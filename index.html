@@ -1,257 +1,284 @@
 <!DOCTYPE html>
-
 <html lang="sr">
-
 <head>
-
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Tamo daleko – Blog o putovanjima</title>
-
   <style>
+    * {
+      box-sizing: border-box;
+    }
 
     body {
-
       margin: 0;
-
       font-family: 'Georgia', serif;
-
       background-color: #fdf6f0;
-
       color: #333;
-
-    }
-
-    header {
-
-      background:  url('Logo.jpg') center/cover no-repeat;
-
-      color: white;
-
-      padding: 22rem 1rem;
-
-      text-align: center;
-
-    }
-
-    header h1 {
-
-      font-size: 3.5rem;
-
-      margin: 0;
-
-      text-shadow: 2px 2px 5px #000;
-
-    }
-
-    header p {
-
-      font-size: 1.5rem;
-
-      text-shadow: 1px 1px 3px #000;
-
-    }
-
-    nav {
-
       display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
+    /* Veliki fullscreen logo */
+    header {
+      width: 100%;
+      height: 100vh;
+      background: url('Logo.jpg') center center / cover no-repeat;
+      transition: opacity 0.3s ease, height 0.3s ease;
+    }
+
+    header.hidden {
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    /* Navigacija pri dnu SAMO NA POČETNOJ */
+    .nav-bottom {
+      display: flex;
       justify-content: center;
-
-      background-color: #e0a96d;
-
-      padding: 0.5rem;
-
       gap: 1rem;
-
+      background-color: #e0a96d;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
     }
 
+    .nav-bottom.hidden {
+      display: none;
+    }
+
+    .nav-bottom a,
     nav a {
-
       color: white;
-
       text-decoration: none;
-
       font-weight: bold;
-
+      cursor: pointer;
     }
 
+    .nav-bottom a:hover,
     nav a:hover {
-
       text-decoration: underline;
+    }
 
+    /* Navigacija na vrhu za unutrašnje stranice */
+    nav {
+      display: none;
+      justify-content: center;
+      background-color: #e0a96d;
+      padding: 0.5rem;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav.visible {
+      display: flex;
     }
 
     .content {
-
       max-width: 800px;
-
       margin: 2rem auto;
-
       padding: 0 1rem;
-
+      flex: 1;
     }
 
     .section-links {
-
       display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 1rem;
-
     }
 
     .section-links a {
-
       background-color: #f5e0c5;
-
-      padding: 0.5rem;
-
+      padding: 0.7rem;
       text-align: center;
-
       border-radius: 8px;
-
       text-decoration: none;
-
       color: #333;
-
       font-weight: bold;
-
+      font-size: 1rem;
       transition: background-color 0.3s;
-
     }
 
     .section-links a:hover {
-
       background-color: #e0a96d;
-
       color: white;
-
     }
 
     footer {
-
       background-color: #333;
-
       color: #fff;
-
       text-align: center;
-
       padding: 1rem;
-
-      margin-top: 2rem;
-
+      font-size: 0.9rem;
     }
 
+    section {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    section.visible {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    #omeni img.profile-pic {
+      max-height: 30vh;
+      width: auto;
+      border-radius: 12px;
+      margin: 1rem auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: block;
+    }
+
+    #omeni p {
+      text-align: justify;
+      max-width: 90%;
+      margin: 0 auto 1.5rem;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: #e0a96d;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .back-button:hover {
+      background-color: #c88545;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        background-position: center top;
+      }
+
+      .section-links {
+        grid-template-columns: 1fr;
+      }
+
+      .content {
+        padding: 0 0.7rem;
+      }
+    }
   </style>
 
+  <script>
+    function prikaziSekciju(idSekcije) {
+      const sveSekcije = document.querySelectorAll('section');
+      sveSekcije.forEach(sec => sec.classList.remove('visible'));
+
+      const header = document.querySelector('header');
+      const navTop = document.querySelector('nav');
+      const navBottom = document.querySelector('.nav-bottom');
+
+      if (idSekcije === 'pocetna') {
+        header.classList.remove('hidden');
+        navBottom.classList.remove('hidden');
+        navTop.classList.remove('visible');
+      } else {
+        header.classList.add('hidden');
+        navBottom.classList.add('hidden');
+        navTop.classList.add('visible');
+
+        const sekcija = document.getElementById(idSekcije);
+        if (sekcija) {
+          sekcija.classList.add('visible');
+          sekcija.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+
+    function nazadNaPocetnu() {
+      prikaziSekciju('pocetna');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.onload = () => {
+      prikaziSekciju('pocetna');
+    }
+  </script>
 </head>
 
 <body>
 
-  <header>
+  <header></header>
 
+  <!-- Navigacija pri dnu samo na početnoj -->
+  <div class="nav-bottom">
+    <a onclick="prikaziSekciju('evropa')">Evropa</a>
+    <a onclick="prikaziSekciju('azija')">Azija</a>
+    <a onclick="prikaziSekciju('omeni')">O meni</a>
+  </div>
 
-
-  </header>
-
- 
-
+  <!-- Navigacija na vrhu za ostale stranice -->
   <nav>
-
-    <a href="#evropa">Evropa</a>
-
-    <a href="#azija">Azija</a>
-
-    <a href="#omeni">O meni</a>
-
+    <a onclick="prikaziSekciju('evropa')">Evropa</a>
+    <a onclick="prikaziSekciju('azija')">Azija</a>
+    <a onclick="prikaziSekciju('omeni')">O meni</a>
+    <a onclick="nazadNaPocetnu()">Početna</a>
   </nav>
-
- 
 
   <div class="content">
 
     <section id="evropa">
-
       <h2>Evropa</h2>
-
       <div class="section-links">
-
-        <a href="Zagreb.html">Zagreb (Hrvatska)</a>
-
+        <a href="zagreb.html">Zagreb (Hrvatska)</a>
         <a href="#">Holandija</a>
-
         <a href="#">Belgija</a>
-
         <a href="#">Kipar</a>
-
         <a href="#">Malta</a>
-
         <a href="#">Francuska</a>
-
         <a href="#">Nemačka</a>
-
         <a href="#">Švedska</a>
-
       </div>
-
+      <button class="back-button" onclick="nazadNaPocetnu()">← Nazad</button>
     </section>
-
- 
 
     <section id="azija">
-
       <h2>Azija</h2>
-
       <div class="section-links">
-
         <a href="#">Japan</a>
-
         <a href="#">Indija</a>
-
-        <a href="#">Maldivi</a>
-
+        <a href="maldivi.html">Maldivi</a>
         <a href="#">Tajland</a>
-
         <a href="#">UAE</a>
-
       </div>
-
+      <button class="back-button" onclick="nazadNaPocetnu()">← Nazad</button>
     </section>
-
- 
 
     <section id="omeni">
-
       <h2>O meni</h2>
-
-      <p>Dobrodošli na moj blog! Ja sam Sandra i obožavam da putujem, otkrivam kulturu i prirodu, pišem priče iz dalekih krajeva i delim ih sa vama.</p>
-
-    </section>
-
- 
-
-    <section id="komentari">
-
-      <h2>Komentari</h2>
-
-      <p>Za komentare koristiću <a href="https://disqus.com/" target="_blank">Disqus</a> – besplatnu platformu koju lako možeš dodati kad objaviš blog.</p>
-
+      <img src="Sandra.jpg" alt="Sandra" class="profile-pic" />
+      <p>Dobrodošli na moj blog! Ja sam Sandra i obožavam da putujem, otkrivam kulturu i prirodu, pišem priče iz dalekih krajeva i delim ih sa vama. Svaka destinacija mi je kao stranica iz bajke, a ovaj blog je moj način da ih sačuvam i podelim sa svetom.</p>
+      <button class="back-button" onclick="nazadNaPocetnu()">← Nazad</button>
     </section>
 
   </div>
 
- 
-
   <footer>
-
     <p>&copy; 2025 Tamo daleko | Sva prava zadržana</p>
-
   </footer>
 
 </body>
-
 </html>
