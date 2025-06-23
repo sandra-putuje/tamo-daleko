@@ -19,10 +19,12 @@
       color: #4B2E0E;
       display: flex;
       flex-direction: column;
-      padding-top: 100vh; /* sadržaj ispod header-a */
+      /* kada je početna vidljiva, sadržaj pomeren ispod headera */
+      padding-top: 100vh;
       transition: padding-top 0.3s ease;
     }
 
+    /* Kada je header sakriven, padding-top na nulu da sadržaj krene odozdo */
     body.header-hidden {
       padding-top: 0;
     }
@@ -34,31 +36,18 @@
       width: 100%;
       height: 100vh;
       background-image: url('Logo.jpg');
-      background-position: center center; 
+      background-position: center center; /* centrirana slika */
       background-size: cover;
       background-repeat: no-repeat;
+      background-attachment: fixed;
+      z-index: -1;
+      transition: opacity 0.3s ease;
       margin: 0;
       padding: 0;
       border: 0;
       outline: none;
       box-shadow: none;
-      z-index: -1;
-      transition: opacity 0.3s ease;
-      background-attachment: fixed;
     }
-@media (max-width: 600px) {
-  header {
-    background-image: url('Logom-mobile.jpg'); /* ispravljeno ime slike */
-    background-position: center center; /* centrirano vertikalno i horizontalno */
-    background-attachment: scroll;
-  }
-
-  /* Smanjenje fonta na dugmićima za mobilni */
-  .nav-bottom a,
-  nav a {
-    font-size: 1rem; /* možeš i manji ako želiš, npr. 0.9rem */
-  }
-}
 
     header.hidden {
       opacity: 0;
@@ -201,13 +190,26 @@
       background-color: #c88545;
     }
 
+    /* MOBILNI STILOVI */
     @media (max-width: 600px) {
+      header {
+        background-image: url('Logom-mobile.jpg'); /* ispravljeno ime slike */
+        background-position: center center; /* centrirano i u portrait i landscape */
+        background-attachment: scroll;
+      }
+
       .section-links {
         grid-template-columns: 1fr;
       }
 
       .content {
         padding: 0 0.7rem;
+      }
+
+      /* Smanjenje fonta na dugmićima za mobilni */
+      .nav-bottom a,
+      nav a {
+        font-size: 1rem;
       }
     }
   </style>
