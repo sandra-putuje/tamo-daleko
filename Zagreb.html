@@ -158,6 +158,22 @@
 
   </article>
 
+  <!-- Ovdje ide Disqus komentar widget -->
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = window.location.pathname;
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://tvoj-shortname.disqus.com/embed.js'; 
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Molimo omogućite JavaScript da vidite komentare.</noscript>
+
 </body>
 
 </html>
