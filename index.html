@@ -46,14 +46,19 @@
       transition: opacity 0.3s ease;
       background-attachment: fixed;
     }
+@media (max-width: 600px) {
+  header {
+    background-image: url('Logom-mobile.jpg'); /* ispravljeno ime slike */
+    background-position: center center; /* centrirano vertikalno i horizontalno */
+    background-attachment: scroll;
+  }
 
-    @media (max-width: 600px) {
-      header {
-        background-image: url('Logo-mobile.jpg');
-        background-position: center center;
-        background-attachment: scroll;
-      }
-    }
+  /* Smanjenje fonta na dugmićima za mobilni */
+  .nav-bottom a,
+  nav a {
+    font-size: 1rem; /* možeš i manji ako želiš, npr. 0.9rem */
+  }
+}
 
     header.hidden {
       opacity: 0;
