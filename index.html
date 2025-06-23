@@ -5,35 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tamo daleko – Blog o putovanjima</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      box-sizing: border-box;
       overflow-x: hidden;
-    }
-
-    body {
       font-family: 'Georgia', serif;
       background-color: #fdf6f0;
       color: #4B2E0E;
+    }
+
+    body {
       display: flex;
       flex-direction: column;
-      padding-top: 100vh; /* da se sadržaj pojavi ispod fiksiranog headera */
+      min-height: 100vh;
     }
 
     header {
-      position: fixed;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
+      height: 100vh;
       background: url('Logo.jpg') center center / cover no-repeat;
-      z-index: -1;
+      transition: opacity 0.3s ease, height 0.3s ease;
     }
 
     header.hidden {
-      display: none;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      pointer-events: none;
     }
 
     .nav-bottom {
@@ -59,7 +62,6 @@
       text-decoration: none;
       font-weight: bold;
       cursor: pointer;
-      padding: 0.5rem 1rem;
       font-size: 1.3rem;
     }
 
@@ -171,7 +173,7 @@
 
     @media (max-width: 600px) {
       header {
-        background-image: url('Logom-mobile.jpg');
+        background-image: url('Logo-mobile.jpg');
         background-position: center top;
       }
 
@@ -207,7 +209,7 @@
         const sekcija = document.getElementById(idSekcije);
         if (sekcija) {
           sekcija.classList.add('visible');
-          sekcija.scrollIntoView({ behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         }
       }
     }
