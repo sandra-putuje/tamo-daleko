@@ -12,7 +12,7 @@
     gtag('js', new Date());
     gtag('config', 'G-NLYKLXD49W');
   </script>
- 
+
   <title>Tamo daleko – Blog o putovanjima</title>
 
   <style>
@@ -47,37 +47,13 @@
         background-position: center top;
       }
     }
-
-@media (max-width: 600px) and (orientation: portrait) {
-  .nav-bottom {
-    flex-wrap: wrap; /* omogući prelaz u novi red */
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    height: auto;
-  }
-
-  .search-wrapper {
-    flex: 1 1 100%; /* zauzima ceo red */
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-    justify-content: center;
-  }
-  .search-wrapper input[type="text"] {
-    width: 80vw; /* širi input da se lepo vidi */
-    max-width: 300px;
-  }
-  .nav-bottom > a {
-    flex: none;
-    padding: 0.4rem 0.8rem;
-    font-size: 1.1rem;
-  }
-}
     header.hidden {
       opacity: 0;
       pointer-events: none;
       z-index: -1;
+      transition: opacity 0.3s ease;
     }
+
     .nav-bottom {
       display: flex;
       justify-content: center;
@@ -287,9 +263,8 @@
     function prikaziSekciju(idSekcije) {
       document.querySelectorAll('section').forEach(sec => sec.classList.remove('visible'));
 
-	const input = document.querySelector('.search-wrapper input[type="text"]');
-	if (input && idSekcije === 'pocetna') input.value = '';
-
+      const input = document.querySelector('.search-wrapper input[type="text"]');
+      if (input && idSekcije === 'pocetna') input.value = '';
 
       const header = document.querySelector('header');
       const navTop = document.querySelector('nav');
@@ -318,6 +293,7 @@
 
     function nazadNaPocetnu() {
       prikaziSekciju('pocetna');
+      history.pushState(null, '', 'index.html');
     }
 
     function pretrazi() {
@@ -357,9 +333,24 @@
     }
 
     window.onload = () => {
-      prikaziSekciju('pocetna');
+      const hash = window.location.hash.replace('#', '');
+
+      const header = document.querySelector('header');
+      const body = document.body;
+
+      if (['evropa', 'azija', 'omeni'].includes(hash)) {
+        header.classList.add('hidden');
+        body.classList.add('header-hidden');
+        prikaziSekciju(hash);
+      } else {
+        header.classList.remove('hidden');
+        body.classList.remove('header-hidden');
+        prikaziSekciju('pocetna');
+      }
 
       const input = document.querySelector('.search-wrapper input[type="text"]');
+      const dugmeLupica = document.querySelector('.search-button');
+
       input.addEventListener('keydown', e => {
         if (e.key === 'Enter') {
           e.preventDefault();
@@ -367,7 +358,6 @@
         }
       });
 
-      const dugmeLupica = document.querySelector('.search-button');
       dugmeLupica.addEventListener('click', () => {
         pretrazi();
       });
@@ -381,8 +371,6 @@
   </script>
 </head>
 
-
-
 <body>
 
   <header></header>
@@ -390,16 +378,16 @@
   <div class="nav-bottom">
     <div class="search-wrapper" role="search" aria-label="Pretraga destinacija">
       <input type="text" placeholder="Pretraži..." aria-label="Pretraga destinacija" />
-     <button 
-  aria-label="Pretraži destinacije" 
-  title="Pretraži" 
-  class="search-button"
->
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="11" cy="11" r="8"></circle>
-    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-  </svg>
-</button>
+      <button 
+        aria-label="Pretraži destinacije" 
+        title="Pretraži" 
+        class="search-button"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
     </div>
 
     <a onclick="prikaziSekciju('evropa')">Evropa</a>
@@ -419,7 +407,7 @@
     <section id="evropa">
       <h2>Evropa</h2>
       <div class="section-links">
-        <a href="Zagreb.html">Zagreb (Hrvatska)</a>
+        <a href="Evropa/Hrvatska/Zagreb.html" target="_blank">Zagreb (Hrvatska)</a>
         <a href="#">Holandija</a>
         <a href="#">Belgija</a>
         <a href="#">Kipar</a>
@@ -436,7 +424,7 @@
       <div class="section-links">
         <a href="#">Japan</a>
         <a href="#">Indija</a>
-        <a href="maldivi.html">Maldivi</a>
+        <a href="Azija/Maldivi/maldivi.html" target="_blank">Maldivi</a>
         <a href="#">Tajland</a>
         <a href="#">UAE</a>
       </div>
