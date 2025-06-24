@@ -50,7 +50,9 @@
 
 @media (max-width: 600px) and (orientation: portrait) {
   .nav-bottom {
-    flex-wrap: wrap;
+    flex-wrap: nowrap !important;
+    overflow-x: auto; /* dozvoli horizontalni skrol ako stvarno ne stane */
+   
     justify-content: center;
     gap: 0.2rem; /* manji razmak između elemenata */
     padding: 0.5rem 1rem;
