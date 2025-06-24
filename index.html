@@ -47,6 +47,32 @@
         background-position: center top;
       }
     }
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .nav-bottom {
+    flex-wrap: wrap; /* omogući prelaz u novi red */
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    height: auto;
+  }
+
+  .search-wrapper {
+    flex: 1 1 100%; /* zauzima ceo red */
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+  }
+  .search-wrapper input[type="text"] {
+    width: 80vw; /* širi input da se lepo vidi */
+    max-width: 300px;
+  }
+  .nav-bottom > a {
+    flex: none;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.1rem;
+  }
+}
     header.hidden {
       opacity: 0;
       pointer-events: none;
