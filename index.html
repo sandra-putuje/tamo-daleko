@@ -50,31 +50,27 @@
 
 @media (max-width: 600px) and (orientation: portrait) {
   .nav-bottom {
-    flex-wrap: wrap; /* omogući prelaz u novi red */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.3rem; /* manji razmak između elemenata */
     padding: 0.5rem 1rem;
     height: auto;
   }
-    header.hidden {
-      opacity: 0;
-      pointer-events: none;
-      z-index: -1;
-    }
   .search-wrapper {
-    flex: 1 1 100%; /* zauzima ceo red */
+    flex: 1 1 100%;
     margin-right: 0;
     margin-bottom: 0.5rem;
     justify-content: center;
   }
   .search-wrapper input[type="text"] {
-    width: 80vw; /* širi input da se lepo vidi */
+    width: 80vw;
     max-width: 300px;
   }
   .nav-bottom > a {
     flex: none;
-    padding: 0.4rem 0.8rem;
+    padding: 0.3rem 0.6rem; /* manje unutrašnje margine */
     font-size: 1.1rem;
+    white-space: nowrap; /* sprečava da se tekst prelomi u novi red */
   }
 }
     .nav-bottom {
