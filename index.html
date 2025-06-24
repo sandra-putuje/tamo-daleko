@@ -47,11 +47,7 @@
         background-position: center top;
       }
     }
-    header.hidden {
-      opacity: 0;
-      pointer-events: none;
-      z-index: -1;
-    }
+
 @media (max-width: 600px) and (orientation: portrait) {
   .nav-bottom {
     flex-wrap: wrap; /* omogući prelaz u novi red */
@@ -60,6 +56,11 @@
     padding: 0.5rem 1rem;
     height: auto;
   }
+    header.hidden {
+      opacity: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
   .search-wrapper {
     flex: 1 1 100%; /* zauzima ceo red */
     margin-right: 0;
