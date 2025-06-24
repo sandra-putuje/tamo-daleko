@@ -52,7 +52,30 @@
       pointer-events: none;
       z-index: -1;
     }
-
+@media (max-width: 600px) and (orientation: portrait) {
+  .nav-bottom {
+    flex-wrap: wrap; /* omogući prelaz u novi red */
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    height: auto;
+  }
+  .search-wrapper {
+    flex: 1 1 100%; /* zauzima ceo red */
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+  }
+  .search-wrapper input[type="text"] {
+    width: 80vw; /* širi input da se lepo vidi */
+    max-width: 300px;
+  }
+  .nav-bottom > a {
+    flex: none;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.1rem;
+  }
+}
     .nav-bottom {
       display: flex;
       justify-content: center;
@@ -362,23 +385,20 @@
 
   <header></header>
 
- <div class="nav-bottom">
-  <div class="search-wrapper" role="search" aria-label="Pretraga destinacija">
-    <input type="text" placeholder="Pretraži..." aria-label="Pretraga destinacija" />
-    <button aria-label="Pretraži destinacije" title="Pretraži" class="search-button">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
-    </button>
-  </div>
-
-  <div class="nav-links">
-    <a onclick="prikaziSekciju('evropa')">Evropa</a>
-    <a onclick="prikaziSekciju('azija')">Azija</a>
-    <a onclick="prikaziSekciju('omeni')">O meni</a>
-  </div>
-</div>
+  <div class="nav-bottom">
+    <div class="search-wrapper" role="search" aria-label="Pretraga destinacija">
+      <input type="text" placeholder="Pretraži..." aria-label="Pretraga destinacija" />
+     <button 
+  aria-label="Pretraži destinacije" 
+  title="Pretraži" 
+  class="search-button"
+>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle>
+    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</button>
+    </div>
 
     <a onclick="prikaziSekciju('evropa')">Evropa</a>
     <a onclick="prikaziSekciju('azija')">Azija</a>
