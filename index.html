@@ -285,6 +285,9 @@
         width: 100px;
       }
     }
+	.nav-bottom.hidden {
+  		display: none;
+	}
   </style>
 
   <script>
@@ -315,24 +318,23 @@
       const navBottom = document.querySelector('.nav-bottom');
       const body = document.body;
 
-      if (idSekcije === 'pocetna') {
-        header.classList.remove('hidden');
-        navBottom.classList.remove('hidden');
-        navTop.classList.remove('visible');
-        body.classList.remove('header-hidden');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        header.classList.add('hidden');
-        navBottom.classList.add('hidden');
-        navTop.classList.add('visible');
-        body.classList.add('header-hidden');
-
-        const sekcija = document.getElementById(idSekcije);
-        if (sekcija) {
-          sekcija.classList.add('visible');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      }
+if (idSekcije === 'pocetna') {
+  header.classList.remove('hidden');
+  navBottom.classList.remove('hidden'); // ← prikazuje donji meni
+  navTop.classList.remove('visible');
+  body.classList.remove('header-hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+} else {
+  header.classList.add('hidden');
+  navBottom.classList.add('hidden'); // ← sakriva donji meni
+  navTop.classList.add('visible');
+  body.classList.add('header-hidden');
+  const sekcija = document.getElementById(idSekcije);
+  if (sekcija) {
+    sekcija.classList.add('visible');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
     }
 
     function nazadNaPocetnu() {
