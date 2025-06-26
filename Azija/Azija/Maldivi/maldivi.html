@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maldivi – Tamo daleko</title>
+  <!-- Dodato za sakrivanje loga na indexu prilikom povratka -->
+  <script>document.documentElement.classList.add('js-loading');</script>
+
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #eaf4fb, #f4f1ed);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #4a86e8;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px #fff;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      background: linear-gradient(to bottom right, #d4e4f7, #a6c8e5);
+      color: #003366;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 1em;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s, background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to bottom right, #b3d6f2, #7fb8e0);
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 20px;
+      background: linear-gradient(to bottom right, #a6c8e5, #d4e4f7);
+      color: #003366;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s, transform 0.2s;
+      cursor: pointer;
+    }
+
+    .back-btn:hover {
+      background: linear-gradient(to bottom right, #7fb8e0, #b3d6f2);
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .button-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .btn {
+        font-size: 0.95em;
+        padding: 10px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Maldivi – Priče s kraja sveta</h1>
+
+  <div class="button-grid">
+    <a href="putujuca_zaba.html" class="btn">Preporuka Putujuće žabe</a>
+    <a href="nesto_naopako.html" class="btn">Može li još nešto da krene naopako?</a>
+    <a href="let_ostrva.html" class="btn">Let i ostrvca iz vazduha</a>
+    <a href="razglednica.html" class="btn">Mi smo u razglednici</a>
+    <a href="dori.html" class="btn">Videla sam slavnu Dori!</a>
+    <a href="delfini.html" class="btn">Doručak sa pogledom na jato delfina</a>    
+    <a href="dzungla.html" class="btn">Džungla</a>
+    <a href="poklon.html" class="btn">Poklon</a>
+    <a href="zivot_na_ostrvu.html" class="btn">Život na ostrvu</a>
+    <a href="aslam.html" class="btn">Dobri duh Aslam</a>
+    <a href="kornjace.html" class="btn">Kornjače</a>
+    <a href="samo_te_gledam.html" class="btn">Samo te gledam</a>
+    <a href="otrovna_nije_opasna.html" class="btn">Ona je samo otrovna, nije opasna</a>
+    <a href="haljina.html" class="btn">Plivanje u haljini</a>
+    <a href="pas.html" class="btn">Pas? Ne može</a>
+    <a href="beba_ajkula.html" class="btn">Beba ajkula i bućkanje u hladu</a>
+    <a href="vrane.html" class="btn">Vrane kradljivice</a>
+    <a href="deca.html" class="btn">Deca</a>
+    <a href="hobotnica.html" class="btn">Hobotnica</a>
+    <a href="prdeca_baba.html" class="btn">Prdeća baba</a>
+    <a href="badu_beru.html" class="btn">Badu Beru</a>
+    <a href="plave_zvezde.html" class="btn">Rasute plave zvezde po obali</a>
+    <a href="hello_sandra.html" class="btn">"Hello, Sandra!"</a>
+    <a href="turski_sed.html" class="btn">U turskom sedu pod maldivskim zvezdama</a>
+    <a href="lokalci.html" class="btn">Lokalci u moru</a>
+    <a href="pecanje.html" class="btn">Pecanje</a>
+    <a href="najlepsa_slika.html" class="btn">Najlepša slika sa Maldiva</a>
+  </div>
+
+  <a href="../../index.html#azija" class="back-btn">← Nazad</a>
+
+</body>
+</html>

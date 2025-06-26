@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Džungla – Maldivi | Tamo daleko</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom right, #e0f0ff, #c2d9ff);
+      color: #003366;
+      margin: 20px;
+      text-align: justify;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1rem;
+      box-sizing: border-box;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 102, 153, 0.3);
+    }
+    h1 {
+      color: #004080;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-weight: normal;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      font-size: 1.1em;
+    }
+.fullwidth-gallery {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  padding: 0;
+  background: none;
+}
+
+.fullwidth-gallery img {
+  display: block;
+  width: 100vw;  /* cela širina prozora */
+  height: auto;
+  border-radius: 0;  /* možeš ukloniti za ivice da budu skroz do kraja */
+  margin-bottom: 1rem; /* razmak između slika */
+  object-fit: cover; /* opcionalno, ako želiš da slike lepo ispune */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 0 auto;
+  max-width: 1200px; /* možeš išaljiš ili prilagodiš po želji */
+  padding: 0 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 51, 102, 0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 51, 102, 0.5);
+    }
+    .back-button {
+      display: inline-block;
+      background: linear-gradient(to bottom right, #7fb8e0, #4a86e8);
+      color: white;
+      padding: 0.7rem 1.4rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 2rem;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background: linear-gradient(to bottom right, #4a86e8, #2a5ca6);
+    }
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Džungla</h1>
+
+<p>Pola ostrva prekriva džungla.</p>
+
+<p>Išli smo kroz džunglu do Bikini plaže. Visoke palme imaju korenje koje raste spolja, iz stabla prema zemlji. Videli smo i čiku koji motkom bere papaju, tu u džungli. I jednu malu farmu ananasa.</p>
+
+<p>Ugledala sam i veeeliku pticu kako leti, i veselo uskliknula da je svi vide — ali ptici su se nešto čudno providela krila... i kakve su to kosti? Kad ono — ogroman šišmiš!</p>
+
+
+<div class="fullwidth-gallery">
+ 
+  <img src="maldivi14.jpg" alt="Maalhos iz vazduha" />
+  <img src="maldivi15.jpg" alt="Aslam, dzungla" /> 
+  <img src="maldivi16.jpg" alt="Dzungla, Maldivi" />
+  <img src="maldivi17.jpg" alt="Dzungla, Maalhos" /> 
+
+</div>
+
+
+  <a href="maldivi.html" class="back-button">← Nazad na Maldive</a>
+
+<!-- Ovdje ide Disqus komentar widget -->
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = window.location.pathname;
+  };
+
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://sandra-putuje.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Molimo omogućite JavaScript da biste videli komentare.</noscript>
+
+</body>
+</html>
