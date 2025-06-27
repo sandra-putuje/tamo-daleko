@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nemački</title>
+  <!-- Dodato za sakrivanje loga na indexu prilikom povratka -->
+  <script>document.documentElement.classList.add('js-loading');</script>
+
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #e6f0e6, #f2f7f2); /* nežna zelena, akvarel ton */
+      color: #2b4d2b; /* tamnija zelena za tekst */
+      text-align: justify;
+      padding: 20px;
+
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+  
+    }
+
+    h1 {
+      text-align: center;
+      color: #3e7d3e; /* lepiji, jači zeleni ton */
+      margin-bottom: 30px;
+      text-shadow: 1px 1px #e6f0e6;
+    }
+
+
+
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolone */
+  grid-auto-rows: auto;
+  gap: 15px;
+  max-width: 600px; /* ili koliko želiš širinu */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 600px) {
+  .button-grid {
+    grid-template-columns: 1fr; /* samo jedna kolona na mobilnom */
+  }
+}
+
+    .btn {
+      background: linear-gradient(to bottom right, #c7e4c7, #8fbc8f);
+      color: #114411;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 1em;
+      box-shadow: 2px 2px 5px rgba(17, 68, 17, 0.2);
+      transition: transform 0.2s, background-color 0.3s;
+      cursor: pointer;
+      user-select: none;
+    }
+
+
+
+
+
+
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to bottom right, #a3d29a, #5f8e5f);
+      color: #e6f0e6;
+      box-shadow: 3px 3px 7px rgba(95, 142, 95, 0.6);
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 20px;
+      background: linear-gradient(to bottom right, #8fbc8f, #c7e4c7);
+      color: #114411;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 2px 2px 5px rgba(17, 68, 17, 0.2);
+      transition: background 0.3s, transform 0.2s;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .back-btn:hover {
+      background: linear-gradient(to bottom right, #5f8e5f, #a3d29a);
+      color: #e6f0e6;
+      transform: scale(1.05);
+      box-shadow: 3px 3px 7px rgba(95, 142, 95, 0.6);
+    }
+.content p {
+  text-align: justify;
+
+
+
+}
+    @media (max-width: 600px) {
+      .button-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .btn {
+        font-size: 0.95em;
+        padding: 10px 16px;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <h1>Nemački</h1>
+
+  <a href="Nemacka.html" class="back-btn">← Nazad na Nemačku</a>
+
+<p>Odmah pored zgrade aerodroma je bio rentakar. Sva naoštrena da jednom u životu iskoristim nemački koji me je majka terala da učim: "Trebaće ti u životu!",  i koji sam mesecima ponavljala uz Duolingo pred polazak.</p>
+
+<p>Nisam stigla da spojim ni tri reči, a čovek progovori na srpskom. Bugarin.</p>
+
+<p>I, za neverovati — to mi se ponavljalo ceo put. Čuju njih kako pričaju i samo prebace na srpski.</p>
+
+
+
+  <a href="Nemacka.html" class="back-btn">← Nazad na Nemačku</a>
+
+<style>
+.back-button {
+  margin-top: 2rem;
+}
+</style>
+
+<!-- Ovdje ide Disqus komentar widget -->
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = window.location.pathname;
+  };
+
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://sandra-putuje.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Molimo omogućite JavaScript da biste videli komentare.</noscript>
+
+</body>
+</html>
