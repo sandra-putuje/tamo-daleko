@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi smo u razglednici – Maldivi | Tamo daleko</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom right, #e0f0ff, #c2d9ff);
+      color: #003366;
+      margin: 20px;
+      text-align: justify;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1rem;
+      box-sizing: border-box;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 102, 153, 0.3);
+    }
+    h1 {
+      color: #004080;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-weight: normal;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      font-size: 1.1em;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 2rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 51, 102, 0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 51, 102, 0.5);
+    }
+    .back-button {
+      display: inline-block;
+      background: linear-gradient(to bottom right, #7fb8e0, #4a86e8);
+      color: white;
+      padding: 0.7rem 1.4rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 2rem;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background: linear-gradient(to bottom right, #4a86e8, #2a5ca6);
+    }
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mi smo u razglednici</h1>
+
+  <p>E da. Voda na Maldivima je kao na slici. Baš su i Duško i Petar bili uzbuđeni kad smo najzad stigli na naše ostrvo. Aslam nas odveo na ručak. A ono što na plaži sa tri stare drvene stolice ispod niskog listopadnog drveta da pravi hlad a pored visoke palme. I na par koraka more najlepše tirkizne boje a preko nenaseljeno ostrvo sa zelenom šumom. Mi smo u razglednici. Vodica bistra, najlepša na svetu a pesak kao puder miluje nam noge.</p>
+
+  <p>Išli smo na sigurno, što se ručka tiče, ribicu u raznim oblicima. Grilovana, tuna na pici... Da ne bi čekali dok se pravi ručak Aslam nas vodio na bikini plažu. U jednom momentu se ide i kroz džunglu. Međutim ljuljne nam kiša pa smo se po kiši kupali. Voda topla da ne može biti toplija (oko 30 stepeni). Jedino su tu korali dole pa nije baš zgodno za ulazak. Došli neki ronioci i doneli gomilu hobotnica. Ja sam se naravno slikala sa njima kao i u Rafailovićima. Samo su ove veće i kače mi se pipcima po rukama pa kad ih odvajaš bude ono plop, plop, od njihovih kružića po pipcima. Ručali. Petar i Duško otišli kući na spavanje a ja sa Aslamom na ronjenje. Zaključila sam da su Maldivljani niski, široke glave kod obraza i muški nose bradu.</p>
+
+  <div class="gallery">
+    <img src="maldivi1.jpg" alt="Plaža sa palmama" />
+    <img src="maldivi2.jpg" alt="More tirkizne boje" />
+    <img src="maldivi3.jpg" alt="Bikini plaža i drvene stolice" />
+    <img src="maldivi4.jpg" alt="Ronjenje sa hoboticama" />
+  </div>
+
+  <a href="maldivi.html" class="back-button">← Nazad na Maldivi</a>
+
+</body>
+</html>

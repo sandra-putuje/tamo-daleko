@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tamo daleko – Blog o putovanjima</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fdf6f0;
+      color: #333;
+    }
+
+    header {
+      background: url('Logo.jpg') center/cover no-repeat;
+      padding: 22rem 1rem;
+      text-align: center;
+      transition: opacity 0.3s ease, height 0.3s ease, padding 0.3s ease;
+    }
+
+    header.hidden {
+      opacity: 0;
+      height: 0;
+      padding: 0 1rem;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #e0a96d;
+      padding: 0.5rem;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      min-height: 60vh;
+    }
+
+
+	.section-links {
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	  gap: 1rem;
+	}
+
+    .section-links a {
+      background-color: #f5e0c5;
+      padding: 0.5rem;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .section-links a:hover {
+      background-color: #e0a96d;
+      color: white;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    section {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    section.visible {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    #omeni img.profile-pic {
+      max-height: 30vh;
+      width: auto;
+      border-radius: 12px;
+      margin: 1rem auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: block;
+    }
+
+    #omeni p {
+      text-align: justify;
+      max-width: 90%;
+      margin: 0 auto 1.5rem;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: #e0a96d;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .back-button:hover {
+      background-color: #c88545;
+    }
+
+    /* MALDIVI – bledo plava sekcija i nežni dugmići */
+    #maldivi {
+      background-color: #eaf4fb;
+      padding: 2rem 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    #maldivi .section-links a {
+      background: linear-gradient(to bottom right, #dbeefd, #bcdff6);
+      color: #003366;
+      font-weight: bold;
+      border-radius: 12px;
+      padding: 0.8rem;
+      text-decoration: none;
+      transition: transform 0.2s, background-color 0.3s;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    }
+
+    #maldivi .section-links a:hover {
+      transform: scale(1.03);
+      background: linear-gradient(to bottom right, #cde0f6, #a7cde8);
+      color: #001f3f;
+    }
+  </style>
+
+  <script>
+    function prikaziSekciju(idSekcije) {
+      const sveSekcije = document.querySelectorAll('section');
+      sveSekcije.forEach(sec => {
+        sec.classList.remove('visible');
+      });
+
+      const header = document.querySelector('header');
+      if(idSekcije === 'pocetna'){
+        header.classList.remove('hidden');
+      } else {
+        header.classList.add('hidden');
+        const sekcija = document.getElementById(idSekcije);
+        if(sekcija) {
+          sekcija.classList.add('visible');
+          sekcija.scrollIntoView({behavior: 'smooth'});
+        }
+      }
+    }
+
+    function nazadNaPocetnu() {
+      prikaziSekciju('pocetna');
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    window.onload = () => {
+      prikaziSekciju('pocetna');
+    }
+  </script>
+</head>
+
+<body>
+
+  <header></header>
+
+  <nav>
+    <a onclick="prikaziSekciju('evropa')">Evropa</a>
+    <a onclick="prikaziSekciju('azija')">Azija</a>
+    <a onclick="prikaziSekciju('omeni')">O meni</a>
+    <a onclick="nazadNaPocetnu()">Početna</a>
+  </nav>
+
+  <div class="content">
+
+    <section id="evropa">
+      <h2>Evropa</h2>
+      <div class="section-links">
+        <a href="zagreb.html">Zagreb (Hrvatska)</a>
+        <a href="#">Holandija</a>
+        <a href="#">Belgija</a>
+        <a href="#">Kipar</a>
+        <a href="#">Malta</a>
+        <a href="#">Francuska</a>
+        <a href="#">Nemačka</a>
+        <a href="#">Švedska</a>
+      </div>
+      <button class="back-button" onclick="nazadNaPocetnu()">← Nazad</button>
+    </section>
+
+    <section id="azija">
+      <h2>Azija</h2>
+      <div class="section-links">
+        <a href="#">Japan</a>
+        <a href="#">Indija</a>
+        <a onclick="prikaziSekciju('maldivi')">Maldivi</a>
+        <a href="#">Tajland</a>
+        <a href="#">UAE</a>
+      </div>
+      <button class="back-button" onclick="nazadNaPocetnu()">← Nazad</button>
+    </section>
+
+    <section id="maldivi">
+      <h2>Maldivi</h2>
+      <div class="section-links">
+        <a href="putujuca_zaba.html">Preporuka Putujuće žabe</a>
+        <a href="nesto_naopako.html">Može li još nešto da krene naopako?</a>
+        <a href="let_ostrva.html">Let i ostrvca iz vazduha</a>
+        <a href="razglednica.html">Mi smo u razglednici</a>
+        <a href="dori.html">Videla sam slavnu Dori!</a>
+        <a href="delfini.html">Doručak sa pogledom na jato delfina</a>
+        <a href="moguce.html">Pa da li je ovo moguće?</a>
+        <a href="dzungla.html">Džungla</a>
+        <a href="poklon.html">Poklon</a>
+        <a href="zivot_na_ostrvu.html">Život na ostrvu</a>
+        <a href="aslam.html">Dobri duh Aslam</a>
+        <a href="kornjace.html">Kornjače</a>
+        <a href="samo_te_gledam.html">Samo te gledam</a>
+        <a href="otrovna.html">Ona je samo otrovna, nije opasna</a>
+        <a href="haljina.html">Plivanje u haljini</a>
+        <a href="pas.html">Pas? Ne može</a>
+        <a href="beba_ajkula.html">Beba ajkula i bućkanje u hladu</a>
+        <a href="vrane.html">Vrane kradljivice</a>
+        <a href="deca.html">Deca</a>
+        <a href="hobotnica.html">Hobotnica</a>
+        <a href="prdeca_baba.html">Prdeća baba</a>
+        <a href="badu_beru.html">Badu Beru</a>
+        <a href="plave_zvezde.html">Rasute plave zvezde po obali</a>
+        <a href="hello_sandra.html">"Hello, Sandra!"</a>
+        <a href="turski_sed.html">U turskom sedu pod maldivskim zvezdama</a>
+        <a href="lokalci.html">Lokalci u moru</a>
+        <a href="pecanje.html">Pecanje</a>
+        <a href="najlepsa_slika.html">Najlepša slika sa Maldiva</a>
+      </div>
+      <button class="back-button" onclick="prikaziSekciju('azija')">← Nazad na Aziju</button>
+    </section>
+
+    <section id="omeni">
+      <h2>O meni</h2>
+      <img src="Sandra.jpg" alt="Sandra" class="profile-pic" />
+      <p>Dobrodošli na moj blog! Ja sam Sandra i obožavam da putujem, otkrivam kulturu i prirodu, pišem priče iz dalekih krajeva i delim ih sa vama. Svaka destinacija mi je kao stranica iz bajke, a ovaj blog je moj način da ih sačuvam i podelim sa svetom.</p>
+      <button class="back-button" onclick="nazadNaPocetnu()">← Nazad</button>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tamo daleko | Sva prava zadržana</p>
+  </footer>
+
+</body>
+</html>
