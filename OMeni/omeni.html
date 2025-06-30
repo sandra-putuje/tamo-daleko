@@ -80,6 +80,16 @@
       text-align: center;
       padding: 1rem;
     }
+.content a[href^="mailto:"] {
+  text-decoration: none;
+  color: #333; /* podrazumevana boja teksta */
+  transition: color 0.3s ease;
+}
+
+.content a[href^="mailto:"]:hover {
+  text-decoration: underline;
+  color: #c9a27e; /* svetlija braon nijansa */
+}
   </style>
 </head>
 
@@ -93,6 +103,12 @@
     <h2>O meni</h2>
     <img src="Sandra.jpg" alt="Sandra" class="profile-pic" />
     <p>Dobrodošli na moj blog! Ja sam Sandra i obožavam da putujem, otkrivam lepe delove prirode i različite kulture, pišem priče iz dalekih krajeva. Ovaj blog je moj način da sačuvam putovanja i podelim ih sa vama.</p>
+    <p style="text-align: center; font-size: 1.1em;  margin-bottom: 2rem;">
+      ✉️ <a href="mailto:sandra.djuricin@gmail.com" >
+        sandra.djuricin@gmail.com
+      </a>
+    </p>
+
     <a href="../index.html" class="back-button">← Nazad</a>
   </div>
 
