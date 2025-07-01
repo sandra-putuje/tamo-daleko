@@ -1,158 +1,172 @@
-<section style="background-color: #fef4ea; padding: 2rem; font-family: Georgia, serif;">
-  <h2 style="text-align: center; color: #c97b63; margin-bottom: 2rem;">
-    Tajland – Ili Guliver u zemlji Liliputanaca
-  </h2>
-
-  <div class="dugmad-grupa">
-    <a href="#">Predgovor</a>
-  </div>
-
-  <div class="fade-in-section">
-    <h3 class="naslov-lokacije">🏙️ Bangkok</h3>
-    <p class="opis-lokacije">Glavni grad Tajlanda, grad kontrasta i kulture.</p>
-    <div class="dugmad-grupa">
-      <a href="#">Sleteli smo – u kupatilo</a>
-      <a href="#">Hotel koji ima dušu</a>
-      <a href="#">Čorbu nepoznatih sastojaka i najbolju pitu od ananasa</a>
-      <a href="#">Uputstvo za upotrebu Tajlanda</a>
-      <a href="#">Trapez frizura i spasilac sa onog sveta</a>
-      <a href="#">Tradicionalna večera na podu i porcije za lutke</a>
-      <a href="#">Pijaca, slonovi i baba koja je zamalo izazvala pobunu</a>
-      <a href="#">Buda ili Budina devojka</a>
-      <a href="#">Kaluđer, čekić i baterijska lampa</a>
-      <a href="#">Jedan Buda, tri kostima</a>
-      <a href="#">Oprošteni gresi</a>
-      <a href="#">Prinudni šoping i (ne)poverenje u vladu</a>
-      <a href="#">Predstave</a>
-      <a href="#">Ploveća pijaca i piton oko vrata</a>
-      <a href="#">Vozni red na fasadi, kuke i kvake</a>
-    </div>
-  </div>
-
-  <div class="fade-in-section">
-    <h3 class="naslov-lokacije">🏝️ Phuket</h3>
-    <p class="opis-lokacije">Popularno ostrvo poznato po prelepim plažama i zabavi.</p>
-    <div class="dugmad-grupa">
-      <a href="#">Benzinska pumpa?</a>
-      <a href="#">Bolja od stand-up komičara</a>
-      <a href="#">Ko će pre da popusti: majmun ili ja</a>
-      <a href="#">Kad se gibon zaljubi u Duška</a>
-      <a href="#">Slonče i katapult ljubavi</a>
-      <a href="#">Ljubav na prodaju</a>
-      <a href="#">Meet the Flinstones</a>
-      <a href="#">My name is Bond, James Bond</a>
-      <a href="#">Kakvi (ne)srećkovići</a>
-    </div>
-  </div>
-
-  <div class="fade-in-section">
-    <h3 class="naslov-lokacije">🌅 Pataja</h3>
-    <p class="opis-lokacije">Grad poznat po plažama, noćnom životu i egzotičnim doživljajima.</p>
-    <div class="dugmad-grupa">
-      <a href="#">Plati pa vidi</a>
-      <a href="#">Plaža, oslobođena ptičica i majmunče sa padobranom</a>
-      <a href="#">Iznenađenje, slepi miševi</a>
-    </div>
-  </div>
-</section>
-
-<style>
-  .naslov-lokacije {
-    color: #a86250;
-    border-bottom: 2px solid #a86250;
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    text-align: center;
-    max-width: 740px; /* Širina kao dva dugmeta */
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 0.3rem;
-  }
-
-  .opis-lokacije {
-    font-style: italic;
-    color: #8b6d5c;
-    margin: 0.3rem auto 1rem auto;
-    max-width: 740px;
-    text-align: center;
-    font-size: 0.9rem;
-  }
-
-  .dugmad-grupa {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    justify-content: center;
-    margin: 1rem auto 2rem;
-    max-width: 1000px;
-/*    background-color: #fff9f7; /* nežno svetlija pozadina */*/
-/*    box-shadow: 0 2px 8px rgba(0,0,0,0.05);*/
-    padding: 1rem;
-    border-radius: 8px;
-  }
-
-  .dugmad-grupa a {
-    background-color: #fdd6d1;
-    color: #6e3f32;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 0.95rem;
-    text-align: center;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
-    max-width: 360px;
-
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .dugmad-grupa a:hover {
-    background-color: #fbb6aa;
-    color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transform: scale(1.05);
-  }
-
-  .fade-in-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    will-change: opacity, transform;
-  }
-
-  .fade-in-section.is-visible {
-    opacity: 1;
-    transform: none;
-  }
-
-  @media (max-width: 600px) {
-    .dugmad-grupa {
-      flex-direction: column;
-      align-items: center;
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tajland – Tamo daleko</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #d0f0c0, #e0f2f1);
+      color: #004d40;
+      text-align: center;
+      padding: 20px;
     }
+    h1 {
+      color: #00796b;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px #a5d6a7;
+    }
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+.btn {
+  background: linear-gradient(to bottom right, #a8d5a0, #6ca86c);
+  color: #2d5d2a;
+  border: none; /* uklonjena žuta ivica */
+  border-radius: 20px;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 2px 2px 5px rgba(108, 168, 108, 0.5);
+  transition: transform 0.2s, background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
 
-    .naslov-lokacije,
+
+.btn:hover {
+  transform: scale(1.05);
+
+/*background: linear-gradient(to bottom right, #8fa67f, #5a7a58);*/
+background: linear-gradient(to bottom right, #8bb272, #5b7b45);
+color: #fbdc6a;
+  border-color: transparent;
+}
+    .back-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 20px;
+      background: linear-gradient(to bottom right, #a8d5a0, #6ca86c);
+      color: white;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s, transform 0.2s;
+      cursor: pointer;
+    }
+    .back-btn:hover {
+      /*background: linear-gradient(to bottom right, #004d40, #00796b);
+      background: linear-gradient(to bottom right, #4caf50, #00796b);
+      background: linear-gradient(to bottom right, #00897b, #4db6ac);*/
+background: linear-gradient(to bottom right, #8bb272, #5b7b45);
+      transform: scale(1.05);
+    }
+    .naslov-lokacije {
+      color: #00796b;
+      border-bottom: 2px solid #fbc02d;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      text-align: center;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 0.3rem;
+    }
     .opis-lokacije {
-      max-width: 90%;
+      font-style: italic;
+      color: #004d40;
+      margin: 0.3rem auto 1rem auto;
+      max-width: 1000px;
+      text-align: center;
+      font-size: 0.95rem;
     }
-  }
-</style>
+    @media (max-width: 600px) {
+      .button-grid {
+        grid-template-columns: 1fr;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+      .btn {
+        font-size: 0.95em;
+        padding: 10px 16px;
+      }
+    }
+.button-grid.single {
+  max-width: 250px;  /* ili koliko je širina jednog dugmeta */
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+  </style>
+</head>
+<body>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll('.fade-in-section');
+  <h1>Tajland – ili Guliver u zemlji Liliputanaca</h1>
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
+  <div class="button-grid single">
+    <a href="#" class="btn">Predgovor</a>
+  </div>
 
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  });
-</script>
+  <h3 class="naslov-lokacije">🏙️ Bangkok</h3>
+  <p class="opis-lokacije">
+    Krungthepmahanakhon Amonrattanakosin Mahintharayutthaya Mahadilokphop Noppharatratchathaniburirom
+    Udomratchaniwetmahasathan Amonphimanawatansathit Sakkathattiyawitsanukamprasit! (Grad anđela, veliki grad besmrtnika,
+    veličanstveni grad devet dragulja, kraljev presto, grad kraljevskih palata, dom inkarnacija bogova, podignut od strane Visvakarmana).
+  </p>
+  <p class="opis-lokacije">
+    Kada Tajlanđani govore ime svog glavnog grada, zovu ga samo Krung Thep Maha Nakhon.
+  </p>
+
+  <div class="button-grid">
+    <a href="sleteli_smo_u_kupatilo.html" class="btn">Sleteli smo – u kupatilo</a>
+    <a href="hotel_koji_ima_dusu.html" class="btn">Hotel koji ima dušu</a>
+    <a href="corba_nepoznatih_sastojaka_i_pita_od_ananasa.html" class="btn">Čorba nepoznatih sastojaka i najbolja pita od ananasa</a>
+    <a href="uputstvo_za_upotrebu_tajlanda.html" class="btn">Uputstvo za upotrebu Tajlanda</a>
+    <a href="trapez_frizura_i_spasilac.html" class="btn">Trapez frizura i spasilac sa onog sveta</a>
+    <a href="vecera_na_podu_i_porcije_za_lutke.html" class="btn">Tradicionalna večera na podu i porcije za lutke</a>
+    <a href="pijaca_slonovi_i_baba.html" class="btn">Pijaca, slonovi i baba koja je zamalo izazvala pobunu</a>
+    <a href="buda_ili_budina_devojka.html" class="btn">Buda ili Budina devojka</a>
+    <a href="kaludjer_cekic_i_lampa.html" class="btn">Kaluđer, čekić i baterijska lampa</a>
+    <a href="jedan_buda_tri_kostima.html" class="btn">Jedan Buda, tri kostima</a>
+    <a href="oprosteni_gresi.html" class="btn">Oprošteni gresi</a>
+    <a href="prinudni_soping_i_nepoverenje.html" class="btn">Prinudni šoping i (ne)poverenje u vladu</a>
+    <a href="predstave.html" class="btn">Predstave</a>
+    <a href="ploveca_pijaca_i_piton.html" class="btn">Ploveća pijaca i piton oko vrata</a>
+    <a href="vozni_red_kuke_i_kvake.html" class="btn">Vozni red na fasadi, kuke i kvake</a>
+  </div>
+
+  <h3 class="naslov-lokacije">🏝️ Phuket</h3>
+  <p class="opis-lokacije">Ostrvo u Andamanskom moru.</p>
+  <div class="button-grid">
+    <a href="benzinska_pumpa.html" class="btn">Benzinska pumpa?</a>
+    <a href="bolja_od_standup_komicara.html" class="btn">Bolja od stand-up komičara</a>
+    <a href="majmun_ili_ja.html" class="btn">Ko će pre da popusti: majmun ili ja</a>
+    <a href="gibon_i_dusko.html" class="btn">Kad se gibon zaljubi u Duška</a>
+    <a href="slonce_i_katapult.html" class="btn">Slonče i katapult ljubavi</a>
+    <a href="ljubav_na_prodaju.html" class="btn">Ljubav na prodaju</a>
+    <a href="meet_the_flintstones.html" class="btn">Meet the Flinstones</a>
+    <a href="bond_james_bond.html" class="btn">My name is Bond, James Bond</a>
+    <a href="sreckovici.html" class="btn">Kakvi (ne)srećkovići</a>
+  </div>
+
+  <h3 class="naslov-lokacije">🌅 Pataja</h3>
+  <p class="opis-lokacije">Poznato letovalište u blizini Bangkoka.</p>
+  <div class="button-grid">
+    <a href="plati_pa_vidi.html" class="btn">Plati pa vidi</a>
+    <a href="plaza_pticica_i_majmunce.html" class="btn">Plaža, oslobođena ptičica i majmunče sa padobranom</a>
+    <a href="iznenadjenje_slepi_misevi.html" class="btn">Iznenađenje, slepi miševi</a>
+  </div>
+
+  <a href="../../index.html#azija" class="back-btn">← Nazad</a>
+
+</body>
+</html>
