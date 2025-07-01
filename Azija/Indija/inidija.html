@@ -4,19 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tajland – Tamo daleko</title>
+  <script>document.documentElement.classList.add('js-loading');</script>
+
   <style>
     body {
       font-family: 'Georgia', serif;
-      background: linear-gradient(to bottom, #d0f0c0, #e0f2f1);
-      color: #004d40;
+      background: linear-gradient(to bottom, #fff8e1, #f0e1b8);
+      color: #6b4c00;
       text-align: center;
       padding: 20px;
     }
+
     h1 {
-      color: #00796b;
+      color: #d47c00;
       margin-bottom: 30px;
-      text-shadow: 1px 1px #a5d6a7;
+      text-shadow: 1px 1px #fff3cc;
     }
+
     .button-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -26,52 +30,55 @@
       margin-left: auto;
       margin-right: auto;
     }
-.btn {
-  background: linear-gradient(to bottom right, #a8d5a0, #6ca86c);
-  color: #2d5d2a;
-  border: none; /* uklonjena žuta ivica */
-  border-radius: 20px;
-  padding: 12px 20px;
-  text-decoration: none;
-  font-size: 1em;
-  box-shadow: 2px 2px 5px rgba(108, 168, 108, 0.5);
-  transition: transform 0.2s, background-color 0.3s, color 0.3s;
-  cursor: pointer;
-}
 
+    .btn {
+      background: linear-gradient(to bottom right, #ffd57e, #f2b038);
+      color: #5a3c00;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 1em;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s, background-color 0.3s;
+      cursor: pointer;
+    }
 
-.btn:hover {
-  transform: scale(1.05);
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to bottom right, #f2b038, #d99400);
+      color: white;
+    }
 
-/*background: linear-gradient(to bottom right, #8fa67f, #5a7a58);*/
-background: linear-gradient(to bottom right, #8bb272, #5b7b45);
-color: #fbdc6a;
-  border-color: transparent;
-}
     .back-btn {
       display: inline-block;
       margin-top: 40px;
       padding: 10px 20px;
-      background: linear-gradient(to bottom right, #a8d5a0, #6ca86c);
-      color: #2d5d2a;
+      background: linear-gradient(to bottom right, #f2b038, #d99400);
+      color: #5a3c00;
       border-radius: 20px;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
       transition: background 0.3s, transform 0.2s;
       cursor: pointer;
     }
+
     .back-btn:hover {
-      /*background: linear-gradient(to bottom right, #004d40, #00796b);
-      background: linear-gradient(to bottom right, #4caf50, #00796b);
-      background: linear-gradient(to bottom right, #00897b, #4db6ac);*/
-      background: linear-gradient(to bottom right, #8bb272, #5b7b45);
+      background: linear-gradient(to bottom right, #d99400, #b06c00);
       transform: scale(1.05);
-      color: #fbdc6a;
+      color: white;
     }
+
+    .button-grid.single {
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .naslov-lokacije {
-      color: #00796b;
-      border-bottom: 2px solid #fbc02d;
+      color: #7a4e00;
+      border-bottom: 2px solid #7a4e00;
       margin-top: 2rem;
       font-size: 1.2rem;
       text-align: center;
@@ -80,57 +87,55 @@ color: #fbdc6a;
       margin-right: auto;
       padding-bottom: 0.3rem;
     }
+
     .opis-lokacije {
       font-style: italic;
-      color: #004d40;
+      color: #6b4c00;
       margin: 0.3rem auto 1rem auto;
       max-width: 1000px;
       text-align: center;
       font-size: 0.95rem;
     }
+
     @media (max-width: 600px) {
       .button-grid {
         grid-template-columns: 1fr;
       }
+
       h1 {
         font-size: 1.5em;
       }
+
       .btn {
-        font-size: 1.2em;
+        font-size: 0.95em;
         padding: 10px 16px;
       }
-      .opis-lokacije {
-        display: none;
-  }
     }
-.button-grid.single {
-  max-width: 250px;  /* ili koliko je širina jednog dugmeta */
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-}
   </style>
 </head>
 <body>
 
-  <h1>Tajland – ili Guliver u zemlji Liliputanaca</h1>
+  <h1>Tajland – Ili Guliver u zemlji Liliputanaca</h1>
 
   <div class="button-grid single">
-    <a href="predgovor.html" class="btn">Predgovor</a>
+    <a href="#" class="btn">Predgovor</a>
   </div>
 
   <h3 class="naslov-lokacije">🏙️ Bangkok</h3>
+
   <p class="opis-lokacije">
     Krungthepmahanakhon Amonrattanakosin Mahintharayutthaya Mahadilokphop Noppharatratchathaniburirom
     Udomratchaniwetmahasathan Amonphimanawatansathit Sakkathattiyawitsanukamprasit! (Grad anđela, veliki grad besmrtnika,
     veličanstveni grad devet dragulja, kraljev presto, grad kraljevskih palata, dom inkarnacija bogova, podignut od strane Visvakarmana).
   </p>
-
+  <p class="opis-lokacije">
+    Kada Tajlanđani govore ime svog glavnog grada, zovu ga samo Krung Thep Maha Nakhon.
+  </p>
 
   <div class="button-grid">
     <a href="sleteli_smo_u_kupatilo.html" class="btn">Sleteli smo – u kupatilo</a>
     <a href="hotel_koji_ima_dusu.html" class="btn">Hotel koji ima dušu</a>
+    <a href="corba_nepoznatih_sastojaka_i_pita_od_ananasa.html" class="btn">Čorbu nepoznatih sastojaka i najbolju pitu od ananasa</a>
     <a href="uputstvo_za_upotrebu_tajlanda.html" class="btn">Uputstvo za upotrebu Tajlanda</a>
     <a href="trapez_frizura_i_spasilac.html" class="btn">Trapez frizura i spasilac sa onog sveta</a>
     <a href="vecera_na_podu_i_porcije_za_lutke.html" class="btn">Tradicionalna večera na podu i porcije za lutke</a>
