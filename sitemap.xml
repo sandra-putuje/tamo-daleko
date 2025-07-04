@@ -1,238 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/index.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
-
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/OMeni/omeni.html</loc>
+  </url>
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Hrvatska/Zagreb.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/maldivi.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/tajland.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/Nemacka.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-
-<url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/krug.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/muvanje.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/nemacki.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/prijatelji-note-novo-more-planova.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/ju-znaci-ju-karlsruhe.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/strazbur.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/kolmar.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/jutro-u-najlepsem-selu-francuske.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/bodensko-jezero-ukulele-giros.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/lucern.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/hajdi-selo.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/lihtenstajn.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/cirkus-u-tri-cina.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nemačka/dvorci-jezero-kraljevske-tajne.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/tajland.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/predgovor.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/sleteli_smo_u_kupatilo.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/hotel_koji_ima_dusu.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/uputstvo_za_upotrebu_tajlanda.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/trapez_frizura_i_spasilac.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/vecera_na_podu_i_porcije_za_lutke.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/pijaca_slonovi_i_baba.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/buda_ili_budina_devojka.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/kaludjer_cekic_i_lampa.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/jedan_buda_tri_kostima.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/oprosteni_gresi.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/prinudni_soping_i_nepoverenje.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/predstave.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/maldivi.html</loc>
+  </url>
+  <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/aslam.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/badu_beru.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/beba_ajkula.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/deca.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/delfini.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/dori.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/dzungla.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/haljina.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/hello_sandra.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/hobotnica.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/kornjace.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/let_ostrva.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/lokalci.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/najlepsa_slika.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/nesto_naopako.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/otrovna_nije_opasna.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/pas.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/pecanje.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/plave_zvezde.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/poklon.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/prdeca_baba.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/putujuca_zaba.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/razglednica.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/samo_te_gledam.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/turski_sed.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/vrane.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/zivot_na_ostrvu.html</loc>
-    <lastmod>2025-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
-  
-
-
-
 </urlset>
-
