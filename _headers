@@ -1,2 +1,8 @@
 /sitemap.xml
   Content-Type: application/xml
+
+/sitemap.txt
+  Content-Type: text/plain
+
+/robots.txt
+  Content-Type: text/plain
