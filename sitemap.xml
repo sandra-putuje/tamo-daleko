@@ -8,6 +8,12 @@
   </url>
 
   <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Hrvatska/Zagreb.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -31,4 +37,202 @@
     <priority>0.8</priority>
   </url>
 
+<url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/aslam.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/badu_beru.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/beba_ajkula.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/deca.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/delfini.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/dori.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/dzungla.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/haljina.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/hello_sandra.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/hobotnica.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/kornjace.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/let_ostrva.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/lokalci.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/najlepsa_slika.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/nesto_naopako.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/otrovna_nije_opasna.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/pas.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/pecanje.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/plave_zvezde.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/poklon.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/prdeca_baba.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/putujuca_zaba.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/razglednica.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/samo_te_gledam.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/turski_sed.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/vrane.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/zivot_na_ostrvu.html</loc>
+    <lastmod>2025-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  
+
+
+
 </urlset>
+
