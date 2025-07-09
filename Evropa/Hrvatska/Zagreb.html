@@ -219,15 +219,14 @@
 <p>     </p>
 <p>     </p>
 
-<!-- DISQUS KOMENTARI -->
-<div id="disqus_thread" style="margin-top: 60px;"></div>
+<!-- Disqus komentar widget -->
+<div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
     this.page.url = window.location.href;
     this.page.identifier = window.location.pathname;
   };
-
-  (function () {
+  (function() {
     var d = document, s = d.createElement('script');
     s.src = 'https://sandra-putuje.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
@@ -236,31 +235,37 @@
 </script>
 <noscript>Molimo omogućite JavaScript da biste videli komentare.</noscript>
 
-<!-- NEWSLETTER FORMA (Substack JS, ne iframe) -->
-<section id="newsletter" style="margin-top:60px; padding-top:20px; border-top:1px solid #ccc;">
-  <h2 style="color:#6b4226; margin-bottom:0.5rem;">Ne propustite sledeću avanturu!</h2>
-  <p style="margin-bottom:1rem;">Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
+<!-- Newsletter sekcija sa dugmetom za subscribe -->
+<section id="newsletter">
+  <h2>Ne propustite sledeću avanturu!</h2>
+  <p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
 
-  <!-- Ovde će Substack JS ubaciti formu -->
-  <div id="substack-embed"></div>
+  <form id="substackForm" action="https://sandraputuje.substack.com/api/v1/subscribe" method="POST" target="_blank" novalidate>
+    <input type="email" id="email" name="email" placeholder="unesite svoj email" required autocomplete="email" />
+    <input type="hidden" name="source" value="website" />
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <div id="message"></div>
 </section>
 
-<!-- Substack JS forma -->
 <script>
-  window.SubstackFeedWidget = {
-    substackUrl: "sandraputuje.substack.com",
-    container: "substack-embed",
-    theme: "custom",
-    colors: {
-      primary: "#a0522d",
-      input: "#fff",
-      email: "#333",
-      background: "#fdf6f0"
+  const form = document.getElementById('substackForm');
+  const message = document.getElementById('message');
+
+  form.addEventListener('submit', function(event) {
+    const emailValue = form.email.value.trim();
+
+    if (!emailValue) {
+      event.preventDefault();
+      message.style.color = 'red';
+      message.textContent = 'Molimo unesite validnu email adresu.';
+      return;
     }
-  };
+
+    message.style.color = 'green';
+    message.textContent = 'Hvala!';
+  });
 </script>
-<script src="https://substackapi.com/widget.js" async></script>
-
-
 </body>
 </html>
