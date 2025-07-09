@@ -275,16 +275,16 @@
 <noscript>Molimo omogućite JavaScript da biste videli komentare.</noscript>
 
 <!-- Newsletter sekcija -->
-<section id="newsletter">
+<section id="newsletter" aria-label="Prijava na newsletter">
   <h2>Ne propustite sledeću avanturu!</h2>
   <p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
 
   <form id="newsletterForm" novalidate>
-    <input type="email" id="email" name="email" placeholder="unesite svoj email" required autocomplete="email" />
-    <button type="submit">Subscribe</button>
+    <input type="email" id="email" name="email" placeholder="unesite svoj email" required autocomplete="email" aria-required="true" />
+    <button type="submit">Prijavi se</button>
   </form>
 
-  <div id="message"></div>
+  <div id="message" role="alert" aria-live="polite"></div>
 </section>
 
 <script>
@@ -295,7 +295,9 @@
     event.preventDefault();
     const emailInput = form.email.value.trim();
 
-    if (!emailInput) {
+    // Jednostavna validacija emaila
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailInput || !emailRegex.test(emailInput)) {
       message.style.color = 'red';
       message.textContent = 'Molimo unesite validnu email adresu.';
       return;
@@ -303,7 +305,7 @@
 
     // Otvara Substack stranicu u novom tabu sa unetim emailom kao parametrom
     const substackURL = 'https://sandraputuje.substack.com/subscribe?email=' + encodeURIComponent(emailInput);
-    window.open(substackURL, '_blank');
+    window.open(substackURL, '_blank', 'noopener');
 
     message.style.color = 'green';
     message.textContent = 'Hvala! Otvoriće vam se nova stranica za potvrdu pretplate.';
