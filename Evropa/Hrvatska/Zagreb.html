@@ -219,7 +219,7 @@
 <p>     </p>
 <p>     </p>
 
-<!-- Ovdje ide Disqus komentar widget -->
+<!-- Disqus komentar widget -->
 <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
@@ -236,34 +236,21 @@
 </script>
 <noscript>Molimo omogućite JavaScript da biste videli komentare.</noscript>
 
-<!-- Newsletter placeholder -->
+<!-- Newsletter sekcija -->
 <section id="newsletter" style="margin-top:40px; padding-top:20px; border-top:1px solid #ccc;">
-  <h2>Ne propustite sledeću avanturu!</h2>
-  <p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
-  
-  <button id="loadNewsletterBtn" style="padding:10px 20px; background:#a0522d; color:white; border:none; border-radius:5px; cursor:pointer;">
-    Prikaži formu za prijavu
-  </button>
+  <h2 style="color:#6b4226; margin-bottom:0.5rem;">Ne propustite sledeću avanturu!</h2>
+  <p style="margin-bottom:1rem;">Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
 
-<!-- Newsletter prijava -->
-<h2>Ne propustite sledeću avanturu!</h2>
-<p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
-<iframe src="https://sandraputuje.substack.com/embed" 
-  width="100%" height="320" style="border:0; background:white;" 
-  frameborder="0" scrolling="no"></iframe>
-
-  <div id="newsletterContainer"></div>
+  <iframe
+    src="https://sandraputuje.substack.com/embed"
+    sandbox="allow-scripts allow-forms allow-same-origin"
+    width="100%"
+    height="320"
+    style="border:0; background:white; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"
+    scrolling="no"
+  ></iframe>
 </section>
 
-<script>
-  document.getElementById('loadNewsletterBtn').addEventListener('click', function() {
-    var container = document.getElementById('newsletterContainer');
-    if (!container.innerHTML) {
-      container.innerHTML = '<iframe src="https://sandraputuje.substack.com/embed" width="100%" height="320" style="border:0; background:white;" frameborder="0" scrolling="no"></iframe>';
-      this.style.display = 'none'; // sakrij dugme nakon učitavanja forme
-    }
-  });
-</script>
 
 </body>
 </html>
