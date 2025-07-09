@@ -236,6 +236,14 @@
 </script>
 <noscript>Molimo omogućite JavaScript da biste videli komentare.</noscript>
 
+<!-- Newsletter placeholder -->
+<section id="newsletter" style="margin-top:40px; padding-top:20px; border-top:1px solid #ccc;">
+  <h2>Ne propustite sledeću avanturu!</h2>
+  <p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
+  
+  <button id="loadNewsletterBtn" style="padding:10px 20px; background:#a0522d; color:white; border:none; border-radius:5px; cursor:pointer;">
+    Prikaži formu za prijavu
+  </button>
 
 <!-- Newsletter prijava -->
 <h2>Ne propustite sledeću avanturu!</h2>
@@ -243,6 +251,19 @@
 <iframe src="https://sandraputuje.substack.com/embed" 
   width="100%" height="320" style="border:0; background:white;" 
   frameborder="0" scrolling="no"></iframe>
+
+  <div id="newsletterContainer"></div>
+</section>
+
+<script>
+  document.getElementById('loadNewsletterBtn').addEventListener('click', function() {
+    var container = document.getElementById('newsletterContainer');
+    if (!container.innerHTML) {
+      container.innerHTML = '<iframe src="https://sandraputuje.substack.com/embed" width="100%" height="320" style="border:0; background:white;" frameborder="0" scrolling="no"></iframe>';
+      this.style.display = 'none'; // sakrij dugme nakon učitavanja forme
+    }
+  });
+</script>
 
 </body>
 </html>
