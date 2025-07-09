@@ -89,31 +89,22 @@
       padding-top: 20px;
       border-top: 1px solid #ccc;
     }
-
+    #newsletter h2 {
+      color: #6b4226;
+      margin-bottom: 0.5rem;
+    }
     #newsletter p {
       margin-bottom: 1rem;
     }
-
-
-
-#newsletter h2 {
-  color: #6b4226; /* braon */
-  margin-bottom: 0.5rem;
-}
-
-#newsletter input[type="email"] {
-  width: 50%;
-  min-width: 200px;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-  margin-bottom: 1rem;
-  display: block;
-  margin-left: 0; /* levo poravnato */
-}
-
+    #newsletter input[type="email"] {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+    }
     #newsletter button {
       padding: 0.6rem 1.2rem;
       background-color: #a0522d;
@@ -126,17 +117,10 @@
     #newsletter button:hover {
       background-color: #c88545;
     }
-
-
-#message {
-  margin-top: 0.5rem;
-  font-style: italic;
-  color: #6b4226; /* braon poruka */
-}
-
-
-
-
+    #message {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: green;
   </style>
 </head>
 <body>
@@ -290,42 +274,53 @@
 </script>
 <noscript>Molimo omogućite JavaScript da biste videli komentare.</noscript>
 
-<!-- Newsletter sekcija -->
-<section id="newsletter">
+<section id="newsletter" style="max-width:400px; margin:2rem auto; font-family:Georgia, serif; color:#6b4226;">
   <h2>Ne propustite sledeću avanturu!</h2>
   <p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
 
-  <form id="newsletterForm" novalidate>
-    <input type="email" id="email" name="email" placeholder="unesite svoj email" required autocomplete="email" />
-    <button type="submit">Subscribe</button>
+  <form id="newsletterForm" onsubmit="return submitForm(event)">
+    <input 
+      type="email" 
+      id="emailInput" 
+      name="email" 
+      placeholder="Unesite svoj email" 
+      required
+      style="width:100%; padding:0.5rem; font-size:1rem; border:1px solid #ccc; border-radius:5px; margin-bottom:1rem;"
+    />
+    <button 
+      type="submit" 
+      style="width:100%; padding:0.6rem; background:#6b4226; color:#fff; border:none; border-radius:5px; font-size:1rem; cursor:pointer;"
+      onmouseover="this.style.backgroundColor='#a0522d'"
+      onmouseout="this.style.backgroundColor='#6b4226'"
+    >Prijavi se</button>
   </form>
 
-  <div id="message"></div>
+  <p id="message" style="display:none; margin-top:1rem; font-style:italic;">
+    ✔️ Proverite svoj mejl – Substack vam je poslao potvrdu. Ako nema, pogledajte u spam/promotions!
+  </p>
 </section>
 
 <script>
-  const form = document.getElementById('newsletterForm');
-  const message = document.getElementById('message');
-
-  form.addEventListener('submit', function(event) {
+  function submitForm(event) {
     event.preventDefault();
-    const emailInput = form.email.value.trim();
+    const email = document.getElementById('emailInput').value.trim();
+    if (!email) return false;
 
-    if (!emailInput) {
-      message.style.color = 'red';
-      message.textContent = 'Molimo unesite validnu email adresu.';
-      return;
-    }
+    // Otvori substack prijavu u novom tabu sa emailom
+    const substackUrl = `https://sandra-putuje.substack.com/subscribe?email=${encodeURIComponent(email)}`;
+    window.open(substackUrl, '_blank');
 
-    // Otvara Substack stranicu u novom tabu sa unetim emailom kao parametrom
-    const substackURL = 'https://sandraputuje.substack.com/subscribe?email=' + encodeURIComponent(emailInput);
-    window.open(substackURL, '_blank');
+    // Prikaži poruku
+    const message = document.getElementById('message');
+    message.style.display = 'block';
 
-    message.style.color = 'green';
-    message.textContent = 'Hvala! Otvoriće vam se nova stranica za potvrdu pretplate.';
-    form.reset();
-  });
+    // Skroluj do poruke glatko
+    message.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    return false;
+  }
 </script>
+
 
 
 </body>
