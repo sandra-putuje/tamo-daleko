@@ -283,45 +283,12 @@
   <h2>Ne propustite sledeću avanturu!</h2>
   <p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
 
-  <form onsubmit="openSubstackForm(event)">
-    <input type="email" id="emailInput" name="email" placeholder="Unesite svoj email" required />
-    <button type="submit">Prijavi se</button>
-  </form>
-
-  <p id="message" style="color: #6b4226; font-style: italic; display: none;">
-    ✔️ Proverite svoj mejl – Substack vam je poslao potvrdu. Ako ga nema, pogledajte u spam/promotions!
-  </p>
+  <a href="https://sandra-putuje.substack.com/subscribe" target="_blank" 
+     style="display: inline-block; padding: 0.6rem 1.2rem; background-color: #a0522d; 
+            color: white; border-radius: 5px; text-decoration: none; font-size: 1rem;">
+    Prijavi se na newsletter
+  </a>
 </section>
-
-<script>
-  function openSubstackForm(event) {
-    event.preventDefault();
-    const email = document.getElementById('emailInput').value;
-    const substackUrl = `https://sandra-putuje.substack.com/subscribe?email=${encodeURIComponent(email)}`;
-    window.open(substackUrl, '_blank');
-    document.getElementById("message").style.display = "block";
-  }
-</script>
-
-
-<script>
-  window.CustomSubstackWidget = {
-    substackUrl: "sandra-putuje.substack.com",
-    placeholder: "Unesite svoj email",
-    buttonText: "Prijavi se",
-    theme: "custom",
-    colors: {
-      input: "#fff",
-      email: "#000",
-      background: "#fff",
-      border: "#ccc",
-      button: "#a0522d",
-      text: "#fff",
-    }
-  };
-</script>
-<script src="https://substackapi.com/widget.js" async></script>
-
 <style>
   #newsletter {
     margin-top: 40px;
