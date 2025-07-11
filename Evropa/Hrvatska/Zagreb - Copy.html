@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Advent u Zagrebu – doživi prazničnu čaroliju hrvatske prestonice kroz živopisne priče, fotografije i lokalne običaje. Putopis iz Hrvatske sa toplim doživljajima i savetima." />
- 
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Sandra Đuričin" /> 
   <title>Zagreb, Advent, putopis – Tamo daleko</title>
 
 <!-- Google tag (gtag.js) -->
@@ -16,6 +17,24 @@
 
   gtag('config', 'G-NLYKLXD49W');
 </script>
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://sandra-putuje.github.io/tamo-daleko/Evropa/Hrvatska/Zagreb.html" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Advent u Zagrebu – Putopis iz Hrvatske | Tamo daleko" />
+<meta property="og:description" content="Doživi prazničnu čaroliju Zagreba kroz autentičan putopis: muzika, fritule, Krcko Oraščić, žurke i topli susreti sa domaćinima." />
+<meta property="og:image" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Hrvatska/zagreb11.jpg" />
+<meta property="og:url" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Hrvatska/Zagreb.html" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="sr_RS" />
+<meta property="og:site_name" content="Tamo daleko" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Advent u Zagrebu – Putopis iz Hrvatske" />
+<meta name="twitter:description" content="Doživi prazničnu čaroliju Zagreba kroz autentičan putopis: muzika, fritule, Krcko Oraščić, žurke i topli susreti sa domaćinima." />
+<meta name="twitter:image" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Hrvatska/zagreb11.jpg" />
 
 
   <style>
@@ -58,19 +77,10 @@
       border-top: 2px solid #a0522d;
       margin: 2rem 0;
     }
-    .back-link {
-      display: block;
-      margin: 1rem 0 2rem;
-      color: #a0522d;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .back-link:hover {
-      text-decoration: underline;
-    }
+
 .back-link {
   display: inline-block;
-  margin: 1rem 0;
+
   padding: 0.6rem 1.2rem;
   background-color: #e0a96d;
   color: white;
@@ -96,19 +106,15 @@
     #newsletter p {
       margin-bottom: 1rem;
     }
-  #newsletter input[type="email"] {
-    width: 50%;
-    min-width: 200px;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-bottom: 1rem;
-    display: block;
-    margin-left: 0; /* poravnanje levo */
-  }
-
+    #newsletter input[type="email"] {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+    }
     #newsletter button {
       padding: 0.6rem 1.2rem;
       background-color: #a0522d;
@@ -125,6 +131,7 @@
       margin-top: 0.5rem;
       font-style: italic;
       color: green;
+  }
   </style>
 </head>
 <body>
@@ -134,7 +141,9 @@
   <p>Putopis iz Hrvatske</p>
 </header>
 
-<a href="../../index.html#evropa" class="back-link">&larr; Nazad na Evropa</a>
+<button class="back-link" onclick="window.location.href='../../index.html?aktivno=zagreb'">
+  ← Nazad na Evropa
+</button>
 
 <article>
   <p><strong>Hrvoje, Krešo, Miro, Dinko, Sunčica.</strong> Bok. Je, je. Pogađaš, u Zagrebu smo. Naše prvo devojačko putovanje, ok malo smo starije, može da počne. Naši neverovatno ljubazni domaćini, Jacini prijatelji sa ostrva Krapnja, čine nam ovaj boravak nezaboravnim. Neviđeni džentlmeni. Utrkuju se da nam pokažu više, bolje. "Sad ćemo ih voditi onamo. Pa idemo ovamo." A mi se prepustile, pa kao pačići za njima.</p>
@@ -278,31 +287,14 @@
 </script>
 <noscript>Molimo omogućite JavaScript da biste videli komentare.</noscript>
 
+<!-- Substack forma -->
 
-<section id="newsletter">
-  <h2>Ne propustite sledeću avanturu!</h2>
-  <p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
 
-  <form onsubmit="openSubstackForm(event)">
-    <input type="email" id="emailInput" name="email" placeholder="Unesite svoj email" required />
-    <button type="submit">Prijavi se</button>
-  </form>
+<div id="custom-substack-embed" style="margin-top:2rem;"></div>
 
-  <p id="message" style="color: #6b4226; font-style: italic; display: none;">
-    ✔️ Proverite svoj mejl – Substack vam je poslao potvrdu. Ako ga nema, pogledajte u spam/promotions!
-  </p>
-</section>
-
-<script>
-  function openSubstackForm(event) {
-    event.preventDefault();
-    const email = document.getElementById('emailInput').value;
-    const substackUrl = `https://sandra-putuje.substack.com/subscribe?email=${encodeURIComponent(email)}`;
-    window.open(substackUrl, '_blank');
-    document.getElementById("message").style.display = "block";
-  }
-</script>
-
+<p id="subscribe-message" style="display:none; color:#2d5d2a; font-style: italic; margin-top: 0.5rem;">
+  ✔️ Proverite svoj mejl za potvrdu pretplate!
+</p>
 
 <script>
   window.CustomSubstackWidget = {
@@ -311,71 +303,13 @@
     buttonText: "Prijavi se",
     theme: "custom",
     colors: {
-      input: "#fff",
-      email: "#000",
-      background: "#fff",
-      border: "#ccc",
-      button: "#a0522d",
-      text: "#fff",
-    }
-  };
-</script>
-<script src="https://substackapi.com/widget.js" async></script>
-
-<style>
-  #newsletter {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #ccc;
-  }
-  #newsletter h2 {
-    color: #6b4226;
-    margin-bottom: 0.5rem;
-  }
-  #newsletter p {
-    margin-bottom: 1rem;
-  }
-  #newsletter input[type="email"] {
-    width: 50%;
-    min-width: 200px;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-bottom: 1rem;
-    display: block;
-    margin-left: 0;
-  }
-  #newsletter button {
-    padding: 0.6rem 1.2rem;
-    background-color: #a0522d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  #newsletter button:hover {
-    background-color: #c88545;
-  }
-</style>
-
-
-
-<script>
-  window.CustomSubstackWidget = {
-    substackUrl: "sandra-putuje.substack.com",
-    placeholder: "unesite svoj email",
-    buttonText: "Subscribe",
-    theme: "custom",
-    colors: {
-      input: "#fff",
-      email: "#000",
-      background: "#fff",
-      border: "#ccc",
-      button: "#a0522d",
-      text: "#fff",
+      primary: "#8bb272",      // dugme
+      input: "#ffffff",        // pozadina polja
+      email: "#2d5d2a",        // tekst u inputu
+      text: "#004d40",         // tekst ispod
+    },
+    onSubmit: function() {
+      document.getElementById('subscribe-message').style.display = 'block';
     }
   };
 </script>

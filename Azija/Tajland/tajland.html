@@ -143,6 +143,14 @@ color: #fbdc6a;
   display: grid;
   grid-template-columns: 1fr;
 }
+
+/* Dodat stil za aktivno dugme */
+.btn.active {
+  transform: scale(1.05);
+  background: linear-gradient(to bottom right, #8bb272, #5b7b45);
+  color: #fbdc6a;
+  box-shadow: 2px 2px 5px rgba(108, 168, 108, 0.5);
+}
   </style>
 </head>
 <body>
@@ -150,7 +158,7 @@ color: #fbdc6a;
   <h1>Tajland – ili Guliver u zemlji Liliputanaca</h1>
 
   <div class="button-grid single">
-    <a href="predgovor.html" class="btn">Predgovor</a>
+    <a href="predgovor.html" class="btn" data-id="predgovor">Predgovor</a>
   </div>
 
   <h3 class="naslov-lokacije">🏙️ Bangkok</h3>
@@ -162,45 +170,62 @@ color: #fbdc6a;
 
 
   <div class="button-grid">
-    <a href="sleteli_smo_u_kupatilo.html" class="btn">Sleteli smo – u kupatilo</a>
-    <a href="hotel_koji_ima_dusu.html" class="btn">Hotel koji ima dušu</a>
-    <a href="uputstvo_za_upotrebu_tajlanda.html" class="btn">Uputstvo za upotrebu Tajlanda</a>
-    <a href="trapez_frizura_i_spasilac.html" class="btn">Trapez frizura i spasilac sa onog sveta</a>
-    <a href="vecera_na_podu_i_porcije_za_lutke.html" class="btn">Tradicionalna večera na podu i porcije za lutke</a>
-    <a href="pijaca_slonovi_i_baba.html" class="btn">Pijaca, slonovi i baba koja je zamalo izazvala pobunu</a>
-    <a href="buda_ili_budina_devojka.html" class="btn">Buda ili Budina devojka</a>
-    <a href="kaludjer_cekic_i_lampa.html" class="btn">Kaluđer, čekić i baterijska lampa</a>
-    <a href="jedan_buda_tri_kostima.html" class="btn">Jedan Buda, tri kostima</a>
-    <a href="oprosteni_gresi.html" class="btn">Oprošteni gresi</a>
-    <a href="prinudni_soping_i_nepoverenje.html" class="btn">Prinudni šoping i (ne)poverenje u vladu</a>
-    <a href="predstave.html" class="btn">Predstave</a>
-    <a href="ploveca_pijaca_i_piton.html" class="btn">Ploveća pijaca i piton oko vrata</a>
-    <a href="vozni_red_kuke_i_kvake.html" class="btn">Vozni red na fasadi, kuke i kvake</a>
+    <a href="sleteli_smo_u_kupatilo.html" class="btn" data-id="sleteli_smo_u_kupatilo">Sleteli smo – u kupatilo</a>
+    <a href="hotel_koji_ima_dusu.html" class="btn" data-id="hotel_koji_ima_dusu">Hotel koji ima dušu</a>
+    <a href="uputstvo_za_upotrebu_tajlanda.html" class="btn" data-id="uputstvo_za_upotrebu_tajlanda">Uputstvo za upotrebu Tajlanda</a>
+    <a href="trapez_frizura_i_spasilac.html" class="btn" data-id="trapez_frizura_i_spasilac">Trapez frizura i spasilac sa onog sveta</a>
+    <a href="vecera_na_podu_i_porcije_za_lutke.html" class="btn" data-id="vecera_na_podu_i_porcije_za_lutke">Tradicionalna večera na podu i porcije za lutke</a>
+    <a href="pijaca_slonovi_i_baba.html" class="btn" data-id="pijaca_slonovi_i_baba">Pijaca, slonovi i baba koja je zamalo izazvala pobunu</a>
+    <a href="buda_ili_budina_devojka.html" class="btn" data-id="buda_ili_budina_devojka">Buda ili Budina devojka</a>
+    <a href="kaludjer_cekic_i_lampa.html" class="btn" data-id="kaludjer_cekic_i_lampa">Kaluđer, čekić i baterijska lampa</a>
+    <a href="jedan_buda_tri_kostima.html" class="btn" data-id="jedan_buda_tri_kostima">Jedan Buda, tri kostima</a>
+    <a href="oprosteni_gresi.html" class="btn" data-id="oprosteni_gresi">Oprošteni gresi</a>
+    <a href="prinudni_soping_i_nepoverenje.html" class="btn" data-id="prinudni_soping_i_nepoverenje">Prinudni šoping i (ne)poverenje u vladu</a>
+    <a href="predstave.html" class="btn" data-id="predstave">Predstave</a>
+    <a href="ploveca_pijaca_i_piton.html" class="btn" data-id="ploveca_pijaca_i_piton">Ploveća pijaca i piton oko vrata</a>
+    <a href="vozni_red_kuke_i_kvake.html" class="btn" data-id="vozni_red_kuke_i_kvake">Vozni red na fasadi, kuke i kvake</a>
   </div>
 
   <h3 class="naslov-lokacije">🏝️ Phuket</h3>
   <p class="opis-lokacije">Ostrvo u Andamanskom moru.</p>
   <div class="button-grid">
-    <a href="benzinska_pumpa.html" class="btn">Benzinska pumpa?</a>
-    <a href="bolja_od_standup_komicara.html" class="btn">Bolja od stand-up komičara</a>
-    <a href="majmun_ili_ja.html" class="btn">Ko će pre da popusti: majmun ili ja</a>
-    <a href="gibon_i_dusko.html" class="btn">Kad se gibon zaljubi u Duška</a>
-    <a href="slonce_i_katapult.html" class="btn">Slonče i katapult ljubavi</a>
-    <a href="ljubav_na_prodaju.html" class="btn">Ljubav na prodaju</a>
-    <a href="meet_the_flintstones.html" class="btn">Meet the Flinstones</a>
-    <a href="bond_james_bond.html" class="btn">My name is Bond, James Bond</a>
-    <a href="sreckovici.html" class="btn">Kakvi (ne)srećkovići</a>
+    <a href="benzinska_pumpa.html" class="btn" data-id="benzinska_pumpa">Benzinska pumpa?</a>
+    <a href="bolja_od_standup_komicara.html" class="btn" data-id="bolja_od_standup_komicara">Bolja od stand-up komičara</a>
+    <a href="majmun_ili_ja.html" class="btn" data-id="majmun_ili_ja">Ko će pre da popusti: majmun ili ja</a>
+    <a href="gibon_i_dusko.html" class="btn" data-id="gibon_i_dusko">Kad se gibon zaljubi u Duška</a>
+    <a href="slonce_i_katapult.html" class="btn" data-id="slonce_i_katapult">Slonče i katapult ljubavi</a>
+    <a href="ljubav_na_prodaju.html" class="btn" data-id="ljubav_na_prodaju">Ljubav na prodaju</a>
+    <a href="meet_the_flintstones.html" class="btn" data-id="meet_the_flintstones">Meet the Flinstones</a>
+    <a href="bond_james_bond.html" class="btn" data-id="bond_james_bond">My name is Bond, James Bond</a>
+    <a href="sreckovici.html" class="btn" data-id="sreckovici">Kakvi (ne)srećkovići</a>
   </div>
 
   <h3 class="naslov-lokacije">🌅 Pataja</h3>
   <p class="opis-lokacije">Poznato letovalište u blizini Bangkoka.</p>
   <div class="button-grid">
-    <a href="plati_pa_vidi.html" class="btn">Plati pa vidi</a>
-    <a href="plaza_pticica_i_majmunce.html" class="btn">Plaža, oslobođena ptičica i majmunče sa padobranom</a>
-    <a href="iznenadjenje_slepi_misevi.html" class="btn">Iznenađenje, slepi miševi</a>
+    <a href="plati_pa_vidi.html" class="btn" data-id="plati_pa_vidi">Plati pa vidi</a>
+    <a href="plaza_pticica_i_majmunce.html" class="btn" data-id="plaza_pticica_i_majmunce">Plaža, oslobođena ptičica i majmunče sa padobranom</a>
+    <a href="iznenadjenje_slepi_misevi.html" class="btn" data-id="iznenadjenje_slepi_misevi">Iznenađenje, slepi miševi</a>
   </div>
 
-  <a href="../../index.html#azija" class="back-btn">← Nazad</a>
+<button class="back-btn" onclick="window.location.href='../../index.html?aktivno=tajland'">
+  ← Nazad na Azija
+</button>
+
+<script>
+  window.onload = function() {
+    const params = new URLSearchParams(window.location.search);
+    const aktivna = params.get('aktivna');
+    if (aktivna) {
+      const el = document.querySelector(`.btn[data-id="${aktivna}"]`);
+      if (el) {
+        el.classList.add('active');
+        // Opcionalno da se dugme vidi odmah ako je nizak viewport
+        el.scrollIntoView({behavior: 'smooth', block: 'center'});
+      }
+    }
+  }
+</script>
 
 </body>
 </html>

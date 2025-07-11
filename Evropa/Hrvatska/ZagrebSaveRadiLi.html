@@ -288,37 +288,40 @@
 <noscript>Molimo omogućite JavaScript da biste videli komentare.</noscript>
 
 <!-- Substack forma -->
+
+
+
+
+
+<section id="newsletter" style="max-width:500px; margin:3rem auto; font-family:Georgia, serif; color:#6b4226;">
   <h2>Ne propustite sledeću avanturu!</h2>
   <p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
 
+  <form action="https://sandra-putuje.substack.com/subscribe" method="post" target="hidden_iframe" onsubmit="showMessage()">
+    <input type="email" name="email" placeholder="Unesite svoj email" required 
+           style="width:100%; padding:0.5rem; font-size:1rem; border:1px solid #ccc; border-radius:5px; box-sizing:border-box; margin-bottom:1rem;" />
+    <button type="submit" 
+            style="padding:0.6rem 1.2rem; background-color:#8bb272; color:white; border:none; border-radius:5px; cursor:pointer; font-size:1rem;">
+      Prijavi se
+    </button>
+  </form>
 
-<div id="custom-substack-embed" style="margin-top:2rem;"></div>
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
 
-<p id="subscribe-message" style="display:none; color:#2d5d2a; font-style: italic; margin-top: 0.5rem;">
-   ✔️ Proverite svoj mejl za potvrdu pretplate! Ako nema, pogledajte u spam/promotions! Imate besplatnu opciju.
-</p>
+  <p id="subscribe-message" style="display:none; color:#2d5d2a; font-style:italic; margin-top:1rem;">
+    ✔️ Proverite svoj mejl za potvrdu pretplate! Ako nema, pogledajte u spam/promotions! Imate besplatnu opciju.
+  </p>
+</section>
 
 <script>
-  window.CustomSubstackWidget = {
-    substackUrl: "sandra-putuje.substack.com",
-    placeholder: "Unesite svoj email",
-    buttonText: "Prijavi se",
-    theme: "custom",
-    colors: {
-      primary: "#8bb272",      // dugme
-      input: "#ffffff",        // pozadina polja
-      email: "#2d5d2a",        // tekst u inputu
-      text: "#004d40",         // tekst ispod
-    },
-onSubmit: function() {
-  const message = document.getElementById('subscribe-message');
-  message.style.display = 'block';
-  message.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-  };
+  function showMessage() {
+    const message = document.getElementById('subscribe-message');
+    setTimeout(() => {
+      message.style.display = 'block';
+      message.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 1000); // malo kasnimo zbog loadinga forme
+  }
 </script>
-<script src="https://substackapi.com/widget.js" async></script>
-
 
 
 
