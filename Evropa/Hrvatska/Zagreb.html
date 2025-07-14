@@ -132,6 +132,25 @@
       font-style: italic;
       color: green;
   }
+
+
+
+/* 1) osiguraj visinu embed‑a da ništa više ne skroluje stranucu */
+#custom-substack-embed{
+  min-height:140px;      /* broj probaj – ~2 visine inputa je obično dosta */
+  position:relative;     /* da novi interni div‑ovi ostanu unutra */
+}
+
+/* 2) ukini neželjeno automatsko skrolovanje koje Substack ponekad okida */
+html,body{
+  scroll-behavior:auto!important;
+}
+
+
+
+
+
+
   </style>
 </head>
 <body>
@@ -288,13 +307,12 @@
 <noscript>Molimo omogućite JavaScript da biste videli komentare.</noscript>
 
 <!-- Substack forma -->
-  <h2>Ne propustite sledeću avanturu!</h2>
-  <p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
-
+<h2>Ne propustite sledeću avanturu!</h2>
+<p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
 
 <div id="custom-substack-embed" style="margin-top:2rem;"></div>
 
-<p id="subscribe-message" style="display:none; color:#2d5d2a; font-style: italic; margin-top: 0.5rem;">
+<p id="subscribe-message" style="display:none; color:##2d5d2a; font-style: italic; margin-top: 0.2rem;">
    ✔️ Proverite svoj mejl za potvrdu pretplate! Ako nema, pogledajte u spam/promotions! Imate besplatnu opciju.
 </p>
 
@@ -305,18 +323,42 @@
     buttonText: "Prijavi se",
     theme: "custom",
     colors: {
-      primary: "#8bb272",      // dugme
-      input: "#ffffff",        // pozadina polja
-      email: "#2d5d2a",        // tekst u inputu
-      text: "#004d40",         // tekst ispod
+      primary: "#8bb272",
+      input: "#ffffff",
+      email: "#2d5d2a",
+      text: "#004d40",
     },
-onSubmit: function() {
-  const message = document.getElementById('subscribe-message');
-  message.style.display = 'block';
-  message.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
+    onSubmit: function () {
+      // Pošalji poruku odmah, nezavisno
+      const message = document.getElementById('subscribe-message');
+      message.style.display = 'block';
+      message.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
+
+  // MutationObserver: posmatraj promene unutar widgeta
+  const targetNode = document.getElementById('custom-substack-embed');
+  const config = { childList: true, subtree: true };
+
+  const observer = new MutationObserver(function (mutationsList, observer) {
+    for (let mutation of mutationsList) {
+      if (mutation.type === 'childList') {
+        mutation.addedNodes.forEach(function (node) {
+          if (node.nodeType === 1 && node.tagName === 'P' && node.textContent.includes("We've sent you a confirmation email")) {
+            node.style.display = 'none'; // sakrij originalnu englesku poruku
+
+            const message = document.getElementById('subscribe-message');
+            message.style.display = 'block';
+            message.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      }
+    }
+  });
+
+  observer.observe(targetNode, config);
 </script>
+
 <script src="https://substackapi.com/widget.js" async></script>
 
 
