@@ -226,6 +226,12 @@ color: #fbdc6a;
     }
   }
 </script>
+<script>
+  const lista = [...document.querySelectorAll('.btn[data-id]')]
+    .map(b => ({ fajl: b.getAttribute('href'), ime: b.textContent.trim() }));
+  localStorage.setItem('tajlandList', JSON.stringify(lista));
+</script>
+
 
 </body>
 </html>
