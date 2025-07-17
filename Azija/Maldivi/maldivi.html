@@ -75,6 +75,7 @@
     .btn:hover {
       transform: scale(1.05);
       background: linear-gradient(to bottom right, #b3d6f2, #7fb8e0);
+      color: white;
     }
 
     .back-btn {
@@ -95,6 +96,16 @@
       background: linear-gradient(to bottom right, #7fb8e0, #b3d6f2);
       transform: scale(1.05);
     }
+
+/* Dodat stil za aktivno dugme */
+.btn.active {
+  transform: scale(1.05);
+      background: linear-gradient(to bottom right, #b3d6f2, #7fb8e0);
+      color: white;
+
+}
+
+
 
     @media (max-width: 600px) {
       .button-grid {
@@ -117,33 +128,34 @@
   <h1>Maldivi – Priče s kraja sveta</h1>
 
   <div class="button-grid">
-    <a href="putujuca_zaba.html" class="btn">Preporuka Putujuće žabe</a>
-    <a href="nesto_naopako.html" class="btn">Može li još nešto da krene naopako?</a>
-    <a href="let_ostrva.html" class="btn">Let i ostrvca iz vazduha</a>
-    <a href="razglednica.html" class="btn">Mi smo u razglednici</a>
-    <a href="dori.html" class="btn">Videla sam slavnu Dori!</a>
-    <a href="delfini.html" class="btn">Doručak sa pogledom na jato delfina</a>    
-    <a href="dzungla.html" class="btn">Džungla</a>
-    <a href="poklon.html" class="btn">Poklon</a>
-    <a href="zivot_na_ostrvu.html" class="btn">Život na ostrvu</a>
-    <a href="aslam.html" class="btn">Dobri duh Aslam</a>
-    <a href="kornjace.html" class="btn">Kornjače</a>
-    <a href="samo_te_gledam.html" class="btn">Samo te gledam</a>
-    <a href="otrovna_nije_opasna.html" class="btn">Samo je otrovna, nije opasna</a>
-    <a href="haljina.html" class="btn">Plivanje u haljini</a>
-    <a href="pas.html" class="btn">Pas? Ne može</a>
-    <a href="beba_ajkula.html" class="btn">Beba ajkula i bućkanje u hladu</a>
-    <a href="vrane.html" class="btn">Vrane kradljivice</a>
-    <a href="deca.html" class="btn">Deca</a>
-    <a href="hobotnica.html" class="btn">Hobotnica</a>
-    <a href="prdeca_baba.html" class="btn">Prdeća baba</a>
-    <a href="badu_beru.html" class="btn">Badu Beru</a>
-    <a href="plave_zvezde.html" class="btn">Rasute plave zvezde po obali</a>
-    <a href="hello_sandra.html" class="btn">"Hello, Sandra!"</a>
-    <a href="turski_sed.html" class="btn">U turskom sedu pod maldivskim zvezdama</a>
-    <a href="lokalci.html" class="btn">Lokalci u moru</a>
-    <a href="pecanje.html" class="btn">Pecanje</a>
-    <a href="najlepsa_slika.html" class="btn">Najlepša slika sa Maldiva</a>
+<a href="putujuca_zaba.html" class="btn" data-id="putujuca_zaba">Preporuka Putujuće žabe</a>
+<a href="nesto_naopako.html" class="btn" data-id="nesto_naopako">Može li još nešto da krene naopako?</a>
+<a href="let_ostrva.html" class="btn" data-id="let_ostrva">Let i ostrvca iz vazduha</a>
+<a href="razglednica.html" class="btn" data-id="razglednica">Mi smo u razglednici</a>
+<a href="dori.html" class="btn" data-id="dori">Videla sam slavnu Dori!</a>
+<a href="delfini.html" class="btn" data-id="delfini">Doručak sa pogledom na jato delfina</a>
+<a href="dzungla.html" class="btn" data-id="dzungla">Džungla</a>
+<a href="poklon.html" class="btn" data-id="poklon">Poklon</a>
+<a href="zivot_na_ostrvu.html" class="btn" data-id="zivot_na_ostrvu">Život na ostrvu</a>
+<a href="aslam.html" class="btn" data-id="aslam">Dobri duh Aslam</a>
+<a href="kornjace.html" class="btn" data-id="kornjace">Kornjače</a>
+<a href="samo_te_gledam.html" class="btn" data-id="samo_te_gledam">Samo te gledam</a>
+<a href="otrovna_nije_opasna.html" class="btn" data-id="otrovna_nije_opasna">Samo je otrovna, nije opasna</a>
+<a href="haljina.html" class="btn" data-id="haljina">Plivanje u haljini</a>
+<a href="pas.html" class="btn" data-id="pas">Pas? Ne može</a>
+<a href="beba_ajkula.html" class="btn" data-id="beba_ajkula">Beba ajkula i bućkanje u hladu</a>
+<a href="vrane.html" class="btn" data-id="vrane">Vrane kradljivice</a>
+<a href="deca.html" class="btn" data-id="deca">Deca</a>
+<a href="hobotnica.html" class="btn" data-id="hobotnica">Hobotnica</a>
+<a href="prdeca_baba.html" class="btn" data-id="prdeca_baba">Prdeća baba</a>
+<a href="badu_beru.html" class="btn" data-id="badu_beru">Badu Beru</a>
+<a href="plave_zvezde.html" class="btn" data-id="plave_zvezde">Rasute plave zvezde po obali</a>
+<a href="hello_sandra.html" class="btn" data-id="hello_sandra">"Hello, Sandra!"</a>
+<a href="turski_sed.html" class="btn" data-id="turski_sed">U turskom sedu pod maldivskim zvezdama</a>
+<a href="lokalci.html" class="btn" data-id="lokalci">Lokalci u moru</a>
+<a href="pecanje.html" class="btn" data-id="pecanje">Pecanje</a>
+<a href="najlepsa_slika.html" class="btn" data-id="najlepsa_slika">Najlepša slika sa Maldiva</a>
+
   </div>
 
 
@@ -151,6 +163,19 @@
 <button class="back-btn" onclick="window.location.href='../../index.html?aktivno=maldivi'">
   ← Nazad na Azija
 </button>
-
+<script>
+  window.onload = function() {
+    const params = new URLSearchParams(window.location.search);
+    const aktivna = params.get('aktivna');
+    if (aktivna) {
+      const el = document.querySelector(`.btn[data-id="${aktivna}"]`);
+      if (el) {
+        el.classList.add('active');
+        // Opcionalno da se dugme vidi odmah ako je nizak viewport
+        el.scrollIntoView({behavior: 'smooth', block: 'center'});
+      }
+    }
+  }
+</script>
 </body>
 </html>
