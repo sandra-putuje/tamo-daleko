@@ -94,6 +94,14 @@ h1 {
   margin-right: auto;
 }
 
+/* Dodat stil za aktivno dugme */
+.btn.active {
+  transform: scale(1.05);
+  background: linear-gradient(to bottom right, #8db88d, #5a885a);
+  color: #e9f1e9;
+  box-shadow: 3px 3px 7px rgba(90, 136, 90, 0.5);
+}
+
 @media (max-width: 600px) {
   .button-grid {
     grid-template-columns: 1fr; /* samo jedna kolona na mobilnom */
@@ -123,20 +131,25 @@ h1 {
   <h1>Putovanje kroz srce Evrope</h1>
 
   <div class="button-grid">
-    <a href="krug.html" class="btn">Krug: Nemačka, Francuska, Švajcarska, Lihtenštajn</a>
-    <a href="muvanje.html" class="btn">Muvanje</a>
-    <a href="nemacki.html" class="btn">Nemački</a>
-    <a href="prijatelji-note-novo-more-planova.html" class="btn">Prijatelji, note i novo more planova</a>
-    <a href="ju-znaci-ju-karlsruhe.html" class="btn">‘Ju, znači ju, što je lepo’ - jutro u Karlsrueu</a>
-    <a href="strazbur.html" class="btn">Strazbur: Od bosih nogu do Evropskog parlamenta</a>
-    <a href="kolmar.html" class="btn">Kolmar u predvečerje: stari kutci, nova poznanstva</a>
-    <a href="jutro-u-najlepsem-selu-francuske.html" class="btn">Jutro u najlepšem selu Francuske</a>
-    <a href="bodensko-jezero-ukulele-giros.html" class="btn">Bodensko jezero, ukulele i giros - dan za pamćenje</a>
-    <a href="lucern.html" class="btn">Lucern: voziću se ja, ne zvala se Sandra</a>
-    <a href="hajdi-selo.html" class="btn">Kad ti ChatGPT da savršen putni savet - Hajdi selo</a>
-    <a href="lihtenstajn.html" class="btn">Ej, ljudi, mi smo u Lihtenštajnu!</a>
-    <a href="cirkus-u-tri-cina.html" class="btn">Cirkus u tri čina</a>
-    <a href="dvorci-jezero-kraljevske-tajne.html" class="btn">Dvorci, jezero i kraljevske tajne</a>
+
+<a href="krug.html" class="btn" data-id="krug">Krug: Nemačka, Francuska, Švajcarska, Lihtenštajn</a>
+<a href="muvanje.html" class="btn" data-id="muvanje">Muvanje</a>
+<a href="nemacki.html" class="btn" data-id="nemacki">Nemački</a>
+<a href="prijatelji-note-novo-more-planova.html" class="btn" data-id="prijatelji-note-novo-more-planova">Prijatelji, note i novo more planova</a>
+<a href="ju-znaci-ju-karlsruhe.html" class="btn" data-id="ju-znaci-ju-karlsruhe">‘Ju, znači ju, što je lepo’ - jutro u Karlsrueu</a>
+<a href="strazbur.html" class="btn" data-id="strazbur">Strazbur: Od bosih nogu do Evropskog parlamenta</a>
+<a href="kolmar.html" class="btn" data-id="kolmar">Kolmar u predvečerje: stari kutci, nova poznanstva</a>
+<a href="jutro-u-najlepsem-selu-francuske.html" class="btn" data-id="jutro-u-najlepsem-selu-francuske">Jutro u najlepšem selu Francuske</a>
+<a href="bodensko-jezero-ukulele-giros.html" class="btn" data-id="bodensko-jezero-ukulele-giros">Bodensko jezero, ukulele i giros - dan za pamćenje</a>
+<a href="lucern.html" class="btn" data-id="lucern">Lucern: voziću se ja, ne zvala se Sandra</a>
+<a href="hajdi-selo.html" class="btn" data-id="hajdi-selo">Kad ti ChatGPT da savršen putni savet - Hajdi selo</a>
+<a href="lihtenstajn.html" class="btn" data-id="lihtenstajn">Ej, ljudi, mi smo u Lihtenštajnu!</a>
+<a href="cirkus-u-tri-cina.html" class="btn" data-id="cirkus-u-tri-cina">Cirkus u tri čina</a>
+<a href="dvorci-jezero-kraljevske-tajne.html" class="btn" data-id="dvorci-jezero-kraljevske-tajne">Dvorci, jezero i kraljevske tajne</a>
+
+
+
+
   </div>
 
 
@@ -151,6 +164,20 @@ h1 {
 }
 </style>
 
+<script>
+  window.onload = function() {
+    const params = new URLSearchParams(window.location.search);
+    const aktivna = params.get('aktivna');
+    if (aktivna) {
+      const el = document.querySelector(`.btn[data-id="${aktivna}"]`);
+      if (el) {
+        el.classList.add('active');
+        // Opcionalno da se dugme vidi odmah ako je nizak viewport
+        el.scrollIntoView({behavior: 'smooth', block: 'center'});
+      }
+    }
+  }
+</script>
 
 </body>
 </html>
