@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://curious-halva-248919.netlify.app/sitemap.xml
+Sitemap: https://sandra-putuje.github.io/tamo-daleko/sitemap.xml
