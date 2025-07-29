@@ -2,51 +2,20 @@
 <html lang="sr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Putopis sa Maldiva - otkrij prelepe plaže, lokalnu kulturu i savete za putovanje na rajske ostrvske destinacije. Lokalno ostrvo. Lični doživljaj." />
-  <meta name="keywords" content="Maldivi, Maalhos, putopis, putovanja, lokalna kultura, plaže, rajska ostrva, avantura, putovanja Azija" />
-  
-  <meta name="author" content="Sandra Djuricin" /> 
-
-
-<!-- Opcionalno: Open Graph tagovi za bolje deljenje na društvenim mrežama -->
-  <meta property="og:title" content="Maldivi, putopis, lokalno ostrvo – Tamo daleko" />
-  <meta property="og:description" content="Putopis sa Maldiva - otkrij prelepe plaže, lokalnu kulturu i savete za putovanje na rajske ostrvske destinacije." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/maldivi.html" />
-<meta property="og:image" content="https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/maldivi52.jpg" />
-
-<!-- Twitter Card (opciono, ali korisno) -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Maldivi, putopis – Tamo daleko" />
-<meta name="twitter:description" content="Putopis sa Maldiva - otkrij prelepe plaže, lokalnu kulturu i savete za putovanje na rajske ostrvske destinacije." />
-<meta name="twitter:image" content="https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/maldivi52.jpg" />
-
-
- 
-  <title>Maldivi, putopis, lokalno ostrvo Maalhos – Tamo daleko</title>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLYKLXD49W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NLYKLXD49W');
-</script>
-
-
-  <!-- Dodato za sakrivanje loga na indexu prilikom povratka -->
-  <script>document.documentElement.classList.add('js-loading');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Maldivi – priče s kraja sveta u plavičastom akvarel stilu. Putopisne kartice sa slikama i linkovima ka pojedinačnim pričama." />
+  <meta name="keywords" content="Maldivi, putopis, putovanja, lokalno ostrvo, akvarel, priče, plavi stil" />
+  <meta name="author" content="Sandra Djuricin" />
+  <title>Maldivi – Priče s kraja sveta</title>
 
   <style>
     body {
       font-family: 'Georgia', serif;
       background: linear-gradient(to bottom, #eaf4fb, #f4f1ed);
       color: #333;
-      text-align: center;
       padding: 20px;
+      margin: 0;
+      text-align: center;
     }
 
     h1 {
@@ -55,47 +24,72 @@
       text-shadow: 1px 1px #fff;
     }
 
-    .button-grid {
+    .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
       max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto 40px auto;
     }
 
-    .btn {
-      background: linear-gradient(to bottom right, #d4e4f7, #a6c8e5);
-      color: #003366;
-      border: none;
-      border-radius: 20px;
-      padding: 12px 20px;
+    .card {
+      background: #d4e4f7;
+      border-radius: 15px;
+      box-shadow: 2px 3px 8px rgba(0,0,0,0.15);
+      overflow: hidden;
       text-decoration: none;
-      font-size: 1em;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.2s, background-color 0.3s;
-      cursor: pointer;
+      color: #003366;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .btn:hover {
+    .card:hover {
       transform: scale(1.05);
-      background: linear-gradient(to bottom right, #b3d6f2, #7fb8e0);
-      color: white;
+      box-shadow: 4px 6px 15px rgba(0,0,0,0.3);
+      color: #003366;
     }
+
+    .card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-bottom: 2px solid #a6c8e5;
+      flex-shrink: 0;
+    }
+
+    .card-title {
+      font-size: 1.1em;
+      padding: 12px 15px;
+      font-weight: normal;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60px;
+      text-align: center;
+    }
+
+.card.aktivna {
+  color: white !important;
+  background-color: #4a86e8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
 
     .back-btn {
       display: inline-block;
-      margin-top: 40px;
-      padding: 10px 20px;
+      padding: 12px 28px;
       background: linear-gradient(to bottom right, #a6c8e5, #d4e4f7);
+      
       color: #003366;
       border-radius: 20px;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
       box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
       transition: background 0.3s, transform 0.2s;
       cursor: pointer;
+      margin-bottom: 20px;
     }
 
     .back-btn:hover {
@@ -103,28 +97,9 @@
       transform: scale(1.05);
     }
 
-/* Dodat stil za aktivno dugme */
-.btn.active {
-  transform: scale(1.05);
-      background: linear-gradient(to bottom right, #b3d6f2, #7fb8e0);
-      color: white;
-
-}
-
-
-
     @media (max-width: 600px) {
-      .button-grid {
+      .card-grid {
         grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 1.5em;
-      }
-
-      .btn {
-        font-size: 0.95em;
-        padding: 10px 16px;
       }
     }
   </style>
@@ -133,55 +108,155 @@
 
   <h1>Maldivi – Priče s kraja sveta</h1>
 
-  <div class="button-grid">
-<a href="putujuca_zaba.html" class="btn" data-id="putujuca_zaba">Preporuka Putujuće žabe</a>
-<a href="nesto_naopako.html" class="btn" data-id="nesto_naopako">Može li još nešto da krene naopako?</a>
-<a href="let_ostrva.html" class="btn" data-id="let_ostrva">Let i ostrvca iz vazduha</a>
-<a href="razglednica.html" class="btn" data-id="razglednica">Mi smo u razglednici</a>
-<a href="dori.html" class="btn" data-id="dori">Videla sam slavnu Dori!</a>
-<a href="delfini.html" class="btn" data-id="delfini">Doručak sa pogledom na jato delfina</a>
-<a href="dzungla.html" class="btn" data-id="dzungla">Džungla</a>
-<a href="poklon.html" class="btn" data-id="poklon">Poklon</a>
-<a href="zivot_na_ostrvu.html" class="btn" data-id="zivot_na_ostrvu">Život na ostrvu</a>
-<a href="aslam.html" class="btn" data-id="aslam">Dobri duh Aslam</a>
-<a href="kornjace.html" class="btn" data-id="kornjace">Kornjače</a>
-<a href="samo_te_gledam.html" class="btn" data-id="samo_te_gledam">Samo te gledam</a>
-<a href="otrovna_nije_opasna.html" class="btn" data-id="otrovna_nije_opasna">Samo je otrovna, nije opasna</a>
-<a href="haljina.html" class="btn" data-id="haljina">Plivanje u haljini</a>
-<a href="pas.html" class="btn" data-id="pas">Pas? Ne može</a>
-<a href="beba_ajkula.html" class="btn" data-id="beba_ajkula">Beba ajkula i bućkanje u hladu</a>
-<a href="vrane.html" class="btn" data-id="vrane">Vrane kradljivice</a>
-<a href="deca.html" class="btn" data-id="deca">Deca</a>
-<a href="hobotnica.html" class="btn" data-id="hobotnica">Hobotnica</a>
-<a href="prdeca_baba.html" class="btn" data-id="prdeca_baba">Prdeća baba</a>
-<a href="badu_beru.html" class="btn" data-id="badu_beru">Badu Beru</a>
-<a href="plave_zvezde.html" class="btn" data-id="plave_zvezde">Rasute plave zvezde po obali</a>
-<a href="hello_sandra.html" class="btn" data-id="hello_sandra">"Hello, Sandra!"</a>
-<a href="turski_sed.html" class="btn" data-id="turski_sed">U turskom sedu pod maldivskim zvezdama</a>
-<a href="lokalci.html" class="btn" data-id="lokalci">Lokalci u moru</a>
-<a href="pecanje.html" class="btn" data-id="pecanje">Pecanje</a>
-<a href="najlepsa_slika.html" class="btn" data-id="najlepsa_slika">Najlepša slika sa Maldiva</a>
+  <div class="card-grid">
+    <a href="putujuca_zaba.html" class="card" title="Preporuka Putujuće žabe">
+      <img src="maldivi52.jpg" alt="Putujuća žaba" loading="lazy" />
+      <div class="card-title">Preporuka Putujuće žabe</div>
+    </a>
 
+    <a href="nesto_naopako.html" class="card" title="Može li još nešto da krene naopako?">
+      <img src="maldivi32.jpg" alt="Može li još nešto da krene naopako?" loading="lazy" />
+      <div class="card-title">Može li još nešto da krene naopako?</div>
+    </a>
+
+    <a href="let_ostrva.html" class="card" title="Let i ostrvca iz vazduha">
+      <img src="maldivi7.jpg" alt="Let i ostrvca iz vazduha" loading="lazy" />
+      <div class="card-title">Let i ostrvca iz vazduha</div>
+    </a>
+
+    <a href="razglednica.html" class="card" title="Mi smo u razglednici">
+      <img src="maldivik (112).jpg" alt="Mi smo u razglednici" loading="lazy" />
+      <div class="card-title">Mi smo u razglednici</div>
+    </a>
+
+    <a href="dori.html" class="card" title="Videla sam slavnu Dori!">
+      <img src="maldivik (111).jpg" alt="Videla sam slavnu Dori!" loading="lazy" />
+      <div class="card-title">Videla sam slavnu Dori!</div>
+    </a>
+
+    <a href="delfini.html" class="card" title="Doručak sa pogledom na jato delfina">
+      <img src="maldivi31.jpg" alt="Doručak sa pogledom na jato delfina" loading="lazy" />
+      <div class="card-title">Doručak sa pogledom na jato delfina</div>
+    </a>
+
+    <a href="dzungla.html" class="card" title="Džungla">
+      <img src="maldivi14.jpg" alt="Džungla" loading="lazy" />
+      <div class="card-title">Džungla</div>
+    </a>
+
+    <a href="poklon.html" class="card" title="Poklon">
+      <img src="maldivik (3).jpg" alt="Poklon" loading="lazy" />
+      <div class="card-title">Poklon</div>
+    </a>
+
+    <a href="zivot_na_ostrvu.html" class="card" title="Život na ostrvu">
+      <img src="maldivi18.jpg" alt="Život na ostrvu" loading="lazy" />
+      <div class="card-title">Život na ostrvu</div>
+    </a>
+
+    <a href="aslam.html" class="card" title="Dobri duh Aslam">
+      <img src="maldivi15.jpg" alt="Dobri duh Aslam" loading="lazy" />
+      <div class="card-title">Dobri duh Aslam</div>
+    </a>
+
+    <a href="kornjace.html" class="card" title="Kornjače">
+      <img src="maldivi27.jpg" alt="Kornjače" loading="lazy" />
+      <div class="card-title">Kornjače</div>
+    </a>
+
+    <a href="samo_te_gledam.html" class="card" title="Samo te gledam">
+      <img src="maldivi13.jpg" alt="Samo te gledam" loading="lazy" />
+      <div class="card-title">Samo te gledam</div>
+    </a>
+
+    <a href="otrovna_nije_opasna.html" class="card" title="Samo je otrovna, nije opasna">
+      <img src="maldivik (8).jpg" alt="Samo je otrovna, nije opasna" loading="lazy" />
+      <div class="card-title">Samo je otrovna, nije opasna</div>
+    </a>
+
+    <a href="haljina.html" class="card" title="Plivanje u haljini">
+      <img src="maldivi30.jpg" alt="Plivanje u haljini" loading="lazy" />
+      <div class="card-title">Plivanje u haljini</div>
+    </a>
+
+    <a href="pas.html" class="card" title="Pas? Ne može">
+      <img src="maldivik (11).jpg" alt="Pas? Ne može" loading="lazy" />
+      <div class="card-title">Pas? Ne može</div>
+    </a>
+
+    <a href="beba_ajkula.html" class="card" title="Beba ajkula i bućkanje u hladu">
+      <img src="maldivi33.jpg" alt="Beba ajkula i bućkanje u hladu" loading="lazy" />
+      <div class="card-title">Beba ajkula i bućkanje u hladu</div>
+    </a>
+
+    <a href="vrane.html" class="card" title="Vrane kradljivice">
+      <img src="maldivik (12).jpg" alt="Vrane kradljivice" loading="lazy" />
+      <div class="card-title">Vrane kradljivice</div>
+    </a>
+
+    <a href="deca.html" class="card" title="Deca">
+      <img src="maldivik (5).jpg" alt="Deca" loading="lazy" />
+      <div class="card-title">Deca</div>
+    </a>
+
+    <a href="hobotnica.html" class="card" title="Hobotnica">
+      <img src="maldivi37.jpg" alt="Hobotnica" loading="lazy" />
+      <div class="card-title">Hobotnica</div>
+    </a>
+
+    <a href="prdeca_baba.html" class="card" title="Prdeća baba">
+      <img src="maldivi38.jpg" alt="Prdeća baba" loading="lazy" />
+      <div class="card-title">Prdeća baba</div>
+    </a>
+
+    <a href="badu_beru.html" class="card" title="Badu Beru">
+      <img src="maldivi40.jpg" alt="Badu Beru" loading="lazy" />
+      <div class="card-title">Badu Beru</div>
+    </a>
+
+    <a href="plave_zvezde.html" class="card" title="Rasute plave zvezde po obali">
+      <img src="maldivik (1).jpg" alt="Rasute plave zvezde po obali" loading="lazy" />
+      <div class="card-title">Rasute plave zvezde po obali</div>
+    </a>
+
+    <a href="hello_sandra.html" class="card" title='"Hello, Sandra!"'>
+      <img src="maldivik (10).jpg" alt='"Hello, Sandra!"' loading="lazy" />
+      <div class="card-title">"Hello, Sandra!"</div>
+    </a>
+
+    <a href="turski_sed.html" class="card" title="U turskom sedu pod maldivskim zvezdama">
+      <img src="maldivi53.jpg" alt="U turskom sedu pod maldivskim zvezdama" loading="lazy" />
+      <div class="card-title">U turskom sedu pod maldivskim zvezdama</div>
+    </a>
+
+    <a href="lokalci.html" class="card" title="Lokalci u moru">
+      <img src="maldivi49.jpg" alt="Lokalci u moru" loading="lazy" />
+      <div class="card-title">Lokalci u moru</div>
+    </a>
+
+    <a href="pecanje.html" class="card" title="Pecanje">
+      <img src="maldivi50.jpg" alt="Pecanje" loading="lazy" />
+      <div class="card-title">Pecanje</div>
+    </a>
+
+    <a href="najlepsa_slika.html" class="card" title="Najlepša slika sa Maldiva">
+      <img src="maldivik (113).jpg" alt="Najlepša slika sa Maldiva" loading="lazy" />
+      <div class="card-title">Najlepša slika sa Maldiva</div>
+    </a>
   </div>
 
+  <a href="../../index.html?aktivno=maldivi" class="back-btn">← Nazad na Azija</a>
 
-
-<button class="back-btn" onclick="window.location.href='../../index.html?aktivno=maldivi'">
-  ← Nazad na Azija
-</button>
 <script>
-  window.onload = function() {
-    const params = new URLSearchParams(window.location.search);
-    const aktivna = params.get('aktivna');
-    if (aktivna) {
-      const el = document.querySelector(`.btn[data-id="${aktivna}"]`);
-      if (el) {
-        el.classList.add('active');
-        // Opcionalno da se dugme vidi odmah ako je nizak viewport
-        el.scrollIntoView({behavior: 'smooth', block: 'center'});
-      }
+  const urlParams = new URLSearchParams(window.location.search);
+  const aktivna = urlParams.get('aktivna');
+  if (aktivna) {
+    const link = document.querySelector(`a[href="${aktivna}.html"]`);
+    if (link) {
+      link.classList.add("aktivna");
     }
   }
 </script>
+
 </body>
 </html>
