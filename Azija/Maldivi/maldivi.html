@@ -254,6 +254,10 @@
     const link = document.querySelector(`a[href="${aktivna}.html"]`);
     if (link) {
       link.classList.add("aktivna");
+      // Sačekaj da se sve učita pa skroluj do kartice
+      window.addEventListener('load', () => {
+        link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
     }
   }
 </script>
