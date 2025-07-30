@@ -22,7 +22,7 @@ const price = [
   { naslov: "Deca", fajl: "deca.html" },
   { naslov: "Hobotnica", fajl: "hobotnica.html" },
   { naslov: "Prdeća baba", fajl: "prdeca_baba.html" },
-  { naslov: "Badu Beru", fajl: "badu_beru.html" },
+  { naslov: "Bodu Beru", fajl: "bodu_beru.html" },
   { naslov: "Rasute plave zvezde po obali", fajl: "plave_zvezde.html" },
   { naslov: "\"Hello, Sandra!\"", fajl: "hello_sandra.html" },
   { naslov: "U turskom sedu pod maldivskim zvezdama", fajl: "turski_sed.html" },
