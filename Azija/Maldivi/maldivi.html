@@ -142,21 +142,25 @@
   }
 
   .card {
+    aspect-ratio: 1 / 1; /* pravi kvadrat */
     display: flex;
     flex-direction: column;
-    height: auto; /* neka visina bude po sadržaju */
+    overflow: hidden;
   }
 
   .card img {
-    aspect-ratio: 3 / 2; /* slika zadržava proporciju 3:2 */
+    flex: 2;
     width: 100%;
     object-fit: cover;
   }
 
   .card-title {
+    flex: 1;
     padding: 12px;
-    font-size: 1em;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
