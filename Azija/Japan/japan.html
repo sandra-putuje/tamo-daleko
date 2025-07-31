@@ -91,9 +91,11 @@
 
 
 
+
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   max-width: 1000px;
   margin: 0 auto 40px auto;
@@ -223,7 +225,7 @@
 </head>
 <body>
 
-  <h1>Japan – Tamo daleko</h1>
+  <h1>Japan – Druga planeta</h1>
 
   <div class="grad-mreza">
     <h3 class="naslov-lokacije">🏙️ Tokio</h3>
@@ -259,41 +261,71 @@
   <div class="grad-mreza">
     <h3 class="naslov-lokacije">🏞️ Niko</h3>
   </div>
-  <div class="button-grid single">
-    <a href="sedmi_dan.html" class="btn">Dan sedmi – Duša Japana stanuje u Niku</a>
-  </div>
 
-  <div class="grad-mreza">
+  <div class="card-grid">
+    <a href="sedmi_dan.html" class="card" title="Dan sedmi – Duša Japana stanuje u Niku">
+      <img src="japan7.jpg" alt="Kimona" loading="lazy" />
+      <div class="card-title">Dan sedmi – Duša Japana stanuje u Niku</div>
+    </a>
+ </div>
+
+   <div class="grad-mreza">
     <h3 class="naslov-lokacije">⛩️ Kjoto</h3>
   </div>
-  <div class="button-grid">
-    <a href="osmi_dan.html" class="btn">Dan osmi – Šinkansen, kimona i kiseli krastavac</a>
-    <a href="deseti_dan.html" class="btn">Dan deseti – Majmuni, bogovi i osmesi u kamenu</a>
-  </div>
+
+  <div class="card-grid">
+    <a href="osmi_dan.html" class="card" title="Dan osmi – Šinkansen, kimona i kiseli krastavac">
+      <img src="japan8.jpg" alt="Kimona" loading="lazy" />
+      <div class="card-title">Dan osmi – Šinkansen, kimona i kiseli krastavac</div>
+    </a>
+    <a href="deseti_dan.html" class="card" title="Dan deseti – Majmuni, bogovi i osmesi u kamenu">
+      <img src="japan9.jpg" alt="Kimona" loading="lazy" />
+      <div class="card-title">Dan deseti – Majmuni, bogovi i osmesi u kamenu</div>
+    </a>
+ </div>
+
 
   <div class="grad-mreza">
     <h3 class="naslov-lokacije">🦌 Nara</h3>
   </div>
-  <div class="button-grid single">
-    <a href="deveti_dan.html" class="btn">Dan deveti – Jelenska kraljevina i klanjajuće životinje</a>
-  </div>
+
+
+  <div class="card-grid">
+    <a href="deveti_dan.html" class="card" title="Dan deveti – Jelenska kraljevina i klanjajuće životinje">
+      <img src="japan10.jpg" alt="Kimona" loading="lazy" />
+      <div class="card-title">Dan deveti – Jelenska kraljevina i klanjajuće životinje</div>
+    </a>
+ </div>
 
   <div class="grad-mreza">
     <h3 class="naslov-lokacije">🏯 Osaka</h3>
-  </div>
-  <div class="button-grid">
-    <a href="jedanaesti_dan.html" class="btn">Dan jedanaesti – Zmaj, golubovi i besni kuvar</a>
-  </div>
+ </div>
+
+
+  <div class="card-grid">
+    <a href="jedanaesti_dan.html" class="card" title="Dan jedanaesti – Zmaj, golubovi i besni kuvar">
+      <img src="japan11.jpg" alt="Kimona" loading="lazy" />
+      <div class="card-title">Dan jedanaesti – Zmaj, golubovi i besni kuvar</div>
+    </a>
+ </div>
 
   <div class="grad-mreza">
     <h3 class="naslov-lokacije">🏙️ Tokio</h3>
-  </div>
-  <div class="button-grid">
-    <a href="dvanaesti_dan.html" class="btn">Dan dvanaesti – Srculence, Fudži i sex hotel</a>
-    <a href="trinaesti_dan.html" class="btn">Dan trinaesti – Leteći auto, hologrami i trend seter</a>
-  </div>
+ </div>
 
-  <a href="../../index.html#azija" class="back-btn">← Nazad</a>
+  <div class="card-grid">
+    <a href="dvanaesti_dan.html" class="card" title="Dan dvanaesti – Srculence, Fudži i sex hotel">
+      <img src="japan12.jpg" alt="Kimona" loading="lazy" />
+      <div class="card-title">Dan dvanaesti – Srculence, Fudži i sex hotel</div>
+    </a>
+    <a href="deseti_dan.html" class="card" title="Dan trinaesti – Leteći auto, hologrami i trend seter">
+      <img src="japan13.jpg" alt="Kimona" loading="lazy" />
+      <div class="card-title">Dan trinaesti – Leteći auto, hologrami i trend seter</div>
+    </a>
+ </div>
+
+<a href="../../index.html?aktivno=japan" class="back-btn">← Nazad na Azija</a>
+
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
