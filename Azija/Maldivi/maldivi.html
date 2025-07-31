@@ -134,11 +134,33 @@
       transform: scale(1.05);
     }
 
-    @media (max-width: 600px) {
-      .card-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: auto; /* neka visina bude po sadržaju */
+  }
+
+  .card img {
+    aspect-ratio: 3 / 2; /* slika zadržava proporciju 3:2 */
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-title {
+    padding: 12px;
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+
   </style>
 </head>
 <body>
