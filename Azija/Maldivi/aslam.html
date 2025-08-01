@@ -158,8 +158,17 @@
 <script src="maldivi-sledeca.js"></script>
 
 
-<button class="back-button" onclick="window.location.href='maldivi.html?aktivna=aslam'">← Nazad na Maldive</button>
 
+
+<button class="back-button" onclick="vratiSe()">← Nazad na Maldive</button>
+
+<script>
+  function vratiSe() {
+    const href = 'maldivi.html?aktivna=aslam';
+    history.pushState(null, '', href);
+    window.location.href = href;
+  }
+</script>
 
 <p>     </p>
 <p>     </p>

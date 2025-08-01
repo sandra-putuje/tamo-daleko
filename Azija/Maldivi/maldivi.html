@@ -338,12 +338,13 @@
     }
   }
 
-  // POZIV odmah nakon definicije da radi na load
+  // Poziv na load stranice
   window.addEventListener('load', oznaciAktivnuKarticu);
 
-  // POZIV na dugme "nazad" u browseru (strelica unazad)
+  // Poziv pri povratku strelicom nazad ili napred
   window.addEventListener('popstate', oznaciAktivnuKarticu);
 </script>
+
 
 
 </body>
