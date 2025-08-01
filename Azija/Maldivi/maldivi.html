@@ -319,31 +319,19 @@
   <a href="../../index.html?aktivno=maldivi" class="back-btn">← Nazad na Azija</a>
 
 <script>
-  function oznaciAktivnuKarticu(ime) {
-    document.querySelectorAll('.card.aktivna').forEach(el => {
-      el.classList.remove('aktivna');
-    });
-
-    if (!ime) return;
-
-    const link = document.querySelector(`a.card[href="${ime}.html"]`);
+  const urlParams = new URLSearchParams(window.location.search);
+  const aktivna = urlParams.get('aktivna');
+  if (aktivna) {
+    const link = document.querySelector(`a[href="${aktivna}.html"]`);
     if (link) {
-      link.classList.add('aktivna');
-      link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      link.classList.add("aktivna");
+      // Sačekaj da se sve učita pa skroluj do kartice
+      window.addEventListener('load', () => {
+        link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
     }
   }
-
-  // Proveri localStorage i označi karticu ako postoji
-  window.addEventListener('DOMContentLoaded', () => {
-    const aktivna = localStorage.getItem('aktivnaKartica');
-    oznaciAktivnuKarticu(aktivna);
-    localStorage.removeItem('aktivnaKartica'); // da ne ostaje posle refresh
-  });
 </script>
-
-
-
-
 
 </body>
 </html>
