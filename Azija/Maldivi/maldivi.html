@@ -325,7 +325,6 @@
       el.classList.remove('aktivna');
     });
 
-    // Uhvati parametar iz URL-a
     const urlParams = new URLSearchParams(window.location.search);
     const aktivna = urlParams.get('aktivna');
 
@@ -333,16 +332,23 @@
       const link = document.querySelector(`a[href="${aktivna}.html"]`);
       if (link) {
         link.classList.add("aktivna");
-        link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Odloženo skrolovanje da bi HTML bio potpuno učitan
+        setTimeout(() => {
+          link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
       }
     }
   }
 
-  // Poziv na load stranice
-  window.addEventListener('load', oznaciAktivnuKarticu);
+  // Pokreni kad se stranica učita
+  window.addEventListener('DOMContentLoaded', oznaciAktivnuKarticu);
 
-  // Poziv pri povratku strelicom nazad ili napred
-  window.addEventListener('popstate', oznaciAktivnuKarticu);
+  // Takođe pokreni kad se korisnik vrati nazad strelicom
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+      oznaciAktivnuKarticu();
+    }
+  });
 </script>
 
 
