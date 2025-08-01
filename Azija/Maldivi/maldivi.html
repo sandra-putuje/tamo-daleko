@@ -319,37 +319,29 @@
   <a href="../../index.html?aktivno=maldivi" class="back-btn">← Nazad na Azija</a>
 
 <script>
-  function oznaciAktivnuKarticu() {
-    // Ukloni prethodne oznake
+  function oznaciAktivnuKarticu(ime) {
     document.querySelectorAll('.card.aktivna').forEach(el => {
       el.classList.remove('aktivna');
     });
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const aktivna = urlParams.get('aktivna');
+    if (!ime) return;
 
-    if (aktivna) {
-      const link = document.querySelector(`a[href="${aktivna}.html"]`);
-      if (link) {
-        link.classList.add("aktivna");
-        // Odloženo skrolovanje da bi HTML bio potpuno učitan
-        setTimeout(() => {
-          link.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 100);
-      }
+    const link = document.querySelector(`a.card[href="${ime}.html"]`);
+    if (link) {
+      link.classList.add('aktivna');
+      link.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }
 
-  // Pokreni kad se stranica učita
-  window.addEventListener('DOMContentLoaded', oznaciAktivnuKarticu);
-
-  // Takođe pokreni kad se korisnik vrati nazad strelicom
-  window.addEventListener('pageshow', (event) => {
-    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
-      oznaciAktivnuKarticu();
-    }
+  // Proveri localStorage i označi karticu ako postoji
+  window.addEventListener('DOMContentLoaded', () => {
+    const aktivna = localStorage.getItem('aktivnaKartica');
+    oznaciAktivnuKarticu(aktivna);
+    localStorage.removeItem('aktivnaKartica'); // da ne ostaje posle refresh
   });
 </script>
+
+
 
 
 

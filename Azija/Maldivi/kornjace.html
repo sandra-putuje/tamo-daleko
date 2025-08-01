@@ -151,15 +151,9 @@
 
 
 
-<button class="back-button" onclick="vratiSe()">← Nazad na Maldive</button>
-
-<script>
-  function vratiSe() {
-    const href = 'maldivi.html?aktivna=kornjace';
-    history.pushState(null, '', href);
-    window.location.href = href;
-  }
-</script>
+<button class="back-button" onclick="localStorage.setItem('aktivnaKartica', 'kornjace'); window.location.href='maldivi.html';">
+  ← Nazad na Maldive
+</button>
 
 
 <p>     </p>
