@@ -321,28 +321,19 @@ puta:</span></u> <b>Krug oko Fudžija i WC šolja</h2>
 <p>     </p>
 <p>     </p>
 
+<!-- Sledeća priča (automatski) -->
+<script src="japan-sledeca.js"></script>
+
+<p>     </p>
+<p>     </p>
+
+
 
 <button class="back-button" onclick="window.location.href='japan.html?aktivna=prvi_dan'">← Nazad na Japan</button>
 
 <p>     </p>
 <p>     </p>
 
-
-<!-- Disqus komentar widget -->
-<div id="disqus_thread"></div>
-<script>
-  var disqus_config = function () {
-    this.page.url = window.location.href;
-    this.page.identifier = window.location.pathname;
-  };
-  (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://sandra-putuje.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-<noscript>Molimo omogućite JavaScript da biste videli komentare.</noscript>
 
 <!-- Substack forma -->
 <h2>Ne propustite sledeću avanturu!</h2>
@@ -399,10 +390,24 @@ puta:</span></u> <b>Krug oko Fudžija i WC šolja</h2>
 
 <script src="https://substackapi.com/widget.js" async></script>
 
+<!-- Ovdje ide Disqus komentar widget -->
+<div style="margin-top: 4rem;"></div>
+<div id="disqus_thread"></div>
 
+<script>
+  var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = window.location.pathname;
+  };
 
-
-
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://sandra-putuje.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Molimo omogućite JavaScript da biste videli komentare.</noscript>
 
 
 </body>
