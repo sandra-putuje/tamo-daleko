@@ -319,19 +319,32 @@
   <a href="../../index.html?aktivno=maldivi" class="back-btn">← Nazad na Azija</a>
 
 <script>
-  const urlParams = new URLSearchParams(window.location.search);
-  const aktivna = urlParams.get('aktivna');
-  if (aktivna) {
-    const link = document.querySelector(`a[href="${aktivna}.html"]`);
-    if (link) {
-      link.classList.add("aktivna");
-      // Sačekaj da se sve učita pa skroluj do kartice
-      window.addEventListener('load', () => {
+  function oznaciAktivnuKarticu() {
+    // Ukloni prethodne oznake
+    document.querySelectorAll('.card.aktivna').forEach(el => {
+      el.classList.remove('aktivna');
+    });
+
+    // Uhvati parametar iz URL-a
+    const urlParams = new URLSearchParams(window.location.search);
+    const aktivna = urlParams.get('aktivna');
+
+    if (aktivna) {
+      const link = document.querySelector(`a[href="${aktivna}.html"]`);
+      if (link) {
+        link.classList.add("aktivna");
         link.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      });
+      }
     }
   }
+
+  // POZIV odmah nakon definicije da radi na load
+  window.addEventListener('load', oznaciAktivnuKarticu);
+
+  // POZIV na dugme "nazad" u browseru (strelica unazad)
+  window.addEventListener('popstate', oznaciAktivnuKarticu);
 </script>
+
 
 </body>
 </html>
