@@ -1,4 +1,4 @@
-// tajland-sledeca.js
+// japan-sledeca.js
 // Čita niz priča iz localStorage-a (postavljen na index stranici Japana)
 (function() {
   const listaJSON = localStorage.getItem('japanList');
