@@ -1,8 +1,7 @@
 // japan-sledeca.js
-// Čita niz priča iz localStorage-a (postavljen na index stranici Japana)
 (function() {
   const listaJSON = localStorage.getItem('japanList');
-  if (!listaJSON) return; // nema liste, ne radimo ništa
+  if (!listaJSON) return;
 
   let lista;
   try {
@@ -26,5 +25,8 @@
       ${sledeci.ime}
     </a>
   `;
-  document.body.appendChild(div);
+
+  const scriptTag = document.currentScript;
+  scriptTag.parentNode.insertBefore(div, scriptTag);
 })();
+

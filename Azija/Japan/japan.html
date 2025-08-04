@@ -270,9 +270,36 @@
   </div>
 
   <div class="card-grid">
-    <a href="sedmi_dan.html" class="card" title="Dan sedmi – Duša Japana stanuje u Niku">
-      <img src="japan7.jpg" alt="Kimona" loading="lazy" />
+    <a href="sedmi_dan.html" class="card" title="Dan sedmi – Duša Japana stanuje u Niku, hramovi">
+      <img src="japan7.jpg" alt="Niko, hramovi" loading="lazy" />
       <div class="card-title">Dan sedmi – Duša Japana stanuje u Niku</div>
+    </a>
+
+
+
+    <a href="sedmi_dan2.html" class="card" title="Dan sedmi – Mostić u Niku">
+      <img src="japan72.jpg" alt="Niko, mostić" loading="lazy" />
+      <div class="card-title">Dan sedmi – mostić</div>
+    </a>
+
+
+
+    <a href="sedmi_dan3.html" class="card" title="Dan sedmi – Kapibare u Niku">
+      <img src="japan73.jpg" alt="Kapibare, Niko" loading="lazy" />
+      <div class="card-title">Dan sedmi – kapibare</div>
+    </a>
+
+
+
+    <a href="sedmi_dan4.html" class="card" title="Dan sedmi – Crvene kapice u Niku">
+      <img src="japan74.jpg" alt="Bebe, crvene kapice, Niko" loading="lazy" />
+      <div class="card-title">Dan sedmi – Crvene kapice</div>
+    </a>
+
+
+    <a href="sedmi_dan5.html" class="card" title="Dan sedmi – Vodopad, jezero u Niku">
+      <img src="japan75.jpg" alt="Vodopad, jezero, Niko" loading="lazy" />
+      <div class="card-title">Dan sedmi – Vodopad, jezero</div>
     </a>
  </div>
 
@@ -347,10 +374,23 @@
       }
     }
   </script>
+
+
 <script>
-  const lista = [...document.querySelectorAll('.btn[data-id]')]
-    .map(b => ({ fajl: b.getAttribute('href'), ime: b.textContent.trim() }));
+const lista = [...document.querySelectorAll('.card-grid a.card')]
+
+    .map(kartica => {
+      return {
+        fajl: kartica.getAttribute('href'),
+        ime: kartica.textContent.trim()
+      };
+    })
+    .filter(el => el.fajl && el.ime);
+
   localStorage.setItem('japanList', JSON.stringify(lista));
 </script>
+
+
+
 </body>
 </html>
