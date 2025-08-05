@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tajland – Tamo daleko</title>
+  <script>document.documentElement.classList.add('js-loading');</script>
+
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #fff8e1, #f0e1b8);
+      color: #6b4c00;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #d47c00;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px #fff3cc;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      background: linear-gradient(to bottom right, #ffd57e, #f2b038);
+      color: #5a3c00;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 1em;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s, background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to bottom right, #f2b038, #d99400);
+      color: white;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 20px;
+      background: linear-gradient(to bottom right, #f2b038, #d99400);
+      color: #5a3c00;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s, transform 0.2s;
+      cursor: pointer;
+    }
+
+    .back-btn:hover {
+      background: linear-gradient(to bottom right, #d99400, #b06c00);
+      transform: scale(1.05);
+      color: white;
+    }
+
+    .button-grid.single {
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .naslov-lokacije {
+      color: #7a4e00;
+      border-bottom: 2px solid #7a4e00;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      text-align: center;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 0.3rem;
+    }
+
+    .opis-lokacije {
+      font-style: italic;
+      color: #6b4c00;
+      margin: 0.3rem auto 1rem auto;
+      max-width: 1000px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      .button-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .btn {
+        font-size: 0.95em;
+        padding: 10px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tajland – Ili Guliver u zemlji Liliputanaca</h1>
+
+  <div class="button-grid single">
+    <a href="#" class="btn">Predgovor</a>
+  </div>
+
+  <h3 class="naslov-lokacije">🏙️ Bangkok</h3>
+
+  <p class="opis-lokacije">
+    Krungthepmahanakhon Amonrattanakosin Mahintharayutthaya Mahadilokphop Noppharatratchathaniburirom
+    Udomratchaniwetmahasathan Amonphimanawatansathit Sakkathattiyawitsanukamprasit! (Grad anđela, veliki grad besmrtnika,
+    veličanstveni grad devet dragulja, kraljev presto, grad kraljevskih palata, dom inkarnacija bogova, podignut od strane Visvakarmana).
+  </p>
+  <p class="opis-lokacije">
+    Kada Tajlanđani govore ime svog glavnog grada, zovu ga samo Krung Thep Maha Nakhon.
+  </p>
+
+  <div class="button-grid">
+    <a href="sleteli_smo_u_kupatilo.html" class="btn">Sleteli smo – u kupatilo</a>
+    <a href="hotel_koji_ima_dusu.html" class="btn">Hotel koji ima dušu</a>
+    <a href="corba_nepoznatih_sastojaka_i_pita_od_ananasa.html" class="btn">Čorbu nepoznatih sastojaka i najbolju pitu od ananasa</a>
+    <a href="uputstvo_za_upotrebu_tajlanda.html" class="btn">Uputstvo za upotrebu Tajlanda</a>
+    <a href="trapez_frizura_i_spasilac.html" class="btn">Trapez frizura i spasilac sa onog sveta</a>
+    <a href="vecera_na_podu_i_porcije_za_lutke.html" class="btn">Tradicionalna večera na podu i porcije za lutke</a>
+    <a href="pijaca_slonovi_i_baba.html" class="btn">Pijaca, slonovi i baba koja je zamalo izazvala pobunu</a>
+    <a href="buda_ili_budina_devojka.html" class="btn">Buda ili Budina devojka</a>
+    <a href="kaludjer_cekic_i_lampa.html" class="btn">Kaluđer, čekić i baterijska lampa</a>
+    <a href="jedan_buda_tri_kostima.html" class="btn">Jedan Buda, tri kostima</a>
+    <a href="oprosteni_gresi.html" class="btn">Oprošteni gresi</a>
+    <a href="prinudni_soping_i_nepoverenje.html" class="btn">Prinudni šoping i (ne)poverenje u vladu</a>
+    <a href="predstave.html" class="btn">Predstave</a>
+    <a href="ploveca_pijaca_i_piton.html" class="btn">Ploveća pijaca i piton oko vrata</a>
+    <a href="vozni_red_kuke_i_kvake.html" class="btn">Vozni red na fasadi, kuke i kvake</a>
+  </div>
+
+  <h3 class="naslov-lokacije">🏝️ Phuket</h3>
+  <p class="opis-lokacije">Ostrvo u Andamanskom moru.</p>
+  <div class="button-grid">
+    <a href="benzinska_pumpa.html" class="btn">Benzinska pumpa?</a>
+    <a href="bolja_od_standup_komicara.html" class="btn">Bolja od stand-up komičara</a>
+    <a href="majmun_ili_ja.html" class="btn">Ko će pre da popusti: majmun ili ja</a>
+    <a href="gibon_i_dusko.html" class="btn">Kad se gibon zaljubi u Duška</a>
+    <a href="slonce_i_katapult.html" class="btn">Slonče i katapult ljubavi</a>
+    <a href="ljubav_na_prodaju.html" class="btn">Ljubav na prodaju</a>
+    <a href="meet_the_flintstones.html" class="btn">Meet the Flinstones</a>
+    <a href="bond_james_bond.html" class="btn">My name is Bond, James Bond</a>
+    <a href="sreckovici.html" class="btn">Kakvi (ne)srećkovići</a>
+  </div>
+
+  <h3 class="naslov-lokacije">🌅 Pataja</h3>
+  <p class="opis-lokacije">Poznato letovalište u blizini Bangkoka.</p>
+  <div class="button-grid">
+    <a href="plati_pa_vidi.html" class="btn">Plati pa vidi</a>
+    <a href="plaza_pticica_i_majmunce.html" class="btn">Plaža, oslobođena ptičica i majmunče sa padobranom</a>
+    <a href="iznenadjenje_slepi_misevi.html" class="btn">Iznenađenje, slepi miševi</a>
+  </div>
+
+  <a href="../../index.html#azija" class="back-btn">← Nazad</a>
+
+</body>
+</html>
