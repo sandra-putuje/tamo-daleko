@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amalfi Pastel Background — Final</title>
+  <style>
+    :root {
+      --amalfi-pink: #ffd9df;      /* blago pastelno roza */
+      --amalfi-peach: #ffe6cc;     /* pastelna breskvasta */
+      --amalfi-orange: #ffcc99;    /* toplija narandžasta */
+      --amalfi-turquoise: #a3d9d4; /* nežna tirkizna */
+      --amalfi-green: #c6e2c6;     /* mekana zelena */
+      
+      --text-color: #2c2c2c;
+      --link-color: #b35f2d;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: "Georgia", "Trebuchet MS", Arial, sans-serif;
+      color: var(--text-color);
+      background:
+        radial-gradient(circle at 25% 10%, rgba(255, 255, 255, 0.85), rgba(255,255,255,0) 40%),
+        linear-gradient(to bottom right, var(--amalfi-orange) 0%, var(--amalfi-pink) 30%, var(--amalfi-peach) 60%, var(--amalfi-turquoise) 85%, var(--amalfi-green) 100%);
+      background-attachment: fixed;
+      background-size: cover;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    header {
+      padding: 28px 16px;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 30px auto;
+      padding: 24px;
+      background: rgba(255,255,255,0.55);
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      line-height: 1.65;
+    }
+
+    p.lead {
+      margin-top: 0;
+      font-size: 1.05rem;
+      color: #2b2b2b;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: underline;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>Amalfi Pastel Background — Final</header>
+  <main>
+    <p class="lead"><strong>Osećaj topline i svežine mediteranskog jutra,</strong> gde se nežna roza i breskvasta stapaju sa tirkizom mora i blagom zelenom vegetacijom.</p>
+
+    <p>Ova paleta je idealna za priče o Amalfi obali, njenoj prirodi, arhitekturi i opuštenom životnom stilu.</p>
+
+    <p>Isprobaj <a href="#">linkove</a> da vidiš kako izgledaju u ovoj šemi boja.</p>
+  </main>
+</body>
+</html>
