@@ -1,4 +1,4 @@
-name: Generate sitemap
+name: Generate sitemap with lastmod
 
 on:
   push:
@@ -11,23 +11,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Generiše sitemap na osnovu fajlova u repo-u
-      - name: Generate sitemap.xml
-        uses: cicirello/generate-sitemap@v1
+      # Instalira Node.js
+      - uses: actions/setup-node@v4
         with:
-          base-url: https://sandra-putuje.github.io/tamo-daleko
-          sitemap-path: sitemap.xml
-          include-html: true
-          include-pdf: false
-          # po želji ignoriši foldere:
-          exclude-paths: |
-            assets/
-            css/
-            js/
+          node-version: '20'
 
-      # Komituje izmene (samo sitemap.xml)
-      - name: Commit sitemap.xml
-        uses: stefanzweifel/git-auto-commit-action@v5
+      # Instalira sitemap generator koji podržava lastmod
+      - run: npm install -g sitemap-generator-cli
+
+      # Generiše sitemap sa lastmod (datum poslednjeg commita za svaki fajl)
+      - run: |
+          sitemap-generator https://sandra-putuje.github.io/tamo-daleko \
+          --strip-querystring \
+          --max-concurrency 5 \
+          --lastmod \
+          --output ./sitemap.xml
+
+      # Automatski komituje novi sitemap
+      - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update sitemap.xml"
+          commit_message: "chore: update sitemap with lastmod"
           file_pattern: sitemap.xml
