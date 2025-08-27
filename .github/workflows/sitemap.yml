@@ -1,25 +1,31 @@
 name: Generate sitemap with lastmod
 
+# Kada se workflow pokreće
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
 
+# Permissions da workflow može da komituje fajlove
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Checkout repoa
       - uses: actions/checkout@v4
 
-      # Instalira Node.js
+      # Instalacija Node.js
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      # Instalira sitemap generator koji podržava lastmod
+      # Instalira sitemap generator CLI
       - run: npm install -g sitemap-generator-cli
 
-      # Generiše sitemap sa lastmod (datum poslednjeg commita za svaki fajl)
+      # Generiše sitemap sa lastmod tagovima
       - run: |
           sitemap-generator https://sandra-putuje.github.io/tamo-daleko \
           --strip-querystring \
@@ -27,7 +33,7 @@ jobs:
           --lastmod \
           --output ./sitemap.xml
 
-      # Automatski komituje novi sitemap
+      # Automatski commit-uje i push-uje novi sitemap
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update sitemap with lastmod"
