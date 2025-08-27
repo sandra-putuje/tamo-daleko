@@ -1,0 +1,33 @@
+name: Generate sitemap
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Generiše sitemap na osnovu fajlova u repo-u
+      - name: Generate sitemap.xml
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url: https://sandra-putuje.github.io/tamo-daleko
+          sitemap-path: sitemap.xml
+          include-html: true
+          include-pdf: false
+          # po želji ignoriši foldere:
+          exclude-paths: |
+            assets/
+            css/
+            js/
+
+      # Komituje izmene (samo sitemap.xml)
+      - name: Commit sitemap.xml
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update sitemap.xml"
+          file_pattern: sitemap.xml
