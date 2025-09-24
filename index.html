@@ -244,13 +244,25 @@
       background-color: #e0a96d;
       color: white;
     }
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
+
+
+
+footer {
+  background-color: #333;
+  color: #fff;             /* boja teksta */
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: normal;     /* normalna debljina */
+}
+
+footer .footer-content {
+  display: inline-flex;    /* stavlja tekst i ikonu u jedan red */
+  align-items: center;     /* vertikalno poravnanje */
+  gap: 8px;                /* razmak između teksta i ikone */
+}
+
+
     section {
       display: none;
       animation: fadeIn 0.5s ease-in-out;
@@ -539,6 +551,21 @@
     </section>
 
   </div>
+  <footer>
 
+ <div class="footer-content">
+    <span>&copy; 2025 Tamo daleko | Sva prava zadržana</span>
+
+    <a href="https://www.instagram.com/sandra.putuje" class="instagram-link" target="_blank" style="margin-left: 10px;">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" 
+           alt="Instagram" 
+           style="width:20px; height:20px; vertical-align: middle;">
+    </a>
+
+  </div>
+
+
+
+  </footer>
 </body>
 </html>
