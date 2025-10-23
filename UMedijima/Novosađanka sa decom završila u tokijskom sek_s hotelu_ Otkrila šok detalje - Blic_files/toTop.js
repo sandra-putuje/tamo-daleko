@@ -1,0 +1,1 @@
+define((()=>({init:function(){document.querySelector(".footer__to-top").addEventListener("click",(()=>{window.scroll({top:0,left:0,behavior:"smooth"})}))}})));

@@ -1,0 +1,1 @@
+define([],(()=>function(){const n=n=>{window.dataLayer.push({event:"adblockEnabled",adblock:n})};!function(t){const e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://ocdn.eu/blic/prebid.js",e.onerror=function(){n(!0)},e.onload=function(){n(!1)},document.body.appendChild(e)}()}()));

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pastel Trio — Test</title>
+  <style>
+    :root{
+      --pastel-pink: #ffd8e6;    /* svetlo pastelna roza */
+      --pastel-peach: #ffe8d0;   /* svetla breskvasta */
+      --pastel-orange: #ffd8b0;  /* svetlo pastelna narandžasta */
+      --header-warm: #f39c12;    /* nova topla boja za naslov */
+      --text-color: #222222;
+      --link-color: #b34f33;
+    }
+
+    /* Trobojni gradient + beličasti radijalni fade */
+    body{
+      min-height: 100vh;
+      margin: 0;
+      font-family: "Georgia", "Trebuchet MS", Arial, sans-serif;
+      color: var(--text-color);
+      /* layer 1: subtle white radial fade on top, layer 2: linear gradient of three colors */
+      background:
+        radial-gradient(circle at 20% 10%, rgba(255,255,255,0.85), rgba(255,255,255,0) 40%),
+        linear-gradient(135deg, var(--pastel-pink) 0%, var(--pastel-peach) 50%, var(--pastel-orange) 100%);
+      background-attachment: fixed;
+      background-size: cover;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    header{
+      padding: 28px 16px;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: var(--header-warm); /* primenjena topla boja */
+    }
+
+    main{
+      max-width: 760px;
+      margin: 30px auto;
+      padding: 24px;
+      background: rgba(255,255,255,0.55); /* dodatna blaga podloga radi čitljivosti */
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      line-height: 1.65;
+    }
+
+    p.lead{
+      margin-top: 0;
+      font-size: 1.05rem;
+      color: #2b2b2b;
+    }
+
+    a{ color: var(--link-color); }
+    a:hover{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>Pastelni trio — nežan prelaz sa beličastim izbledeljem</header>
+  <main>
+    <p class="lead"><strong>Volim da sedim i razmišljam o sitnicama koje greju dušu.</strong> Neka dani budu laki, obojeni malim radostima i tišinom koja leči. Sve je lepše kada je blago i toplo — poput jutra koje polako prelazi iz roze u nijansu breskve pa u zlatnu narandžastu.</p>
+
+    <p>Mogu da prilagodim nijanse (tamnije ili svetlije), intenzitet beličastog izbleđivanja ili uklonim belu podlogu iz glavnog <code>&lt;main&gt;</code> elementa ako želiš potpuno „čist“ izgled.</p>
+
+    <p>Želiš da ovu verziju pretvorim u CSS varijantu koju da ti ubacim u postojeći sajt (s obzirom na to da želiš strogo bez kreativnih promena bez dozvole), ili da ostavimo ovo samo kao test fajl?</p>
+  </main>
+</body>
+</html>

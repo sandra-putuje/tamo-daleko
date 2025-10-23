@@ -1,0 +1,1 @@
+define([],(function(){return{init:function(){if(-1===document.cookie.indexOf("blicUserTokenExpirationTime")&&window.SSORingierConnect.isUserLoggedIn){(async()=>await fetch("/secure",{method:"POST",Headers:{"Content-Type":"application/json"}}))().then((e=>{document.cookie.indexOf("blicLoggedin=false")>-1&&window.location.reload()}))}}}}));

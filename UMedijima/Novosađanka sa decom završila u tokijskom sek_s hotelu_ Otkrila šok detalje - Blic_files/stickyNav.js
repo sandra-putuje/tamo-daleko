@@ -1,0 +1,1 @@
+define([],(function(){return{init:function(e){require.runnerBox.runElement(e);const t=document.querySelector(".header"),n=document.querySelector(".header__top").offsetHeight;window.addEventListener("scroll",(()=>{window.pageYOffset>=n?t.classList.add("stuck"):t.classList.remove("stuck")}))}}}));

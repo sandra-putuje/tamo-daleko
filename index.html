@@ -338,7 +338,8 @@ footer .footer-content {
       'nemacka': { sekcija: 'evropa', naziv: 'Nemačka' },
       'švedska': { sekcija: 'evropa', naziv: 'Švedska' },
       'tajland': { sekcija: 'azija', naziv: 'Tajland' },
-      'uae': { sekcija: 'azija', naziv: 'UAE' }
+      'uae': { sekcija: 'azija', naziv: 'UAE' },
+      'tanzanija': { sekcija: 'afrika', naziv: 'Tanzanija' }
     };
 
     function prikaziSekciju(idSekcije) {
@@ -410,7 +411,7 @@ footer .footer-content {
       }
 
       const hash = window.location.hash.replace('#', '');
-      if (['evropa', 'azija', 'omeni'].includes(hash)) {
+      if (['evropa', 'azija', 'afrika', 'omeni'].includes(hash)) {
         document.querySelector('header').classList.add('hidden');
         document.body.classList.add('header-hidden');
         prikaziSekciju(hash);
@@ -502,6 +503,7 @@ footer .footer-content {
 
     <a onclick="prikaziSekciju('evropa')">Evropa</a>
     <a onclick="prikaziSekciju('azija')">Azija</a>
+    <a onclick="prikaziSekciju('afrika')">Afrika</a>
     <a href="OMeni/omeni.html">O meni</a>
     
   </div>
@@ -509,6 +511,7 @@ footer .footer-content {
   <nav>
     <a onclick="prikaziSekciju('evropa')">Evropa</a>
     <a onclick="prikaziSekciju('azija')">Azija</a>
+    <a onclick="prikaziSekciju('afrika')">Afrika</a>
     <a href="OMeni/omeni.html">O meni</a>
     
     <a onclick="nazadNaPocetnu()">Početna</a>
@@ -541,6 +544,15 @@ footer .footer-content {
       </div>
            <button class="back-button" onclick="nazadNaPocetnu()">← Nazad</button>
     </section>
+
+    <section id="afrika">
+      <h2>Afrika</h2>
+      <div class="section-links">
+        <a href="Afrika/Tanzanija/Tanzanija.html" target="_blank">Tanzanija</a>
+      </div>
+           <button class="back-button" onclick="nazadNaPocetnu()">← Nazad</button>
+    </section>
+
 
     <section id="omeni">
       <h2>O meni</h2>

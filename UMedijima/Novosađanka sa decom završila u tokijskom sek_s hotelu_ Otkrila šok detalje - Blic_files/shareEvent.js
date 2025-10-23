@@ -1,0 +1,1 @@
+define((()=>({init:function(n,a){const e={event:"share",method:n,link_url:a};window.dataLayer=window.dataLayer||[],console.log(`::: [GA4] ShareEvent. Pushing params: ${JSON.stringify(e)}`),window.dataLayer.push(e)}})));

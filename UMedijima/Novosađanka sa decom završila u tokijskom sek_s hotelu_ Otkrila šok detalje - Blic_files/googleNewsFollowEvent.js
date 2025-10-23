@@ -1,0 +1,1 @@
+define((()=>({init:function(n){n.addEventListener("click",(()=>{const n={event:"follow",method:"google news"};window.dataLayer=window.dataLayer||[],console.log(`::: [GA4] FollowEvent. Pushing params: ${JSON.stringify(n)}`),window.dataLayer.push(n)}))}})));
