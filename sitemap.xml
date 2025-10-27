@@ -107,6 +107,7 @@
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/hello_sandra.html</loc>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/hobotnica.html</loc>
   </url>
   <url>
@@ -161,3 +162,14 @@
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/zivot_na_ostrvu.html</loc>
   </url>
 </urlset>
+=======
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/tarangiri.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/ngorongoro.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/masai.html</loc>
+  </url>
+</urlset>
+>>>>>>> ead120b374ee7bf259d64d2e547946b9962a6a4d
