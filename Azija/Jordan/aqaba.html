@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Aqaba i šarene ribice: korali Crvenog mora i večeri uz zalazak sunca | Tamo daleko</title>
+    <title>Aqaba i šarene ribice: korali Crvenog mora | Tamo daleko</title>
     <meta name="description" content="Putopis iz Aqabe: korali Japanske bašte, šarene ribice, snorkeling uz obalu Crvenog mora, hipi smeštaj, zalazak sunca i susret sa starim gradom Jordana." />
     <meta name="author" content="Sandra Đuričin" />
     <meta name="robots" content="index, follow" />
@@ -13,16 +13,10 @@
 
     <meta property="og:title" content="Aqaba i šarene ribice: korali Crvenog mora | Tamo daleko" />
     <meta property="og:description" content="Putopis iz Aqabe: kupanje uz korale Japanske bašte, šarene ribice, snorkeling i večera uz more." />
-    <meta property="og:image" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Jordan/img/aqaba01.jpg" />
+    <meta property="og:image" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Jordan/img/aqaba (2).jpg" />
     <meta property="og:url" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Jordan/aqaba.html" />
     <meta property="og:type" content="article" />
-    <meta property="og:locale" content="sr_RS" />
     <meta property="og:site_name" content="Tamo daleko" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Aqaba i šarene ribice: korali Crvenog mora | Tamo daleko" />
-    <meta name="twitter:description" content="Putopis iz Aqabe: snorkeling među koralima, šarene ribice i hipi smeštaj." />
-    <meta name="twitter:image" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Jordan/img/aqaba01.jpg" />
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NLYKLXD49W"></script>
     <script>
@@ -39,8 +33,6 @@
             --pastel-orange: #ffd8b0;
             --text-color: #222;
             --header-color: #f39c12;
-            --accent-color: #a0522d;
-            --hover-color: #d96b75;
         }
 
         body {
@@ -65,32 +57,25 @@
             box-sizing: border-box;
         }
 
-        h1 {
-            color: var(--header-color);
-            font-size: 2.5rem;
-            text-align: center;
-            margin: 40px 0 20px;
-        }
+        h1 { color: var(--header-color); font-size: 2.5rem; text-align: center; margin: 40px 0 20px; }
+        h2 { margin-top: 2.5rem; color: var(--header-color); }
+        p { margin-bottom: 1.5rem; text-align: justify; font-weight: 400; }
 
-        h2 {
-            margin-top: 2.5rem;
-            color: var(--header-color);
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-            text-align: justify;
-            font-weight: 400;
-        }
-
-        img {
+        article img {
             display: block;
             width: 100%;
             height: auto;
             margin: 2rem 0;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            cursor: zoom-in;
+            transition: transform 0.3s;
         }
+
+        article img:hover { transform: scale(1.01); }
+
+        .gallery { display: flex; gap: 15px; flex-wrap: wrap; margin: 2rem 0; }
+        .gallery img { flex: 1; min-width: 250px; margin: 0; }
 
         .back-button {
             display: inline-block;
@@ -102,38 +87,37 @@
             font-weight: bold;
             border: none;
             cursor: pointer;
-            transition: transform 0.2s, background 0.3s;
+            transition: transform 0.2s;
             margin: 20px 0;
         }
+        .back-button:hover { transform: scale(1.05); }
 
-        .back-button:hover {
-            transform: scale(1.05);
-            background: linear-gradient(135deg, #e08b00 0%, #ffd8b0 100%);
-        }
-
-        /* Substack & Newsletter */
-        #custom-substack-embed {
-            min-height: 140px;
-            margin: 2rem 0;
-        }
-
-        #subscribe-message {
-            color: #2d5d2a;
-            font-style: italic;
+        .lightbox-overlay {
             display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center; align-items: center;
+            cursor: zoom-out;
         }
+        .lightbox-overlay img { max-width: 90%; max-height: 90%; border-radius: 5px; }
 
+        #custom-substack-embed { min-height: 140px; margin: 2rem 0; }
+        #subscribe-message { color: #2d5d2a; font-style: italic; display: none; }
         .spacer { height: 40px; }
 
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
-		      .gallery {
-        grid-template-columns: 1fr;
+            .gallery { flex-direction: column; }
         }
-}
     </style>
 </head>
 <body>
+
+    <div id="lightbox" class="lightbox-overlay" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="" alt="">
+    </div>
 
     <header>
         <h1>Aqaba i šarene ribice</h1>
@@ -141,62 +125,63 @@
     </header>
 
     <article>
-  	<p>Sledeća stanica: Aqaba. Tu sam ja našla smeštaj jer mi je bilo važno da smo na samoj obali mora, da se možemo kupati kada i koliko želimo. Još sam našla tačno kod Japanske bašte, što su u stvari korali u moru sa puno šarenih ribica.</p>
+        <p>Sledeća stanica: Aqaba. Tu sam ja našla smeštaj jer mi je bilo važno da smo na samoj obali mora, da se možemo kupati kada i koliko želimo. Još sam našla tačno kod Japanske bašte, što su u stvari korali u moru sa puno šarenih ribica.</p>
 
-	<p>Postoji konopac u vodi koji se prati i nema greške, ribice su pred vama. Čak sam od kuće ponela naočare za ronjenje, mada su u blizini agencije za iznajmljivanje svega za ronjenje i snorkeling.</p>
+        <p>Postoji konopac u vodi koji se prati i nema greške, ribice su pred vama. Čak sam od kuće ponela naočare za ronjenje, mada su u blizini agencije za iznajmljivanje svega za ronjenje i snorkeling.</p>
 
-	<p>Smeštaj mi je delovao hipi, kao neka komuna, a boje jarke kao da sam u Meksiku. Imale smo i bazen.</p>
+        <p>Smeštaj mi je delovao hipi, kao neka komuna, a boje jarke kao da sam u Meksiku. Imale smo i bazen.</p>
 
-        <img src="img/aqaba (1).jpg" alt="Dvorište smeštaja sa bazenom">
-        <img src="img/aqaba (3).jpg" alt="Hipi smeštaj u Aqabi sa jarkim bojama">
+            <img src="img/aqaba (1).jpg" alt="Dvorište smeštaja sa bazenom">
+            <img src="img/aqaba (3).jpg" alt="Hipi smeštaj u Aqabi sa jarkim bojama">
+     
         <img src="img/aqaba (4).jpg" alt="Detalji eksterijera u Jordanu">
 
         <p>Kupanje u moru je bilo prelepo, mada je ulazak kamenit, pa trebaju papučice za vodu. More je bilo toplo, a pogled neverovatan. Dole pesak, pa korali kao kuće i ribice raznih boja: male crvene, crno-bele uspravne štrafte sa žutim leđima, sjajno plavo-roza, riba klovn (ali ne Nemo), narandžasta sa svetlo plavim štraftama oivičenim crnom. Prelepo.</p>
 
-	<p>Korali su mi lepši i ima ih u više boja i oblika nego na Maldivima, ali Maldivi vode po šarolikosti ribica.</p>
+        <p>Korali su mi lepši i ima ih u više boja i oblika nego na Maldivima, ali Maldivi vode po šarolikosti ribica.</p>
 
         <img src="img/aqaba (2).jpg" alt="Podvodni svet Japanske bašte u Aqabi">
 
- 	<p>Večerale smo ribu u restoranu uz more, sa pogledom na zalazak sunca i uz moj omiljeni sok od ceđenog manga.</p>
+        <p>Večerale smo ribu u restoranu uz more, sa pogledom na zalazak sunca i uz moj omiljeni sok od ceđenog manga.</p>
 
-	<p>Uveče smo posetile Aqabu i stari grad. Kad smo htele da parkiramo, pitala sam jednu ženicu da li smemo tu da parkiramo. Pogledam je, a ona pređe prstom preko vrata i pokaže na muža (valjda muž, gomila žena je tu bilo).</p>
+        <p>Uveče smo posetile Aqabu i stari grad. Kad smo htele da parkiramo, pitala sam jednu ženicu da li smemo tu da parkiramo. Pogledam je, a ona pređe prstom preko vrata i pokaže na muža (valjda muž, gomila žena je tu bilo).</p>
 
-	<p>Ja pitam muža koji nosi nosiljku za bebu i on mi uz najlepši osmeh odgovori da je u redu da se tu parkira. Ipak, ostao mi je neki nelagodan osećaj u stomaku od njenog gesta i što ne sme sa ženama da se razgovara.</p>
+        <p>Ja pitam muža koji nosi nosiljku za bebu i on mi uz najlepši osmeh odgovori da je u redu da se tu parkira. Ipak, ostao mi je neki nelagodan osećaj u stomaku od njenog gesta i što ne sme sa ženama da se razgovara.</p>
 
-	<p>Stari deo Aquabe je vrlo mali, ima i par tezgi kao pijaca. Tu je prodavnica u kojoj je jedan Arapin koji je živeo u Beogradu i reče nam šta je naučio kod nas, uz psovku na našem jeziku, što je izazvalo salvu smeha jer je bilo potpuno neočekivano.</p>
+        <p>Stari deo Aquabe je vrlo mali, ima i par tezgi kao pijaca. Tu je prodavnica u kojoj je jedan Arapin koji je živeo u Beogradu i reče nam šta je naučio kod nas, uz psovku na našem jeziku, što je izazvalo salvu smeha jer je bilo potpuno neočekivano.</p>
 
-	<p>Smešno mi je bilo kako se moja drugarica cenkala. Traži ona popust i prodavac je pita, pa zašto bih Vam dao popust A ona ni pet ni šest nego zato što sam lepa žena. Prodavac se nasmeje i da joj popust. Kasnije smo iz fazona koristile njenu foru, peckajući je, ali smo zaista dobile popust kao "beautifull women"</p>
+        <p>Smešno mi je bilo kako se moja drugarica cenkala. Traži ona popust i prodavac je pita, pa zašto bih Vam dao popust A ona ni pet ni šest nego zato što sam lepa žena. Prodavac se nasmeje i da joj popust. Kasnije smo iz fazona koristile njenu foru, peckajući je, ali smo zaista dobile popust kao "beautifull women"</p>
 
-        <img src="img/aqaba (5).jpg" alt="Pijaca i sukovi u starom gradu Aqabe">
-        <img src="img/aqaba (6).jpg" alt="Lokalni proizvodi i začini na sukima">
+      
+            <img src="img/aqaba (5).jpg" alt="Pijaca i sukovi u starom gradu Aqabe">
+            <img src="img/aqaba (6).jpg" alt="Lokalni proizvodi i začini na sukima">
+     
 
-	<p>Aqaba je zategnuta i uređena u odnosu na Aman. Lepi hoteli uz obalu, a Izrael, grad Eilat, je toliko blizu da se vide upaljena svetla po domovima.</p>
+        <p>Aqaba je zategnuta i uređena u odnosu na Aman. Lepi hoteli uz obalu, a Izrael, grad Eilat, je toliko blizu da se vide upaljena svetla po domovima.</p>
 
-	<p>Sledeći dan, povratak u pustinju. Iz nekog razloga volim da se vratim na neku destinaciju u toku puta, pa je sve poznato, već je postalo naše.</p>
+        <p>Sledeći dan, povratak u pustinju. Iz nekog razloga volim da se vratim na neku destinaciju u toku puta, pa je sve poznato, već je postalo naše.</p>
 
-	<p>Vratile smo se zbog besplatne vožnje vozom, koja se dobije uz Jordan Pass, ali mora da se rezerviše termin.</p>
+        <p>Vratile smo se zbog besplatne vožnje vozom, koja se dobije uz Jordan Pass, ali mora da se rezerviše termin.</p>
 
-	<p>Dočekao nas je voz sa vojnicima iz 1916. godine. Džakovi od peska po otvorenim vagonima, vojnici naoružani i ozbiljni.</p>
+        <p>Dočekao nas je voz sa vojnicima iz 1916. godine. Džakovi od peska po otvorenim vagonima, vojnici naoružani i ozbiljni.</p>
 
-	<p>Vozimo se kroz pustinju kad iz stenja neko pripuca na nas. Naiđu konjanici i oni koji jašu kamile, napadoše voz, uzeše taoce. Jedan jaše i nosi zastavu Jordana.</p>
+        <p>Vozimo se kroz pustinju kad iz stenja neko pripuca na nas. Naiđu konjanici i oni koji jašu kamile, napadoše voz, uzeše taoce. Jedan jaše i nosi zastavu Jordana.</p>
 
-	<p>Prisustvovali smo Velikom arapskom ustanku. Lorensa od Arabije nismo videli, ali smo mu ranije videli pećinu u pustinji. Bilo je simpatično.</p>
+        <p>Prisustvovali smo Velikom arapskom ustanku. Lorensa od Arabije nismo videli, ali smo mu ranije videli pećinu u pustinji. Bilo je simpatično.</p>
 
-	<p>Bilo je i čaura metaka u našem vagonu, ali je naglašeno da se ne smeju nositi na aerodrom.</p>
+        <p>Bilo je i čaura metaka u našem vagonu, ali je naglašeno da se ne smeju nositi na aerodrom.</p>
 
-        <img src="img/aqaba (7).jpg" alt="Wadi Rum, ustanak, voz">
-        <img src="img/aqaba (8).jpg" alt="Wadi Rum, konjanik, voz">
-
-
-     </article>
+     
+            <img src="img/aqaba (7).jpg" alt="Wadi Rum, ustanak, voz">
+            <img src="img/aqaba (8).jpg" alt="Wadi Rum, konjanik, voz">
+      
+    </article>
 
     <section class="newsletter">
         <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
         <h2>Ne propustite sledeću avanturu!</h2>
-        <p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
-        
         <div id="custom-substack-embed"></div>
-        <p id="subscribe-message">✔️ Proverite svoj mejl za potvrdu pretplate! Ako nema, pogledajte u spam!</p>
+        <p id="subscribe-message">✔️ Proverite svoj mejl za potvrdu pretplate!</p>
     </section>
 
     <footer>
@@ -207,35 +192,26 @@
 
     <script src="jordan-sledeca.js"></script>
     <script>
-      window.CustomSubstackWidget = {
-        substackUrl: "sandra-putuje.substack.com",
-        placeholder: "Unesite svoj email",
-        buttonText: "Prijavi se",
-        theme: "custom",
-        colors: {
-          primary: "#8bb272",
-          input: "#ffffff",
-          email: "#2d5d2a",
-          text: "#004d40",
-        },
-        onSubmit: function () {
-          document.getElementById('subscribe-message').style.display = 'block';
-        }
-      };
+        document.querySelectorAll('article img').forEach(image => {
+            image.onclick = () => {
+                document.getElementById('lightbox').style.display = 'flex';
+                document.getElementById('lightbox-img').src = image.getAttribute('src');
+            }
+        });
+
+        window.CustomSubstackWidget = {
+            substackUrl: "sandra-putuje.substack.com",
+            placeholder: "Unesite svoj email",
+            buttonText: "Prijavi se",
+            theme: "custom",
+            colors: { primary: "#8bb272", input: "#ffffff", email: "#2d5d2a", text: "#004d40" },
+            onSubmit: function () { document.getElementById('subscribe-message').style.display = 'block'; }
+        };
     </script>
     <script src="https://substackapi.com/widget.js" async></script>
-    
     <script>
-      var disqus_config = function () {
-        this.page.url = window.location.href;
-        this.page.identifier = window.location.pathname;
-      };
-      (function() {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://sandra-putuje.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
+        var disqus_config = function () { this.page.url = window.location.href; this.page.identifier = window.location.pathname; };
+        (function() { var d = document, s = d.createElement('script'); s.src = 'https://sandra-putuje.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })();
     </script>
 </body>
 </html>
