@@ -134,7 +134,7 @@
             <img src="img/aqaba (1).jpg" alt="Dvorište smeštaja sa bazenom">
             <img src="img/aqaba (3).jpg" alt="Hipi smeštaj u Aqabi sa jarkim bojama">
      
-        <img src="img/aqaba (4).jpg" alt="Detalji eksterijera u Jordanu">
+            <img src="img/aqaba (4).jpg" alt="Detalji eksterijera u Jordanu">
 
         <p>Kupanje u moru je bilo prelepo, mada je ulazak kamenit, pa trebaju papučice za vodu. More je bilo toplo, a pogled neverovatan. Dole pesak, pa korali kao kuće i ribice raznih boja: male crvene, crno-bele uspravne štrafte sa žutim leđima, sjajno plavo-roza, riba klovn (ali ne Nemo), narandžasta sa svetlo plavim štraftama oivičenim crnom. Prelepo.</p>
 
@@ -177,21 +177,27 @@
       
     </article>
 
-    <section class="newsletter">
-        <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
-        <h2>Ne propustite sledeću avanturu!</h2>
-        <div id="custom-substack-embed"></div>
-        <p id="subscribe-message">✔️ Proverite svoj mejl za potvrdu pretplate!</p>
-    </section>
+ <script src="jordan-sledeca.js"></script>
 
-    <footer>
-        <button class="back-button" onclick="window.location.href='jordan.html?aktivna=aqaba'">← Nazad na Jordan</button>
+ <footer>
+        <button class="back-button" onclick="window.location.href='jordan.html?aktivna=mrtvomore'">← Nazad na Jordan</button>
         <div class="spacer"></div>
         <div id="disqus_thread"></div>
     </footer>
 
-    <script src="jordan-sledeca.js"></script>
+    <section class="newsletter">
+        <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
+        <h2>Ne propustite sledeću avanturu!</h2>
+        <p>Prijavite se i nove priče stižu direktno u vaš inbox.</p>
+        <div id="custom-substack-embed"></div>
+        <p id="subscribe-message">✔️ Proverite svoj mejl za potvrdu pretplate!</p>
+    </section>
+
+
+
+   
     <script>
+        // Lightbox logika
         document.querySelectorAll('article img').forEach(image => {
             image.onclick = () => {
                 document.getElementById('lightbox').style.display = 'flex';
@@ -199,6 +205,7 @@
             }
         });
 
+        // Substack
         window.CustomSubstackWidget = {
             substackUrl: "sandra-putuje.substack.com",
             placeholder: "Unesite svoj email",

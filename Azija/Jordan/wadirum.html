@@ -231,88 +231,48 @@
 <p>     </p>
 <p>     </p>
 
-<script src="jordan-sledeca.js"></script>
+ <script src="jordan-sledeca.js"></script>
 
-<p>     </p>
-<p>     </p>
+ <footer>
+        <button class="back-button" onclick="window.location.href='jordan.html?aktivna=mrtvomore'">← Nazad na Jordan</button>
+        <div class="spacer"></div>
+        <div id="disqus_thread"></div>
+    </footer>
 
-<button class="back-button" onclick="window.location.href='jordan.html?aktivna=wadirum'">← Nazad na Jordan</button>
+    <section class="newsletter">
+        <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
+        <h2>Ne propustite sledeću avanturu!</h2>
+        <p>Prijavite se i nove priče stižu direktno u vaš inbox.</p>
+        <div id="custom-substack-embed"></div>
+        <p id="subscribe-message">✔️ Proverite svoj mejl za potvrdu pretplate!</p>
+    </section>
 
-<p>     </p>
-<p>     </p>
 
-<h2>Ne propustite sledeću avanturu!</h2>
-<p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
 
-<div id="custom-substack-embed" style="margin-top:2rem;"></div>
-
-<p id="subscribe-message" style="display:none; color:#2d5d2a; font-style: italic; margin-top: 0.2rem;">
-    ✔️ Proverite svoj mejl za potvrdu pretplate! Ako nema, pogledajte u spam/promotions! Imate besplatnu opciju.
-</p>
-
-<script>
-  // Lightbox skripta
-  document.querySelectorAll('article img').forEach(image => {
-      image.onclick = () => {
-          document.getElementById('lightbox').style.display = 'flex';
-          document.getElementById('lightbox-img').src = image.getAttribute('src');
-      }
-  });
-
-  window.CustomSubstackWidget = {
-    substackUrl: "sandra-putuje.substack.com",
-    placeholder: "Unesite svoj email",
-    buttonText: "Prijavi se",
-    theme: "custom",
-    colors: {
-      primary: "#8bb272",
-      input: "#ffffff",
-      email: "#2d5d2a",
-      text: "#004d40",
-    },
-    onSubmit: function () {
-      const message = document.getElementById('subscribe-message');
-      message.style.display = 'block';
-      message.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
-  const targetNode = document.getElementById('custom-substack-embed');
-  const config = { childList: true, subtree: true };
-  const observer = new MutationObserver(function (mutationsList, observer) {
-    for (let mutation of mutationsList) {
-      if (mutation.type === 'childList') {
-        mutation.addedNodes.forEach(function (node) {
-          if (node.nodeType === 1 && node.tagName === 'P' && node.textContent.includes("We've sent you a confirmation email")) {
-            node.style.display = 'none';
-            const message = document.getElementById('subscribe-message');
-            message.style.display = 'block';
-            message.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
+   
+    <script>
+        // Lightbox logika
+        document.querySelectorAll('article img').forEach(image => {
+            image.onclick = () => {
+                document.getElementById('lightbox').style.display = 'flex';
+                document.getElementById('lightbox-img').src = image.getAttribute('src');
+            }
         });
-      }
-    }
-  });
-  observer.observe(targetNode, config);
-</script>
 
-<script src="https://substackapi.com/widget.js" async></script>
-
-<div style="margin-top: 4rem;"></div>
-<div id="disqus_thread"></div>
-
-<script>
-  var disqus_config = function () {
-    this.page.url = window.location.href;
-    this.page.identifier = window.location.pathname;
-  };
-  (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://sandra-putuje.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-
+        // Substack
+        window.CustomSubstackWidget = {
+            substackUrl: "sandra-putuje.substack.com",
+            placeholder: "Unesite svoj email",
+            buttonText: "Prijavi se",
+            theme: "custom",
+            colors: { primary: "#8bb272", input: "#ffffff", email: "#2d5d2a", text: "#004d40" },
+            onSubmit: function () { document.getElementById('subscribe-message').style.display = 'block'; }
+        };
+    </script>
+    <script src="https://substackapi.com/widget.js" async></script>
+    <script>
+        var disqus_config = function () { this.page.url = window.location.href; this.page.identifier = window.location.pathname; };
+        (function() { var d = document, s = d.createElement('script'); s.src = 'https://sandra-putuje.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })();
+    </script>
 </body>
 </html>
