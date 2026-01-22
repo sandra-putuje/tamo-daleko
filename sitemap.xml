@@ -1,432 +1,657 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/OMeni/omeni.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Hrvatska/Zagreb.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Rumunija/Krajova.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/Nemacka.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/maldivi.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/japan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/indija.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/jordan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/tajland.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/Tanzanija.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/index.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/krug.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/muvanje.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/nemacki.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/prijatelji-note-novo-more-planova.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/ju-znaci-ju-karlsruhe.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/strazbur.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/kolmar.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/jutro-u-najlepsem-selu-francuske.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/bodensko-jezero-ukulele-giros.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/lucern.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/hajdi-selo.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/lihtenstajn.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/cirkus-u-tri-cina.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/dvorci-jezero-kraljevske-tajne.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/putujuca_zaba.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/nesto_naopako.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/let_ostrva.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/razglednica.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/dori.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/delfini.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/dzungla.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/poklon.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/zivot_na_ostrvu.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/aslam.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/kornjace.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/samo_te_gledam.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/otrovna_nije_opasna.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/haljina.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/pas.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/beba_ajkula.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/vrane.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/deca.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/hobotnica.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/prdeca_baba.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/bodu_beru.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/plave_zvezde.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/hello_sandra.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/turski_sed.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/lokalci.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/pecanje.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/najlepsa_slika.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/5stvari.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/let_aurora.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/prvi_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/drugi_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/treci_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/cetvrti_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/peti_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sesti_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sedmi_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sedmi_dan2.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sedmi_dan3.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sedmi_dan4.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sedmi_dan5.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/osmi_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/osmi_dan2.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/deveti_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/deseti_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/deseti_dan2.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/deseti_dan3.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/deveti_dan2.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/jedanaesti_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/jedanaesti_dan2.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/dvanaesti_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/dvanaesti_dan2.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/trinaesti_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/10stvari.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/predgovor.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/prvi_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/drugi_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/treci_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/cetvrti_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/peti_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/sesti_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/sedmi_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/sedmi_dan2.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/sedmi_dan3.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/osmi_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/deveti_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/deveti_dan2.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/deseti_dan.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/jerash.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/petra.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/wadirum.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/aqaba.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/mrtvomore.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/nebo.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/predgovor.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/sleteli_smo_u_kupatilo.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/hotel_koji_ima_dusu.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/uputstvo_za_upotrebu_tajlanda.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/trapez_frizura_i_spasilac.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/vecera_na_podu_i_porcije_za_lutke.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/pijaca_slonovi_i_baba.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/buda_ili_budina_devojka.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/kaludjer_cekic_i_lampa.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/jedan_buda_tri_kostima.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/oprosteni_gresi.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/prinudni_soping_i_nepoverenje.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/predstave.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/ploveca_pijaca_i_piton.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/vozni_red_kuke_i_kvake.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/benzinska_pumpa.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/bolja_od_standup_komicara.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/majmun_ili_ja.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/gibon_i_dusko.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/slonce_i_katapult.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/ljubav_na_prodaju.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/meet_the_flintstones.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/bond_james_bond.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/sreckovici.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/plati_pa_vidi.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/plaza_pticica_i_majmunce.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/iznenadjenje_slepi_misevi.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/predgovor.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/zanzibar.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/nungwi.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/kendwa.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/farmazacina.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/skola.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/stonetown.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/prisonisland.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/mnemba.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/sume.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/strah.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/tarangiri.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/ngorongoro.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/serval.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/masai.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/masailodge.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/materuni.html</loc>
-  </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/OMeni/omeni.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Hrvatska/Zagreb.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/Nemacka.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/maldivi.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/japan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/indija.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/tajland.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/Tanzanija.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/index.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/krug.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/muvanje.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/nemacki.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/prijatelji-note-novo-more-planova.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/ju-znaci-ju-karlsruhe.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/strazbur.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/kolmar.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/jutro-u-najlepsem-selu-francuske.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/bodensko-jezero-ukulele-giros.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/lucern.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/hajdi-selo.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/lihtenstajn.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/cirkus-u-tri-cina.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/dvorci-jezero-kraljevske-tajne.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/putujuca_zaba.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/nesto_naopako.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/let_ostrva.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/razglednica.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/dori.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/delfini.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/dzungla.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/poklon.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/zivot_na_ostrvu.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/aslam.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/kornjace.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/samo_te_gledam.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/otrovna_nije_opasna.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/haljina.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/pas.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/beba_ajkula.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/vrane.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/deca.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/hobotnica.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/prdeca_baba.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/bodu_beru.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/plave_zvezde.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/hello_sandra.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/turski_sed.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/lokalci.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/pecanje.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/najlepsa_slika.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/5stvari.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/index.html?aktivno=maldivi</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/let_aurora.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/prvi_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/drugi_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/treci_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/cetvrti_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/peti_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sesti_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sedmi_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sedmi_dan2.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sedmi_dan3.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sedmi_dan4.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sedmi_dan5.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/osmi_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/osmi_dan2.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/deveti_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/deseti_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/deseti_dan2.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/deseti_dan3.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/deveti_dan2.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/jedanaesti_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/jedanaesti_dan2.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/dvanaesti_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/dvanaesti_dan2.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/trinaesti_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/10stvari.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/index.html?aktivno=japan</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/predgovor.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/prvi_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/drugi_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/treci_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/cetvrti_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/peti_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/sesti_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/sedmi_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/sedmi_dan2.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/sedmi_dan3.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/osmi_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/deveti_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/deveti_dan2.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/deseti_dan.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/index.html?aktivno=indija</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/predgovor.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/sleteli_smo_u_kupatilo.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/hotel_koji_ima_dusu.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/uputstvo_za_upotrebu_tajlanda.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/trapez_frizura_i_spasilac.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/vecera_na_podu_i_porcije_za_lutke.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/pijaca_slonovi_i_baba.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/buda_ili_budina_devojka.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/kaludjer_cekic_i_lampa.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/jedan_buda_tri_kostima.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/oprosteni_gresi.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/prinudni_soping_i_nepoverenje.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/predstave.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/ploveca_pijaca_i_piton.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/vozni_red_kuke_i_kvake.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/benzinska_pumpa.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/bolja_od_standup_komicara.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/majmun_ili_ja.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/gibon_i_dusko.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/slonce_i_katapult.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/ljubav_na_prodaju.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/meet_the_flintstones.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/bond_james_bond.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/sreckovici.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/plati_pa_vidi.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/plaza_pticica_i_majmunce.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Tajland/iznenadjenje_slepi_misevi.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/predgovor.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/zanzibar.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/nungwi.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/tarangiri.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/ngorongoro.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/serval.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/masai.html</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sandra-putuje.github.io/tamo-daleko/index.html?aktivno=afrika</loc>
+  <lastmod>2025-10-24T14:17:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
