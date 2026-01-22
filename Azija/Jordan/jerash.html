@@ -175,40 +175,48 @@
     <p>Džeraš me je naučio važnu lekciju: nekada su najlepši putevi oni na koje nismo planirali da krenemo.</p>
 </article>
 
-<script src="jordan-sledeca.js"></script>
+ <script src="jordan-sledeca.js"></script>
 
-<button class="back-button" onclick="window.location.href='jordan.html?aktivna=jerash'">← Nazad na Jordan</button>
+ <footer>
+        <button class="back-button" onclick="window.location.href='jordan.html?aktivna=mrtvomore'">← Nazad na Jordan</button>
+        <div class="spacer"></div>
+        <div id="disqus_thread"></div>
+    </footer>
 
-<h2>Ne propustite sledeću avanturu!</h2>
-<p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
-<div id="custom-substack-embed"></div>
-<p id="subscribe-message" style="display:none; color:#2d5d2a; font-style: italic;">✔️ Proverite svoj mejl za potvrdu pretplate!</p>
+    <section class="newsletter">
+        <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
+        <h2>Ne propustite sledeću avanturu!</h2>
+        <p>Prijavite se i nove priče stižu direktno u vaš inbox.</p>
+        <div id="custom-substack-embed"></div>
+        <p id="subscribe-message">✔️ Proverite svoj mejl za potvrdu pretplate!</p>
+    </section>
 
-<script>
-  // Lightbox
-  document.querySelectorAll('article img').forEach(image => {
-      image.onclick = () => {
-          document.getElementById('lightbox').style.display = 'flex';
-          document.getElementById('lightbox-img').src = image.getAttribute('src');
-      }
-  });
 
-  window.CustomSubstackWidget = {
-    substackUrl: "sandra-putuje.substack.com",
-    placeholder: "Unesite svoj email",
-    buttonText: "Prijavi se",
-    theme: "custom",
-    colors: { primary: "#8bb272", input: "#ffffff", email: "#2d5d2a", text: "#004d40" },
-    onSubmit: function () { document.getElementById('subscribe-message').style.display = 'block'; }
-  };
-</script>
-<script src="https://substackapi.com/widget.js" async></script>
 
-<div id="disqus_thread" style="margin-top: 4rem;"></div>
-<script>
-  var disqus_config = function () { this.page.url = window.location.href; this.page.identifier = window.location.pathname; };
-  (function() { var d = document, s = d.createElement('script'); s.src = 'https://sandra-putuje.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })();
-</script>
+   
+    <script>
+        // Lightbox logika
+        document.querySelectorAll('article img').forEach(image => {
+            image.onclick = () => {
+                document.getElementById('lightbox').style.display = 'flex';
+                document.getElementById('lightbox-img').src = image.getAttribute('src');
+            }
+        });
 
+        // Substack
+        window.CustomSubstackWidget = {
+            substackUrl: "sandra-putuje.substack.com",
+            placeholder: "Unesite svoj email",
+            buttonText: "Prijavi se",
+            theme: "custom",
+            colors: { primary: "#8bb272", input: "#ffffff", email: "#2d5d2a", text: "#004d40" },
+            onSubmit: function () { document.getElementById('subscribe-message').style.display = 'block'; }
+        };
+    </script>
+    <script src="https://substackapi.com/widget.js" async></script>
+    <script>
+        var disqus_config = function () { this.page.url = window.location.href; this.page.identifier = window.location.pathname; };
+        (function() { var d = document, s = d.createElement('script'); s.src = 'https://sandra-putuje.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })();
+    </script>
 </body>
 </html>

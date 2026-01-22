@@ -1,6 +1,6 @@
-// indija-sledeca.js
+// jordan-sledeca.js
 (function() {
-  const listaJSON = localStorage.getItem('indijaList');
+  const listaJSON = localStorage.getItem('jordanList');
   if (!listaJSON) return;
 
   let lista;
