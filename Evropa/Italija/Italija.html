@@ -125,19 +125,36 @@ h1 {
   transform: scale(1.05);
 }
 
-/* Mobilni prikaz */
+
+
+/* Mobilni ekrani */
 @media (max-width: 600px) {
-  h1 {
-    font-size: 1.5em;
+  /* Pomeri grid bliže vrhu ekrana */
+  .button-grid {
+    margin: 30px auto 10px auto; 
+    grid-template-columns: 1fr; /* jedan po jedan red */
+    gap: 15px;
+    width: 90%;
   }
 
+  /* Veća dugmad na mobilu */
   .btn, .back-btn {
-    font-size: 1em;              /* veći font */
-    padding: 14px 20px;           /* veći padding */
-    width: 95%;                   /* skoro puna širina ekrana */
-    max-width: none;              /* ukloni limit */
+    font-size: 1.2em;
+    padding: 16px 24px;
+    width: 100%; /* skoro puna širina */
+    max-width: none;
+    display: block;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
   }
 }
+
+
+
 </style>
 </head>
 <body>
