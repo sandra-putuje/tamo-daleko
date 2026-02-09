@@ -37,23 +37,42 @@
 </script>
 
 
- <style>
+<style>
+/* Osnovni body */
 body {
   font-family: 'Georgia', serif;
   background-color: #fbf7f1;
-  color: #4b3a2a; /* topla braon – vino, zemlja */
+  color: #4b3a2a;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertikalno centriranje */
+  align-items: center;     /* horizontalno centriranje */
   text-align: center;
-  padding: 20px;
 }
 
+/* Naslov */
 h1 {
-  color: #8b3a2b; /* terakota / cigla */
-  margin-bottom: 30px;
+  color: #8b3a2b;
+  margin-bottom: 40px;
   text-shadow: 1px 1px #f2e6da;
 }
 
+/* Grid za dugmad */
+.button-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  justify-items: center; /* horizontalno centriranje dugmadi */
+}
+
+/* Dugmad Pulja / Amalfi */
 .btn {
-  background: linear-gradient(to bottom right, #c7d1a3, #a8b47a); /* maslinasto zelena */
+  background: linear-gradient(to bottom right, #c7d1a3, #a8b47a);
   color: #3f4a2c;
   border: none;
   border-radius: 20px;
@@ -64,10 +83,8 @@ h1 {
   transition: transform 0.2s, background 0.3s;
   cursor: pointer;
   user-select: none;
-
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 80%; /* širina dugmeta */
+  max-width: 250px;
 }
 
 .btn:hover {
@@ -77,35 +94,6 @@ h1 {
   box-shadow: 3px 3px 8px rgba(120, 90, 60, 0.45);
 }
 
-.back-btn {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 10px 20px;
-  background-color: #a8b47a; /* maslinasto zelena */
-  color: #3f4a2c;
-  border: none;    
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 2px 2px 6px rgba(90, 80, 60, 0.25);
-  transition: background-color 0.3s, transform 0.2s;
-  cursor: pointer;
-}
-
-.back-btn:hover {
-  background-color: #8f9c5f;
-  color: #fffaf2;
-  transform: scale(1.05);
-}
-.button-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .btn.active {
   transform: scale(1.05);
   background: linear-gradient(to bottom right, #9aa85f, #7f8d4f);
@@ -113,14 +101,41 @@ h1 {
   box-shadow: 3px 3px 8px rgba(120, 90, 60, 0.5);
 }
 
+/* Dugme Nazad */
+.back-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 10px 20px;
+  background-color: #a8b47a;
+  color: #3f4a2c;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 2px 2px 6px rgba(90, 80, 60, 0.25);
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+  width: 80%;
+  max-width: 250px;
+}
+
+.back-btn:hover {
+  background-color: #8f9c5f;
+  color: #fffaf2;
+  transform: scale(1.05);
+}
+
+/* Mobilni prikaz */
 @media (max-width: 600px) {
   h1 {
     font-size: 1.5em;
   }
 
-  .btn {
-    font-size: 0.95em;
-    padding: 10px 16px;
+  .btn, .back-btn {
+    font-size: 1em;              /* veći font */
+    padding: 14px 20px;           /* veći padding */
+    width: 95%;                   /* skoro puna širina ekrana */
+    max-width: none;              /* ukloni limit */
   }
 }
 </style>
@@ -154,11 +169,7 @@ h1 {
   ← Nazad na Evropa
 </button>
 
-<style>
-.back-button {
-  margin-top: 2rem;
-}
-</style>
+
 
 <script>
   window.onload = function() {
