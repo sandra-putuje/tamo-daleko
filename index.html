@@ -262,7 +262,16 @@ footer {
 footer .footer-content {
   display: inline-flex;    /* stavlja tekst i ikonu u jedan red */
   align-items: center;     /* vertikalno poravnanje */
-  gap: 8px;                /* razmak između teksta i ikone */
+  gap: 4px;                /* razmak između teksta i ikone */
+}
+
+footer {
+  display: flex;
+  justify-content: center;   /* centrirano */
+  align-items: center;
+  gap: 1rem;                 /* razmak između elemenata */
+  flex-wrap: nowrap;         /* ZABRANI prelom u novi red */
+  white-space: nowrap;       /* dodatna sigurnost */
 }
 
 
