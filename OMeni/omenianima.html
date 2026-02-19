@@ -46,46 +46,8 @@
       margin-bottom: 1rem;
       font-size: 1.1em;
     }
-.fullwidth-gallery {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
-  padding: 0;
-  background: none;
-}
 
-.fullwidth-gallery img {
-  display: block;
-  width: 100vw;  /* cela širina prozora */
-  height: auto;
-  border-radius: 0;  /* možeš ukloniti za ivice da budu skroz do kraja */
-  margin-bottom: 1rem; /* razmak između slika */
-  object-fit: cover; /* opcionalno, ako želiš da slike lepo ispune */
-}
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  margin: 0 auto;
-  max-width: 1200px; /* možeš išaljiš ili prilagodiš po želji */
-  padding: 0 1rem;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 51, 102, 0.3);
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-    .gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(0, 51, 102, 0.5);
-    }
     .back-button {
       display: inline-block;
       background: linear-gradient(to bottom right, #7fb8e0, #4a86e8);
