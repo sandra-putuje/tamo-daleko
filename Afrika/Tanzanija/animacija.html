@@ -113,14 +113,12 @@ body, p, span {
       margin-bottom: 1rem;
       text-align: justify;
     }
-    img {
-      display: block;
-      width: 100%;       /* Obezbeđuje da slika zauzima celu širinu teksta */
-      height: auto;      /* Automatski prilagođava visinu proporcinalno */
-      margin: 1rem 0;    /* Vertikalni razmak iznad i ispod slike */
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;   /* centrirano */
+}
     hr {
       border: none;
       border-top: 2px solid #a0522d;
