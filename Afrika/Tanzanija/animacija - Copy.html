@@ -55,24 +55,28 @@
       --card-border: rgba(220, 180, 120, 0.35);
     }
 
-
-
-    body {
-      font-family: 'Georgia', serif;
+    body{
+      min-height:100vh;
+      margin:0;
+      font-family: "Georgia", "Trebuchet MS", Arial, sans-serif;
+      color: var(--text-color);
       background:
         radial-gradient(circle at 20% 10%, rgba(255,255,255,0.85), rgba(255,255,255,0) 40%),
         linear-gradient(135deg, var(--pastel-pink) 0%, var(--pastel-peach) 50%, var(--pastel-orange) 100%);
-      color: #003366;
-      margin: 20px;
-      text-align: center;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 1rem;
-      box-sizing: border-box;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 102, 153, 0.3);
+      background-attachment: fixed;
+      background-size: cover;
+
+
+  text-align: justify;   /* za paragrafe */
+  max-width: 850px;      /* ograničava širinu teksta */
+  margin-left: auto;
+  margin-right: auto;    /* centrirano */
+  padding: 20px 16px;    /* unutrašnji razmak */
+  line-height: 1.6;
+
     }
+
+
 
 
 p {
