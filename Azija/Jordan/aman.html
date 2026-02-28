@@ -207,24 +207,15 @@
  <script src="jordan-sledeca.js"></script>
 
  <footer>
+
+
         <button class="back-button" onclick="window.location.href='jordan.html?aktivna=mrtvomore'">← Nazad na Jordan</button>
-        <div class="spacer"></div>
-        <div id="disqus_thread"></div>
+        <div id="disqus_thread" style="margin-top: 40px;"></div>
     </footer>
 
-    <section class="newsletter">
-        <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
-        <h2>Ne propustite sledeću avanturu!</h2>
-        <p>Prijavite se i nove priče stižu direktno u vaš inbox.</p>
-        <div id="custom-substack-embed"></div>
-        <p id="subscribe-message">✔️ Proverite svoj mejl za potvrdu pretplate!</p>
-    </section>
-
-
-
-   
-    <script>
-        // Lightbox logika
+<div id="custom-substack-embed"></div>
+  <script>
+        // Lightbox logika (ostaje ista)
         document.querySelectorAll('article img').forEach(image => {
             image.onclick = () => {
                 document.getElementById('lightbox').style.display = 'flex';
@@ -232,17 +223,15 @@
             }
         });
 
-       <section class="newsletter">
-    <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
-    <h2>Ne propustite sledeću avanturu!</h2>
-    <p>Prijavite se i nove priče stižu direktno u vaš inbox.</p>
-    
-    <iframe src="https://sandra-putuje.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-</section>
-
-    <script>
+        // Disqus komentari (ostaje isto)
         var disqus_config = function () { this.page.url = window.location.href; this.page.identifier = window.location.pathname; };
-        (function() { var d = document, s = d.createElement('script'); s.src = 'https://sandra-putuje.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })();
+        (function() { 
+            var d = document, s = d.createElement('script'); 
+            s.src = 'https://sandra-putuje.disqus.com/embed.js'; 
+            s.setAttribute('data-timestamp', +new Date()); 
+            (d.head || d.body).appendChild(s); 
+        })();
     </script>
+<script src="newsletter.js"></script>
 </body>
 </html>
