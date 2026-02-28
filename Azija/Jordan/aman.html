@@ -232,17 +232,14 @@
             }
         });
 
-        // Substack
-        window.CustomSubstackWidget = {
-            substackUrl: "sandra-putuje.substack.com",
-            placeholder: "Unesite svoj email",
-            buttonText: "Prijavi se",
-            theme: "custom",
-            colors: { primary: "#8bb272", input: "#ffffff", email: "#2d5d2a", text: "#004d40" },
-            onSubmit: function () { document.getElementById('subscribe-message').style.display = 'block'; }
-        };
-    </script>
-    <script src="https://substackapi.com/widget.js" async></script>
+       <section class="newsletter">
+    <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
+    <h2>Ne propustite sledeću avanturu!</h2>
+    <p>Prijavite se i nove priče stižu direktno u vaš inbox.</p>
+    
+    <iframe src="https://sandra-putuje.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+</section>
+
     <script>
         var disqus_config = function () { this.page.url = window.location.href; this.page.identifier = window.location.pathname; };
         (function() { var d = document, s = d.createElement('script'); s.src = 'https://sandra-putuje.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })();
