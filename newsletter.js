@@ -21,6 +21,5 @@ function injectNewsletter() {
         </section>
     `;
 }
-
-// Pokreni funkciju kada se stranica učita
+// Bez ove linije, funkcija samo "postoji", ali se nikada ne izvršava
 document.addEventListener('DOMContentLoaded', injectNewsletter);
