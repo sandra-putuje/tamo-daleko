@@ -220,38 +220,49 @@
 <p>     </p>
 
 
-<!-- Substack forma -->
-<h2>Ne propustite sledeću avanturu!</h2>
-<p>Kad Sandra krene u novi kraj sveta, vaš inbox prvi sazna. Prijavite se i stižu vam sve nove priče mejlom.</p>
-
-<div id="custom-substack-embed" style="margin-top:2rem;"></div>
-
-<p id="subscribe-message" style="display:none; color:##2d5d2a; font-style: italic; margin-top: 0.2rem;">
-   ✔️ Proverite svoj mejl za potvrdu pretplate! Ako nema, pogledajte u spam/promotions! Imate besplatnu opciju.
-</p>
+ <footer>
+        <div id="disqus_thread" style="margin-top: 40px;"></div>
+    </footer>
 
 <div id="custom-substack-embed"></div>
-<script src="/tamo-daleko/newsletter.js"></script>
 
-<script src="https://substackapi.com/widget.js" async></script>
+    <script>
+        // Lightbox logika
+        document.querySelectorAll('article img').forEach(image => {
+            image.onclick = () => {
+                document.getElementById('lightbox').style.display = 'flex';
+                document.getElementById('lightbox-img').src = image.getAttribute('src');
+            }
+        });
 
-<!-- Ovdje ide Disqus komentar widget -->
-<div style="margin-top: 4rem;"></div>
-<div id="disqus_thread"></div>
+        // Disqus komentari
+        var disqus_config = function () { 
+            this.page.url = window.location.href; 
+            this.page.identifier = window.location.pathname; 
+        };
+        (function() { 
+            var d = document, s = d.createElement('script'); 
+            s.src = 'https://sandra-putuje.disqus.com/embed.js'; 
+            s.setAttribute('data-timestamp', +new Date()); 
+            (d.head || d.body).appendChild(s); 
+        })();
+    </script>
 
-<script>
-  var disqus_config = function () {
-    this.page.url = window.location.href;
-    this.page.identifier = window.location.pathname;
-  };
+    <section class="newsletter" style="text-align: center; padding: 40px 20px; background: var(--card-bg); border-radius: 10px; border: 1px solid var(--card-border); margin: 50px 0;">
+    <hr style="border: 0; border-top: 1px solid #ccc; margin-bottom: 30px;">
+    <h2 style="margin-top: 0; color: var(--header-color);">Ne propustite sledeću avanturu!</h2>
+    <p>Pridružite se zajednici putnika i nove priče će vam stizati direktno u inbox.</p>
+    
+    <a href="https://sandra-putuje.substack.com/subscribe" 
+       target="_blank" 
+       style="display: inline-block; background-color: #8bb272; color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+        Prijavi se na newsletter
+    </a>
+    
+    <p style="font-size: 0.85rem; margin-top: 20px; color: #555; font-style: italic;">
+        *Besplatna prijava putem Substack platforme.
+    </p>
+</section>
 
-  (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://sandra-putuje.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-<noscript>Molimo omogućite JavaScript da biste videli komentare.</noscript>
 </body>
 </html>

@@ -244,17 +244,12 @@ body {
         <div id="disqus_thread"></div>
     </footer>
 
-    <section class="newsletter">
-        <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
-        <h2>Ne propustite sledeću avanturu!</h2>
-        <p>Prijavite se i nove priče stižu direktno u vaš inbox.</p>
-        <div id="custom-substack-embed"></div>
-        <p id="subscribe-message">✔️ Proverite svoj mejl za potvrdu pretplate!</p>
-    </section>
+ <footer>
+        <div id="disqus_thread" style="margin-top: 40px;"></div>
+    </footer>
 
+<div id="custom-substack-embed"></div>
 
-
-   
     <script>
         // Lightbox logika
         document.querySelectorAll('article img').forEach(image => {
@@ -264,20 +259,34 @@ body {
             }
         });
 
-        // Substack
-        window.CustomSubstackWidget = {
-            substackUrl: "sandra-putuje.substack.com",
-            placeholder: "Unesite svoj email",
-            buttonText: "Prijavi se",
-            theme: "custom",
-            colors: { primary: "#8bb272", input: "#ffffff", email: "#2d5d2a", text: "#004d40" },
-            onSubmit: function () { document.getElementById('subscribe-message').style.display = 'block'; }
+        // Disqus komentari
+        var disqus_config = function () { 
+            this.page.url = window.location.href; 
+            this.page.identifier = window.location.pathname; 
         };
+        (function() { 
+            var d = document, s = d.createElement('script'); 
+            s.src = 'https://sandra-putuje.disqus.com/embed.js'; 
+            s.setAttribute('data-timestamp', +new Date()); 
+            (d.head || d.body).appendChild(s); 
+        })();
     </script>
-    <script src="https://substackapi.com/widget.js" async></script>
-    <script>
-        var disqus_config = function () { this.page.url = window.location.href; this.page.identifier = window.location.pathname; };
-        (function() { var d = document, s = d.createElement('script'); s.src = 'https://sandra-putuje.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })();
-    </script>
+
+    <section class="newsletter" style="text-align: center; padding: 40px 20px; background: var(--card-bg); border-radius: 10px; border: 1px solid var(--card-border); margin: 50px 0;">
+    <hr style="border: 0; border-top: 1px solid #ccc; margin-bottom: 30px;">
+    <h2 style="margin-top: 0; color: var(--header-color);">Ne propustite sledeću avanturu!</h2>
+    <p>Pridružite se zajednici putnika i nove priče će vam stizati direktno u inbox.</p>
+    
+    <a href="https://sandra-putuje.substack.com/subscribe" 
+       target="_blank" 
+       style="display: inline-block; background-color: #8bb272; color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+        Prijavi se na newsletter
+    </a>
+    
+    <p style="font-size: 0.85rem; margin-top: 20px; color: #555; font-style: italic;">
+        *Besplatna prijava putem Substack platforme.
+    </p>
+</section>
+
 </body>
 </html>
