@@ -1,16 +1,11 @@
 // Funkcija koja ubacuje newsletter sekciju na stranicu
 function injectNewsletter() {
     const container = document.getElementById('custom-substack-embed');
-    if (!container) return;
-
-    console.log("Newsletter funkcija je pokrenuta!"); // Ovo ćeš videti u konzoli (F12)
-    const container = document.getElementById('custom-substack-embed');
     
     if (!container) {
         console.log("Greška: Element 'custom-substack-embed' nije pronađen u HTML-u!");
         return;
     }
-
 
     container.innerHTML = `
         <section style="text-align: center; padding: 40px 20px; background: rgba(255, 220, 160, 0.65); border-radius: 10px; border: 1px solid rgba(220, 180, 120, 0.35); margin: 50px 0; font-family: Georgia, serif;">
@@ -29,10 +24,8 @@ function injectNewsletter() {
             </p>
         </section>
     `;
-   console.log("Newsletter je uspešno ubačen!");
-
+    console.log("Newsletter je uspešno ubačen!");
 }
-// Bez ove linije, funkcija samo "postoji", ali se nikada ne izvršava
+
+// Pokretanje funkcije čim se stranica učita
 document.addEventListener('DOMContentLoaded', injectNewsletter);
-
-
