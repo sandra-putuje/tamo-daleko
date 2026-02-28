@@ -362,48 +362,8 @@ html,body{
    ✔️ Proverite svoj mejl za potvrdu pretplate! Ako nema, pogledajte u spam/promotions! Imate besplatnu opciju.
 </p>
 
-<script>
-  window.CustomSubstackWidget = {
-    substackUrl: "sandra-putuje.substack.com",
-    placeholder: "Unesite svoj email",
-    buttonText: "Prijavi se",
-    theme: "custom",
-    colors: {
-      primary: "#8bb272",
-      input: "#ffffff",
-      email: "#2d5d2a",
-      text: "#004d40",
-    },
-    onSubmit: function () {
-      // Pošalji poruku odmah, nezavisno
-      const message = document.getElementById('subscribe-message');
-      message.style.display = 'block';
-      message.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
-  // MutationObserver: posmatraj promene unutar widgeta
-  const targetNode = document.getElementById('custom-substack-embed');
-  const config = { childList: true, subtree: true };
-
-  const observer = new MutationObserver(function (mutationsList, observer) {
-    for (let mutation of mutationsList) {
-      if (mutation.type === 'childList') {
-        mutation.addedNodes.forEach(function (node) {
-          if (node.nodeType === 1 && node.tagName === 'P' && node.textContent.includes("We've sent you a confirmation email")) {
-            node.style.display = 'none'; // sakrij originalnu englesku poruku
-
-            const message = document.getElementById('subscribe-message');
-            message.style.display = 'block';
-            message.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
-      }
-    }
-  });
-
-  observer.observe(targetNode, config);
-</script>
+<div id="custom-substack-embed"></div>
+<script src="/tamo-daleko/newsletter.js"></script>
 
 <script src="https://substackapi.com/widget.js" async></script>
 
