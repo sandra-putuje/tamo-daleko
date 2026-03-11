@@ -45,7 +45,7 @@
       --pastel-orange: #ffd8b0;
       --text-color: #222;
       --link-color: #b34f33;
-      --header-color: #f39c12; /* centriran naslov i podnaslovi */
+      --header-color: #b34f33;  /* centriran naslov i podnaslovi */
       --card-bg: rgba(255, 220, 160, 0.65);
       --card-border: rgba(220, 180, 120, 0.35);
     }
@@ -122,40 +122,42 @@ img {
 
 .back-link {
   display: inline-block;
-
   padding: 0.6rem 1.2rem;
-  background-color: var(--header-color);
+  background-color: #b34f33;
   color: white;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
 }
+
 .back-link:hover {
-  background-color: #d96b75;
+  background-color: #8e3e28;
 }
 
-    .back-button {
+.back-button {
       display: inline-block;
-      
-      background: linear-gradient(135deg, #f39c12 0%, #ffe8d0 100%);
+      /* Boja fasada u starom gradu Nice */
+      background: #b34f33; 
       color: white;
       padding: 0.7rem 1.4rem;
       border-radius: 20px;
       text-decoration: none;
       font-family: 'Georgia', serif;
       font-size: 1em;
-      outline: none; /* uklanja fokus okvir */
-      border: none;  /* uklanja eventualni border */
+      outline: none;
+      border: none;
       font-weight: bold;
       margin-top: 2rem;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
       cursor: pointer;
-
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
+
     .back-button:hover {
-      
-    background: linear-gradient(135deg, #e08b00 0%, #ffd8b0 100%);
+      /* Malo tamnija nijansa za efekat prelaska mišem */
+      background: #8e3e28;
+      transform: translateY(-2px);
     }
     @media (max-width: 600px) {
       .gallery {
@@ -245,7 +247,15 @@ html,body{
 <p>U samom centru je lepa fontana sa skulpturom čoveka koji na glavi ima konje. Nigde mi nije bilo teže da napravim fotografiju. Stalno uleću u kadar bez pardona.</p>
 <p>U blizini je more.</p>
 
- 
+<h2>🌅 Prvi zalazak u Nici - pesma, more i pacovi</h2>
+
+<p>Lepe palme prema obali, sve je čisto, uglancano, ali tu su i pacovi. I to sam ih videla jedno pet kako trčkaraju tamo-vamo. Niko se ne obazire. Možda ih tu i hrane. Previše mi je prometno i čisto da bi oni tu bili slučajno, i to u tolikom broju, i pitomi da se ne boje ljudi.</p>
+
+<p>Izašli smo na obalu. Jedan crnac prelepo peva romantične pesme, ima zvučnik. Taman kao poručeno, stigli smo na zalazak sunca. Narandžast, dug kao štrafta ispod oblaka, prelazi u ljubičasto. Beli kameni obluci na plaži. Setila sam se da bi Petar sigurno bacao žabice. Bacila sam za njega par, ali nijedna nije odskakutala. Bilo je talasa, nije bilo mirno more.</p>
+
+<p>Prošetali smo starim gradom Nice. Uske ulice, restorani, puno ljudi na ulicama i na šetalištu uz more. Velik grad. Lep, čist. Lepa arhitektura. Održavane fasade, često kitnjaste barokne, ali ima i zgrada ravnih tetraedara kao naše socijalističke, malo dalje od centra. Živo je, puno sveta, morska atmosfera, letnja iako je oktobar. Prodaje se sladoled.</p>
+
+<p>Nekoliko puta sam čula srpski.</p> 
 
 <p><img src="slikeAzurna/nica (1).jpg" alt="Nica, fontana"></p>
 
@@ -303,7 +313,7 @@ html,body{
 <p>     </p>
 
 <!-- Sledeća priča (automatski) -->
-<script src="tanzanija-sledeca.js"></script>
+<script src="azurna-sledeca.js"></script>
 
 <p>     </p>
 <p>     </p>
