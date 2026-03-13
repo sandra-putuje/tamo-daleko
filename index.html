@@ -350,20 +350,30 @@ footer {
       'jordan': { sekcija: 'azija', naziv: 'Jordan' },
       'francuska': { sekcija: 'evropa', naziv: 'Francuska' },
       'italija': { sekcija: 'evropa', naziv: 'Italija' },
-      'zagreb': { sekcija: 'evropa', naziv: 'Zagreb' },
-      'krajova': { sekcija: 'evropa', naziv: 'Krajova' },
+
+
+      'hrvatska': { sekcija: 'evropa', naziv: 'Hrvatska (Zagreb)' },
+      'zagreb': { sekcija: 'evropa', naziv: 'Hrvatska (Zagreb)' },
+      'rumunija': { sekcija: 'evropa', naziv: 'Rumunija (Krajova)' },
+      'krajova': { sekcija: 'evropa', naziv: 'Rumunija (Krajova)' },
+      'nemačka': { sekcija: 'evropa', naziv: 'Nemačka' },
+      'srbija': { sekcija: 'evropa', naziv: 'Srbija (Novi Sad)' },
+      'novi sad': { sekcija: 'evropa', naziv: 'Srbija (Novi Sad)' },
+
+
+
+      
       'holandija': { sekcija: 'evropa', naziv: 'Holandija' },
       'belgija': { sekcija: 'evropa', naziv: 'Belgija' },
       'kipar': { sekcija: 'evropa', naziv: 'Kipar' },
       'malta': { sekcija: 'evropa', naziv: 'Malta' },
-      'nemacka': { sekcija: 'evropa', naziv: 'Nemačka' },
+      
       'švedska': { sekcija: 'evropa', naziv: 'Švedska' },
       'tajland': { sekcija: 'azija', naziv: 'Tajland' },
 
       'uae': { sekcija: 'azija', naziv: 'UAE' },           
-      'tanzanija': { sekcija: 'afrika', naziv: 'Tanzanija' },
-      'srbija': { sekcija: 'evropa', naziv: 'Srbija' }
-
+      'tanzanija': { sekcija: 'afrika', naziv: 'Tanzanija' }
+      
     };
 
 
@@ -466,33 +476,51 @@ footer {
         }
       });
     }
-    function pretrazi() {
-      const input = document.querySelector('.search-wrapper input[type="text"]');
-      const unos = input.value.toLowerCase().trim();
-      if (!unos) return;
+function pretrazi() {
+    // 1. Uhvati input bez obzira gde se nalazi
+    const input = document.querySelector('.search-wrapper input[type="text"]');
+    if (!input) return;
 
-      const kljuc = Object.keys(mapaDestinacija).find(k => k.includes(unos));
-      if (!kljuc) {
+    const unos = input.value.toLowerCase().trim();
+    if (!unos) return;
+
+    // 2. Pronađi destinaciju u mapi
+    const kljuc = Object.keys(mapaDestinacija).find(k => k.includes(unos));
+
+    if (!kljuc) {
         alert('Nema rezultata za: ' + unos);
         return;
-      }
-
-      const podatak = mapaDestinacija[kljuc];
-      prikaziSekciju(podatak.sekcija);
-
-      const sekcijaEl = document.getElementById(podatak.sekcija);
-      if (!sekcijaEl) return;
-
-      sekcijaEl.querySelectorAll('.section-links a').forEach(a => a.classList.remove('active'));
-      const dugme = Array.from(sekcijaEl.querySelectorAll('.section-links a')).find(a => 
-        a.textContent.toLowerCase().includes(podatak.naziv.toLowerCase())
-      );
-      if (dugme) {
-        dugme.classList.add('active');
-        dugme.focus();
-        dugme.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
     }
+
+    const podatak = mapaDestinacija[kljuc];
+
+    // 3. Ukloni "active" klasu sa SVAKOG linka na celom sajtu pre nove pretrage
+    document.querySelectorAll('.section-links a').forEach(a => {
+        a.classList.remove('active');
+        a.blur(); // skini fokus sa starog rezultata
+    });
+
+    // 4. Prikaži novu sekciju
+    prikaziSekciju(podatak.sekcija);
+
+    // 5. Sačekaj da se DOM smiri pa skroluj
+    setTimeout(() => {
+        const sekcijaEl = document.getElementById(podatak.sekcija);
+        if (sekcijaEl) {
+            const dugmad = Array.from(sekcijaEl.querySelectorAll('.section-links a'));
+            const dugme = dugmad.find(a => 
+                a.textContent.toLowerCase().includes(podatak.naziv.toLowerCase())
+            );
+
+            if (dugme) {
+                dugme.classList.add('active');
+                dugme.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+        // Opciono: očisti input nakon pretrage da bude spreman za sledeću
+        // input.value = ''; 
+    }, 150);
+}
     function nazadNaPocetnu() {
       prikaziSekciju('pocetna');
       history.pushState(null, '', 'index.html');
@@ -542,8 +570,8 @@ footer {
     <section id="evropa">
       <h2>Evropa</h2>
       <div class="section-links">
-        <a href="Evropa/Hrvatska/Zagreb.html" target="_blank">Hrvatska (Zagreb)</a>
-        <a href="Evropa/Rumunija/Krajova.html" target="_blank">Rumunija (Krajova)</a>
+        <a href="Evropa/Hrvatska/Zagreb/Zagreb.html" target="_blank">Hrvatska (Zagreb)</a>
+        <a href="Evropa/Rumunija/Krajova/Krajova.html" target="_blank">Rumunija (Krajova)</a>
         <a href="Evropa/Nemačka/Nemacka.html" target="_blank">Nemačka</a>
         <a href="Evropa/Italija/Italija.html" target="_blank">Italija</a>
         <a href="Evropa/Francuska/Azurna/azurna.html">Francuska</a>
