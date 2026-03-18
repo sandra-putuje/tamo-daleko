@@ -539,27 +539,28 @@ function pretrazi() {
 
   <header></header>
 
-  <div class="nav-bottom">
-    <div class="search-wrapper" role="search" aria-label="Pretraga destinacija">
-      <input type="text" placeholder="Pretraži..." aria-label="Pretraga destinacija" />
-      <button 
-        aria-label="Pretraži destinacije" 
-        title="Pretraži" 
-        class="search-button"
-      >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </button>
-    </div>
-
-    <a onclick="prikaziSekciju('evropa')">Evropa</a>
-    <a onclick="prikaziSekciju('azija')">Azija</a>
-    <a onclick="prikaziSekciju('afrika')">Afrika</a>
-    <a href="OMeni/omeni.html">O meni</a>
+<div class="nav-bottom">
+  <div class="search-wrapper" role="search" aria-label="Pretraga destinacija">
+    <input type="text" id="search-input" placeholder="Pretraži..." aria-label="Pretraga destinacija" />
     
+    <button 
+      onclick="pretrazi()"
+      aria-label="Pretraži destinacije" 
+      title="Pretraži" 
+      class="search-button"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </button>
   </div>
+
+  <a onclick="prikaziSekciju('evropa')">Evropa</a>
+  <a onclick="prikaziSekciju('azija')">Azija</a>
+  <a onclick="prikaziSekciju('afrika')">Afrika</a>
+  <a href="OMeni/omeni.html">O meni</a>
+</div>
 
   <nav>
     <a onclick="prikaziSekciju('evropa')">Evropa</a>
