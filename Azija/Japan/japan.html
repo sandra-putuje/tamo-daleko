@@ -216,12 +216,17 @@
         display: block;
         max-width: 100%;
       }
-      .naslov-lokacije {
-        width: auto; 
-        font-size: 1.5rem;
-        padding: 10px;
-        display: inline-block;
-      }
+.naslov-lokacije {
+  position: relative;
+  display: inline-block; /* Promenjeno sa block na inline-block */
+  width: auto;           /* Promenjeno sa 100% na auto */
+  max-width: 1000px;
+  margin: 2rem auto 0.5rem auto;
+  color: #d86a8c;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0 0.5rem 0.5rem 0.5rem; /* Smanjen padding sa strana */
+}
     }
   </style>
 </head>
