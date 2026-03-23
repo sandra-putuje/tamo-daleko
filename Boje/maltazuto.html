@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Drevni Jordan – Tamo daleko</title>
+
+<!-- SEO META -->
+<meta name="description" content="Putopis iz Jordana: Petra, Vadi Rum, Mrtvo more, Aqaba i Amman. Lična priča sa putovanja, kulturna zapažanja, saveti i autentični doživljaji Bliskog istoka.">
+<meta name="keywords" content="Jordan, putopis, Petra, Vadi Rum, Mrtvo more, Aqaba, Amman, drevni Jordan, Bliski istok, arheologija, pustinje, beduini, putovanje, saveti za putovanje, kultura, istorija">
+
+<meta name="author" content="Sandra Đuričin">
+<link rel="canonical" href="https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/jordan.html" />
+
+<!-- FAVICON (opciono) -->
+<link rel="icon" href="../../favicon.ico" type="image/x-icon" />
+
+<!-- OPEN GRAPH ZA DELJENJE -->
+<meta property="og:title" content="Drevni Jordan – Tamo daleko" />
+<meta property="og:description" content="Putopis iz Jordana: Petra, Vadi Rum, Mrtvo more, Aqaba i Amman. Lična priča, saveti i autentični doživljaji Bliskog istoka." />
+<meta property="og:image" content="https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/jordan01.jpg" />
+<meta property="og:url" content="https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/jordan.html" />
+<meta property="og:type" content="website" />
+
+<!-- TWITTER KARTICA -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Drevni Jordan – Tamo daleko" />
+<meta name="twitter:description" content="Putopis iz Jordana: Petra, Vadi Rum, Mrtvo more, Aqaba i Amman. Lična priča i saveti sa putovanja." />
+<meta name="twitter:image" content="https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/jordan01.jpg" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NLYKLXD49W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NLYKLXD49W');
+  </script>
+
+
+
+<style>
+    :root {
+      /* NOVA PALETA - Svetla, sunčana Malta */
+      --malta-sun-light: #fffbea;   /* Skroz svetla, krem žuta (skoro bela) */
+      --malta-sun-mid: #fff1b0;     /* Svetla, limun-zlatna nijansa */
+      --malta-sun-yellow: #f8e17a;  /* Čista, sunčano zlatno-žuta */
+      --text-color: #4a3e2a;        /* Mekša braon za tekst */
+      --link-color: #d4a017;
+      --header-color: #e6b800;      /* Vibrantna, zlatna boja */
+      --card-bg: rgba(255, 252, 240, 0.9);
+      --card-border: rgba(230, 184, 0, 0.2);
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: "Georgia", "Trebuchet MS", Arial, sans-serif;
+      color: var(--text-color);
+      background: 
+        radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 50%),
+        linear-gradient(135deg, var(--malta-sun-light) 0%, var(--malta-sun-mid) 40%, var(--malta-sun-yellow) 100%);
+      background-attachment: fixed;
+      background-size: cover;
+      text-align: center;
+    }
+
+    header {
+      padding: 30px 16px;
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: var(--header-color);
+      text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7);
+      margin-bottom: 2rem;
+    }
+
+    .naslov-lokacije {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 1000px;
+      margin: 1.5rem auto;
+      color: var(--header-color);
+      font-size: 1.4rem;
+      text-align: center;
+      padding: 0 1rem 0.6rem 1rem;
+      font-weight: bold;
+    }
+
+    .naslov-lokacije::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 3px;
+      background-color: var(--header-color);
+      border-radius: 2px;
+      width: 200px; /* Širina linije */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      max-width: 1100px;
+      margin: 0 auto 50px auto;
+      padding: 0 15px;
+    }
+
+    .card {
+      width: 260px;
+      height: 330px; /* Malo veća visina */
+      background: #ffffff; /* Čisto bela podloga kartice za svežinu */
+      border: 1px solid var(--card-border);
+      border-radius: 12px; /* Manji radijus za moderniji izgled */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06); /* Mekša senka */
+      overflow: hidden;
+      text-decoration: none;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card:hover, .card.aktivna {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(230, 184, 0, 0.2); /* Zlatna senka na hoveru */
+      border-color: var(--header-color);
+    }
+
+    .card img {
+      width: 100%;
+      height: 230px; /* Malo veća slika */
+      object-fit: cover;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .card-title {
+      font-size: 1.1em;
+      padding: 12px 15px;
+      font-weight: 500;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.3;
+      background: #fffdf5; /* Veoma svetla podloga za naslov */
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 40px 0;
+      padding: 12px 30px;
+      background: var(--header-color);
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+
+    .emoji-icon {
+      width: 2.2em;
+      height: 2.2em;
+      vertical-align: middle;
+      margin-right: 0.3em;
+    }
+
+    /* MEDIA QUERIES */
+    @media (max-width: 768px) {
+      header { font-size: 1.9rem; padding: 20px 10px; }
+      
+      .card-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .card {
+        width: 90%;
+        max-width: 320px;
+        height: auto;
+      }
+
+      .card img {
+        height: 200px;
+      }
+
+      .naslov-lokacije {
+        font-size: 1.3rem;
+        margin: 1rem auto;
+      }
+
+      .naslov-lokacije::after {
+        width: 150px;
+      }
+    }
+
+  .instagram-link img {
+    filter: invert(56%) sepia(35%) saturate(786%) hue-rotate(352deg) brightness(91%) contrast(88%);
+    /* Ova boja filtera sada gađa oker/braon nijansu */
+  }
+
+  </style>
+
+</head>
+<body>
+<header>Drevni Jordan
+
+
+    <a href="https://www.instagram.com/sandra.putuje" class="instagram-link" target="_blank" style="margin-left: 10px;">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" 
+           alt="Instagram" 
+style="width:20px; height:20px; vertical-align: middle; filter: invert(61%) sepia(86%) saturate(2961%) hue-rotate(358deg) brightness(98%) contrast(96%);">
+    </a>
+</header>
+
+  
+
+<div class="naslov-lokacije">Saveti, ruta, cene</div>
+
+<div class="card-grid">
+  <a href="saveti.html" class="card">
+    <img src="wadirum2.jpg" alt="Jordan">
+    <div class="card-title">Jordan 7 dana, samostalna organizacija</div>
+  </a>
+
+</div>
+<div class="naslov-lokacije">Greške</div>
+  <div class="card-grid">
+    <a href="greske.html" class="card" title="Greške">
+      <img src="greske.jpg" alt="Greške" loading="lazy" />
+      <div class="card-title">10 najvećih grešaka u Jordanu</div>
+    </a>
+ </div>
+  <div class="grad-mreza">
+    <h3 class="naslov-lokacije"><img 
+      src="img/dzeras.png" 
+      alt="Džeraš, stari rimski grad" 
+      class="emoji-icon"
+      loading="lazy"
+    /> 
+ Džeraš</h3>
+  </div>
+
+  <div class="card-grid">
+    <a href="jerash.html" class="card" title="Džeraš">
+      <img src="jerash01.jpg" alt="Džeraš" loading="lazy" />
+      <div class="card-title">Džeraš, stari rimski grad</div>
+    </a>
+
+    
+  </div>
+  <div class="grad-mreza">
+  <h3 class="naslov-lokacije">
+    <img 
+      src="img/petra.png" 
+      alt="Riznica u Petri" 
+      class="emoji-icon"
+      loading="lazy"
+    /> 
+    Petra
+  </h3>
+</div>
+
+  <div class="card-grid">
+    <a href="petra.html" class="card" title="Petra">
+      <img src="petra01.jpg" alt="Petra, svetsko čudo" loading="lazy" />
+      <div class="card-title">Petra, svetsko čudo</div>
+    </a>
+
+
+
+  </div>
+
+   <div class="grad-mreza">
+    <h3 class="naslov-lokacije"> <img 
+      src="img/wadi-rum.png" 
+      alt="Wadi Rum" 
+      class="emoji-icon"
+      loading="lazy"
+    /> 
+ Wadi Rum</h3>
+  </div>
+
+  <div class="card-grid">
+    <a href="wadirum.html" class="card" title="Pustinja">
+      <img src="wadirum.jpg" alt="Pustinja, Wadi Rum" loading="lazy" />
+      <div class="card-title">Pustinja, Wadi Rum</div>
+    </a>
+ </div>
+
+   <div class="grad-mreza">
+    <h3 class="naslov-lokacije"> <img 
+      src="img/aqaba.png" 
+      alt="Aqaba" 
+      class="emoji-icon"
+      loading="lazy"
+    /> 
+ Aqaba</h3>
+  </div>
+
+  <div class="card-grid">
+    <a href="aqaba.html" class="card" title="Aqaba">
+      <img src="aqaba.jpg" alt="Aqaba" loading="lazy" />
+      <div class="card-title">Aqaba na Crvenom moru</div>
+    </a>
+ </div>
+
+    <div class="grad-mreza">
+    <h3 class="naslov-lokacije"> <img 
+      src="img/mrtvomore.png" 
+      alt="Mrtvo more" 
+      class="emoji-icon"
+      loading="lazy"
+    /> 
+ Mrtvo more</h3>
+  </div>
+
+ <div class="card-grid">
+    <a href="mrtvomore.html" class="card" title="Mrtvo more">
+      <img src="mrtvomore.jpg" alt="Mrtvo more" loading="lazy" />
+      <div class="card-title">Mrtvo more</div>
+    </a>
+ </div>
+
+    <div class="grad-mreza">
+    <h3 class="naslov-lokacije"> <img 
+      src="img/nebo.png" 
+      alt="Planina Nebo, Madaba i Wadi Musa" 
+      class="emoji-icon"
+      loading="lazy"
+    /> 
+ Usput</h3>
+  </div>
+
+  <div class="card-grid">
+    <a href="nebo.html" class="card" title="Nebo, Madaba i Wadi Musa">
+      <img src="nebo.jpg" alt="Planina Nebo, Madaba, zalazak, Wadi Musa" loading="lazy" />
+      <div class="card-title">Planina Nebo, Madaba, Wadi Musa</div>
+    </a>
+ </div> 
+
+
+    <div class="grad-mreza">
+    <h3 class="naslov-lokacije"> <img 
+      src="img/aman.png" 
+      alt="Aman" 
+      class="emoji-icon"
+      loading="lazy"
+    /> 
+ Aman</h3>
+  </div>
+ 
+  <div class="card-grid">
+    <a href="aman.html" class="card" title="Aman i Betanija">
+      <img src="aman.jpg" alt="Aman i Betanija" loading="lazy" />
+      <div class="card-title">Aman i Betanija</div>
+    </a>
+ </div>
+
+    <div class="grad-mreza">
+    <h3 class="naslov-lokacije"> <img 
+      src="img/ljudi.png" 
+      alt="Ljudi" 
+      class="emoji-icon"
+      loading="lazy"
+    /> 
+ Ljudi</h3>
+  </div>
+ 
+  <div class="card-grid">
+    <a href="ljudi.html" class="card" title="Ljudi">
+      <img src="ljudi.jpg" alt="Ljudi" loading="lazy" />
+      <div class="card-title">Ljudi u Jordanu</div>
+    </a>
+ </div>
+
+
+<div class="naslov-lokacije">Za ljubitelje animacija</div>
+<div class="card-grid">
+  <a href="jordananimated.html" class="card">
+    <img src="jordancrtani.png" alt="Safari">
+    <div class="card-title">Čuda Jordana</div>
+  </a>
+
+
+</div> 
+
+
+
+<a href="../../index.html?aktivno=jordan" class="back-btn">← Nazad na Azija</a>
+
+<p>  </p>
+<p>  </p>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const aktivna = urlParams.get('aktivna');
+    if (aktivna) {
+      const link = document.querySelector(`a[href="${aktivna}.html"]`);
+      if (link) {
+        link.classList.add("aktivna");
+        window.addEventListener('load', () => {
+          link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+    }
+  </script>
+
+
+<script>
+const lista = [...document.querySelectorAll('.card-grid a.card')]
+
+    .map(kartica => {
+      return {
+        fajl: kartica.getAttribute('href'),
+        ime: kartica.textContent.trim()
+      };
+    })
+    .filter(el => el.fajl && el.ime);
+
+  localStorage.setItem('jordanList', JSON.stringify(lista));
+</script>
+
+
+
+</body>
+</html>
