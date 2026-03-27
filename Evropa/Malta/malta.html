@@ -201,14 +201,20 @@
         height: 250px;
       }
 
-      .naslov-lokacije {
-        font-size: 1.3rem;
-        margin: 1rem auto;
-      }
+  .naslov-lokacije {
+    font-size: 1.3rem;
+    margin: 1rem auto;
+    text-align: center; /* bitno za centriranje */
+  }
 
-      .naslov-lokacije::after {
-        width: 270px;
-      }
+  .naslov-lokacije::after {
+    content: "";
+    display: block;
+    width: 100%;        /* umesto 270px */
+    max-width: 320px;   /* prati max širinu kartice */
+    height: 2px;
+    margin: 8px auto 0; /* centriranje */
+  }
     }
 </style>
 </head>
