@@ -203,14 +203,16 @@
 
   .naslov-lokacije {
     font-size: 1.3rem;
+    width: 90%;          /* isto kao kartica */
+    max-width: 320px;    /* isto kao kartica */
     margin: 1rem auto;
-    text-align: center; /* bitno za centriranje */
+    text-align: center;
   }
 
   .naslov-lokacije::after {
     content: "";
     display: block;
-    width: 100%;        /* umesto 270px */
+    width: 100%;        
     max-width: 320px;   /* prati max širinu kartice */
     height: 2px;
     margin: 8px auto 0; /* centriranje */
