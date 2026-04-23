@@ -127,6 +127,18 @@ body, p, span {
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
+
+article img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: zoom-in;
+}
+
+article img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.2);
+}
+
+
     hr {
       border: none;
       border-top: 2px solid #a0522d;
@@ -229,14 +241,33 @@ html,body{
 }
 
 
+    /* Lightbox Overlay */
+    .lightbox-overlay {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center; align-items: center;
+      cursor: zoom-out;
+    }
+    .lightbox-overlay img { 
+      max-width: 90%; max-height: 90%; border-radius: 5px; 
+      transform: none !important; /* Onemogućava mrdanje unutar krupnog plana */
+    }
 
+    #custom-substack-embed { min-height: 140px; position: relative; }
+    html,body { scroll-behavior: auto !important; }
+    blockquote { font-style: italic; border-left: 4px solid var(--header-color); padding-left: 15px; margin: 2rem 0; }
 
 
 
   </style>
 </head>
 <body>
-
+<div id="lightbox" class="lightbox-overlay" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" alt="">
+</div>
 <header>
   <h1>Prelepa Granada</h1>
 
@@ -288,8 +319,6 @@ html,body{
 <p>A smešno mi je bilo i kad su gledale Uber, on javi kakvo vozilo dolazi i gde nas preuzima. Tako da označi tačku i piše pick up (point). Gleda Vesna i kaže: ej, doći će pik ap (vozilo) po nas.</p>
 
 
-<p><img src="img/granada (1).jpg" alt="granada" 
-     title="Granada, ulice" ></p>
 	 
 <p><img src="img/granada (2).jpg" alt="granada" 
      title="Granada, ulice" ></p>
