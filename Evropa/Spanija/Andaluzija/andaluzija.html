@@ -154,23 +154,27 @@ header {
 
 
 
-.card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  border-bottom:2px solid rgba(220,190,160,0.35);
-  flex-shrink: 0;
+.card img {
+      width: 100%;
+      height: 100%;       /* Primorava sliku da popuni prostor */
+      object-fit: cover;  /* Održava proporcije slike da se ne izobliči */
+      flex-grow: 1;       /* KLJUČNO: Tera sliku da "otme" sav prostor od teksta */
+      min-height: 0;      /* Dozvoljava flexbox-u da je smanji/poveća pravilno */
 }
 
-.card-title{
+.card-title {
       font-size: 1.1em;
-      padding: 8px 15px;
+      padding: 4px 10px;   /* Smanjen gornji/donji razmak */
       font-weight: normal;
-      flex-grow: 1;
+      flex-grow: 0;        /* KLJUČNO: Sprečava tekst da se širi */
+      flex-shrink: 0;      /* Sprečava da se tekst previše skupi */
+      min-height: 30px;    /* Odredi tačno koliko želiš da taj pojas bude visok */
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      line-height: 1.1;
+      background: #f8f8f8; /* Čisto da se jasno vidi granica pojasa */
 }
 
 
@@ -263,6 +267,17 @@ object-fit: contain;
 
 </header>
 
+  <div class="grad-mreza">
+    <h3 class="naslov-lokacije">
+ Vodič za organizaciju</h3>
+  </div>
+
+  <div class="card-grid">
+    <a href="andaluzijasaveti.html" class="card" title="andaluzija vodič">
+      <img src="andaluzijasaveti.jpg" alt="andaluzijasaveti" loading="lazy" />
+      <div class="card-title">Saveti i cene</div>
+    </a>
+</div>
 
 
   <div class="grad-mreza">
