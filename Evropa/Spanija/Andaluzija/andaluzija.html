@@ -119,25 +119,26 @@ header {
   border-radius:2px;
 }
 
-    .card-grid{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width:1000px;
-      margin: 0 auto 40px auto;
-      padding: 0 10px; 	
-    }
+/* KARTICE */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  padding: 0 10px;
+}
 .card {
   width: 260px;
   height: 300px;
-  background: linear-gradient(135deg, #ffe9d5 0%, #fff4ea 100%); /* bleđa pastel narandžasta */
+  background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(255,250,230,0.9));
   border-radius: 15px;
-  box-shadow: 2px 3px 8px rgba(0,0,0,0.15);
+  box-shadow: 2px 3px 8px rgba(0,0,0,0.1);
   overflow: hidden;
   text-decoration: none;
-  color: #703648;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+  color: var(--text-color);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,34 +148,25 @@ header {
 .card.aktivna {
   transform: scale(1.05);
   box-shadow: 3px 4px 10px rgba(0,0,0,0.25);
-
-  background: linear-gradient(135deg, #ffe3e8 0%, var(--amalfi-peach) 100%);
-  color: #6a3a4e;
+  background: linear-gradient(135deg, #fff0da 0%, #fff9ec 100%);
 }
 
-
-
 .card img {
-      width: 100%;
-      height: 100%;       /* Primorava sliku da popuni prostor */
-      object-fit: cover;  /* Održava proporcije slike da se ne izobliči */
-      flex-grow: 1;       /* KLJUČNO: Tera sliku da "otme" sav prostor od teksta */
-      min-height: 0;      /* Dozvoljava flexbox-u da je smanji/poveća pravilno */
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(180, 120, 60, 0.3);
+  flex-shrink: 0;
 }
 
 .card-title {
-      font-size: 1.1em;
-      padding: 4px 10px;   /* Smanjen gornji/donji razmak */
-      font-weight: normal;
-      flex-grow: 0;        /* KLJUČNO: Sprečava tekst da se širi */
-      flex-shrink: 0;      /* Sprečava da se tekst previše skupi */
-      min-height: 30px;    /* Odredi tačno koliko želiš da taj pojas bude visok */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      line-height: 1.1;
-      background: #f8f8f8; /* Čisto da se jasno vidi granica pojasa */
+  font-size: 1.1em;
+  padding: 8px 15px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 
