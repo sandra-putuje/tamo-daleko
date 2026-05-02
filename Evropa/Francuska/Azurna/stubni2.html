@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azurna obala - Putopis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
+        
+        .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1000&q=80'); 
+                background-size: cover; color: white; padding: 60px 20px; text-align: center; border-radius: 15px; margin-bottom: 30px; }
+        
+        .container { display: flex; flex-wrap: wrap; gap: 20px; }
+        .main-content { flex: 2; min-width: 300px; }
+        .sidebar { flex: 1; min-width: 250px; }
+
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        
+        h1, h2, h3 { color: #005f73; }
+        .accent-blue { color: #008ca3; font-weight: bold; }
+        
+        .tip-box { background: #e9f5f8; border-left: 5px solid #005f73; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+        
+        .destinations { display: flex; gap: 10px; margin-bottom: 20px; overflow-x: auto; padding-bottom: 10px; }
+        .tag { background: #005f73; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8em; white-space: nowrap; }
+
+        .image-box { background: #eee; width: 100%; height: 200px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #888; border: 2px dashed #ccc; margin: 10px 0; }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Azurna Obala: Vikend Između Lepote i Haosa</h1>
+        <p><i class="fas fa-calendar-alt"></i> 17.10.2025 – 20.10.2025</p>
+    </div>
+
+    <div class="destinations">
+        <span class="tag">#Nica</span>
+        <span class="tag">#Monako</span>
+        <span class="tag">#MonteKarlo</span>
+        <span class="tag">#Menton</span>
+        <span class="tag">#Eze</span>
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            
+            <div class="card">
+                <h2><i class="fas fa-plane-departure"></i> Put ka Rivijeri</h2>
+                <p>Ovaj oktobarski vikend bio je spoj savršenstva i neplaniranih obrta. Od linijskog taksija koji se pretvorio u <strong>sightseeing turu</strong> dostave paketa, do aerodroma u Nici koji nas je dočekao prokišnjavanjem.</p>
+                
+                <div class="tip-box">
+                    <strong><i class="fas fa-exclamation-triangle"></i> Lekcija sa puta:</strong> 
+                    Uvek pitajte vozača da li planira dodatne adrese pre nego što krenete ka aerodromu. Naš "bolestan" vozač i njegovo kijanje (koje je bilo i zvuk notifikacije!) zamalo su nam pokvarili planove.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-city"></i> Nica i njeni "Splinteri"</h2>
+                <p>Nica nas je dočekala kitnjastim fasadama, mirisom pice sa lukom i prelepim zalascima sunca. Ipak, šetalište krije i male stanovnike — pacove koji su toliko pitomi da deluju kao deo turističke ponude.</p>
+                <div class="image-box">Ovde ubaci sliku zalaska i hotela Negresco</div>
+                <p>Stari grad je prava halucinacija boja: crvene fasade, zelene žaluzine i žute statue ljudi u meditaciji koji čuče na stubovima.</p>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-gem"></i> Sjaj Monaka i Monte Karla</h2>
+                <p>Monako je grad bez pukotine na fasadi. Posetili smo baroknu kockarnicu, divili se luksuznim hotelima poput <em>Metropole-a</em> i uživali u miru Japanskog vrta.</p>
+                <ul>
+                    <li><strong>Smena straže:</strong> Uhvatili smo je tačno na vreme kod Kraljevske palate.</li>
+                    <li><strong>Preporuka:</strong> Sendviči u bagetima u podnožju Monaka su fenomenalni i uvek sveži.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="sidebar">
+            <div class="card">
+                <h3><i class="fas fa-map-marked-alt"></i> Ostale stanice</h3>
+                <p><span class="accent-blue">Menton:</span> Grad koji miriše na limun, sa stepenicama koje vode pravo u baziliku i najlepšim pastelnim bojama.</p>
+                <hr>
+                <p><span class="accent-blue">Eze:</span> Srednjovekovni kameni grad na brdu. Botanička bašta sa kaktusima nudi pogled koji vredi svakog koraka uspona.</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-info-circle"></i> Kratke beleške</h3>
+                <p><i class="fas fa-train"></i> Vozovi su odlični, ali navigacija u Nici zna da vas pošalje u tunel.</p>
+                <p><i class="fas fa-umbrella"></i> Zadnji dan u Nici je obeležio buvljak i mokre patike.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

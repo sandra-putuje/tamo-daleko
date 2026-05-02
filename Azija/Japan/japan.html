@@ -213,14 +213,20 @@
         width: 100%;
       }
       .grad-mreza {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        display: block;
         max-width: 100%;
       }
-      .naslov-lokacije {
-        width: 100px;
-        font-size: 1.5rem;
-        padding: 8px 10px;
-      }
+.naslov-lokacije {
+  position: relative;
+  display: inline-block; /* Promenjeno sa block na inline-block */
+  width: auto;           /* Promenjeno sa 100% na auto */
+  max-width: 1000px;
+  margin: 2rem auto 0.5rem auto;
+  color: #d86a8c;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0 0.5rem 0.5rem 0.5rem; /* Smanjen padding sa strana */
+}
     }
   </style>
 </head>
@@ -235,6 +241,23 @@ style="width:20px; height:20px; vertical-align: middle; filter: invert(59%) sepi
     </a>
 
 </h1>
+
+  <div class="grad-mreza">
+    <h3 class="naslov-lokacije">Saveti</h3>
+ </div>
+
+
+  <div class="card-grid">
+    <a href="20stvari.html" class="card" title="10 saveta za Japan (i još po koji) 🗾">
+      <img src="japan140.jpg" alt="Kimona" loading="lazy" />
+      <div class="card-title">20 praktičnih saveta za Japan 🗾</div>
+    </a>
+
+ </div>
+
+  <div class="grad-mreza">
+    <h3 class="naslov-lokacije">Putovanje</h3>
+ </div>
 
  <div class="card-grid">
     <a href="let_aurora.html" class="card" title="Let avionom i Aurora?">
@@ -391,18 +414,7 @@ style="width:20px; height:20px; vertical-align: middle; filter: invert(59%) sepi
     </a>
  </div>
 
-  <div class="grad-mreza">
-    <h3 class="naslov-lokacije">Saveti</h3>
- </div>
 
-
-  <div class="card-grid">
-    <a href="10stvari.html" class="card" title="10 saveta za Japan (i još po koji) 🗾">
-      <img src="japan140.jpg" alt="Kimona" loading="lazy" />
-      <div class="card-title">10 saveta za Japan (i još po koji) 🗾</div>
-    </a>
-
- </div>
 
 <a href="../../index.html?aktivno=japan" class="back-btn">← Nazad na Azija</a>
 

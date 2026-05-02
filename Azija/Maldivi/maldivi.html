@@ -137,40 +137,38 @@
 
 
 
-@media (max-width: 600px) {
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
+    @media (max-width:600px){
+      .card-grid {
+         flex-direction: column;
+      }
+      .card {
+        width: 100%;
+        height: 320px;
+      }
 
-  .card {
-    display: flex;
-    flex-direction: column;
-    height: auto; /* neka visina bude po sadržaju */
-  }
-
-  .card img {
-    aspect-ratio: 1 / 1; /* slika zadržava proporciju 1:1 */
-    width: 100%;
-    object-fit: cover;
-  }
-
-
-
-
-.card-title {
-      font-size: 1em;
-      padding: 12px 15px;
-      font-weight: normal;
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 40px;
-      text-align: center;
-
-
-
+.card img {
+  width: 100%;
+  /* OVDE MENJATE VISINU SLIKE */
+  height: 260px; /* Povećano sa 220px na 260px */
+  object-fit: cover;
+  border-bottom: 2px solid rgba(180, 120, 60, 0.3);
+  flex-shrink: 0;
 }
+      .btn {
+        min-width: auto;
+        width: 100%;
+      }
+      .grad-mreza {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        max-width: 100%;
+      }
+      .naslov-lokacije {
+        width: 150px;
+        font-size: 1.5rem;
+        
+        padding: 8px 10px;
+      }
+    }
 
 
   </style>
@@ -238,7 +236,7 @@
     </a>
 
     <a href="aslam.html" class="card" title="Dobri duh Aslam">
-      <img src="maldivi15.jpg" alt="Dobri duh Aslam" loading="lazy" />
+      <img src="maldivi15a.jpg" alt="Dobri duh Aslam" loading="lazy" />
       <div class="card-title">Dobri duh Aslam</div>
     </a>
 
