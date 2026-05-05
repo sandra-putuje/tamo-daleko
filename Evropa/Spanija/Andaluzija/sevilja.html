@@ -434,8 +434,17 @@ html,body{
 	 <p><img src="img/sevilja (28).jpg" alt="Sevilja" 
      title="Flamenko haljine" ></p>	 
 
-<p><img src="img/sevilja (30).jpg" alt="Sevilja" 
-     title="Plaza Espanja" ></p>
+
+	 
+<picture>
+  <!-- Telefon (uski ekran) -->
+  <source srcset="img/sevilja-30-1.jpg" alt="Sevilja" 
+     title="Plaza Espanja"  media="(max-width: 1000px)">
+  
+  <!-- Desktop (širi ekran) -->
+  <img src="img/sevilja (30).jpg" alt="Sevilja" 
+     title="Plaza Espanja" >
+</picture>		 
 	 
   <figcaption style="font-style: italic; font-size: 0.9rem; color: #555;">
     Plaza de España.
