@@ -109,11 +109,14 @@ body, p, span {
       margin-bottom: 1rem;
       text-align: justify;
     }
-    img {
+img {
       display: block;
-      width: 100%;       /* Obezbeđuje da slika zauzima celu širinu teksta */
-      height: auto;      /* Automatski prilagođava visinu proporcinalno */
-      margin: 1rem 0;    /* Vertikalni razmak iznad i ispod slike */
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: 90vh;       /* Ograničava visinu slike na 90% visine ekrana */
+      object-fit: contain;    /* Sprečava izobličenje i sečenje slike */
+      margin: 1.5rem auto;    /* Centrira sliku ako postane uža od teksta */
       border-radius: 6px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
@@ -261,10 +264,9 @@ html,body{
 <p>Zatim su nas ugostili ručkom i pokazali nam postupak pravljenja kafe. Baš dok sam ja mešala kafu dok se pekla, zapevali su Jumbo bwana. O moje sreće. Pevala sam i ja, sva bitna kako sam naučila reči.</p>
 
 
-
 <p><img src="Tanzanija_files/materuni (1).jpg" alt="Kilimandžaro"></p>
 
-<p><img src="Tanzanija_files/materuni (2).jpg" alt="Kilimandžaro drveće banana></p>
+<p><img src="Tanzanija_files/materuni (2).jpg" alt="Kilimandžaro"></p>
 
 <p><img src="Tanzanija_files/materuni (3).jpg" alt="Kilimandžaro kameleon"></p>
 
@@ -278,7 +280,11 @@ html,body{
 
 <p><img src="Tanzanija_files/materuni (8).jpg" alt="Kilimandžaro, Materuni vodopad"></p>
 
-<p><img src="Tanzanija_files/materuni (9).jpg" alt="Kilimandžaro, Materuni vodopad"></p>
+<p><img src="Tanzanija_files/materuni (10).jpg" alt="Kilimandžaro, Materuni vodopad"></p>
+
+<p><img src="Tanzanija_files/materuni (11).jpg" alt="Kilimandžaro, Materuni vodopad, ručak"></p>
+
+<p><img src="Tanzanija_files/materuni (12).jpg" alt="Kilimandžaro, Materuni vodopad, kafa"></p>
 
 <p><img src="Tanzanija_files/materuni (14).jpg" alt="Kilimandžaro, Materuni vodopad, ručak"></p>
 
