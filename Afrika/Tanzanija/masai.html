@@ -113,11 +113,14 @@ body, p, span {
       margin-bottom: 1rem;
       text-align: justify;
     }
-    img {
+img {
       display: block;
-      width: 100%;       /* Obezbeđuje da slika zauzima celu širinu teksta */
-      height: auto;      /* Automatski prilagođava visinu proporcinalno */
-      margin: 1rem 0;    /* Vertikalni razmak iznad i ispod slike */
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: 90vh;       /* Ograničava visinu slike na 90% visine ekrana */
+      object-fit: contain;    /* Sprečava izobličenje i sečenje slike */
+      margin: 1.5rem auto;    /* Centrira sliku ako postane uža od teksta */
       border-radius: 6px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
@@ -259,6 +262,16 @@ html,body{
 
 <p>Nije bilo tužnih priča, prošenja, iznuđivanja novca tipa: „E, sad smo se slikali, sad plati toliko.“</p>
 
+<p><img src="Tanzanija_files/masai (1a).jpg" alt="Masai skaču"></p>
+
+<p><img src="Tanzanija_files/masai (1).jpg" alt="Masai skaču"></p>
+
+
+
+<p><img src="Tanzanija_files/masai (2).jpg" alt="Masai krave, plaža"></p>
+
+<p><img src="Tanzanija_files/masai (3).jpg" alt="Masai plaža"></p>
+
 <p>Što se tiče Masaia na kopnu, vrlo su siromašni. Svesni su da je školovanje vrlo važno i šalju decu u školu. Viđali smo ih u nedođijama gde u blizini nema ničega osim suve, žute trave, kako vode stoku ili koze da negde probaju da nađu nešto za jelo.</p>
 
 <p>Viđali smo male, često nedovršene kuće sa decom ispred koja nam mašu. Bili smo u dva Masai hotela, gde su nam zidovi i plafon bili od blata, drvo posred kuće. Prozora nema, a vrata su bila mrežica koja se zatvara cibzarom. Ima vode i struje i sve je maksimalno ukusno i autentično uređeno, čak vrlo skupo na Bukingu.</p>
@@ -275,11 +288,9 @@ html,body{
 
 <p><strong>Kakvo je vaše mišljenje ili iskustvo?</strong></p>
 
-<p><img src="Tanzanija_files/masai (1).jpg" alt="Masai skaču"></p>
 
-<p><img src="Tanzanija_files/masai (2).jpg" alt="Masai krave, plaža"></p>
 
-<p><img src="Tanzanija_files/masai (3).jpg" alt="Masai plaža"></p>
+
 
 <p><img src="Tanzanija_files/masai (4).jpg" alt="Masai i koze"></p>
 
@@ -291,7 +302,9 @@ html,body{
 
 <p><img src="Tanzanija_files/masai (8).jpg" alt="Masai doček"></p>
 
-<p><img src="Tanzanija_files/masai (9).jpg" alt="Masai portreti"></p>
+<p><img src="Tanzanija_files/masailodge (20).jpg" alt="Masai portreti"></p>
+
+<p><img src="Tanzanija_files/masailodge (21).jpg" alt="Masai portreti"></p>
 
 <p><img src="Tanzanija_files/masai (10).jpg" alt="Masai ratnik"></p>
 

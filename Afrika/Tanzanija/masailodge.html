@@ -110,11 +110,14 @@ body, p, span {
       margin-bottom: 1rem;
       text-align: justify;
     }
-    img {
+img {
       display: block;
-      width: 100%;       /* Obezbeđuje da slika zauzima celu širinu teksta */
-      height: auto;      /* Automatski prilagođava visinu proporcinalno */
-      margin: 1rem 0;    /* Vertikalni razmak iznad i ispod slike */
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: 90vh;       /* Ograničava visinu slike na 90% visine ekrana */
+      object-fit: contain;    /* Sprečava izobličenje i sečenje slike */
+      margin: 1.5rem auto;    /* Centrira sliku ako postane uža od teksta */
       border-radius: 6px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
@@ -347,6 +350,8 @@ html,body{
 <p><img src="Tanzanija_files/masailodge (15).jpg" alt="Masai ratnici u tradicionalnoj obući,običaji  u Masai Lodge-u"></p>
 
 <p><img src="Tanzanija_files/masailodge (16).jpg" alt="Masai ratnici u tradicionalnoj odeći,običaji  u Masai Lodge-u"></p>
+
+<p><img src="Tanzanija_files/masailodge (16a).jpg" alt="Masai ratnici u tradicionalnoj odeći,običaji  u Masai Lodge-u"></p>
 
 <p><img src="Tanzanija_files/masailodge (17).jpg" alt="Smeštaj, kuća pećina spolja u Masai Lodge-u"></p>
 
