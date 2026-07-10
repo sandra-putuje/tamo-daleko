@@ -246,13 +246,49 @@ img {
   }
 }
 
-/* Globalno uputstvo na dnu cele galerije */
+/* Globalno uputstvo na dnu cele galerije - Jače pulsiranje i vulkan narandžasta */
+/* Globalno uputstvo na dnu cele galerije - Tamno plavo i statično */
 .galerija-uputstvo {
   display: block;
   text-align: center;
-  color: #888;
-  font-style: italic;
-  margin-top: 5px;
+  color: #1a4f76; /* Stabilna tamno plava boja sa odličnim kontrastom */
+  font-weight: 700; /* Podebljano za bolju uočljivost */
+  font-style: normal;
+  font-size: 1rem;
+  margin-top: 10px;
+  letter-spacing: 0.8px;
+  /* Animacija pulsiranja je uklonjena */
+}
+
+/* Stil za trougliće (strelice) - Tamno plavi, klikabilni i statični */
+.galerija-strelica {
+  position: absolute;
+  top: 35vh; /* Centrirano na sredinu visine slika na telefonu */
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #1a4f76; /* Tamno plava boja koja prati uputstvo */
+  z-index: 10;
+  cursor: pointer;
+  pointer-events: auto; /* Klikabilno */
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.8); /* Svetla senka koja pomaže plavim strelicama da se vide preko tamnijih delova slika */
+  user-select: none;
+  /* Animacija pulsiranja je uklonjena */
+}
+
+/* Definicija jačeg pulsiranja */
+@keyframes jace-pulsira {
+  0% { 
+    opacity: 0.6; 
+    transform: scale(0.95); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.05); /* Skoro 10% uvećanje u piku animacije */
+  }
+  100% { 
+    opacity: 0.6; 
+    transform: scale(0.95); 
+  }
 }
 
 /* Prilagođavanje za veće ekrane (monitore) */
@@ -289,7 +325,34 @@ img {
     max-height: none;
   }
 }
+/* 1. Pripremamo krovni kontejner da drži strelice unutar sebe */
+.galerija-kontejner {
+  margin: 25px 0;
+  width: 100%;
+  position: relative; /* Ključno za absolute pozicioniranje strelica */
+}
 
+
+
+/* 3. Pozicioniranje leve strelice */
+.strelica-leva {
+  left: 5px;
+}
+
+/* 4. Pozicioniranje desne strelice */
+.strelica-desna {
+  right: 5px;
+}
+
+/* 5. Prilagođavanje za desktop ekrane (pošto su tu slike više, podižemo strelice malo) */
+@media (min-width: 768px) {
+  .galerija-strelica {
+    top: 50%;
+    font-size: 2.5rem; /* Na velikom ekranu mogu biti malo veće */
+  }
+  .strelica-leva { left: -35px; } /* Na desktopu ih izbacujemo skroz van slika ako ima mesta */
+  .strelica-desna { right: -35px; }
+}
   </style>
 </head>
 <body>
@@ -408,6 +471,9 @@ Budimo se. Pokušavam da uslikam more kao što je na razglednici koju sam kupila
 U vreme kada nismo imali mape na telefonima (niti same mobilne), pitali smo lokalce za pravac, a navigacija nam je bio sâm pogled na more.</p>
 
 <div class="galerija-kontejner">
+<!-- Leva strelica (trouglić) -->
+  <span class="galerija-strelica strelica-leva">&#9664;</span>
+
   <div class="horizontalna-galerija">
     <div class="galerija-stavka">
       <img src="santorini (55).jpg" alt="Fira unutrašnje ulice">
@@ -466,6 +532,10 @@ U vreme kada nismo imali mape na telefonima (niti same mobilne), pitali smo loka
     </div>
 
   </div>
+  
+  
+<!-- Desna strelica (trouglić) -->
+  <span class="galerija-strelica strelica-desna">&#9654;</span>  
   <small class="galerija-uputstvo">← Povucite levo ili desno za više slika →</small>
 </div>
 
@@ -680,7 +750,7 @@ nisu mogli da ponove taj kvalitet jer niko nije imao takav Kodak Gold papir na k
 <p><img src="mikonos (9).jpg" alt="Mikonos" 
      title="Mikonos" ></p>
 
-<p><strong>Bilo je to jedno sasvim drugačije vreme, bez interneta i mobilnih, gde su se uspomene urezivale direktno u srce (i na filmsku traku), a svaka prepreka na putu pretvarala u priču koja se pamti celog života.</strong></p></button>
+<p><strong>Bilo je to jedno sasvim drugačije vreme, bez interneta i mobilnih, gde su se uspomene urezivale direktno u srce (i na filmsku traku), a svaka prepreka na putu pretvarala u priču koja se pamti celog života.</strong></p>
 <p>     </p>
 <p>     </p>
 
@@ -747,6 +817,29 @@ nisu mogli da ponove taj kvalitet jer niko nije imao takav Kodak Gold papir na k
             s.setAttribute('data-timestamp', +new Date()); 
             (d.head || d.body).appendChild(s); 
         })();
+		
+// Logika za klik na strelice galerije
+const galerija = document.querySelector('.horizontalna-galerija');
+const levaStrelica = document.querySelector('.strelica-leva');
+const desnaStrelica = document.querySelector('.strelica-desna');
+
+// Određujemo koliko će se galerija pomeriti pri jednom kliku (širina jednog ekrana)
+const iznosSkrola = () => galerija.clientWidth * 0.8; 
+
+desnaStrelica.onclick = () => {
+    galerija.scrollBy({ left: iznosSkrola(), behavior: 'smooth' });
+};
+
+levaStrelica.onclick = () => {
+    galerija.scrollBy({ left: -iznosSkrola(), behavior: 'smooth' });
+};		
+		
+		
+		
+		
+		
+		
+		
     </script>
 
     <section class="newsletter" style="text-align: center; padding: 40px 20px; background: rgba(233,246,255,.68); border-radius: 10px; border:1px solid rgba(124,181,224,.35); margin: 50px 0;">
