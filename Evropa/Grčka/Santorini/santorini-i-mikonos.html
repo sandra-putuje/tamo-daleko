@@ -184,21 +184,97 @@ img {
 
 
 
-/* 1) osiguraj visinu embed‑a da ništa više ne skroluje stranucu */
-#custom-substack-embed{
-  min-height:140px;      /* broj probaj – ~2 visine inputa je obično dosta */
-  position:relative;     /* da novi interni div‑ovi ostanu unutra */
+/* Krovni kontejner */
+.galerija-kontejner {
+  margin: 25px 0;
+  width: 100%;
 }
 
-/* 2) ukini neželjeno automatsko skrolovanje koje Substack ponekad okida */
-html,body{
-  scroll-behavior:auto!important;
+/* Horizontalna traka */
+.horizontalna-galerija {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 15px;
+  padding-bottom: 15px;
+}
+
+/* Fino podešavanje skrol trake */
+.horizontalna-galerija::-webkit-scrollbar {
+  height: 6px;
+}
+.horizontalna-galerija::-webkit-scrollbar-thumb {
+  background-color: #33a1fd;
+  border-radius: 10px;
+}
+
+/* Pojedinačna stavka (Sada se širi prema slici) */
+.galerija-stavka {
+  flex: 0 0 auto; /* Oproštamo se od fiksnih 85% širine, stavka uzima onoliko širine koliko joj treba */
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 
 
+/* Uokvireni tekstualni opis ispod same slike */
+.galerija-opis {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  line-height: 1.4;
+  padding: 0 5px;
+  max-width: 100%; /* Opis neće preći širinu slike */
+}
+
+/* Globalno uputstvo na dnu cele galerije */
+.galerija-uputstvo {
+  display: block;
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* Prilagođavanje za veće ekrane (monitore) */
+@media (min-width: 768px) {
+  .galerija-stavka img {
+    height: 450px; /* Na monitorima dajemo slikama malo više prostora po visini */
+  }
+}
 
 
+
+/* --- MOBILNI TELEFONI (Sve izvan @media) --- */
+
+.galerija-stavka img {
+  width: auto;                  /* Širina se prilagođava formatu slike */
+  max-width: calc(100vw - 40px);/* Horizontalna slika nikada neće biti šira od ekrana telefona (staje cela!) */
+  
+  height: auto;                 /* Visina se prilagođava prirodno */
+  max-height: 70vh;             /* Uspravne slike mogu da idu do 70% visine ekrana (ostaju velike i dugačke, ne smanjuju se) */
+  
+  object-fit: contain; 
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+/* --- DESKTOP / MONITORI (Ekran širi od 768px) --- */
+
+@media (min-width: 768px) {
+  .galerija-stavka img {
+    /* Na velikom ekranu se vraćamo na ujednačenu visinu jer tu ima mesta za sve */
+    height: 550px; 
+    max-width: none;
+    max-height: none;
+  }
+}
 
   </style>
 </head>
@@ -316,56 +392,74 @@ Budimo se. Pokušavam da uslikam more kao što je na razglednici koju sam kupila
 
 <p>Nije nam svejedno što ne možemo da uđemo u smeštaj, ali odlučimo da prošetamo Firom. Sviđa nam se. Ulice su vrlo neobične, uske, gore-dole, lavirint, sve okrečeno u belo, pukne pogled s visine na more.</p>
 
-<p><img src="santorini (55).jpg" alt="Fira" 
-     title="Fira" ></p>
+<div class="galerija-kontejner">
+  <div class="horizontalna-galerija">
+    <div class="galerija-stavka">
+      <img src="santorini (55).jpg" alt="Fira unutrašnje ulice">
+    </div>
+    <div class="galerija-stavka">
+      <img src="santorini (58).jpg" alt="Pogled na plavu kupolu">
+    </div>
+    <div class="galerija-stavka">
+      <img src="santorini (15).jpg" alt="Karakteristične bele kuće">
+    </div>
+    <div class="galerija-stavka">
+      <img src="santorini (1).jpg" alt="Santorini detalj">
+    </div>
 
-<p><img src="santorini (58).jpg" alt="Fira" 
-     title="Fira" ></p>
+    
+    <div class="galerija-stavka">
+      <img src="santorini (2).jpg" alt="Fira" title="Fira">
+    </div>
 
-<p><img src="santorini (15).jpg" alt="Fira" 
-     title="Fira" ></p>	
+    <div class="galerija-stavka">
+      <img src="santorini (6).jpg" alt="Fira" title="Fira">
+    </div>
 
-<p><img src="santorini (1).jpg" alt="Fira" 
-     title="Fira" ></p>	
+    <div class="galerija-stavka">
+      <img src="santorini (8).jpg" alt="Fira" title="Fira">
+    </div>
+
+    <div class="galerija-stavka">
+      <img src="santorini (16).jpg" alt="Fira" title="Fira">
+    </div>
+
+    <div class="galerija-stavka">
+      <img src="santorini (61).jpg" alt="Fira" title="Fira">
+    </div>
+
+    <div class="galerija-stavka">
+      <img src="santorini (17).jpg" alt="Fira" title="Fira">
+    </div>
+
+    <div class="galerija-stavka">
+      <img src="santorini (34).jpg" alt="Fira" title="Fira">
+      <div class="galerija-opis">
+        Možete li da se zamislite da šetate ovakvim ulicama? Kako samo to može da se zavoli!
+      </div>
+    </div>
+
+    <div class="galerija-stavka">
+      <img src="santorini (35).jpg" alt="Fira" title="Fira">
+    </div>
+
+    <div class="galerija-stavka">
+      <img src="santorini (18).jpg" alt="Fira" title="Fira">
+      <div class="galerija-opis">
+        Odavde gledano deluje kao da je nemoguće šetati ulicama.
+      </div>
+    </div>
+
+  </div>
+  <small class="galerija-uputstvo">← Povucite levo ili desno za više slika →</small>
+</div>
+
+
+
+
+
 	 
-<p><img src="santorini (2).jpg" alt="Fira" 
-     title="Fira" ></p>	
-
-<p><img src="santorini (6).jpg" alt="Fira" 
-     title="Fira" ></p>	 
-	
-	 
-<p><img src="santorini (8).jpg" alt="Fira" 
-     title="Fira" ></p>	
-	 
-	 
-
-<p><img src="santorini (16).jpg" alt="Fira" 
-     title="Fira" ></p>	
-	 
-<p><img src="santorini (61).jpg" alt="Fira" 
-     title="Fira" ></p>	
-
  
-<p><img src="santorini (17).jpg" alt="Fira" 
-     title="Fira" ></p>	
-
-
-<p><img src="santorini (34).jpg" alt="Fira" 
-     title="Fira" ></p>	
-  <figcaption style="font-style: italic; font-size: 0.9rem; color: #555;">
-    Možete li da se zamislite da šetate ovakvim ulicama? Kako samo to može da se zavoli!
-  </figcaption>		 
-
-<p><img src="santorini (35).jpg" alt="Fira" 
-     title="Fira" ></p>	
-
-<p><img src="santorini (18).jpg" alt="Fira" 
-     title="Fira" ></p>
-	 
-  <figcaption style="font-style: italic; font-size: 0.9rem; color: #555;">
-    Odavde gledano deluje kao da je nemoguće šetati ulicama.
-  </figcaption>	 
 
 <p>Jednom prilikom su naišli i neki kosooki, gazde opet nema, pitaju da ostave ruksake. Ja sva bitna da demonstriram znanje japanskog, kad rekoše da su Kinezi. I am sorry. You should distinguish. Uh.</p>
 
@@ -472,7 +566,11 @@ imala sam osećaj kao da smo sleteli na neku drugu planetu, a bele uličice i ku
 
 <h2 id="blue">We put a little bit of blue in everything we do</h2>
 
-<p>Prvi film koji smo izradili i dobili slike mi je bio razočarenje. Slike su bile potpuno plave. Pri izlasku sam na foto-radnji videla prikladan slogan: We put a little bit of blue in everything we do. Promenili smo foto-radnju, gde su nam prodali <strong>Kodak film</strong> i napravili slike na Kodak papiru i bile su nam savršene.</p>
+<p>Prvi film koji smo izradili i dobili slike mi je bio razočarenje. Slike su bile potpuno plave. Pri izlasku sam na foto-radnji videla prikladan slogan: We put a little bit of blue in everything we do.</p>
+
+<p>Promenili smo foto-radnju, i do kraja letovanja smo koristili Kodak film i pravili su slike na Kodak papiru i bile su nam savršene toliko da kada smo došli kući 
+i hteli da napravimo veće fotografije koje smo kačili kao slike na zidu, 
+nisu mogli da ponove taj kvalitet jer niko nije imao takav Kodak Gold papir na kome su rađene originalne fotografije i koji je imao savršen kolorit.</p>
 
 <p>Na trgu kod foto-radnje je bilo uličnih zabavljača. Zapamtila sam onog što je gutao vatru.</p>
 
