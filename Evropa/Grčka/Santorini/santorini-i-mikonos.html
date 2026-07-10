@@ -221,15 +221,29 @@ img {
 
 
 /* Uokvireni tekstualni opis ispod same slike */
+/* --- MOBILNI TELEFONI --- */
+
 .galerija-opis {
-  margin-top: 8px;
+  margin: 10px auto 0 auto; /* Centriramo tekstualni blok ispod slike */
   font-size: 0.9rem;
   font-style: italic;
   color: #555;
   text-align: center;
   line-height: 1.4;
   padding: 0 5px;
-  max-width: 100%; /* Opis neće preći širinu slike */
+  
+  /* KLJUČNA IZMENA ZA MOBILNI: */
+  max-width: 240px; /* Smanjujemo širinu teksta na telefonu, što ga primorava da ode u 2 reda */
+}
+
+
+/* --- DESKTOP / MONITORI (Ekran širi od 768px) --- */
+
+@media (min-width: 768px) {
+  .galerija-opis {
+    /* Na desktopu skidamo ovo ograničenje da bi tekst mogao lepo da se raširi u jedan red */
+    max-width: 100%; 
+  }
 }
 
 /* Globalno uputstvo na dnu cele galerije */
