@@ -188,10 +188,9 @@ img {
 .galerija-kontejner {
   margin: 25px 0;
   width: 100%;
-  position: relative; /* Ključno za absolute pozicioniranje strelica */
 }
 
-/* Horizontalna traka (Podrazumevano za desktop) */
+/* Horizontalna traka */
 .horizontalna-galerija {
   display: flex;
   overflow-x: auto;
@@ -219,8 +218,11 @@ img {
   flex-direction: column;
 }
 
+
+
 /* Uokvireni tekstualni opis ispod same slike */
 /* --- MOBILNI TELEFONI --- */
+
 .galerija-opis {
   margin: 10px auto 0 auto; /* Centriramo tekstualni blok ispod slike */
   font-size: 0.9rem;
@@ -234,7 +236,9 @@ img {
   max-width: 240px; /* Smanjujemo širinu teksta na telefonu, što ga primorava da ode u 2 reda */
 }
 
+
 /* --- DESKTOP / MONITORI (Ekran širi od 768px) --- */
+
 @media (min-width: 768px) {
   .galerija-opis {
     /* Na desktopu skidamo ovo ograničenje da bi tekst mogao lepo da se raširi u jedan red */
@@ -242,6 +246,7 @@ img {
   }
 }
 
+/* Globalno uputstvo na dnu cele galerije - Jače pulsiranje i vulkan narandžasta */
 /* Globalno uputstvo na dnu cele galerije - Tamno plavo i statično */
 .galerija-uputstvo {
   display: block;
@@ -252,6 +257,7 @@ img {
   font-size: 1rem;
   margin-top: 10px;
   letter-spacing: 0.8px;
+  /* Animacija pulsiranja je uklonjena */
 }
 
 /* Stil za trougliće (strelice) - Tamno plavi, klikabilni i statični */
@@ -266,6 +272,7 @@ img {
   pointer-events: auto; /* Klikabilno */
   text-shadow: 1px 1px 3px rgba(255,255,255,0.8); /* Svetla senka koja pomaže plavim strelicama da se vide preko tamnijih delova slika */
   user-select: none;
+  /* Animacija pulsiranja je uklonjena */
 }
 
 /* Definicija jačeg pulsiranja */
@@ -284,7 +291,17 @@ img {
   }
 }
 
+/* Prilagođavanje za veće ekrane (monitore) */
+@media (min-width: 768px) {
+  .galerija-stavka img {
+    height: 450px; /* Na monitorima dajemo slikama malo više prostora po visini */
+  }
+}
+
+
+
 /* --- MOBILNI TELEFONI (Sve izvan @media) --- */
+
 .galerija-stavka img {
   width: auto;                  /* Širina se prilagođava formatu slike */
   max-width: calc(100vw - 40px);/* Horizontalna slika nikada neće biti šira od ekrana telefona (staje cela!) */
@@ -297,41 +314,9 @@ img {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Pozicioniranje leve i desne strelice */
-.strelica-leva { left: 5px; }
-.strelica-desna { right: 5px; }
 
+/* --- DESKTOP / MONITORI (Ekran širi od 768px) --- */
 
-/* ==========================================================================
-   POPRAVKA ZA MOBILNE (Ekrani do 767px)
-   Pravimo vertikalni raspored i sklanjamo elemente koji ne trebaju na telefonu
-   ========================================================================== */
-@media (max-width: 767px) {
-  .horizontalna-galerija {
-    flex-direction: column;      /* Slike idu jedna ispod druge */
-    overflow-x: visible;         /* Isključujemo horizontalni skrol */
-    scroll-snap-type: none;      /* Isključujemo snap skrolovanje */
-    align-items: center;         /* Centriramo slike na ekranu */
-    gap: 30px;                   /* Pravimo lep razmak između blokova slika */
-  }
-
-  .galerija-stavka {
-    width: 100%;
-    align-items: center;         /* Centriramo sliku i opis unutar stavke */
-  }
-
-  /* Sakrivamo strelice i tekstualno uputstvo na telefonu */
-  .galerija-strelica,
-  .galerija-uputstvo {
-    display: none !important;
-  }
-}
-
-
-/* ==========================================================================
-   ZA DESKTOP / MONITORI (Ekran širi od 768px)
-   Svi tvoji originalni stilovi za veće ekrane su ovde
-   ========================================================================== */
 @media (min-width: 768px) {
   .galerija-stavka img {
     /* Na velikom ekranu se vraćamo na ujednačenu visinu jer tu ima mesta za sve */
@@ -339,14 +324,36 @@ img {
     max-width: none;
     max-height: none;
   }
+}
+/* 1. Pripremamo krovni kontejner da drži strelice unutar sebe */
+.galerija-kontejner {
+  margin: 25px 0;
+  width: 100%;
+  position: relative; /* Ključno za absolute pozicioniranje strelica */
+}
 
+
+
+/* 3. Pozicioniranje leve strelice */
+.strelica-leva {
+  left: 5px;
+}
+
+/* 4. Pozicioniranje desne strelice */
+.strelica-desna {
+  right: 5px;
+}
+
+/* 5. Prilagođavanje za desktop ekrane (pošto su tu slike više, podižemo strelice malo) */
+@media (min-width: 768px) {
   .galerija-strelica {
     top: 50%;
     font-size: 2.5rem; /* Na velikom ekranu mogu biti malo veće */
   }
   .strelica-leva { left: -35px; } /* Na desktopu ih izbacujemo skroz van slika ako ima mesta */
   .strelica-desna { right: -35px; }
-}  </style>
+}
+  </style>
 </head>
 <body>
 
