@@ -13,13 +13,13 @@
 <meta name="description" content="Otkrijte autentični Santorini putopis i vodič. Saznajte šta videti u Iji i Firi, kako izgleda izlet na vulkan, iskopine Akrotiri i produžetak puta na Mikonos." />
 
 <!-- Canonical URL -->
-<link rel="canonical" href="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grčka/Santorini/santorini-i-mikonos.html" />
+<link rel="canonical" href="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grcka/santorini-i-mikonos.html" />
 
 <!-- Open Graph (Za prelep prikaz kada se link deli na Facebook-u, Viber-u, WhatsApp-u) -->
 <meta property="og:title" content="Santorini i Mikonos: Avantura iz nekih drugih vremena | Tamo daleko" />
 <meta property="og:description" content="Autentičan putopis sa korisnim savetima. Ija, Fira, Akrotiri, vulkan, Crvena plaža i Mikonos kroz prizmu romantičnih vremena bez interneta." />
-<meta property="og:image" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grčka/Santorini/santorini.jpg" />
-<meta property="og:url" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grčka/Santorini/santorini-i-mikonos.html" />
+<meta property="og:image" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grcka/santorini.jpg" />
+<meta property="og:url" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grcka/santorini-i-mikonos.html" />
 <meta property="og:type" content="article" />
 <meta property="og:locale" content="sr_RS" />
 <meta property="og:site_name" content="Tamo daleko" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Santorini i Mikonos Putopis: Vodič i Iskustvo" />
 <meta name="twitter:description" content="Putovanje kroz Grčku bez interneta i mobilnih telefona. Doživite Iju, Firu, Akrotiri i Mikonos iz prve ruke." />
-<meta name="twitter:image" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grčka/Santorini/santorini.jpg" />
+<meta name="twitter:image" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grcka/santorini.jpg" />
 
 <script type="application/ld+json">
 {
@@ -188,10 +188,9 @@ img {
 .galerija-kontejner {
   margin: 25px 0;
   width: 100%;
-  position: relative; /* Ključno za absolute pozicioniranje strelica */
 }
 
-/* Horizontalna traka (Podrazumevano za desktop) */
+/* Horizontalna traka */
 .horizontalna-galerija {
   display: flex;
   overflow-x: auto;
@@ -219,8 +218,11 @@ img {
   flex-direction: column;
 }
 
+
+
 /* Uokvireni tekstualni opis ispod same slike */
 /* --- MOBILNI TELEFONI --- */
+
 .galerija-opis {
   margin: 10px auto 0 auto; /* Centriramo tekstualni blok ispod slike */
   font-size: 0.9rem;
@@ -234,7 +236,9 @@ img {
   max-width: 240px; /* Smanjujemo širinu teksta na telefonu, što ga primorava da ode u 2 reda */
 }
 
+
 /* --- DESKTOP / MONITORI (Ekran širi od 768px) --- */
+
 @media (min-width: 768px) {
   .galerija-opis {
     /* Na desktopu skidamo ovo ograničenje da bi tekst mogao lepo da se raširi u jedan red */
@@ -242,6 +246,7 @@ img {
   }
 }
 
+/* Globalno uputstvo na dnu cele galerije - Jače pulsiranje i vulkan narandžasta */
 /* Globalno uputstvo na dnu cele galerije - Tamno plavo i statično */
 .galerija-uputstvo {
   display: block;
@@ -252,6 +257,7 @@ img {
   font-size: 1rem;
   margin-top: 10px;
   letter-spacing: 0.8px;
+  /* Animacija pulsiranja je uklonjena */
 }
 
 /* Stil za trougliće (strelice) - Tamno plavi, klikabilni i statični */
@@ -266,6 +272,7 @@ img {
   pointer-events: auto; /* Klikabilno */
   text-shadow: 1px 1px 3px rgba(255,255,255,0.8); /* Svetla senka koja pomaže plavim strelicama da se vide preko tamnijih delova slika */
   user-select: none;
+  /* Animacija pulsiranja je uklonjena */
 }
 
 /* Definicija jačeg pulsiranja */
@@ -284,7 +291,17 @@ img {
   }
 }
 
+/* Prilagođavanje za veće ekrane (monitore) */
+@media (min-width: 768px) {
+  .galerija-stavka img {
+    height: 450px; /* Na monitorima dajemo slikama malo više prostora po visini */
+  }
+}
+
+
+
 /* --- MOBILNI TELEFONI (Sve izvan @media) --- */
+
 .galerija-stavka img {
   width: auto;                  /* Širina se prilagođava formatu slike */
   max-width: calc(100vw - 40px);/* Horizontalna slika nikada neće biti šira od ekrana telefona (staje cela!) */
@@ -297,57 +314,9 @@ img {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Pozicioniranje leve i desne strelice */
-.strelica-leva { left: 5px; }
-.strelica-desna { right: 5px; }
 
+/* --- DESKTOP / MONITORI (Ekran širi od 768px) --- */
 
-/* ==========================================================================
-   POPRAVKA ZA MOBILNE (Ekrani do 767px)
-   Pravimo vertikalni raspored i sklanjamo elemente koji ne trebaju na telefonu
-   ========================================================================== */
-/* ==========================================================================
-   POPRAVKA ZA MOBILNE (Ekrani do 767px)
-   Pravimo vertikalni raspored i sklanjamo elemente koji ne trebaju na telefonu
-   ========================================================================== */
-@media (max-width: 767px) {
-  .horizontalna-galerija {
-    display: block;              /* Menjamo sa flex na block da se ponašaju kao običan tekst/slike */
-    overflow-x: visible;         /* Isključujemo horizontalni skrol */
-    scroll-snap-type: none;      /* Isključujemo snap skrolovanje */
-    padding-bottom: 0px;
-  }
-
-  .galerija-stavka {
-    display: block;              /* I stavke postaju obični blokovi */
-    width: 100%;
-    margin-bottom: 25px;         /* OVDE kontrolišeš razmak! Stavi 10px ili 15px, tačno ovoliko će biti razmak između slika */
-  }
-
-  .galerija-stavka img {
-    display: block;
-    margin: 0 auto;              /* Centriramo sliku */
-    width: 100%;                 /* Slika zauzima punu širinu kontenera */
-    max-width: calc(100vw - 40px); /* Prati tvoje pravilo za širinu */
-    height: auto !important;     /* Poništavamo fiksne visine i 70vh koji prave prazan prostor */
-    max-height: none !important; /* Poništavamo max-height limit koji je gušio sliku */
-  }
-
-  .galerija-opis {
-    margin: 8px auto 0 auto;     /* Mali razmak između slike i njenog opisa */
-  }
-
-  /* Sakrivamo strelice i tekstualno uputstvo na telefonu */
-  .galerija-strelica,
-  .galerija-uputstvo {
-    display: none !important;
-  }
-}
-
-/* ==========================================================================
-   ZA DESKTOP / MONITORI (Ekran širi od 768px)
-   Svi tvoji originalni stilovi za veće ekrane su ovde
-   ========================================================================== */
 @media (min-width: 768px) {
   .galerija-stavka img {
     /* Na velikom ekranu se vraćamo na ujednačenu visinu jer tu ima mesta za sve */
@@ -355,14 +324,36 @@ img {
     max-width: none;
     max-height: none;
   }
+}
+/* 1. Pripremamo krovni kontejner da drži strelice unutar sebe */
+.galerija-kontejner {
+  margin: 25px 0;
+  width: 100%;
+  position: relative; /* Ključno za absolute pozicioniranje strelica */
+}
 
+
+
+/* 3. Pozicioniranje leve strelice */
+.strelica-leva {
+  left: 5px;
+}
+
+/* 4. Pozicioniranje desne strelice */
+.strelica-desna {
+  right: 5px;
+}
+
+/* 5. Prilagođavanje za desktop ekrane (pošto su tu slike više, podižemo strelice malo) */
+@media (min-width: 768px) {
   .galerija-strelica {
     top: 50%;
     font-size: 2.5rem; /* Na velikom ekranu mogu biti malo veće */
   }
   .strelica-leva { left: -35px; } /* Na desktopu ih izbacujemo skroz van slika ako ima mesta */
   .strelica-desna { right: -35px; }
-}  </style>
+}
+  </style>
 </head>
 <body>
 
@@ -653,8 +644,7 @@ imala sam osećaj kao da smo sleteli na neku drugu planetu, a bele uličice i ku
 <p><img src="santorini (54).jpg" alt="Fira" 
      title="Fira" ></p>	
 
-<p><img src="santorini (44).jpg" alt="Fira" 
-     title="Fira" ></p>	 
+
 	 
 
 
@@ -668,7 +658,7 @@ nisu mogli da ponove taj kvalitet jer niko nije imao takav Kodak Gold papir na k
 
 <p>Na trgu kod foto-radnje je bilo uličnih zabavljača. Zapamtila sam onog što je gutao vatru.</p>
 
-<p>Upamtili smo i kako nam je jednom, dok smo šetali neverovatnom Ojom i gledali na plave kupole i more, do ušiju dopro Bregin instrumental iz filma Arizona dream. Momenat za pamćenje.</p>
+<p>Upamtili smo i kako nam je jednom, dok smo šetali neverovatnom Ijom i gledali na plave kupole i more, do ušiju dopro Bregin instrumental iz filma Arizona dream. Momenat za pamćenje.</p>
 
 <p>Voleli smo i zalaske sunca uz pogled na more sa visine i klasičnu muziku iz restorana.</p>
 
