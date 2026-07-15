@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolmar - Bajka Alzasu</title>
+    <style>
+        /* Definisanje palete boja kroz CSS varijable */
+        :root {
+            --boja-drveta: #8B4513;        /* Tamno braon za grede */
+            --boja-fasade: #F4C2C2;        /* Nežno roze */
+            --boja-kanala: #4A7A8C;        /* Mirna plavo-zelena */
+            --boja-vina: #D4AF37;          /* Zlatni akcenti */
+            --svetla-pozadina: #FAFAF6;    /* Topla bela */
+            --tamni-tekst: #2C2C2C;        /* Skoro crna za čitljivost */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--svetla-pozadina);
+            color: var(--tamni-tekst);
+            line-height: 1.6;
+        }
+
+        /* Hero sekcija */
+        header {
+            background: linear-gradient(135deg, var(--boja-kanala) 0%, #355C6E 100%);
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 6px solid var(--boja-vina);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* Glavni kontejner */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Istaknuti uvod */
+        .intro-card {
+            background-color: #ffffff;
+            border-left: 5px solid var(--boja-fasade);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .intro-card h2 {
+            color: var(--boja-drveta);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        /* Sekcija sa atrakcijama (Grid) */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-top: 4px solid var(--boja-drveta);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Vizuelni placeholder za slike sa bojama Kolmara */
+        .card-image-placeholder {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .img-pink { background-color: var(--boja-fasade); }
+        .img-teal { background-color: var(--boja-kanala); }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            color: var(--boja-drveta);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        /* Dugme sa akcentnom bojom */
+        .btn {
+            display: inline-block;
+            background-color: var(--boja-vina);
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: #bfa032; /* Malo tamnija zlatna na hover */
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--boja-drveta);
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kolmar</h1>
+        <p>Prozor u najlepšu bajku Francuske</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="intro-card">
+            <h2>Dobrodošli u srce Alzasa</h2>
+            <p>Smešten na istoku Francuske, uz granicu sa Nemačkom, Kolmar je grad koji izgleda kao da je oživeo sa stranica dečijih slikovnica. Poznat po očuvanom starom jezgru, kanalima koji vijugaju između šarenih kuća i vrhunskim vinima, Kolmar osvaja šarmom u svako godišnje doba.</p>
+        </div>
+
+        <div class="grid">
+            <!-- Kartica 1: Mala Venecija -->
+            <div class="card">
+                <div class="card-image-placeholder img-teal">
+                    La Petite Venise
+                </div>
+                <div class="card-content">
+                    <h3>Mala Venecija</h3>
+                    <p>Deo grada gde se slikovite drvene kuće nalaze tik uz kanale reke Loh. Najbolji način da doživite ovaj deo grada je lagana vožnja čamcem sa ravnim dnom.</p>
+                    <a href="#" class="btn">Istraži kanale</a>
+                </div>
+            </div>
+
+            <!-- Kartica 2: Šarene fasade -->
+            <div class="card" style="border-top-color: var(--boja-fasade);">
+                <div class="card-image-placeholder img-pink">
+                    Fasade i cveće
+                </div>
+                <div class="card-content">
+                    <h3>Arhitektura iz bajke</h3>
+                    <p>Specifične kuće iz 14. i 15. veka ofarbane su u pastelne boje, a svaka od njih nekada je bojom označavala zanat kojim se vlasnik bavio.</p>
+                    <a href="#" class="btn">Saznaj više</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kolmar Turizam. Inspirisano bojama istorije i tradicije.</p>
+    </footer>
+
+</body>
+</html>
