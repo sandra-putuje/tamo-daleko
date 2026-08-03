@@ -552,28 +552,25 @@ function oznaciDestinaciju(destinacija) {
   // Ukloni active sa svih linkova
   sekcijaEl.querySelectorAll('.section-links a').forEach(a => a.classList.remove('active'));
 
-  // 2. Nađi ciljani link
-  const ciljaniLink = Array.from(sekcijaEl.querySelectorAll('.section-links a')).find(a => 
-    a.textContent.toLowerCase().includes(info.naziv.toLowerCase())
-  );
+// 2. Pronađi ciljani link (trim() uklanja nevidljive razmake)
+const ciljaniLink = Array.from(sekcijaEl.querySelectorAll('.section-links a')).find(a => 
+  a.textContent.trim().toLowerCase().includes(info.naziv.trim().toLowerCase())
+);
 
-  if (ciljaniLink) {
-    ciljaniLink.classList.add('active');
+if (ciljaniLink) {
+  ciljaniLink.classList.add('active');
 
-    // 3. Mali tajmaut omogućava pretraživaču da prvo prikaže sekciju na ekranu, pa tek onda skroluje
-    setTimeout(() => {
-      // Osigurava da link može primiti fokus
-      ciljaniLink.setAttribute('tabindex', '-1'); 
-      ciljaniLink.focus({ preventScroll: true }); // Stavlja fokus bez naglog skoka
-      
-      // Glatko skrolovanje tačno na sredinu ekrana
-      ciljaniLink.scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'center',
-        inline: 'nearest'
-      });
-    }, 150); // 150ms pauza je idealna da pretraživač završi renderovanje
-  }
+  setTimeout(() => {
+    // Skroluj do Francuske
+    ciljaniLink.scrollIntoView({ 
+      behavior: 'smooth', 
+      block: 'center'
+    });
+
+    // Postavi fokus radi pristupačnosti, ali ukloni vizuelni plavi okvir pregledača
+    ciljaniLink.focus({ preventScroll: true });
+    ciljaniLink.blur(); // <-- OVO uklanja liniju/link sa dna koja ostane 'zamrznuta' u fokusu
+  }, 150);
 }
 
     window.onload = () => {
