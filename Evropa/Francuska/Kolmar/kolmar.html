@@ -172,6 +172,47 @@ hr {
   transform: translateY(-1px);
 }
 
+/* Osnovno stanje dugmeta */
+.back-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+
+  background: linear-gradient(135deg, var(--geranium-red), var(--colmar-pink));
+  color: white;
+  
+  border-radius: 20px;         /* Zaobljene ivice */
+  
+
+  
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+
+  /* Tipografija izjednačena sa tekstom iz body-ja */
+  font-family: 'Georgia', serif;
+  font-size: 0.95rem;          /* Veličina usklađena sa glavnim tekstom */
+  font-weight: bold;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+/* Stanje na prelazak mišem (Hover) */
+.back-button:hover
+{
+  /* Duboka morsko-plava pozadina na hover */
+  background: var(--header-color);
+  color: #ffffff;              /* Slova prelaze u belu boju */
+  border-color: #1a4b6e;
+  transform: translateY(-1px); 
+  box-shadow: 0 4px 12px rgba(26, 75, 110, 0.25);
+}
+
+/* Klik efekat */
+.back-button:active,
+.toc-back-link:active {
+  transform: translateX(-1px);
+}
+
+
 #newsletter {
   margin-top: 40px;
   padding-top: 20px;
@@ -412,6 +453,91 @@ hr {
   background-color: var(--header-color); /* Na prelaz prelazi u duboku boju vina */
   transform: translateY(-2px);
 }
+/* Lightbox stilovi */
+#lightbox {
+  display: none; /* Skriveno po podrazumevanom stanju */
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Tamna providna pozadina */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-zatvori {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Efekat uveličavanja slike na prelazak mišem */
+article img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Menja kursor u ruku da označi da slika može da se klikne */
+}
+
+article img:hover {
+  transform: scale(1.02); /* Blago uveličanje od 2% */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Nešto jača senka pri prelasku */
+}
+/* FAQ Sekcija Stilovi */
+.faq-sekcija {
+  margin: 40px 0;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(140, 58, 79, 0.08);
+  border-left: 4px solid var(--header-color);
+}
+
+.faq-sekcija h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: var(--header-color);
+  font-size: 1.8rem;
+}
+
+.faq-stavka {
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--colmar-pink);
+  padding-bottom: 15px;
+}
+
+.faq-stavka:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.faq-pitanje {
+  font-weight: bold;
+  color: var(--header-color);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.faq-odgovor {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
 </style>
 </head>
 <body>
@@ -442,8 +568,11 @@ hr {
             <li style="margin-bottom: 8px; text-align: left;"><a href="#prva-setnja">Uživanje u kućici i prva šetnja kanalima</a></li>
             <li style="margin-bottom: 8px; text-align: left;"><a href="#pijaca-i-camac">Pijaca, francuske "jabuke" i vožnja čamcem</a></li>
             <li style="margin-bottom: 8px; text-align: left;"><a href="#subota-strazbur">Subota u Strazburu: Veličanstvena arhitektura i trka za vozom</a></li>
-            <li style="margin-bottom: 8px; text-align: left;"><a href="#nedelja-bazel">Nedelja u Bazelu: Brda, zoo-vrt i jedna "spontana" uspomena</a></li>
+            <li style="margin-bottom: 8px; text-align: left;"><a href="#nedelja-bazel">Nedelja u Bazelu: Brda i zoo-vrt</a></li>
             <li style="margin-bottom: 0; text-align: left;"><a href="#povratak-aerodrom">Povratak i adrenalin na aerodromu</a></li>
+			<li style="margin-bottom: 0; text-align: left;"><a href="#pitanja">Često postavljana pitanja o poseti Kolmaru</a></li>	
+			
+			
         </ul>
     </div>
   </nav>
@@ -454,7 +583,7 @@ hr {
   Kaže Luka pitaj Kristinu, ona voli da putuje. Ako bude htela Kristina, hoćeš i ti? Hoću. Petre ako ide Luka, hoćeš i ti? Hoće. I tako nas četvoro krenusmo na put.
   Ja vam ne mogu opisati koliko sam ja bila srećna.  Taj momenat je bio preokret. Posle su i moje drugarice iz srednje škole htele da putuju i tako je sve krenulo.
   </p>
-<p><img src="kolmar (0).jpg" alt="Kolmar, predveče"></p>
+<p><img src="kolmar (0).jpg" alt="Kanal Mala Venecija u Kolmaru"></p>
   <p>
   Elem, pred put. Nervoza raste.
   </p>
@@ -513,13 +642,13 @@ hr {
   Šetali predveče i uveče. Vrlo prijatno. Okolina prelepa. Deca dobra. Lepo se slažu. Ja oduševljena. <strong>Seli i večerali tart, one tanke pice, hrskave sa lukom</strong>, u restoranu pored kanala. 
   </p>
 
-<p><img src="kolmar (38).jpg" alt="Kolmar, predveče"></p>
+<p><img src="kolmar (38).jpg" alt="Kanal Mala Venecija u Kolmaru"></p>
 
-<p><img src="kolmar (23).jpg" alt="Kolmar, predveče"></p>
+<p><img src="kolmar (23).jpg" alt="Kanal Mala Venecija u Kolmaru"></p>
 
-<p><img src="kolmar (32).jpg" alt="Kolmar, predveče"></p>
+<p><img src="kolmar (32).jpg" alt="Kolmar, trg, predveče"></p>
 
-<p><img src="kolmar (39).jpg" alt="Kolmar, predveče"></p>
+<p><img src="kolmar (39).jpg" alt="Kanal Mala Venecija u Kolmaru"></p>
 
   <p>
   Ispred ulaza nas dočekala jedina žurka koju smo videli. Ljudi stoje, piju. Glasna muzika. Gužva. Žagor. Pitam, hoćete na žurku, neće. Sreća da nam je stan bio sa dvorišne strane i nismo čuli galamu. Moglo je da se spava. Luka nam skinuo crtać, al' nije hteo da se pokrene.
@@ -545,37 +674,37 @@ Srećom, Luka je u letu uhvatio da je nekako izustila „apple“. I bi jabuka! 
 
 <p><img src="kolmar (16).jpg" alt="Kolmar, kolači"></p>
 
-<p><img src="kolmar (19).jpg" alt="Kolmar"></p>
+<p><img src="kolmar (19).jpg" alt="Kanal Mala Venecija u Kolmaru"></p>
 
-<p><img src="kolmar (27).jpg" alt="Kolmar"></p>
+<p><img src="kolmar (27).jpg" alt="Kolmar, detalj fasade"></p>
 
-<p><img src="kolmar (28).jpg" alt="Kolmar"></p>
+<p><img src="kolmar (28).jpg" alt="Uskršnji ukrasi u Kolmaru"></p>
 
-<p><img src="kolmar (30).jpg" alt="Kolmar"></p>
+<p><img src="kolmar (30).jpg" alt="Kolmar, trg"></p>
 
-<p><img src="kolmar (33).jpg" alt="Kolmar"></p>
+<p><img src="kolmar (33).jpg" alt="Kolmar, trg"></p>
 
 
 <p><img src="kolmar (36).jpg" alt="Kolmar"></p>
 
 <p><img src="kolmar (6).jpg" alt="Kolmar"></p>
 
-<p><img src="kolmar (13).jpg" alt="Kolmar"></p>
+<p><img src="kolmar (13).jpg" alt="Kolmar, pignon"></p>
 
 
-<p><img src="kolmar (18).jpg" alt="Kolmar"></p>
+<p><img src="kolmar (18).jpg" alt="Kolmar, pignon"></p>
 
-<p><img src="kolmar (21).jpg" alt="Kolmar"></p>
+<p><img src="kolmar (21).jpg" alt="Kolmar, tanueurs"></p>
 
 <p><img src="kolmar (24).jpg" alt="Kolmar"></p>
 
-<p><img src="kolmar (25).jpg" alt="Kolmar"></p>
+<p><img src="kolmar (25).jpg" alt="Kolmar, glave na kući"></p>
 
-<p><img src="kolmar (26).jpg" alt="Kolmar"></p>
+<p><img src="kolmar (26).jpg" alt="Kolmar, drvena kuća, čuvena fasada"></p>
 
-<p><img src="kolmar (31).jpg" alt="Kolmar"></p>
+<p><img src="kolmar (31).jpg" alt="Kolmar, park"></p>
 
-<p><img src="kolmar (5).jpg" alt="Kolmar"></p>
+<p><img src="kolmar (5).jpg" alt="Kolmar, dvorište sa visterijama"></p>
 
 
 
@@ -588,9 +717,9 @@ Srećom, Luka je u letu uhvatio da je nekako izustila „apple“. I bi jabuka! 
   </p>
 
 
-<p><img src="kolmar (111).jpg" alt="Kolmar"></p>
+<p><img src="kolmar (111).jpg" alt="Kanal Mala Venecija u Kolmaru"></p>
 
-<p><img src="kolmar (22).jpg" alt="Kolmar"></p>
+<p><img src="kolmar (22).jpg" alt="Kanal Mala Venecija u Kolmaru, vožnja čamcem"></p>
 
 
 
@@ -638,9 +767,9 @@ Srećom, Luka je u letu uhvatio da je nekako izustila „apple“. I bi jabuka! 
   Stigli kući. Napravili ručko-večeru. Oni ostali da odmore, a ja u šetnju voljenim Kolmarom. Otkrila klupe u cveću, dečje igralište. Pozdravila sve lepe zgradice sada u novom ruhu, osvetljene.
   </p>
   
-<p><img src="strazbur (1).jpg" alt="Strazbur"></p>
+<p><img src="strazbur (1).jpg" alt="Katedrala Notr Dam u Strazburu"></p>
 
-<p><img src="strazbur (2).jpg" alt="Strazbur"></p>
+<p><img src="strazbur (2).jpg" alt="Katedrala Notr Dam u Strazburu"></p>
 
 
 
@@ -652,7 +781,7 @@ Srećom, Luka je u letu uhvatio da je nekako izustila „apple“. I bi jabuka! 
 
 <p><img src="strazbur (7).jpg" alt="Strazbur"></p>
 
-<p><img src="strazbur (8).jpg" alt="Strazbur"></p>
+<p><img src="strazbur (8).jpg" alt="Katedrala Notr Dam u Strazburu"></p>
 
 <p><img src="strazbur (9).jpg" alt="Strazbur"></p>
 
@@ -666,7 +795,7 @@ Srećom, Luka je u letu uhvatio da je nekako izustila „apple“. I bi jabuka! 
 
 <p><img src="strazbur (14).jpg" alt="Strazbur"></p>
 
-<p><img src="strazbur (15).jpg" alt="Strazbur"></p>
+<p><img src="strazbur (15).jpg" alt="Strazbur, visterije u cvatu"></p>
 
 <p><img src="strazbur (16).jpg" alt="Strazbur"></p>
 
@@ -750,6 +879,54 @@ Srećom, Luka je u letu uhvatio da je nekako izustila „apple“. I bi jabuka! 
     <a href="#vrh" class="back-link">↑ Nazad na sadržaj</a>
   </div>
   
+<!-- FAQ SEKCIJA -->
+<section class="faq-sekcija">
+  <h3 id="pitanja">Često postavljana pitanja o poseti Kolmaru</h3>
+
+  <div class="faq-stavka">
+    <div class="faq-pitanje">Koliko je dana potrebno za obilazak Kolmara?</div>
+    <div class="faq-odgovor">
+      Za sam Kolmar i obilazak atrakcija poput Male Venecije dovoljan je jedan do dva dana. Međutim, idealno je odvojiti 3–4 dana kako biste vozom obišli i obližnje gradove poput Strazbura i Bazela.
+    </div>
+  </div>
+
+  <div class="faq-stavka">
+    <div class="faq-pitanje">Kako stići od aerodroma (EuroAirport) do Kolmara?</div>
+    <div class="faq-odgovor">
+      Sa aerodroma EuroAirport (Basel-Mulhouse-Freiburg) kreće autobus koji vozi do železničke stanice u gradu Miluzu (Mulhouse), odakle se direktnim regionalnim TER vozom stiže do Kolmara za oko 20 minuta.
+    </div>
+  </div>
+
+  <div class="faq-stavka">
+    <div class="faq-pitanje">Da li se u Kolmaru može sporazumeti na engleskom jeziku?</div>
+    <div class="faq-odgovor">
+      U turističkim zonama i većim restoranima engleski se delimično razume, ali je poznavanje osnovnih reči na francuskom ili korišćenje aplikacija za prevođenje izuzetno korisno, posebno u lokalnim radnjama i na pijaci.
+    </div>
+  </div>
+
+  <div class="faq-stavka">
+    <div class="faq-pitanje">Da li postoji besplatan prevoz od železničke stanice do centra Kolmara?</div>
+    <div class="faq-odgovor">
+      Da, od železničke stanice do samog istorijskog centra i katedrale vozi besplatni električni mini-bus (Navette électrique gratuita), što je odlična opcija ako imate prtljag.
+    </div>
+  </div>
+
+  <div class="faq-stavka">
+    <div class="faq-pitanje">Koliko košta vožnja čamcem u Maloj Veneciji?</div>
+    <div class="faq-odgovor">
+      Vožnja čamcem po kanalima Kolmara traje oko 25 minuta i staje 10 evra po odrasloj osobi ili 5 evra za decu do 10 godina. Polazak je kod Pont Saint-Pierre, pored restorana Caveau Saint-Pierre, tu se i kupuju karte.
+    </div>
+  </div>
+</section> 
+
+  <div style="text-align: right;">
+    <a href="#vrh" class="back-link">↑ Nazad na sadržaj</a>
+  </div> 
+  
+<a href="../Francuska.html" class="back-button">
+  <span>&larr;</span> Nazad na Francuska
+</a>  
+  
   <br><br>
 
   <footer>
@@ -775,13 +952,22 @@ Srećom, Luka je u letu uhvatio da je nekako izustila „apple“. I bi jabuka! 
   </section>
 
 </article> <!-- KRAJ ARTICLE TAGA -->
-
+<!-- Lightbox Kontejner -->
+<div id="lightbox" onclick="this.style.display='none'">
+  <span class="lightbox-zatvori">&times;</span>
+  <img id="lightbox-img" src="" alt="Uvećana slika">
+</div>
 <script>
-    // Lightbox logika
+    // Lightbox logika za sve slike unutar <article>
     document.querySelectorAll('article img').forEach(image => {
         image.onclick = () => {
-            document.getElementById('lightbox').style.display = 'flex';
-            document.getElementById('lightbox-img').src = image.getAttribute('src');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            if (lightbox && lightboxImg) {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = image.getAttribute('src');
+            }
         }
     });
 
@@ -798,21 +984,21 @@ Srećom, Luka je u letu uhvatio da je nekako izustila „apple“. I bi jabuka! 
     })();
     
     // Logika za klik na strelice galerije
-    const galerija = document.querySelector('.horizontalna-galerija');
-    const levaStrelica = document.querySelector('.strelica-leva');
-    const desnaStrelica = document.querySelector('.strelica-desna');
+//    const galerija = document.querySelector('.horizontalna-galerija');
+//    const levaStrelica = document.querySelector('.strelica-leva');
+//    const desnaStrelica = document.querySelector('.strelica-desna');
 
-    if (galerija && levaStrelica && desnaStrelica) {
-        const iznosSkrola = () => galerija.clientWidth * 0.8; 
+//    if (galerija && levaStrelica && desnaStrelica) {
+//        const iznosSkrola = () => galerija.clientWidth * 0.8; 
 
-        desnaStrelica.onclick = () => {
-            galerija.scrollBy({ left: iznosSkrola(), behavior: 'smooth' });
-        };
+//        desnaStrelica.onclick = () => {
+//            galerija.scrollBy({ left: iznosSkrola(), behavior: 'smooth' });
+//        };
 
-        levaStrelica.onclick = () => {
-            galerija.scrollBy({ left: -iznosSkrola(), behavior: 'smooth' });
-        };        
-    }
+//        levaStrelica.onclick = () => {
+//            galerija.scrollBy({ left: -iznosSkrola(), behavior: 'smooth' });
+//        };        
+//    }
 </script>
 
 </body>

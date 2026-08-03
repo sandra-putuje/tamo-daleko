@@ -457,15 +457,16 @@ footer {
 	  'Brisel': { sekcija: 'evropa', naziv: 'Belgija' },
 	  
 	  
-	  'Grčka': { sekcija: 'evropa', naziv: 'Grčka (Santorini i Mikonos)' },
-      'Santorini': { sekcija: 'evropa', naziv: 'Grčka (Santorini i Mikonos)' },
-      'Mikonos': { sekcija: 'evropa', naziv: 'Grčka (Santorini i Mikonos)' },
-	  'Sitonija': { sekcija: 'evropa', naziv: 'Grčka (Santorini i Mikonos)' },
-      'Sarti': { sekcija: 'evropa', naziv: 'Grčka (Santorini i Mikonos)' },
-      'Neos Marmaras': { sekcija: 'evropa', naziv: 'Grčka (Santorini i Mikonos)' },
-	  'Megaportokali': { sekcija: 'evropa', naziv: 'Grčka (Santorini i Mikonos)' },
-      'Lagomandra': { sekcija: 'evropa', naziv: 'Grčka (Santorini i Mikonos)' },
-      'Orange beach': { sekcija: 'evropa', naziv: 'Grčka (Santorini i Mikonos)' }
+	  'grčka': { sekcija: 'evropa', naziv: 'Grčka' },
+	  'grcka': { sekcija: 'evropa', naziv: 'Grčka' },
+      'Santorini': { sekcija: 'evropa', naziv: 'Grčka' },
+      'Mikonos': { sekcija: 'evropa', naziv: 'Grčka' },
+	  'Sitonija': { sekcija: 'evropa', naziv: 'Grčka' },
+      'Sarti': { sekcija: 'evropa', naziv: 'Grčka' },
+      'Neos Marmaras': { sekcija: 'evropa', naziv: 'Grčka' },
+	  'Megaportokali': { sekcija: 'evropa', naziv: 'Grčka' },
+      'Lagomandra': { sekcija: 'evropa', naziv: 'Grčka' },
+      'Orange beach': { sekcija: 'evropa', naziv: 'Grčka' }
       
     };
 
@@ -500,34 +501,62 @@ footer {
       }
     }
 
-    function oznaciDestinaciju(destinacija) {
-      const d = destinacija.toLowerCase();
-      const header = document.querySelector('header');
-      const body = document.body;
+ //  function oznaciDestinaciju(destinacija) {
+ //    const d = destinacija.toLowerCase();
+ //     const header = document.querySelector('header');
+ //     const body = document.body;
 
       // Pronađi u mapi destinacija info o sekciji i nazivu
-      const info = mapaDestinacija[d];
-      if (!info) return; // ako destinacija nije u mapi, izađi
+ //     const info = mapaDestinacija[d];
+ //     if (!info) return; // ako destinacija nije u mapi, izađi
 
-      header.classList.add('hidden');
-      body.classList.add('header-hidden');
-      prikaziSekciju(info.sekcija);
+ //     header.classList.add('hidden');
+ //     body.classList.add('header-hidden');
+ //     prikaziSekciju(info.sekcija);
 
-      const sekcijaEl = document.getElementById(info.sekcija);
-      if (!sekcijaEl) return;
+ //     const sekcijaEl = document.getElementById(info.sekcija);
+ //     if (!sekcijaEl) return;
 
       // Ukloni aktivne klase sa svih dugmadi u sekciji
-      sekcijaEl.querySelectorAll('.section-links a').forEach(a => a.classList.remove('active'));
+ //     sekcijaEl.querySelectorAll('.section-links a').forEach(a => a.classList.remove('active'));
 
       // Potraži dugme koje sadrži tekst destinacije i aktiviraj ga
-      sekcijaEl.querySelectorAll('.section-links a').forEach(a => {
-        if (a.textContent.toLowerCase().includes(info.naziv.toLowerCase())) {
-          a.classList.add('active');
-          a.focus();
-          a.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      });
+ //     sekcijaEl.querySelectorAll('.section-links a').forEach(a => {
+ //       if (a.textContent.toLowerCase().includes(info.naziv.toLowerCase())) {
+ //         a.classList.add('active');
+ //         a.focus();
+ //         a.scrollIntoView({ behavior: 'smooth', block: 'center' });
+ //       }
+ //     });
+ //   }
+	
+	function oznaciDestinaciju(destinacija) {
+  // Pretvori u mala slova i zameni č/ć sa c
+  const d = decodeURIComponent(destinacija).toLowerCase().replace(/č|ć/g, 'c'); 
+  const header = document.querySelector('header');
+  const body = document.body;
+
+  // Traženje i sa kvačicom i bez kvačice
+  const info = mapaDestinacija[d] || mapaDestinacija[destinacija.toLowerCase()];
+  if (!info) return;
+
+  header.classList.add('hidden');
+  body.classList.add('header-hidden');
+  prikaziSekciju(info.sekcija);
+
+  const sekcijaEl = document.getElementById(info.sekcija);
+  if (!sekcijaEl) return;
+
+  sekcijaEl.querySelectorAll('.section-links a').forEach(a => a.classList.remove('active'));
+
+  sekcijaEl.querySelectorAll('.section-links a').forEach(a => {
+    if (a.textContent.toLowerCase().includes(info.naziv.toLowerCase())) {
+      a.classList.add('active');
+      a.focus();
+      a.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
+  });
+}
 
     window.onload = () => {
       const urlParams = new URLSearchParams(window.location.search);

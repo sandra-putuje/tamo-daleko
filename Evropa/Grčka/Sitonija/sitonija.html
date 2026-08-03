@@ -13,7 +13,7 @@
 <meta name="description" content="Naša priča sa Sitonije. Otkrijte Megaportokali, Lagomandru, Tiganiju, Neos Marmaras i restoran u Kalamitsiju uz preporuke iz ličnog iskustva." />
 
 <!-- Canonical URL -->
-<link rel="canonical" href="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grčka/Sitonija/sitonija.html" />
+<link rel="canonical" href="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grcka/sitonija-najlepse-plaze.html" />
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NLYKLXD49W"></script>
@@ -28,8 +28,8 @@
 <!-- Open Graph -->
 <meta property="og:title" content="Naša priča sa Sitonije: najlepše plaže, hladovina i restoran u pesku | Tamo daleko" />
 <meta property="og:description" content="Devet puta na Sitoniji i još uvek otkrivamo nova mesta. Megaportokali, Lagomandra, Tigania, Neos Marmaras i Kalamitsi iz ličnog iskustva." />
-<meta property="og:image" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grčka/Sitonija/sitonija.jpg" />
-<meta property="og:url" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grčka/Sitonija/sitonija.html" />
+<meta property="og:image" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grcka/sitonija.jpg" />
+<meta property="og:url" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grcka/sitonija-najlepse-plaze.html" />
 <meta property="og:type" content="article" />
 <meta property="og:locale" content="sr_RS" />
 <meta property="og:site_name" content="Tamo daleko" />
@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Sitonija: Najlepše Plaže i Naše Preporuke" />
 <meta name="twitter:description" content="Megaportokali, Lagomandra, Tigania, Neos Marmaras i Kalamitsi kroz ličnu priču o letovanju na Sitoniji." />
-<meta name="twitter:image" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grčka/Sitonija/sitonija.jpg" />
+<meta name="twitter:image" content="https://sandra-putuje.github.io/tamo-daleko/Evropa/Grcka/sitonija.jpg" />
 
 <script type="application/ld+json">
 {
@@ -55,10 +55,10 @@
     "name": "Tamo daleko"
   },
   "description": "Naša priča sa Sitonije uz preporuke za najlepše plaže, prirodnu hladovinu, zalazak sunca u Neos Marmarasu i restoran u Kalamitsiju.",
-  "image": "https://sandra-putuje.github.io/tamo-daleko/Evropa/Grčka/Sitonija/sitonija.jpg",
+  "image": "https://sandra-putuje.github.io/tamo-daleko/Evropa/Grcka/sitonija.jpg",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://sandra-putuje.github.io/tamo-daleko/Evropa/Grčka/Sitonija/sitonija.html"
+    "@id": "https://sandra-putuje.github.io/tamo-daleko/Evropa/Grcka/sitonija-najlepse-plaze.html"
   },
   "inLanguage": "sr"
 }
@@ -156,6 +156,42 @@ hr {
 
 .back-link:hover {
   background: #e07a5f; /* Topla borova/Orange Beach akcenat boja */
+}
+
+/* Osnovno stanje dugmeta */
+.back-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  /* Svetliji tirkizno-morski gradijent za pozadinu */
+  background: linear-gradient(135deg, #e2f4f1 0%, #a8e0d3 100%);
+  color: #1b4d3e;              /* Tamna bor-zelena boja slova */
+  border: 1px solid #72c1ae;
+  border-radius: 20px;         /* Zaobljen oblik */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  /* Glatki prelazak svih svojstava */
+  transition: all 0.3s ease;
+  /* Tipografija izjednačena sa tekstom iz body-ja */
+  font-family: 'Georgia', serif;
+  font-size: 0.95rem;          /* Veličina usklađena sa glavnim tekstom */
+  font-weight: bold;
+  line-height: 1.5;
+  text-decoration: none;
+  
+}
+
+/* Stanje na prelazak mišem (Hover) */
+.back-button:hover {
+  /* Tamniji gradijent iz iste morske/bor palete */
+  background: linear-gradient(135deg, #2e9b89 0%, #1b4d3e 100%);
+  color: #ffffff;              /* Slova prelaze u belu boju */
+  border-color: #1b4d3e;
+  transform: translateX(-3px); /* Suptilno pomeranje ulevo */
+  box-shadow: 0 4px 12px rgba(27, 77, 62, 0.25);
+}
+
+/* Klik efekat */
+.back-button:active {
+  transform: translateX(-1px);
 }
 
 #newsletter {
@@ -362,12 +398,63 @@ hr {
     display: none !important;
   }
 }
+
+/* Lightbox stilovi */
+#lightbox {
+  display: none; /* Skriveno po podrazumevanom stanju */
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Tamna providna pozadina */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-zatvori {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Efekat uveličavanja slike na prelazak mišem */
+article img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Menja kursor u ruku da označi da slika može da se klikne */
+}
+
+article img:hover {
+  transform: scale(1.02); /* Blago uveličanje od 2% */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Nešto jača senka pri prelasku */
+}
 </style>
 
 </head>
 <body>
 
+<!-- Lightbox Kontejner -->
+<div id="lightbox" onclick="this.style.display='none'">
+  <span class="lightbox-zatvori">&times;</span>
+  <img id="lightbox-img" src="" alt="Uvećana slika">
+</div>
 
+</body>
+</html>
  
 <header style="text-align: center; padding: 2rem 1rem;">
 
@@ -401,6 +488,8 @@ hr {
     <li><a href="#marmaras">Plivanje u zalazak sunca u Neos Marmarasu</a></li>
     <li><a href="#kalamitsi">Restoran u Kalamitsiju gde stolice stoje u pesku</a></li>
     <li><a href="#zakljucak">Sitonija između uspomena i novih početaka</a></li>
+    <li><a href="#pitanja">Često postavljana pitanja o Sitoniji (FAQ)</a></li>	
+	
   </ul>
 
 </nav>
@@ -420,7 +509,7 @@ hr {
 
 <p>Istovremeno, otkrivamo da uživamo i u nekim novim stvarima. Sporijim jutrima i slobodi da dan provedemo kako želimo.</p>
 
-<p><img src="nekadisad.jpg" alt="Fira" 
+<p><img src="nekadisad.jpg" alt="Sitonija nekad i sad" 
      title="Grčka" ></p>	
 	 
   <figcaption style="font-style: italic; font-size: 0.9rem; color: #555; text-align: center;">
@@ -429,19 +518,17 @@ hr {
 
 <p>Već deveti put smo na <strong>Sitoniji</strong>, drugom prstu <strong>Halkidikija u Grčkoj</strong>. Smestimo se u <strong>Neos Marmarasu</strong> ili <strong>Sartiju</strong>, ili podelimo letovanje između ta dva mesta. Svaki put otkrijemo nešto novo, iako se uvek vraćamo istim omiljenim mestima. Evo naših preporuka za ljubitelje <strong>peska i hlada</strong>.</p>
 
-<p>Moram napomenuti da je gradska plaža u Sartiju izuzetno opasna kad ima talasa jer se pojave morske struje koje vuku od obale. 
-Tada se treba prepustiti pa kad struja oslabi, otplivati paralelno sa obalom i udaljiti se od struje, pa tek onda plivati ka obali. 
-Mislim da se svake godine neko tu utopi. 
-Znači crvena zastavica je veliko NE za ulazak u vodu, iako mnogi uživaju u talasima u plićaku.</p>
+<p>Jedina stvar na koju u Sartiju uvek upozoravaju jeste gradska plaža kada ima velike talase. 
+Tada se mogu pojaviti jake morske struje koje otežavaju povratak ka obali. Zato crvenu zastavicu treba shvatiti ozbiljno i ne ulaziti u vodu, 
+ma koliko talasi delovali primamljivo iz plićaka.</p>
 
 
 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #1b4d3e; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
-</div>	
-
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
+</div>
 
 <h2 id="megaportokali">Megaportokali i Kavourotripes: Maldivsko plavo more i hlad borova</h2>
 
@@ -512,16 +599,13 @@ Znači crvena zastavica je veliko NE za ulazak u vodu, iako mnogi uživaju u tal
 
 
 
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
+</div>
 
 
-	 	 
-		 
-
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #1b4d3e; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
-</div>	
 
 <h2 id="portokali">Portokali, Paradiso i praktični saveti za posetu</h2>
 
@@ -570,11 +654,11 @@ Znači crvena zastavica je veliko NE za ulazak u vodu, iako mnogi uživaju u tal
 
 
 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #1b4d3e; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
-</div>	
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
+</div>
 
 <h2 id="lagomandra">Lagomandra: Šuma, pesak i more na jednom mestu</h2>
 
@@ -590,10 +674,10 @@ Znači crvena zastavica je veliko NE za ulazak u vodu, iako mnogi uživaju u tal
 	 
  
 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #1b4d3e; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
 </div>	
 
 <h2 id="tigania">Tigania: Plažni bar u stilu Robinsona Krusoa</h2>
@@ -632,11 +716,11 @@ Znači crvena zastavica je veliko NE za ulazak u vodu, iako mnogi uživaju u tal
 <p><img src="tigania.jpg" alt="Tigania" 
      title="Tigania" ></p>	 
 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #1b4d3e; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
-</div>	
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
+</div>
 
 <h2 id="marmaras">Plivanje u zalazak sunca u Neos Marmarasu</h2>
 
@@ -653,10 +737,10 @@ Znači crvena zastavica je veliko NE za ulazak u vodu, iako mnogi uživaju u tal
 <p><img src="neos.jpg" alt="Neos Marmaras" 
      title="Neos Marmaras" ></p>	 
 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #1b4d3e; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
 </div>	
 
 <h2 id="kalamitsi">Restoran u Kalamitsiju gde stolice stoje u pesku</h2>
@@ -666,10 +750,10 @@ Znači crvena zastavica je veliko NE za ulazak u vodu, iako mnogi uživaju u tal
 <p><img src="kalamitsi.jpg" alt="Kalamitsi" 
      title="Kalamitsi" ></p>
 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #1b4d3e; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
 </div>	
 
 <h2 id="zakljucak">Sitonija između uspomena i novih početaka</h2>
@@ -679,14 +763,63 @@ Znači crvena zastavica je veliko NE za ulazak u vodu, iako mnogi uživaju u tal
 <p><img src="vidikovac.jpg" alt="vidikovac" 
      title="vidikovac" ></p>
 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #1b4d3e; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
 </div>	
 
+<section class="faq-sekcija">
+
+  <h2 id="pitanja">Često postavljana pitanja o Sitoniji (FAQ)</h2>
+
+  <details class="faq-item">
+    <summary>Koje su najlepše plaže na Sitoniji za ljubitelje prirodne hladovine?</summary>
+    <div class="faq-odgovor">
+      <p>Najbolji izbor za prirodan hlad borova su <strong>Megaportokali</strong>, <strong>Lagomandra</strong> i celokupna oblast <strong>Kavourotripes</strong>. Borove šume na ovim plažama spuštaju se gotovo do samog peska i mora, pa vam suncobran često nije ni potreban.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Da li su plaže na Sitoniji pogodne za decu i neplivače?</summary>
+    <div class="faq-odgovor">
+      <p>Da, većina plaža ima postepen ulazak u vodu i fin sitan pesak (poput Megaportokalija i Lagomandre). Ipak, obratite pažnju na gradsku plažu u Sartiju gde se pri jačem vetru mogu stvoriti veliki talasi i struje, pa je tada najsigurnije pratiti crvenu zastavicu.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Gde se nalazi najbolji zalazak sunca na Sitoniji?</summary>
+    <div class="faq-odgovor">
+      <p>Jedan od najlepših zalazaka sunca doživećete na gradskoj plaži u <strong>Neos Marmarasu</strong>, i mestima sa te strane "prsta" gde sunce zalazi u more. Plivanje u kasno popodne dok se sunce spušta ka horizontu i boji nebo u narandžaste i roze tonove pruža zaista poseban doživljaj.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Gde odsesti na Sitoniji – Neos Marmaras ili Sarti?</summary>
+    <div class="faq-odgovor">
+      <p>Oba mesta imaju svoje prednosti. <strong>Neos Marmaras</strong> se nalazi na zapadnoj obali, brdovitiji je i nudi prelepe zalaske sunca i lepšu atmosferu. <strong>Sarti</strong> je na istočnoj obali, ravan je, ima fantastičan pogled na Atos i odlična je baza za posetu uvalama Kavourotripes i plaži Tigania.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Kakva je ponuda restorana na samoj obali mora?</summary>
+    <div class="faq-odgovor">
+      <p>Naš dugogodišnji favorit je <strong>taverna Zorbas u Kalamitsiju</strong>, gde stolice doslovno stoje u pesku, pa možete uživati u svežoj ribi i morskim specijalitetima uz zvuk talasa tik pored vas.</p>
+    </div>
+  </details>
+</section>
 <p>     </p>
 <p>     </p>
+
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
+</div>
+
+<a href="../Grcka.html" class="back-button">
+  <span>&larr;</span> Nazad na Grčka
+</a>
 <p>     </p>
 
  <footer>
@@ -717,20 +850,20 @@ Znači crvena zastavica je veliko NE za ulazak u vodu, iako mnogi uživaju u tal
         })();
 		
 // Logika za klik na strelice galerije
-const galerija = document.querySelector('.horizontalna-galerija');
-const levaStrelica = document.querySelector('.strelica-leva');
-const desnaStrelica = document.querySelector('.strelica-desna');
+//const galerija = document.querySelector('.horizontalna-galerija');
+//const levaStrelica = document.querySelector('.strelica-leva');
+//const desnaStrelica = document.querySelector('.strelica-desna');
 
 // Određujemo koliko će se galerija pomeriti pri jednom kliku (širina jednog ekrana)
-const iznosSkrola = () => galerija.clientWidth * 0.8; 
+//const iznosSkrola = () => galerija.clientWidth * 0.8; 
 
-desnaStrelica.onclick = () => {
-    galerija.scrollBy({ left: iznosSkrola(), behavior: 'smooth' });
-};
+//desnaStrelica.onclick = () => {
+//    galerija.scrollBy({ left: iznosSkrola(), behavior: 'smooth' });
+//};
 
-levaStrelica.onclick = () => {
-    galerija.scrollBy({ left: -iznosSkrola(), behavior: 'smooth' });
-};		
+//levaStrelica.onclick = () => {
+//    galerija.scrollBy({ left: -iznosSkrola(), behavior: 'smooth' });
+//};		
 		
 		
 		

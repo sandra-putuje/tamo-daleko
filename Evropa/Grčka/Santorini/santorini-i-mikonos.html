@@ -150,6 +150,46 @@ img {
   background-color: #c88545;
 }
 
+/* Osnovno stanje dugmeta */
+.back-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+/* Nežni plavi gradijent iz body pozadine */
+  background: linear-gradient(135deg, #eef9ff 0%, #b8e0ff 100%);
+  color: #1a4b6e;              /* Tamnoplava boja slova za odličan kontrast */
+  border: 1px solid #8ecae6;    /* Usklađena svetloplava linija */
+  border-radius: 20px;         /* Zaobljene ivice */
+  
+
+  
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+
+  /* Tipografija izjednačena sa tekstom iz body-ja */
+  font-family: 'Georgia', serif;
+  font-size: 0.95rem;          /* Veličina usklađena sa glavnim tekstom */
+  font-weight: bold;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+/* Stanje na prelazak mišem (Hover) */
+.back-button:hover,
+.toc-back-link:hover {
+  /* Duboka morsko-plava pozadina na hover */
+  background: linear-gradient(135deg, #2b709e 0%, #1a4b6e 100%);
+  color: #ffffff;              /* Slova prelaze u belu boju */
+  border-color: #1a4b6e;
+  transform: translateX(-3px); /* Blago pomeranje ulevo */
+  box-shadow: 0 4px 12px rgba(26, 75, 110, 0.25);
+}
+
+/* Klik efekat */
+.back-button:active,
+.toc-back-link:active {
+  transform: translateX(-1px);
+}
+
 
    #newsletter {
       margin-top: 40px;
@@ -399,6 +439,49 @@ img {
     display: none !important;
   }
 }
+/* Lightbox stilovi */
+#lightbox {
+  display: none; /* Skriveno po podrazumevanom stanju */
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Tamna providna pozadina */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-zatvori {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Efekat uveličavanja slike na prelazak mišem */
+article img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Menja kursor u ruku da označi da slika može da se klikne */
+}
+
+article img:hover {
+  transform: scale(1.02); /* Blago uveličanje od 2% */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Nešto jača senka pri prelasku */
+}
   </style>
 </head>
 <body>
@@ -460,10 +543,10 @@ img {
 <p><img src="santorini (7).jpg" alt="Fira" 
      title="Fira" ></p>	 
 	 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #4f9fd8; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
 </div>	 
 	 
 <h2 id="smestaj">Potraga za smeštajem i Duškov „nemirni“ brod</h2>
@@ -479,10 +562,10 @@ img {
 
 <p>Drugom prilikom mu je bio lep prizor, osvetljen jedrenjak koji je bio ukotvljen u luci. Jedrenjak kao iz priče o Petru Panu sav nakićen svetlećim lampionima. Spazili smo ga sa vrha terase odakle se organizovano posmatrao <strong>zalazak sunca uz klasičnu muziku</strong> (možda vam to zvuči malo kičerajski ali na taj događaj se dolazilo i više sati ranije radi rezervacije mesta). Upotrebljen je sav prateći <strong>foto pribor</strong>: mini tripod, sajla za okidanje (da ne bi rukom drmao aparat dok se drži duga ekspozicija) sve namešteno i iskadrirano... Kliiik! Ekspozicija od nekoliko sekundi i odosmo do fotoradnje da nam izvade poslednji snimak sa filma (u mračnoj komori iseku poslednji snimak i ostatak filma vrate u aparat da se može dalje slikati) te razviju izvađeni snimak (stara vremena, ne vidiš šta si slikao dok kod fotografa ne razviješ film i napraviš sliku), a ono na slici jedrenjak mutan, a sve oko njega oštro! Kako to kad je korišćen stativ? Posle se Duško setio da se brod ljuljuškao na blagim, za oko neprimetnim, talasima dok je blenda bila otvorena i to se po filmu razmazalo. Ništa od sjajnog kadra jedrenjaka u noći...</p>
 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #4f9fd8; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
 </div>
 
 
@@ -493,10 +576,10 @@ img {
 <p><img src="solun.jpg" alt="Solun" 
      title="Fira" ></p>	
 	 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #4f9fd8; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
 </div>		 
 
 <h2 id="atina">Atina: Izgubljeni u prevodu i prostoru</h2>
@@ -512,10 +595,10 @@ img {
      title="Atina" ></p>	 
 	 
 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #4f9fd8; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
 </div>	
 
 <h2 id="santorini">Santorini: Kineski nesporazum i gradovi sa razglednice</h2>
@@ -617,10 +700,10 @@ U vreme kada nismo imali mape na telefonima (niti same mobilne), pitali smo loka
 
 <p>Jednom prilikom su naišli i neki kosooki, gazde opet nema, pitaju da ostave ruksake. Ja sva bitna da demonstriram znanje japanskog, kad rekoše da su Kinezi. I am sorry. You should distinguish. Uh.</p>
 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #4f9fd8; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
 </div>	
 
 <h2 id="oia">Vetrenjače, vulkanski mak i stampedo magaraca</h2>
@@ -679,10 +762,10 @@ U vreme kada nismo imali mape na telefonima (niti same mobilne), pitali smo loka
 <p><img src="santorini (29).jpg" alt="Fira" 
      title="Fira" ></p>	
 	 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #4f9fd8; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
 </div>		 
 
 <h2 id="vulkan">Izlet u srce vulkana: Hodanje po aktivnom krateru</h2>	 
@@ -726,10 +809,10 @@ imala sam osećaj kao da smo sleteli na neku drugu planetu, a bele uličice i ku
      title="Fira" ></p>	
 
 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #4f9fd8; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
 </div>		 
 
 
@@ -756,10 +839,10 @@ nisu mogli da ponove taj kvalitet jer niko nije imao takav Kodak Gold papir na k
 <p><img src="santorini (10).jpg" alt="Fira" 
      title="Fira" ></p>
 	 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #4f9fd8; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
 </div>		 
 
 <h2 id="akrotiri">Crvena plaža, grčka Pompeja i ukus čeri paradajza</h2>
@@ -797,10 +880,10 @@ nisu mogli da ponove taj kvalitet jer niko nije imao takav Kodak Gold papir na k
 
 <p>Delimičnu utehu je doneo dalji put na Mikonos.</p>
 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #4f9fd8; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
 </div>	
 
 <h2 id="mikonos">Odlazak i uteha zvana Mikonos</h2>
@@ -852,10 +935,10 @@ nisu mogli da ponove taj kvalitet jer niko nije imao takav Kodak Gold papir na k
 
 <hr style="border: 0; height: 1px; background: #e0e0e0; margin: 40px 0;">
 
-<div style="text-align: right; margin: 30px 0 10px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <a href="#vrh" style="display: inline-block; padding: 8px 16px; background-color: #fafafa; color: #4f9fd8; text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; border: 1px solid #eef2f5; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-        ↑ Nazad na izbor priča
-    </a>
+<div style="display: flex; justify-content: flex-end; margin: 1rem 0;">
+  <a href="#vrh" class="back-button">
+    ↑ Nazad na izbor priča
+  </a>
 </div>	
 
 <h2 id="faq">Često postavljana pitanja o putovanju na Santorini i Mikonos (FAQ)</h2>
@@ -891,6 +974,9 @@ nisu mogli da ponove taj kvalitet jer niko nije imao takav Kodak Gold papir na k
 
 <p>     </p>
 <p>     </p>
+<a href="../Grcka.html" class="back-button">
+  <span>&larr;</span> Nazad na Grčka
+</a>
 <p>     </p>
 
  <footer>
@@ -959,6 +1045,10 @@ levaStrelica.onclick = () => {
         *Besplatna prijava putem Substack platforme.
     </p>
 </section>
-
+<!-- Lightbox Kontejner -->
+<div id="lightbox" onclick="this.style.display='none'">
+  <span class="lightbox-zatvori">&times;</span>
+  <img id="lightbox-img" src="" alt="Uvećana slika">
+</div>
 </body>
 </html>

@@ -188,34 +188,40 @@ header {
 
 
 
-.back-btn {
+.back-btn,
+.back-button {
   display: inline-block;
   margin-top: 40px;
   padding: 10px 20px;
+  
+  /* Gradient u toplim krem-zlatnim tonovima bodija i sajta */
   background: linear-gradient(
     to bottom right,
-    rgba(255, 195, 180, 0.85),  /* breskvasto-roza */
-    rgba(255, 165, 150, 0.95)   /* toplija roza */
+    rgba(245, 224, 197, 0.9),  /* svetla krem-karamel nijansa */
+    rgba(224, 169, 109, 0.95)  /* topla narandžasto-zlatna (#e0a96d) */
   );
-  color: #fff;
+  
+  color: #4B2E0E;              /* tamnosmeđi tekst za odličan kontrast */
   border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: none;            /* bez senke */
-  border: none;                /* bez rama */
+  box-shadow: none;             /* bez senke */
+  border: none;                 /* bez rama */
   transition: background 0.3s, transform 0.2s;
   cursor: pointer;
 }
 
-.back-btn:hover {
+.back-btn:hover,
+.back-button:hover {
+  /* Blago tamniji i topliji gradient na hover */
   background: linear-gradient(
     to bottom right,
-    rgba(255, 180, 165, 0.95),
-    rgba(245, 145, 135, 1)
+    rgba(224, 169, 109, 0.95),
+    rgba(200, 133, 69, 1)      /* c88545 - tvoja tamnija narandžasta */
   );
+  color: #ffffff;               /* tekst prelazi u belu boju pri preletu */
   transform: scale(1.05);
 }
-
 .emoji-icon {
   width: 2.5em;
   height: 2.5em;
