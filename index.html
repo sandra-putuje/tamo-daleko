@@ -340,6 +340,17 @@ footer {
 	.nav-bottom.hidden {
   		display: none;
 	}
+	
+	/* Uklanja sistemski roze/plavi sloj na dodir i fokus u mobilnim pretraživačima */
+.section-links a,
+.section-links a:focus,
+.section-links a:active,
+.section-links a:focus-visible {
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none;
+  outline: none !important;
+  box-shadow: none !important;
+}
   </style>
 
   <script>
@@ -501,39 +512,73 @@ footer {
       }
     }
 
-//   function oznaciDestinaciju(destinacija) {
-//     const d = destinacija.toLowerCase();
-//      const header = document.querySelector('header');
-//      const body = document.body;
 
-      // Pronađi u mapi destinacija info o sekciji i nazivu
-//      const info = mapaDestinacija[d];
-//      if (!info) return; // ako destinacija nije u mapi, izađi
-
-//      header.classList.add('hidden');
-//      body.classList.add('header-hidden');
-//      prikaziSekciju(info.sekcija);
-
-//      const sekcijaEl = document.getElementById(info.sekcija);
-//      if (!sekcijaEl) return;
-
-      // Ukloni aktivne klase sa svih dugmadi u sekciji
-//      sekcijaEl.querySelectorAll('.section-links a').forEach(a => a.classList.remove('active'));
-
-      // Potraži dugme koje sadrži tekst destinacije i aktiviraj ga
-//      sekcijaEl.querySelectorAll('.section-links a').forEach(a => {
-//        if (a.textContent.toLowerCase().includes(info.naziv.toLowerCase())) {
-//          a.classList.add('active');
-//          a.focus();
-//          a.scrollIntoView({ behavior: 'smooth', block: 'center' });
-//        }
-//      });
-//    }
 	
+//function oznaciDestinaciju(destinacija) {
+//  if (!destinacija) return;
+
+  // 1. Priprema i čišćenje naziva
+//  const d = decodeURIComponent(destinacija).toLowerCase().replace(/č|ć/g, 'c');
+//  const header = document.querySelector('header');
+//  const body = document.body;
+
+//  const info = mapaDestinacija[d] || mapaDestinacija[destinacija.toLowerCase()];
+//  if (!info) return;
+
+//  if (header) header.classList.add('hidden');
+//  if (body) body.classList.add('header-hidden');
+
+  // 2. Prikaži sekciju
+//  prikaziSekciju(info.sekcija);
+
+//  const sekcijaEl = document.getElementById(info.sekcija);
+//  if (!sekcijaEl) return;
+
+  // Skloni 'active' klasu sa svih linkova i skini fokus
+//  const sviLinkovi = sekcijaEl.querySelectorAll('.section-links a');
+//  sviLinkovi.forEach(a => {
+//    a.classList.remove('active');
+//    a.blur(); // Uklanja roza/aktivne okvire sa mobilnih ekrana
+//  });
+
+  // 3. Pronađi odgovarajući link
+//  let ciljaniLink = null;
+//  sviLinkovi.forEach(a => {
+//    const tekstLinka = a.textContent.trim().toLowerCase().replace(/č|ć/g, 'c');
+//    const trazeniNaziv = info.naziv.trim().toLowerCase().replace(/č|ć/g, 'c');
+    
+//    if (tekstLinka.includes(trazeniNaziv)) {
+//      ciljaniLink = a;
+//    }
+//  });
+
+  // 4. Izvrši skrolovanje prilagođeno mobilnim telefonima
+//  if (ciljaniLink) {
+//    ciljaniLink.classList.add('active');
+
+    // Čekamo da mobilni browser završi renderovanje i CSS animacije
+//    requestAnimationFrame(() => {
+//      setTimeout(() => {
+//        ciljaniLink.scrollIntoView({ 
+//          behavior: 'smooth', 
+//          block: 'center' 
+//        });
+
+        // Ukloni fokus nakon skrola da se izbegne roza linija/okvir na dnu
+//        setTimeout(() => {
+//          ciljaniLink.blur();
+//          if (document.activeElement) {
+//            document.activeElement.blur();
+//          }
+//        }, 300);
+
+//      }, 250); // Pauza prilagođena mobilnim ekranima
+//    });
+//  }
+//}
 function oznaciDestinaciju(destinacija) {
   if (!destinacija) return;
 
-  // 1. Priprema i čišćenje naziva
   const d = decodeURIComponent(destinacija).toLowerCase().replace(/č|ć/g, 'c');
   const header = document.querySelector('header');
   const body = document.body;
@@ -544,20 +589,19 @@ function oznaciDestinaciju(destinacija) {
   if (header) header.classList.add('hidden');
   if (body) body.classList.add('header-hidden');
 
-  // 2. Prikaži sekciju
   prikaziSekciju(info.sekcija);
 
   const sekcijaEl = document.getElementById(info.sekcija);
   if (!sekcijaEl) return;
 
-  // Skloni 'active' klasu sa svih linkova i skini fokus
+  // Skloni active i zamagli sve prethodne fokuse
   const sviLinkovi = sekcijaEl.querySelectorAll('.section-links a');
   sviLinkovi.forEach(a => {
     a.classList.remove('active');
-    a.blur(); // Uklanja roza/aktivne okvire sa mobilnih ekrana
+    a.blur();
   });
 
-  // 3. Pronađi odgovarajući link
+  // Pronađi odgovarajući link
   let ciljaniLink = null;
   sviLinkovi.forEach(a => {
     const tekstLinka = a.textContent.trim().toLowerCase().replace(/č|ć/g, 'c');
@@ -568,31 +612,20 @@ function oznaciDestinaciju(destinacija) {
     }
   });
 
-  // 4. Izvrši skrolovanje prilagođeno mobilnim telefonima
   if (ciljaniLink) {
     ciljaniLink.classList.add('active');
 
-    // Čekamo da mobilni browser završi renderovanje i CSS animacije
+    // Sačekaj da se DOM osveži, pa samo skroluj (bez .focus() poziva)
     requestAnimationFrame(() => {
       setTimeout(() => {
         ciljaniLink.scrollIntoView({ 
           behavior: 'smooth', 
           block: 'center' 
         });
-
-        // Ukloni fokus nakon skrola da se izbegne roza linija/okvir na dnu
-        setTimeout(() => {
-          ciljaniLink.blur();
-          if (document.activeElement) {
-            document.activeElement.blur();
-          }
-        }, 300);
-
-      }, 250); // Pauza prilagođena mobilnim ekranima
+      }, 200);
     });
   }
 }
-
     window.onload = () => {
       const urlParams = new URLSearchParams(window.location.search);
       const aktivnaDestinacija = urlParams.get('aktivno'); // npr. 'zagreb', 'nemacka', 'tajland'
