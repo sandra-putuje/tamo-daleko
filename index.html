@@ -533,30 +533,31 @@ footer {
 function oznaciDestinaciju(destinacija) {
   if (!destinacija) return;
 
-  // 1. Dekodiranje i priprema naziva
+  // 1. Priprema i čišćenje naziva
   const d = decodeURIComponent(destinacija).toLowerCase().replace(/č|ć/g, 'c');
   const header = document.querySelector('header');
   const body = document.body;
 
-  // Traženje u mapi destinacija
   const info = mapaDestinacija[d] || mapaDestinacija[destinacija.toLowerCase()];
   if (!info) return;
 
-  // Sakrivanje zaglavlja ako je tako definisano
   if (header) header.classList.add('hidden');
   if (body) body.classList.add('header-hidden');
 
-  // 2. Prikaži odgovarajući kontinent/sekciju
+  // 2. Prikaži sekciju
   prikaziSekciju(info.sekcija);
 
   const sekcijaEl = document.getElementById(info.sekcija);
   if (!sekcijaEl) return;
 
-  // Ukloni active klasu sa svih linkova u toj sekciji
+  // Skloni 'active' klasu sa svih linkova i skini fokus
   const sviLinkovi = sekcijaEl.querySelectorAll('.section-links a');
-  sviLinkovi.forEach(a => a.classList.remove('active'));
+  sviLinkovi.forEach(a => {
+    a.classList.remove('active');
+    a.blur(); // Uklanja roza/aktivne okvire sa mobilnih ekrana
+  });
 
-  // 3. Pronađi tačan link države
+  // 3. Pronađi odgovarajući link
   let ciljaniLink = null;
   sviLinkovi.forEach(a => {
     const tekstLinka = a.textContent.trim().toLowerCase().replace(/č|ć/g, 'c');
@@ -567,20 +568,28 @@ function oznaciDestinaciju(destinacija) {
     }
   });
 
-  // 4. Ako je link pronađen, označi ga, skroluj do njega i postavi fokus
+  // 4. Izvrši skrolovanje prilagođeno mobilnim telefonima
   if (ciljaniLink) {
     ciljaniLink.classList.add('active');
 
-    setTimeout(() => {
-      // Skrolovanje do elementa na sredinu ekrana
-      ciljaniLink.scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'center' 
-      });
+    // Čekamo da mobilni browser završi renderovanje i CSS animacije
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        ciljaniLink.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center' 
+        });
 
-      // Siguran focus bez lomljenja stranice
-      ciljaniLink.focus({ preventScroll: true });
-    }, 200);
+        // Ukloni fokus nakon skrola da se izbegne roza linija/okvir na dnu
+        setTimeout(() => {
+          ciljaniLink.blur();
+          if (document.activeElement) {
+            document.activeElement.blur();
+          }
+        }, 300);
+
+      }, 250); // Pauza prilagođena mobilnim ekranima
+    });
   }
 }
 
