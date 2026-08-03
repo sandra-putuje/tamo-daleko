@@ -531,48 +531,56 @@ footer {
 //    }
 	
 function oznaciDestinaciju(destinacija) {
-  // Pretvori u mala slova i zameni č/ć sa c
-  const d = decodeURIComponent(destinacija).toLowerCase().replace(/č|ć/g, 'c'); 
+  if (!destinacija) return;
+
+  // 1. Dekodiranje i priprema naziva
+  const d = decodeURIComponent(destinacija).toLowerCase().replace(/č|ć/g, 'c');
   const header = document.querySelector('header');
   const body = document.body;
 
-  // Traženje i sa kvačicom i bez kvačice
+  // Traženje u mapi destinacija
   const info = mapaDestinacija[d] || mapaDestinacija[destinacija.toLowerCase()];
   if (!info) return;
 
-  header.classList.add('hidden');
-  body.classList.add('header-hidden');
-  
-  // 1. Prikaži sekciju
+  // Sakrivanje zaglavlja ako je tako definisano
+  if (header) header.classList.add('hidden');
+  if (body) body.classList.add('header-hidden');
+
+  // 2. Prikaži odgovarajući kontinent/sekciju
   prikaziSekciju(info.sekcija);
 
   const sekcijaEl = document.getElementById(info.sekcija);
   if (!sekcijaEl) return;
 
-  // Ukloni active sa svih linkova
-  sekcijaEl.querySelectorAll('.section-links a').forEach(a => a.classList.remove('active'));
+  // Ukloni active klasu sa svih linkova u toj sekciji
+  const sviLinkovi = sekcijaEl.querySelectorAll('.section-links a');
+  sviLinkovi.forEach(a => a.classList.remove('active'));
 
-  // 2. Nađi ciljani link
-  const ciljaniLink = Array.from(sekcijaEl.querySelectorAll('.section-links a')).find(a => 
-    a.textContent.toLowerCase().includes(info.naziv.toLowerCase())
-  );
+  // 3. Pronađi tačan link države
+  let ciljaniLink = null;
+  sviLinkovi.forEach(a => {
+    const tekstLinka = a.textContent.trim().toLowerCase().replace(/č|ć/g, 'c');
+    const trazeniNaziv = info.naziv.trim().toLowerCase().replace(/č|ć/g, 'c');
+    
+    if (tekstLinka.includes(trazeniNaziv)) {
+      ciljaniLink = a;
+    }
+  });
 
+  // 4. Ako je link pronađen, označi ga, skroluj do njega i postavi fokus
   if (ciljaniLink) {
     ciljaniLink.classList.add('active');
 
-    // 3. Mali tajmaut omogućava pretraživaču da prvo prikaže sekciju na ekranu, pa tek onda skroluje
     setTimeout(() => {
-      // Osigurava da link može primiti fokus
-      ciljaniLink.setAttribute('tabindex', '-1'); 
-      ciljaniLink.focus({ preventScroll: true }); // Stavlja fokus bez naglog skoka
-      
-      // Glatko skrolovanje tačno na sredinu ekrana
+      // Skrolovanje do elementa na sredinu ekrana
       ciljaniLink.scrollIntoView({ 
         behavior: 'smooth', 
-        block: 'center',
-        inline: 'nearest'
+        block: 'center' 
       });
-    }, 150); // 150ms pauza je idealna da pretraživač završi renderovanje
+
+      // Siguran focus bez lomljenja stranice
+      ciljaniLink.focus({ preventScroll: true });
+    }, 200);
   }
 }
 
