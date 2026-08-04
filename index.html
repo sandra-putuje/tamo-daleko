@@ -546,17 +546,17 @@ function oznaciDestinaciju(destinacija) {
   });
 
   if (ciljaniLink) {
-    ciljaniLink.classList.add('active');
-
-    // Sačekaj da se DOM osveži, pa samo skroluj (bez .focus() poziva)
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        ciljaniLink.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'center' 
-        });
-      }, 200);
+    // 1. Prvo skroluj do elementa BEZ klase .active
+    ciljaniLink.scrollIntoView({ 
+      behavior: 'smooth', 
+      block: 'center' 
     });
+
+    // 2. Dodaj .active klasu TEK NAKON što se skrol završi (i odmah je odmuti/bluruj)
+    setTimeout(() => {
+      ciljaniLink.classList.add('active');
+      ciljaniLink.blur(); // Osigurava da pregledač ne 'okida' klik
+    }, 300);
   }
 }
     window.onload = () => {
@@ -636,9 +636,12 @@ function pretrazi() {
             );
 
             if (dugme) {
-                dugme.classList.add('active');
-                dugme.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+						dugme.scrollIntoView({ behavior: 'smooth', block: 'center' });
+						setTimeout(() => {
+						dugme.classList.add('active');
+						dugme.blur();
+    }, 300);
+}
         }
     }, 150);
 }
