@@ -2,35 +2,33 @@
 <html lang="sr">
 <head>
 
-
-<!-- Opšti meta tagovi -->
+  <!-- Opšti meta tagovi -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="q8VPv20HPqlkFPxDVV_2Ts4_CUuqg3bUF3ygc5BiNAA" />
-<meta name="description" content="Putopisi iz Evrope, Azije i Afrike koje piše Sandra Đuričin. Autentične priče, lepe slike i topli trenuci sa putovanja. Otkrij svet iz prvog lica." />
-<meta name="author" content="Sandra Đuričin" />
+  <meta name="description" content="Putopisi iz Evrope, Azije i Afrike koje piše Sandra Đuričin. Autentične priče, lepe slike i topli trenuci sa putovanja. Otkrij svet iz prvog lica." />
+  <meta name="author" content="Sandra Đuričin" />
 
-<!-- Open Graph za Facebook, Viber, LinkedIn itd. -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Tamo daleko - putopisi Sandre Đuričin" />
-<meta property="og:description" content="Autentični putopisi iz Evrope, Azije i Afrike, kroz priče, slike i lične doživljaje." />
-<meta property="og:image" content="https://sandra-putuje.github.io/tamo-daleko/Logom-mobile.jpg" />
-<meta property="og:url" content="https://sandra-putuje.github.io/tamo-daleko/" />
-<meta property="og:site_name" content="Tamo daleko" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tamo daleko - putopisi Sandre Đuričin" />
+  <meta property="og:description" content="Autentični putopisi iz Evrope, Azije i Afrike, kroz priče, slike i lične doživljaje." />
+  <meta property="og:image" content="https://sandra-putuje.github.io/tamo-daleko/Logom-mobile.jpg" />
+  <meta property="og:url" content="https://sandra-putuje.github.io/tamo-daleko/" />
+  <meta property="og:site_name" content="Tamo daleko" />
 
-<!-- Twitter kartice -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Tamo daleko - putopisi Sandre Đuričin" />
-<meta name="twitter:description" content="Autentični putopisi iz Evrope, Azije i Afrike. Priče koje vas vode daleko." />
-<meta name="twitter:image" content="https://sandra-putuje.github.io/tamo-daleko/Logom-mobile.jpg" />
+  <!-- Twitter kartice -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tamo daleko - putopisi Sandre Đuričin" />
+  <meta name="twitter:description" content="Autentični putopisi iz Evrope, Azije i Afrike. Priče koje vas vode daleko." />
+  <meta name="twitter:image" content="https://sandra-putuje.github.io/tamo-daleko/Logom-mobile.jpg" />
 
-<!--<link rel="icon" href="favicon.ico"> -->
-
-<link rel="icon" type="image/png" href="my-favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="my-favicon/favicon.svg" />
-<link rel="shortcut icon" href="my-favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="my-favicon/apple-touch-icon.png" />
-<link rel="manifest" href="my-favicon/site.webmanifest" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="my-favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="my-favicon/favicon.svg" />
+  <link rel="shortcut icon" href="my-favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="my-favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="my-favicon/site.webmanifest" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NLYKLXD49W"></script>
@@ -38,12 +36,12 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-NLYKLXD49W');
   </script>
 
   <title>Tamo daleko - Blog o putovanjima</title>
   <link rel="canonical" href="https://sandra-putuje.github.io/tamo-daleko/" />
+  
   <style>
     html, body {
       margin: 0; padding: 0; height: 100%; box-sizing: border-box; overflow-x: hidden;
@@ -77,31 +75,6 @@
       }
     }
 
-@media (max-width: 600px) and (orientation: portrait) {
-  .nav-bottom {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    height: auto;
-  }
-
-  .search-wrapper {
-    flex: 1 1 100%;
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-    justify-content: center;
-  }
-  .search-wrapper input[type="text"] {
-    width: 80vw;
-    max-width: 300px;
-  }
-  .nav-bottom > a {
-    flex: none;
-    padding: 0.4rem 0.8rem;
-    font-size: 1.1rem;
-  }
-}
     header.hidden {
       opacity: 0;
       pointer-events: none;
@@ -109,24 +82,142 @@
       transition: opacity 0.3s ease;
     }
 
+    /* --- Hamburger Meni sa dve crtice u gornjem desnom uglu --- */
+    .top-right-menu {
+      position: fixed;
+      top: 8px;
+      right: 20px;
+      z-index: 1000;
+    }
+    @media (max-width: 600px) {
+     .top-right-menu {
+       right: 3px;
+	   top: 2px;
+      }
+    }
+    .menu-toggle {
+      background: rgba(224, 169, 109, 0.95);
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      width: 42px;
+      height: 42px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .menu-toggle:hover {
+      background-color: #c88545;
+      transform: scale(1.05);
+    }
+
+    .menu-line {
+      width: 22px;
+      height: 2px;
+      background-color: white;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .menu-toggle.active .line-1 {
+      transform: translateY(4px) rotate(45deg);
+    }
+
+    .menu-toggle.active .line-2 {
+      transform: translateY(-4px) rotate(-45deg);
+    }
+
+    /* Meni i Podmeniji */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: #fdf6f0;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e0a96d;
+      flex-direction: column;
+    }
+
+    .dropdown-content.show {
+      display: flex;
+      animation: fadeInMenu 0.2s ease-in-out;
+    }
+
+    .menu-category {
+      border-bottom: 1px solid #f5e0c5;
+    }
+
+    .menu-category:last-child {
+      border-bottom: none;
+    }
+
+    .category-title {
+      padding: 10px 14px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      background-color: #f5e0c5;
+      color: #4B2E0E;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .submenu {
+    display: none;
+    flex-direction: column;
+    background-color: #fdf6f0;
+    }
+
+    .menu-category.open .submenu {
+     display: flex;
+     }
+
+    .submenu a {
+      color: #333;
+      padding: 8px 14px 8px 24px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: normal;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .submenu a:hover {
+      background-color: #e0a96d;
+      color: white;
+    }
+
+    @keyframes fadeInMenu {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Donja Navigacija */
     .nav-bottom {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-
       background-color: #e0a96d;
-
       position: fixed;
       bottom: 0; left: 0; width: 100%;
       z-index: 100;
       transition: opacity 0.3s ease;
       font-weight: bold;
       text-align: center;
-    gap: 0.4rem 0.8rem;   /* manje vertikalno, umereno horizontalno */
-    padding: 0.5rem 0.8rem;
-
+      gap: 0.4rem 0.8rem;
+      padding: 0.5rem 0.8rem;
     }
+
     .search-wrapper {
       display: flex;
       align-items: center;
@@ -134,9 +225,11 @@
       width: 100%;
       flex: 1 1 100%;
     }
+
     .nav-bottom a {
       flex: 1 1 auto;
     }
+
     @media (min-width: 601px) {
       .nav-bottom {
         flex-wrap: nowrap;
@@ -149,6 +242,31 @@
       }
       .nav-bottom a {
         flex: none;
+      }
+    }
+
+    @media (max-width: 600px) and (orientation: portrait) {
+      .nav-bottom {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        height: auto;
+      }
+      .search-wrapper {
+        flex: 1 1 100%;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        justify-content: center;
+      }
+      .search-wrapper input[type="text"] {
+        width: 80vw;
+        max-width: 300px;
+      }
+      .nav-bottom > a {
+        flex: none;
+        padding: 0.4rem 0.8rem;
+        font-size: 1.1rem;
       }
     }
 
@@ -170,10 +288,12 @@
       cursor: text;
       transition: background-color 0.3s, color 0.3s;
     }
+
     .search-wrapper input[type="text"]:focus {
       background-color: #e0a96d;
       color: white;
     }
+
     .search-button {
       border: none;
       background-color: #e0a96d;
@@ -184,6 +304,7 @@
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s;
     }
+
     .search-button:hover,
     .search-button:focus {
       background-color: #c88545;
@@ -202,12 +323,14 @@
       border-radius: 6px;
       outline: none;
     }
+
     .nav-bottom a:hover,
     nav a:hover {
       background-color: #c88545;
       color: white;
       text-decoration: none;
     }
+
     .active, .active:focus {
       background-color: #c88545 !important;
       color: white !important;
@@ -224,20 +347,24 @@
       top: 0;
       z-index: 100;
     }
+
     nav.visible {
       display: flex;
     }
+
     .content {
       max-width: 800px;
       margin: 2rem auto;
       padding: 0 1rem;
       flex: 1;
     }
+
     .section-links {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 1rem;
     }
+
     .section-links a {
       background-color: #f5e0c5;
       padding: 0.7rem;
@@ -249,49 +376,47 @@
       font-size: 1rem;
       transition: background-color 0.3s, color 0.3s;
     }
+
     .section-links a:hover {
       background-color: #e0a96d;
       color: white;
     }
 
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 0.8rem;
+      font-size: 0.9rem;
+      font-weight: normal;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+    }
 
-
-footer {
-  background-color: #333;
-  color: #fff;             /* boja teksta */
-  text-align: center;
-  padding: 0.8rem;
-  font-size: 0.9rem;
-  font-weight: normal;     /* normalna debljina */
-}
-
-footer .footer-content {
-  display: inline-flex;    /* stavlja tekst i ikonu u jedan red */
-  align-items: center;     /* vertikalno poravnanje */
-  gap: 4px;                /* razmak između teksta i ikone */
-}
-
-footer {
-  display: flex;
-  justify-content: center;   /* centrirano */
-  align-items: center;
-  gap: 1rem;                 /* razmak između elemenata */
-  flex-wrap: nowrap;         /* ZABRANI prelom u novi red */
-  white-space: nowrap;       /* dodatna sigurnost */
-}
-
+    footer .footer-content {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
 
     section {
       display: none;
       animation: fadeIn 0.5s ease-in-out;
     }
+
     section.visible {
       display: block;
     }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
     #omeni img.profile-pic {
       max-height: 30vh;
       width: auto;
@@ -300,6 +425,7 @@ footer {
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       display: block;
     }
+
     #omeni p {
       text-align: justify;
       max-width: 90%;
@@ -307,6 +433,7 @@ footer {
       font-size: 1rem;
       line-height: 1.6;
     }
+
     .back-button {
       display: inline-block;
       padding: 0.6rem 1.2rem;
@@ -319,38 +446,29 @@ footer {
       cursor: pointer;
       margin-top: 1rem;
     }
+
     .back-button:hover {
       background-color: #c88545;
     }
+
     @media (max-width: 600px) {
-      .nav-bottom a,
-      nav a {
-        font-size: 1rem;
-      }
-      .section-links {
-        grid-template-columns: 1fr;
-      }
-      .content {
-        padding: 0 0.7rem;
-      }
-      .search-wrapper input[type="text"] {
-        width: 100px;
-      }
+      .nav-bottom a, nav a { font-size: 1rem; }
+      .section-links { grid-template-columns: 1fr; }
+      .content { padding: 0 0.7rem; }
+      .search-wrapper input[type="text"] { width: 100px; }
     }
-	.nav-bottom.hidden {
-  		display: none;
-	}
-	
-	/* Uklanja sistemski roze/plavi sloj na dodir i fokus u mobilnim pretraživačima */
-.section-links a,
-.section-links a:focus,
-.section-links a:active,
-.section-links a:focus-visible {
-  -webkit-tap-highlight-color: transparent !important;
-  -webkit-touch-callout: none;
-  outline: none !important;
-  box-shadow: none !important;
-}
+
+    .nav-bottom.hidden { display: none; }
+
+    .section-links a,
+    .section-links a:focus,
+    .section-links a:active,
+    .section-links a:focus-visible {
+      -webkit-tap-highlight-color: transparent !important;
+      -webkit-touch-callout: none;
+      outline: none !important;
+      box-shadow: none !important;
+    }
   </style>
 
   <script>
@@ -369,13 +487,9 @@ footer {
       'azurna': { sekcija: 'evropa', naziv: 'Francuska' },
       'azurna obala': { sekcija: 'evropa', naziv: 'Francuska' },
       'kolmar': { sekcija: 'evropa', naziv: 'Francuska' },
-      'strazbur': { sekcija: 'evropa', naziv: 'Francuska' },	  
-	  
-
-
+      'strazbur': { sekcija: 'evropa', naziv: 'Francuska' },      
       'italija': { sekcija: 'evropa', naziv: 'Italija' },
       'amalfi': { sekcija: 'evropa', naziv: 'Italija' },
-      
       'sorento': { sekcija: 'evropa', naziv: 'Italija' },
       'bari': { sekcija: 'evropa', naziv: 'Italija' },
       'pozitano': { sekcija: 'evropa', naziv: 'Italija' },
@@ -383,7 +497,6 @@ footer {
       'capri': { sekcija: 'evropa', naziv: 'Italija' },
       'napulj': { sekcija: 'evropa', naziv: 'Italija' },
       'amalfi obala': { sekcija: 'evropa', naziv: 'Italija' },
-
       'pulja': { sekcija: 'evropa', naziv: 'Italija' },
       'apulia': { sekcija: 'evropa', naziv: 'Italija' },
       'puglia': { sekcija: 'evropa', naziv: 'Italija' },
@@ -399,9 +512,6 @@ footer {
       'cisternino': { sekcija: 'evropa', naziv: 'Italija' },
       'matera franca': { sekcija: 'evropa', naziv: 'Italija' },
       'monopoli': { sekcija: 'evropa', naziv: 'Italija' },
-
-
-
       'hrvatska': { sekcija: 'evropa', naziv: 'Hrvatska (Zagreb)' },
       'zagreb': { sekcija: 'evropa', naziv: 'Hrvatska (Zagreb)' },
       'rumunija': { sekcija: 'evropa', naziv: 'Rumunija (Krajova)' },
@@ -409,78 +519,62 @@ footer {
       'nemačka': { sekcija: 'evropa', naziv: 'Nemačka, Švajcarska, Lihtenštajn' },
       'srbija': { sekcija: 'evropa', naziv: 'Srbija (Novi Sad)' },
       'novi sad': { sekcija: 'evropa', naziv: 'Srbija (Novi Sad)' },
-
       'nemacka': { sekcija: 'evropa', naziv: 'Nemačka, Švajcarska, Lihtenštajn' },
       'švajcarska': { sekcija: 'evropa', naziv: 'Nemačka, Švajcarska, Lihtenštajn' },
-      'svajcarska': { sekcija: 'evropa', naziv: 'Nemačka, Švajcarska, Lihtenštajn' },	  
+      'svajcarska': { sekcija: 'evropa', naziv: 'Nemačka, Švajcarska, Lihtenštajn' },      
       'lihtenštajn': { sekcija: 'evropa', naziv: 'Nemačka, Švajcarska, Lihtenštajn' },      
       'lihtenstajn': { sekcija: 'evropa', naziv: 'Nemačka, Švajcarska, Lihtenštajn' },
-	  
       'belgija': { sekcija: 'evropa', naziv: 'Belgija' },
       'kipar': { sekcija: 'evropa', naziv: 'Kipar' },
       'malta': { sekcija: 'evropa', naziv: 'Malta' },
       'svedska': { sekcija: 'evropa', naziv: 'Švedska, Danska' },      
       'švedska': { sekcija: 'evropa', naziv: 'Švedska, Danska' },
-      'Malmo': { sekcija: 'evropa', naziv: 'Švedska, Danska' },	  
-      'Danska': { sekcija: 'evropa', naziv: 'Švedska, Danska' },
-      'Kopenhagen': { sekcija: 'evropa', naziv: 'Švedska, Danska' },
-	  
+      'malmo': { sekcija: 'evropa', naziv: 'Švedska, Danska' },      
+      'danska': { sekcija: 'evropa', naziv: 'Švedska, Danska' },
+      'kopenhagen': { sekcija: 'evropa', naziv: 'Švedska, Danska' },
       'tajland': { sekcija: 'azija', naziv: 'Tajland' },
-
       'uae': { sekcija: 'azija', naziv: 'UAE' },  
-
-      'Ujedinjeni arapski emirati': { sekcija: 'azija', naziv: 'UAE' }, 
-      'Dubai': { sekcija: 'azija', naziv: 'UAE' }, 
-      'Abudabi': { sekcija: 'azija', naziv: 'UAE' }, 
-         
+      'ujedinjeni arapski emirati': { sekcija: 'azija', naziv: 'UAE' }, 
+      'dubai': { sekcija: 'azija', naziv: 'UAE' }, 
+      'abudabi': { sekcija: 'azija', naziv: 'UAE' }, 
       'tanzanija': { sekcija: 'afrika', naziv: 'Tanzanija' },
       'zanzibar': { sekcija: 'afrika', naziv: 'Tanzanija' },
       'masai': { sekcija: 'afrika', naziv: 'Tanzanija' },
       'safari': { sekcija: 'afrika', naziv: 'Tanzanija' },
-	  
-      'malta': { sekcija: 'evropa', naziv: 'Malta' },
       'valeta': { sekcija: 'evropa', naziv: 'Malta' },
-      'marshalaxx': { sekcija: 'evropa', naziv: 'Malta' },
       'mdina': { sekcija: 'evropa', naziv: 'Malta' },
       'popajevo selo': { sekcija: 'evropa', naziv: 'Malta' },
-
       'amsterdam': { sekcija: 'evropa', naziv: 'Holandija (Amsterdam)' },
       'zaanse schans': { sekcija: 'evropa', naziv: 'Holandija (Amsterdam)' },
       'holandija': { sekcija: 'evropa', naziv: 'Holandija (Amsterdam)' },
-
       'sevilja': { sekcija: 'evropa', naziv: 'Španija' },
-      'Španija': { sekcija: 'evropa', naziv: 'Španija' },
       'španija': { sekcija: 'evropa', naziv: 'Španija' },
-	  'andaluzija': { sekcija: 'evropa', naziv: 'Španija' },
-	  
-	  'spanija': { sekcija: 'evropa', naziv: 'Španija' },
+      'andaluzija': { sekcija: 'evropa', naziv: 'Španija' },
+      'spanija': { sekcija: 'evropa', naziv: 'Španija' },
       'granada': { sekcija: 'evropa', naziv: 'Španija' },
       'kordoba': { sekcija: 'evropa', naziv: 'Španija' },
-	  
-	  'malaga': { sekcija: 'evropa', naziv: 'Španija' },
-      'Ronda': { sekcija: 'evropa', naziv: 'Španija' },
+      'malaga': { sekcija: 'evropa', naziv: 'Španija' },
+      'ronda': { sekcija: 'evropa', naziv: 'Španija' },
       'setenil de las bodegas': { sekcija: 'evropa', naziv: 'Španija' },
-
-      'Belgija': { sekcija: 'evropa', naziv: 'Belgija' },
-      'Briž': { sekcija: 'evropa', naziv: 'Belgija' },
-      'Briz': { sekcija: 'evropa', naziv: 'Belgija' },	  
-      'Gent': { sekcija: 'evropa', naziv: 'Belgija' },
-	  'Brisel': { sekcija: 'evropa', naziv: 'Belgija' },
-	  
-	  
-	  'grčka': { sekcija: 'evropa', naziv: 'Grčka' },
-	  'grcka': { sekcija: 'evropa', naziv: 'Grčka' },
-      'Santorini': { sekcija: 'evropa', naziv: 'Grčka' },
-      'Mikonos': { sekcija: 'evropa', naziv: 'Grčka' },
-	  'Sitonija': { sekcija: 'evropa', naziv: 'Grčka' },
-      'Sarti': { sekcija: 'evropa', naziv: 'Grčka' },
-      'Neos Marmaras': { sekcija: 'evropa', naziv: 'Grčka' },
-	  'Megaportokali': { sekcija: 'evropa', naziv: 'Grčka' },
-      'Lagomandra': { sekcija: 'evropa', naziv: 'Grčka' },
-      'Orange beach': { sekcija: 'evropa', naziv: 'Grčka' }
-      
+      'briž': { sekcija: 'evropa', naziv: 'Belgija' },
+      'briz': { sekcija: 'evropa', naziv: 'Belgija' },      
+      'gent': { sekcija: 'evropa', naziv: 'Belgija' },
+      'brisel': { sekcija: 'evropa', naziv: 'Belgija' },
+      'grčka': { sekcija: 'evropa', naziv: 'Grčka' },
+      'grcka': { sekcija: 'evropa', naziv: 'Grčka' },
+      'santorini': { sekcija: 'evropa', naziv: 'Grčka' },
+      'mikonos': { sekcija: 'evropa', naziv: 'Grčka' },
+      'sitonija': { sekcija: 'evropa', naziv: 'Grčka' },
+      'sarti': { sekcija: 'evropa', naziv: 'Grčka' },
+      'neos marmaras': { sekcija: 'evropa', naziv: 'Grčka' },
+      'megaportokali': { sekcija: 'evropa', naziv: 'Grčka' },
+      'lagomandra': { sekcija: 'evropa', naziv: 'Grčka' },
+      'orange beach': { sekcija: 'evropa', naziv: 'Grčka' },
+	  'kipar': { sekcija: 'evropa', naziv: 'Kipar' },
+	  'Švedska': { sekcija: 'evropa', naziv: 'Švedska i Danska' },
+	  'švedska': { sekcija: 'evropa', naziv: 'Švedska i Danska' },
+	  'Danska': { sekcija: 'evropa', naziv: 'Švedska i Danska' }
     };
-
 
     function prikaziSekciju(idSekcije) {
       document.querySelectorAll('section').forEach(sec => sec.classList.remove('visible'));
@@ -495,13 +589,13 @@ footer {
 
       if (idSekcije === 'pocetna') {
         header.classList.remove('hidden');
-        navBottom.classList.remove('hidden'); // ← prikazuje donji meni
+        navBottom.classList.remove('hidden');
         navTop.classList.remove('visible');
         body.classList.remove('header-hidden');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
         header.classList.add('hidden');
-        navBottom.classList.add('hidden'); // ← sakriva donji meni
+        navBottom.classList.add('hidden');
         navTop.classList.add('visible');
         body.classList.add('header-hidden');
         const sekcija = document.getElementById(idSekcije);
@@ -512,123 +606,74 @@ footer {
       }
     }
 
+    function oznaciDestinaciju(destinacija) {
+      if (!destinacija) return;
 
-	
-//function oznaciDestinaciju(destinacija) {
-//  if (!destinacija) return;
+      const d = decodeURIComponent(destinacija).toLowerCase().replace(/č|ć/g, 'c');
+      const header = document.querySelector('header');
+      const body = document.body;
 
-  // 1. Priprema i čišćenje naziva
-//  const d = decodeURIComponent(destinacija).toLowerCase().replace(/č|ć/g, 'c');
-//  const header = document.querySelector('header');
-//  const body = document.body;
+      const info = mapaDestinacija[d] || mapaDestinacija[destinacija.toLowerCase()];
+      if (!info) return;
 
-//  const info = mapaDestinacija[d] || mapaDestinacija[destinacija.toLowerCase()];
-//  if (!info) return;
+      if (header) header.classList.add('hidden');
+      if (body) body.classList.add('header-hidden');
 
-//  if (header) header.classList.add('hidden');
-//  if (body) body.classList.add('header-hidden');
+      prikaziSekciju(info.sekcija);
 
-  // 2. Prikaži sekciju
-//  prikaziSekciju(info.sekcija);
+      const sekcijaEl = document.getElementById(info.sekcija);
+      if (!sekcijaEl) return;
 
-//  const sekcijaEl = document.getElementById(info.sekcija);
-//  if (!sekcijaEl) return;
+      const sviLinkovi = sekcijaEl.querySelectorAll('.section-links a');
+      sviLinkovi.forEach(a => {
+        a.classList.remove('active');
+        a.blur();
+      });
 
-  // Skloni 'active' klasu sa svih linkova i skini fokus
-//  const sviLinkovi = sekcijaEl.querySelectorAll('.section-links a');
-//  sviLinkovi.forEach(a => {
-//    a.classList.remove('active');
-//    a.blur(); // Uklanja roza/aktivne okvire sa mobilnih ekrana
-//  });
+      let ciljaniLink = null;
+      sviLinkovi.forEach(a => {
+        const tekstLinka = a.textContent.trim().toLowerCase().replace(/č|ć/g, 'c');
+        const trazeniNaziv = info.naziv.trim().toLowerCase().replace(/č|ć/g, 'c');
+        
+        if (tekstLinka.includes(trazeniNaziv)) {
+          ciljaniLink = a;
+        }
+      });
 
-  // 3. Pronađi odgovarajući link
-//  let ciljaniLink = null;
-//  sviLinkovi.forEach(a => {
-//    const tekstLinka = a.textContent.trim().toLowerCase().replace(/č|ć/g, 'c');
-//    const trazeniNaziv = info.naziv.trim().toLowerCase().replace(/č|ć/g, 'c');
-    
-//    if (tekstLinka.includes(trazeniNaziv)) {
-//      ciljaniLink = a;
-//    }
-//  });
-
-  // 4. Izvrši skrolovanje prilagođeno mobilnim telefonima
-//  if (ciljaniLink) {
-//    ciljaniLink.classList.add('active');
-
-    // Čekamo da mobilni browser završi renderovanje i CSS animacije
-//    requestAnimationFrame(() => {
-//      setTimeout(() => {
-//        ciljaniLink.scrollIntoView({ 
-//          behavior: 'smooth', 
-//          block: 'center' 
-//        });
-
-        // Ukloni fokus nakon skrola da se izbegne roza linija/okvir na dnu
-//        setTimeout(() => {
-//          ciljaniLink.blur();
-//          if (document.activeElement) {
-//            document.activeElement.blur();
-//          }
-//        }, 300);
-
-//      }, 250); // Pauza prilagođena mobilnim ekranima
-//    });
-//  }
-//}
-function oznaciDestinaciju(destinacija) {
-  if (!destinacija) return;
-
-  const d = decodeURIComponent(destinacija).toLowerCase().replace(/č|ć/g, 'c');
-  const header = document.querySelector('header');
-  const body = document.body;
-
-  const info = mapaDestinacija[d] || mapaDestinacija[destinacija.toLowerCase()];
-  if (!info) return;
-
-  if (header) header.classList.add('hidden');
-  if (body) body.classList.add('header-hidden');
-
-  prikaziSekciju(info.sekcija);
-
-  const sekcijaEl = document.getElementById(info.sekcija);
-  if (!sekcijaEl) return;
-
-  // Skloni active i zamagli sve prethodne fokuse
-  const sviLinkovi = sekcijaEl.querySelectorAll('.section-links a');
-  sviLinkovi.forEach(a => {
-    a.classList.remove('active');
-    a.blur();
-  });
-
-  // Pronađi odgovarajući link
-  let ciljaniLink = null;
-  sviLinkovi.forEach(a => {
-    const tekstLinka = a.textContent.trim().toLowerCase().replace(/č|ć/g, 'c');
-    const trazeniNaziv = info.naziv.trim().toLowerCase().replace(/č|ć/g, 'c');
-    
-    if (tekstLinka.includes(trazeniNaziv)) {
-      ciljaniLink = a;
+      if (ciljaniLink) {
+        ciljaniLink.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => {
+          ciljaniLink.classList.add('active');
+          ciljaniLink.blur();
+        }, 300);
+      }
     }
-  });
 
-  if (ciljaniLink) {
-    ciljaniLink.classList.add('active');
+    /* Funkcije za gornji desni meni */
+    function toggleMenu() {
+      const toggleBtn = document.getElementById('menuToggle');
+      const menu = document.getElementById('dropdownMenu');
+      toggleBtn.classList.toggle('active');
+      menu.classList.toggle('show');
+    }
 
-    // Sačekaj da se DOM osveži, pa samo skroluj (bez .focus() poziva)
-    requestAnimationFrame(() => {
-      setTimeout(() => {
-        ciljaniLink.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'center' 
-        });
-      }, 200);
-    });
-  }
-}
+    function zatvoriMeni() {
+      const toggleBtn = document.getElementById('menuToggle');
+      const menu = document.getElementById('dropdownMenu');
+      if (toggleBtn && menu) {
+        toggleBtn.classList.remove('active');
+        menu.classList.remove('show');
+      }
+    }
+
+    function otvoriTekstIzMenija(destinacijaKljuc) {
+      zatvoriMeni();
+      oznaciDestinaciju(destinacijaKljuc);
+    }
+
     window.onload = () => {
       const urlParams = new URLSearchParams(window.location.search);
-      const aktivnaDestinacija = urlParams.get('aktivno'); // npr. 'zagreb', 'nemacka', 'tajland'
+      const aktivnaDestinacija = urlParams.get('aktivno');
 
       if (aktivnaDestinacija) {
         oznaciDestinaciju(aktivnaDestinacija);
@@ -649,68 +694,73 @@ function oznaciDestinaciju(destinacija) {
       const input = document.querySelector('.search-wrapper input[type="text"]');
       const dugmeLupica = document.querySelector('.search-button');
 
-      input.addEventListener('keydown', e => {
-        if (e.key === 'Enter') {
-          e.preventDefault();
-          pretrazi();
-        }
-      });
+      if (input) {
+        input.addEventListener('keydown', e => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            pretrazi();
+          }
+        });
+      }
 
-      dugmeLupica.addEventListener('click', () => {
-        pretrazi();
-      });
+      if (dugmeLupica) {
+        dugmeLupica.addEventListener('click', () => {
+          pretrazi();
+        });
+      }
 
       document.addEventListener('click', (e) => {
         if (!e.target.closest('.search-wrapper')) {
           document.querySelectorAll('.section-links a.active').forEach(a => a.classList.remove('active'));
         }
+        if (!e.target.closest('.top-right-menu')) {
+          zatvoriMeni();
+        }
       });
     }
-function pretrazi() {
-    // 1. Uhvati input bez obzira gde se nalazi
-    const input = document.querySelector('.search-wrapper input[type="text"]');
-    if (!input) return;
 
-    const unos = input.value.toLowerCase().trim();
-    if (!unos) return;
+    function pretrazi() {
+      const input = document.querySelector('.search-wrapper input[type="text"]');
+      if (!input) return;
 
-    // 2. Pronađi destinaciju u mapi
-    const kljuc = Object.keys(mapaDestinacija).find(k => k.includes(unos));
+      const unos = input.value.toLowerCase().trim();
+      if (!unos) return;
 
-    if (!kljuc) {
+      const kljuc = Object.keys(mapaDestinacija).find(k => k.includes(unos));
+
+      if (!kljuc) {
         alert('Nema rezultata za: ' + unos);
         return;
-    }
+      }
 
-    const podatak = mapaDestinacija[kljuc];
+      const podatak = mapaDestinacija[kljuc];
 
-    // 3. Ukloni "active" klasu sa SVAKOG linka na celom sajtu pre nove pretrage
-    document.querySelectorAll('.section-links a').forEach(a => {
+      document.querySelectorAll('.section-links a').forEach(a => {
         a.classList.remove('active');
-        a.blur(); // skini fokus sa starog rezultata
-    });
+        a.blur();
+      });
 
-    // 4. Prikaži novu sekciju
-    prikaziSekciju(podatak.sekcija);
+      prikaziSekciju(podatak.sekcija);
 
-    // 5. Sačekaj da se DOM smiri pa skroluj
-    setTimeout(() => {
+      setTimeout(() => {
         const sekcijaEl = document.getElementById(podatak.sekcija);
         if (sekcijaEl) {
-            const dugmad = Array.from(sekcijaEl.querySelectorAll('.section-links a'));
-            const dugme = dugmad.find(a => 
-                a.textContent.toLowerCase().includes(podatak.naziv.toLowerCase())
-            );
+          const dugmad = Array.from(sekcijaEl.querySelectorAll('.section-links a'));
+          const dugme = dugmad.find(a => 
+            a.textContent.toLowerCase().includes(podatak.naziv.toLowerCase())
+          );
 
-            if (dugme) {
-                dugme.classList.add('active');
-                dugme.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+          if (dugme) {
+            dugme.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => {
+              dugme.classList.add('active');
+              dugme.blur();
+            }, 300);
+          }
         }
-        // Opciono: očisti input nakon pretrage da bude spreman za sledeću
-        // input.value = ''; 
-    }, 150);
-}
+      }, 150);
+    }
+
     function nazadNaPocetnu() {
       prikaziSekciju('pocetna');
       history.pushState(null, '', 'index.html');
@@ -722,38 +772,115 @@ function pretrazi() {
 
   <header></header>
 
-<div class="nav-bottom">
-  <div class="search-wrapper" role="search" aria-label="Pretraga destinacija">
-    <input type="text" id="search-input" placeholder="Pretraži..." aria-label="Pretraga destinacija" />
-    
-    <button 
-      onclick="pretrazi()"
-      aria-label="Pretraži destinacije" 
-      title="Pretraži" 
-      class="search-button"
-    >
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
+  <!-- Meni sa 2 crtice u gornjem desnom uglu -->
+  <div class="top-right-menu">
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Meni sa podkategorijama">
+      <span class="menu-line line-1"></span>
+      <span class="menu-line line-2"></span>
     </button>
+    
+    <div class="dropdown-content" id="dropdownMenu">
+      
+      <div class="menu-category">
+        <div class="category-title" onclick="this.parentElement.classList.toggle('open')">🔥 Najnovije</div>
+        <div class="submenu">
+
+
+		<a href="Evropa/Kipar/kipar.html">Kipar</a>  
+        <a href="Evropa/Grčka/Grcka.html">Grčka</a>
+        <a href="Evropa/Francuska/Kolmar/kolmar.html">Kolmar</a>		
+        <a href="Evropa/Spanija/Andaluzija/andaluzija.html">Španija</a>		  
+		  
+		  
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <div class="category-title" onclick="this.parentElement.classList.toggle('open')">⭐ Najčitanije</div>
+        <div class="submenu">
+		 <!--
+          <a onclick="otvoriTekstIzMenija('japan')">Japan</a>
+          <a onclick="otvoriTekstIzMenija('maldivi')">Maldivi</a>
+          <a onclick="otvoriTekstIzMenija('jordan')">Jordan</a>
+		  
+		  
+		  
+		  -->
+        <a href="Azija/Japan/japan.html">Japan</a>
+        <a href="Azija/Maldivi/maldivi.html">Maldivi</a>
+        <a href="Azija/Jordan/jordan.html">Jordan</a>	
+		<a href="Afrika/Tanzanija/Tanzanija.html">Tanzanija</a>
+		<a href="Azija/Indija/indija.html">Indija</a>
+		
+		
+
+
+
+		
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <div class="category-title" onclick="this.parentElement.classList.toggle('open')">😄 Najsmešnije</div>
+        <div class="submenu">
+		
+
+		
+		<a href="Azija/Japan/trinaesti_dan.html">Sex hotel, Tokio</a>
+		<a href="Azija/Maldivi/prdeca_baba.html">Nemili događaj, Maldivi</a>		
+		<a href="Evropa/Italija/Amalfi/amalfipositano.html">Izgubljena Dragana, Pozitano</a>		
+		<a href="Azija/Jordan/jerash.html">Marama za muškarce, Džeraš</a>		
+
+        </div>
+      </div>
+	  
+      <div class="menu-category">
+        <div class="category-title" onclick="this.parentElement.classList.toggle('open')">🔮 Najneobičnije</div>
+        <div class="submenu">
+		 <!--
+          <a onclick="otvoriTekstIzMenija('japan')">Japan</a>
+          <a onclick="otvoriTekstIzMenija('maldivi')">Maldivi</a>
+          <a onclick="otvoriTekstIzMenija('jordan')">Jordan</a>
+		  
+		  
+		  
+		  -->
+        <a href="Azija/Indija/cetvrti_dan.html">Holi festival,Indija</a>
+        <a href="Afrika/Tanzanija/tarangire.html">Safari, Tarangire</a>
+        <a href="Afrika/Tanzanija/ngorongoro.html">Safari, Ngorongoro</a>	
+		<a href="Afrika/Tanzanija/masailodge.html">Masai pleme, Tanzanija</a>
+		<a href="Azija/Jordan/petra.html">Petra, svetsko čudo</a>
+        <a href="Azija/Indija/osmi_dan.html">Tadž Mahal, svetsko čudo</a>
+
+
+		
+        </div>
+      </div>	  
+
+    </div>
   </div>
 
-  <a onclick="prikaziSekciju('evropa')">Evropa</a>
-  <a onclick="prikaziSekciju('azija')">Azija</a>
-  <a onclick="prikaziSekciju('afrika')">Afrika</a>
-  <a href="OMeni/omeni.html">O meni</a>
-</div>
+  <div class="nav-bottom">
+    <div class="search-wrapper" role="search" aria-label="Pretraga destinacija">
+      <input type="text" id="search-input" placeholder="Pretraži..." aria-label="Pretraga destinacija" />
+      <button onclick="pretrazi()" aria-label="Pretraži destinacije" title="Pretraži" class="search-button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+
+    <a onclick="prikaziSekciju('evropa')">Evropa</a>
+    <a onclick="prikaziSekciju('azija')">Azija</a>
+    <a onclick="prikaziSekciju('afrika')">Afrika</a>
+    <a href="OMeni/omeni.html">O meni</a>
+  </div>
 
   <nav>
     <a onclick="prikaziSekciju('evropa')">Evropa</a>
     <a onclick="prikaziSekciju('azija')">Azija</a>
     <a onclick="prikaziSekciju('afrika')">Afrika</a>
-    <!-- <a href="OMeni/omeni.html">O meni</a> -->
-
-   
-    <!-- <a onclick="nazadNaPocetnu()">Početna</a> -->    
-   
   </nav>
 
   <div class="content">
@@ -761,85 +888,65 @@ function pretrazi() {
     <section id="evropa">
       <h2>Evropa</h2>
       <div class="section-links">
-
-		<a href="Evropa/Belgija/belgija.html" target="_blank">Belgija</a>   
-        <a href="Evropa/Francuska/Francuska.html" target="_blank">Francuska</a>
-		<a href="Evropa/Grčka/Grcka.html" target="_blank">Grčka</a>
-        <a href="Evropa/Holandija/amsterdam.html" target="_blank">Holandija (Amsterdam)</a>
-        <a href="Evropa/Hrvatska/Zagreb/Zagreb.html" target="_blank">Hrvatska (Zagreb)</a>
-        <a href="Evropa/Italija/Italija.html" target="_blank">Italija</a>
-        <a href="Evropa/Malta/malta.html" target="_blank">Malta</a>
-        <a href="Evropa/Nemačka/Nemacka.html" target="_blank">Nemačka, Švajcarska, Lihtenštajn</a>
-        <a href="Evropa/Rumunija/Krajova/Krajova.html" target="_blank">Rumunija (Krajova)</a>
-        <a href="Evropa/Srbija/NoviSadKin/NoviSadKin.html" target="_blank">Srbija (Novi Sad)</a>
-		<a href="Evropa/Spanija/Andaluzija/andaluzija.html" target="_blank">Španija</a>		
-
-
-
-<!--
-        
-     
-        <a href="#">Kipar</a>
-        
-        
- --> 
-
+        <a href="Evropa/Belgija/belgija.html">Belgija</a>    
+        <a href="Evropa/Francuska/Francuska.html">Francuska</a>
+        <a href="Evropa/Grčka/Grcka.html">Grčka</a>
+        <a href="Evropa/Holandija/amsterdam.html">Holandija (Amsterdam)</a>
+        <a href="Evropa/Hrvatska/Zagreb/Zagreb.html">Hrvatska (Zagreb)</a>
+        <a href="Evropa/Italija/Italija.html">Italija</a>
+		<a href="Evropa/Kipar/kipar.html">Kipar</a>
+        <a href="Evropa/Malta/malta.html">Malta</a>
+        <a href="Evropa/Nemačka/Nemacka.html">Nemačka, Švajcarska, Lihtenštajn</a>
+        <a href="Evropa/Rumunija/Krajova/Krajova.html">Rumunija (Krajova)</a>
+        <a href="Evropa/Srbija/NoviSadKin/NoviSadKin.html">Srbija (Novi Sad)</a>
+		<a href="Evropa/Svedska-Danska/svedska-danska.html">Švedska i Danska</a> 
+        <a href="Evropa/Spanija/Andaluzija/andaluzija.html">Španija</a>        
       </div>
-           <button class="back-button" onclick="nazadNaPocetnu()">← Nazad</button>
+      <button class="back-button" onclick="nazadNaPocetnu()">← Nazad</button>
     </section>
 
     <section id="azija">
       <h2>Azija</h2>
       <div class="section-links">
-        <a href="Azija/Maldivi/maldivi.html" target="_blank">Maldivi</a>
-        <a href="Azija/Japan/japan.html" target="_blank">Japan</a>
-	<a href="Azija/Indija/indija.html" target="_blank">Indija</a>
-        <a href="Azija/Jordan/jordan.html" target="_blank">Jordan</a>
-        <a href="Azija/Tajland/tajland.html" target="_blank">Tajland</a>
-        <a href="Azija/UAE/uae.html" target="_blank">UAE</a>
-
- 
+        <a href="Azija/Maldivi/maldivi.html">Maldivi</a>
+        <a href="Azija/Japan/japan.html">Japan</a>
+        <a href="Azija/Indija/indija.html">Indija</a>
+        <a href="Azija/Jordan/jordan.html">Jordan</a>
+        <a href="Azija/Tajland/tajland.html">Tajland</a>
+        <a href="Azija/UAE/uae.html">UAE</a>
       </div>
-           <button class="back-button" onclick="nazadNaPocetnu()">← Nazad</button>
+      <button class="back-button" onclick="nazadNaPocetnu()">← Nazad</button>
     </section>
 
     <section id="afrika">
       <h2>Afrika</h2>
       <div class="section-links">
-        <a href="Afrika/Tanzanija/Tanzanija.html" target="_blank">Tanzanija</a>
+        <a href="Afrika/Tanzanija/Tanzanija.html">Tanzanija</a>
       </div>
-           <button class="back-button" onclick="nazadNaPocetnu()">← Nazad</button>
+      <button class="back-button" onclick="nazadNaPocetnu()">← Nazad</button>
     </section>
-
 
     <section id="omeni">
       <h2>O meni</h2>
       <p>Ovde ide tekst o meni...</p>
-      <button class="back-link" onclick="nazadNaPocetnu()">
-        ← Nazad na Početna
-      </button>
+      <button class="back-button" onclick="nazadNaPocetnu()">← Nazad na Početnu</button>
     </section>
 
   </div>
+
   <footer>
-
- <div class="footer-content">
-    <span>&copy; 2025 Tamo daleko | Sva prava zadržana</span>
-
-<a href="https://www.instagram.com/sandra.putuje/" 
-   target="_blank" 
-   rel="noopener noreferrer" 
-   style="display: inline-flex; margin-left: 10px; text-decoration: none; vertical-align: middle;">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" 
-
-           alt="Instagram"
-
-           style="width:26px; height:26px; filter: brightness(0) invert(1);">
-</a>
-  </div>
-
-
-
+    <div class="footer-content">
+      <span>&copy; 2025 Tamo daleko | Sva prava zadržana</span>
+      <a href="https://www.instagram.com/sandra.putuje/" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         style="display: inline-flex; margin-left: 10px; text-decoration: none; vertical-align: middle;">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" 
+             alt="Instagram"
+             style="width:26px; height:26px; filter: brightness(0) invert(1);">
+      </a>
+    </div>
   </footer>
+
 </body>
 </html>
