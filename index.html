@@ -10,18 +10,48 @@
   <meta name="author" content="Sandra Đuričin" />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Tamo daleko - putopisi Sandre Đuričin" />
-  <meta property="og:description" content="Autentični putopisi iz Evrope, Azije i Afrike, kroz priče, slike i lične doživljaje." />
-  <meta property="og:image" content="https://sandra-putuje.github.io/tamo-daleko/Logom-mobile.jpg" />
-  <meta property="og:url" content="https://sandra-putuje.github.io/tamo-daleko/" />
-  <meta property="og:site_name" content="Tamo daleko" />
+ 
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Tamo daleko | Putopisi Sandre Đuričin" />
+<meta property="og:description" content="Autentični putopisi iz Evrope, Azije i Afrike, kroz priče, fotografije, korisne savete i lične doživljaje sa putovanja." />
+<meta property="og:image" content="https://sandra-putuje.github.io/tamo-daleko/Logom-mobile.jpg" />
+<meta property="og:url" content="https://sandra-putuje.github.io/tamo-daleko/" />
+<meta property="og:site_name" content="Tamo daleko" />
+<meta property="og:locale" content="sr_RS" />  
 
   <!-- Twitter kartice -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Tamo daleko - putopisi Sandre Đuričin" />
   <meta name="twitter:description" content="Autentični putopisi iz Evrope, Azije i Afrike. Priče koje vas vode daleko." />
   <meta name="twitter:image" content="https://sandra-putuje.github.io/tamo-daleko/Logom-mobile.jpg" />
+
+  <!-- Schema.org Strukturirani Podaci (JSON-LD) za SEO -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelBlog",
+  "name": "Tamo daleko",
+  "url": "https://sandra-putuje.github.io/tamo-daleko/",
+  "description": "Putopisi Sandre Đuričin iz Evrope, Azije i Afrike. Autentične priče sa putovanja, lepe fotografije, korisni saveti i lični doživljaji.",
+  "inLanguage": "sr",
+  "author": {
+    "@type": "Person",
+    "name": "Sandra Đuričin",
+    "url": "https://sandra-putuje.github.io/tamo-daleko/OMeni/omeni.html"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Sandra Đuričin"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sandra-putuje.github.io/tamo-daleko/"
+  }
+}
+</script>
+
+
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="my-favicon/favicon-96x96.png" sizes="96x96" />
@@ -81,6 +111,85 @@
       z-index: -1;
       transition: opacity 0.3s ease;
     }
+	
+	/* SEO naslov i opis na početnoj stranici */
+.seo-intro {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(82%, 620px);
+    box-sizing: border-box;
+    text-align: center;
+
+    /* Diskretna, poluprovidna pozadina */
+    background: rgba(253, 246, 240, 0.52);
+
+    padding: 12px 22px;
+    border-radius: 10px;
+
+    /* Veoma suptilna ivica */
+    border: 1px solid rgba(224, 169, 109, 0.25);
+
+    /* Vrlo blaga senka */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+
+    z-index: 10;
+}
+
+.main-seo-title {
+    margin: 0 0 6px;
+    color: #4B2E0E;
+    font-size: 1.45rem;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.intro-seo {
+    margin: 0;
+    color: #4B2E0E;
+    font-size: 0.92rem;
+    line-height: 1.45;
+}
+
+/* Mobilni telefoni */
+@media (max-width: 600px) {
+    .seo-intro {
+        top: 15px;
+        width: 90%;
+        padding: 10px 15px;
+        border-radius: 8px;
+    }
+
+    .main-seo-title {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    .intro-seo {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
+	
+	
+	
+	    /* Skriveno za čitače ekrana i Google bot (SEO) */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+
+
+
 
     /* --- Hamburger Meni sa dve crtice u gornjem desnom uglu --- */
     .top-right-menu {
@@ -134,25 +243,58 @@
     }
 
     /* Meni i Podmeniji */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 50px;
-      right: 0;
-      background-color: #fdf6f0;
-      min-width: 200px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid #e0a96d;
-      flex-direction: column;
-    }
-
+/* Izmenjen dropdown-content - zamenjen overflow sa visible */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fdf6f0;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  overflow: visible; /* Promenjeno sa hidden na visible */
+  border: 1px solid #e0a96d;
+  flex-direction: column;
+}
     .dropdown-content.show {
       display: flex;
       animation: fadeInMenu 0.2s ease-in-out;
     }
 
+/* Dodat hover za naslove kategorija (🔥 Najnovije, ⭐ Najčitanije...) */
+.category-title {
+  padding: 10px 14px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  background-color: #f5e0c5;
+  color: #4B2E0E;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+
+.category-title:hover {
+  background-color: #e0a96d;
+  color: white;
+}
+
+
+
+/* Stilovi za podmeni i linkove */
+.submenu {
+  display: none;
+  flex-direction: column;
+  background-color: #fdf6f0;
+}
+
+.menu-category.open .submenu {
+  display: flex;
+}
     .menu-category {
       border-bottom: 1px solid #f5e0c5;
     }
@@ -161,40 +303,23 @@
       border-bottom: none;
     }
 
-    .category-title {
-      padding: 10px 14px;
-      font-weight: bold;
-      font-size: 0.9rem;
-      background-color: #f5e0c5;
-      color: #4B2E0E;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
 
-    .submenu {
-    display: none;
-    flex-direction: column;
-    background-color: #fdf6f0;
-    }
 
-    .menu-category.open .submenu {
-     display: flex;
-     }
+.submenu a {
+  color: #333;
+  padding: 8px 14px 8px 24px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: normal;
+  transition: background-color 0.2s, color 0.2s;
+  display: block;
+}
 
-    .submenu a {
-      color: #333;
-      padding: 8px 14px 8px 24px;
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: normal;
-      transition: background-color 0.2s, color 0.2s;
-    }
+.submenu a:hover {
+  background-color: #e0a96d;
+  color: white;
+}	
 
-    .submenu a:hover {
-      background-color: #e0a96d;
-      color: white;
-    }
 
     @keyframes fadeInMenu {
       from { opacity: 0; transform: translateY(-5px); }
@@ -570,12 +695,19 @@
       'neos marmaras': { sekcija: 'evropa', naziv: 'Grčka' },
       'megaportokali': { sekcija: 'evropa', naziv: 'Grčka' },
       'lagomandra': { sekcija: 'evropa', naziv: 'Grčka' },
-      'orange beach': { sekcija: 'evropa', naziv: 'Grčka' },
-	  'kipar': { sekcija: 'evropa', naziv: 'Kipar' }
-
+      'orange beach': { sekcija: 'evropa', naziv: 'Grčka' }
+	  
     };
+	
+	 function azurirajSeoStranice(naslov, opis) {
+      document.title = naslov + " | Tamo daleko";
+      let metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute("content", opis);
+      }
+    }
 
-    function prikaziSekciju(idSekcije) {
+    function prikaziSekciju(idSekcije, upisiUIstoriju = true) {
       document.querySelectorAll('section').forEach(sec => sec.classList.remove('visible'));
 
       const input = document.querySelector('.search-wrapper input[type="text"]');
@@ -586,24 +718,89 @@
       const navBottom = document.querySelector('.nav-bottom');
       const body = document.body;
 
-      if (idSekcije === 'pocetna') {
-        header.classList.remove('hidden');
-        navBottom.classList.remove('hidden');
-        navTop.classList.remove('visible');
-        body.classList.remove('header-hidden');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        header.classList.add('hidden');
-        navBottom.classList.add('hidden');
-        navTop.classList.add('visible');
-        body.classList.add('header-hidden');
+
+		
+	if (idSekcije === 'pocetna') {
+    header.classList.remove('hidden');
+    navBottom.classList.remove('hidden');
+    navTop.classList.remove('visible');
+    body.classList.remove('header-hidden');
+
+    document.querySelector('.seo-intro').style.display = 'block';
+
+    azurirajSeoStranice(
+        "Tamo daleko - Blog o putovanjima",
+        "Putopisi iz Evrope, Azije i Afrike koje piše Sandra Đuričin."
+    );
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });	
+		
+		
+		
+
+        if (upisiUIstoriju && window.location.hash !== '') {
+          history.pushState(null, '', window.location.pathname);
+        }
+		
+} else {
+    header.classList.add('hidden');
+    document.querySelector('.seo-intro').style.display = 'none';
+    navBottom.classList.add('hidden');
+    navTop.classList.add('visible');
+    body.classList.add('header-hidden');		
+		
+		
+		
+		
+        
         const sekcija = document.getElementById(idSekcije);
         if (sekcija) {
           sekcija.classList.add('visible');
+          
+          if (idSekcije === 'evropa') {
+            azurirajSeoStranice("Evropa - Putopisi", "Otkrijte priče i putopise iz evropskih zemalja.");
+          } else if (idSekcije === 'azija') {
+            azurirajSeoStranice("Azija - Putopisi", "Zanimljive priče sa putovanja po Aziji.");
+          } else if (idSekcije === 'afrika') {
+            azurirajSeoStranice("Afrika - Putopisi", "Egzotične avanture i safari putopisi iz Afrike.");
+          } else if (idSekcije === 'omeni') {
+            azurirajSeoStranice("O autoru", "Saznajte više o Sandri Đuričin i njenom blogu.");
+          }
+          
           window.scrollTo({ top: 0, behavior: 'smooth' });
+
+          if (upisiUIstoriju && window.location.hash !== '#' + idSekcije) {
+            history.pushState(null, '', '#' + idSekcije);
+          }
         }
       }
     }
+   function osveziPrikazNaOsnovuUrl() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const aktivnaDestinacija = urlParams.get('aktivno');
+
+      if (aktivnaDestinacija) {
+        oznaciDestinaciju(aktivnaDestinacija);
+        return;
+      }
+
+      const hash = window.location.hash.replace('#', '');
+      if (['evropa', 'azija', 'afrika', 'omeni'].includes(hash)) {
+        prikaziSekciju(hash, false);
+      } else {
+        prikaziSekciju('pocetna', false);
+      }
+    }
+
+    window.addEventListener('popstate', () => {
+      osveziPrikazNaOsnovuUrl();
+    });
+
+    window.addEventListener('pageshow', (event) => {
+      if (event.persisted) {
+        osveziPrikazNaOsnovuUrl();
+      }
+    });
 
     function oznaciDestinaciju(destinacija) {
       if (!destinacija) return;
@@ -770,6 +967,21 @@
 <body>
 
   <header></header>
+  
+  
+ 
+<div class="seo-intro">
+
+    <h1 class="main-seo-title">
+        Tamo daleko | blog o putovanjima
+    </h1>
+
+    <p class="intro-seo">
+        Autentične priče sa putovanja po Evropi, Aziji i Africi,
+        kroz fotografije, korisne savete i lične doživljaje.
+    </p>
+
+</div>
 
   <!-- Meni sa 2 crtice u gornjem desnom uglu -->
   <div class="top-right-menu">
