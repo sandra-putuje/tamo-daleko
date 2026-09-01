@@ -112,67 +112,100 @@
       transition: opacity 0.3s ease;
     }
 	
-	/* SEO naslov i opis na početnoj stranici */
+/* =========================================================
+   SEO NASLOV I UVODNI OPIS NA POČETNOJ STRANICI
+   ========================================================= */
+
 .seo-intro {
     position: absolute;
-    top: 25px;
+    top: 22px;
     left: 50%;
     transform: translateX(-50%);
-    width: min(82%, 620px);
+
+    width: min(78%, 590px);
     box-sizing: border-box;
+
     text-align: center;
 
-    /* Diskretna, poluprovidna pozadina */
-    background: rgba(253, 246, 240, 0.52);
+    /* Diskretna i providna pozadina */
+    background: rgba(253, 246, 240, 0.45);
 
-    padding: 12px 22px;
-    border-radius: 10px;
+    padding: 11px 20px;
+
+    border-radius: 9px;
 
     /* Veoma suptilna ivica */
-    border: 1px solid rgba(224, 169, 109, 0.25);
+    border: 1px solid rgba(224, 169, 109, 0.22);
 
-    /* Vrlo blaga senka */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+    /* Gotovo neprimetna senka */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 
     z-index: 10;
 }
 
+
+/* H1 */
 .main-seo-title {
-    margin: 0 0 6px;
+    margin: 0 0 5px;
+
     color: #4B2E0E;
-    font-size: 1.45rem;
+
+    font-size: 1.35rem;
     line-height: 1.2;
+
     font-weight: bold;
 }
 
+
+/* SEO uvodni tekst */
 .intro-seo {
     margin: 0;
+
     color: #4B2E0E;
-    font-size: 0.92rem;
-    line-height: 1.45;
+
+    font-size: 0.88rem;
+    line-height: 1.4;
 }
 
-/* Mobilni telefoni */
+
+/* =========================================================
+   MOBILNI TELEFONI
+   ========================================================= */
+
 @media (max-width: 600px) {
+
     .seo-intro {
-        top: 15px;
-        width: 90%;
-        padding: 10px 15px;
-        border-radius: 8px;
+        top: 12px;
+
+        width: 88%;
+
+        padding: 8px 13px;
+
+        border-radius: 7px;
+
+        background: rgba(253, 246, 240, 0.42);
+
+        border: 1px solid rgba(224, 169, 109, 0.18);
+
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
+
 
     .main-seo-title {
-        font-size: 1.2rem;
-        margin-bottom: 5px;
+        font-size: 1.05rem;
+
+        line-height: 1.2;
+
+        margin-bottom: 3px;
     }
 
+
     .intro-seo {
-        font-size: 0.85rem;
-        line-height: 1.4;
+        font-size: 0.78rem;
+
+        line-height: 1.35;
     }
 }
-	
-	
 	
 	    /* Skriveno za čitače ekrana i Google bot (SEO) */
     .sr-only {
