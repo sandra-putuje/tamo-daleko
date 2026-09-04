@@ -67,12 +67,7 @@
 
   gtag('config', 'G-NLYKLXD49W');
 </script>
-
-
-
-
-
-  <style>
+<style>
     :root{
       --pastel-pink: #ffd8e6;
       --pastel-peach: #ffe8d0;
@@ -83,6 +78,9 @@
       --card-bg: rgba(255, 220, 160, 0.65);
       --card-border: rgba(220, 180, 120, 0.35);
     }
+* {
+  box-sizing: border-box;
+}
 
     body{
       min-height:100vh;
@@ -105,34 +103,20 @@
 
     }
 
-
-
-
-p {
-  margin-bottom: 1.5rem;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-
-    header{
-      padding: 28px 16px;
-      font-size: 2.2rem; /* veliki naslov */
-      font-weight: 700;
-      color: var(--header-color);
-      text-align: center; /* centriran */
-      margin-bottom: 2rem;
-    }
-
-
-body, p, span {
-  font-weight: 400 !important;
-
+header {
+  text-align: center;
+  padding: 2rem 1rem;
 }
-
 
     h1 {
       color: var(--header-color);
       font-size: 2.5rem;
       margin-bottom: 0.2em;
+	  text-align: center;
     }
 
 
@@ -142,224 +126,713 @@ body, p, span {
       margin-top: 2rem;
       color: var(--header-color);
     }
-    p {
-      margin-bottom: 1rem;
-      text-align: justify;
-    }
-    img {
-      display: block;
-      width: 100%;       /* Obezbeđuje da slika zauzima celu širinu teksta */
-      height: auto;      /* Automatski prilagođava visinu proporcinalno */
-      margin: 1rem 0;    /* Vertikalni razmak iznad i ispod slike */
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    hr {
-      border: none;
-      border-top: 2px solid #a0522d;
-      margin: 2rem 0;
-    }
+
+h3 {
+  color:  var(--header-color);
+}
+
+p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+  margin: 1.5rem auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(36,55,70,0.14);
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #9ebdc2;
+  margin: 2rem 0;
+}
+
+
+/* SADRŽAJ */
+
+.sadrzaj {
+  background: rgba(255,255,255,0.48);
+  padding: 1rem 1.4rem;
+  border-radius: 12px;
+  border: 1px solid rgba(126,158,165,0.35);
+  margin: 1.5rem 0 2rem;
+}
+
+.sadrzaj h2 {
+  margin-top: 0;
+}
+
+.sadrzaj a {
+  color: #24557a;
+  text-decoration: underline;
+  text-decoration-color: #9bb8c9;
+  text-underline-offset: 3px;
+  transition: all 0.25s ease;
+}
+
+.sadrzaj a:visited {
+  color: #76558f;
+  text-decoration-color: #b49ac2;
+}
+
+.sadrzaj a:hover {
+  color: #3f7568;
+  text-decoration-color: #3f7568;
+}
+
+.sadrzaj a:active {
+  color: #315e54;
+}
+
+.datum {
+  text-align: center;
+  color: #59727a;
+  font-style: italic;
+}
+
+
+ /* DUGMAD */
+
+
+.back-button,
 
 .back-link {
+
   display: inline-block;
 
   padding: 0.6rem 1.2rem;
-  background-color: var(--header-color);
-  color: white;
+
+      background: linear-gradient(135deg, #e08b00 0%, #ffd8b0 100%);
+
+      color: white;
+
+      outline: none; /* uklanja fokus okvir */
+
+      border: none;  /* uklanja eventualni border */
+
+  border-radius: 20px;
+
+  box-shadow: 0 2px 6px rgba(36,55,70,0.10);
+
+  transition: all 0.3s ease;
+
+  font-family: 'Georgia', serif;
+
+  font-size: 0.95rem;
+
+  font-weight: bold;
+
+  line-height: 1.5;
+
+  text-decoration: none;
+
+}
+
+
+.back-link:hover,
+
+.back-button:hover {
+
+background: linear-gradient(135deg, #e08b00 0%, #ffd8b0 100%);
+
+  color: #ffffff;
+
+  border-color: #3f6873;
+
+  transform: translateX(-3px);
+
+  box-shadow: 0 4px 12px rgba(36,55,70,0.25);
+
+}
+
+
+.back-link:active,
+
+.back-button:active {
+
+  transform: translateX(-1px);
+
+}
+
+
+
+
+
+/* LIGHTBOX */
+
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(28,45,53,0.88);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
   border-radius: 8px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+}
+
+.lightbox-zatvori {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+article img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+article img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(36,55,70,0.25);
+}
+
+
+/* NEWSLETTER */
+
+.newsletter {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(255, 248, 240, 0.75); /* Topla, meka krem pozadina */
+  border-radius: 12px;
+  border: 1px solid rgba(220, 180, 120, 0.4);
+  margin: 50px 0;
+}
+
+.newsletter h2 {
+  margin-top: 0;
+  color: #f39c12; /* Boja naslova usklađena sa H1 */
+}
+
+.newsletter a {
+  display: inline-block;
+  /* Svetlije levo (#fbe3b5), toplije narandžasto desno (#f39c12) */
+  background: linear-gradient(90deg, #fbe3b5 0%, #f39c12 100%);
+  color: #333333; /* Tamniji tekst radi odlične čitljivosti */
+  padding: 15px 35px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(36,55,70,0.12);
+  transition: all 0.3s ease;
 }
-.back-link:hover {
-  background-color: #d96b75;
+
+.newsletter a:hover {
+  /* Hover efekt identičan ostalim dugmićima */
+  background: linear-gradient(90deg, #f9d799 0%, #e08b00 100%);
+  color: #111111;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(36,55,70,0.20);
 }
 
-    .back-button {
-      display: inline-block;
-      
-      background: linear-gradient(135deg, #f39c12 0%, #ffe8d0 100%);
-      color: white;
-      padding: 0.7rem 1.4rem;
-      border-radius: 20px;
-      text-decoration: none;
-      font-family: 'Georgia', serif;
-      font-size: 1em;
-      outline: none; /* uklanja fokus okvir */
-      border: none;  /* uklanja eventualni border */
-      font-weight: bold;
-      margin-top: 2rem;
-      transition: background 0.3s ease;
-      cursor: pointer;
+footer {
+  margin-top: 40px;
+}
+/* Stylize uvodnu sekciju */
+.prvi-utisci-box {
+    background-color: #f4f6f7;
+    border-left: 5px solid #e08b00;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 4px;
+}
 
-    }
-    .back-button:hover {
-      
-    background: linear-gradient(135deg, #e08b00 0%, #ffd8b0 100%);
-    }
-    @media (max-width: 600px) {
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-    }
+/* MOBILNI PRIKAZ */
 
-   #newsletter {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #ccc;
-    }
-    #newsletter h2 {
-      color: #6b4226;
-      margin-bottom: 0.5rem;
-    }
-    #newsletter p {
-      margin-bottom: 1rem;
-    }
-    #newsletter input[type="email"] {
-      width: 100%;
-      padding: 0.5rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-      margin-bottom: 1rem;
-    }
-    #newsletter button {
-      padding: 0.6rem 1.2rem;
-      background-color: #a0522d;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-    #newsletter button:hover {
-      background-color: #c88545;
-    }
-    #message {
-      margin-top: 0.5rem;
-      font-style: italic;
-      color: green;
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 2rem;
   }
 
+  body {
+    padding: 0.8rem;
+  }
 
-
-/* 1) osiguraj visinu embed‑a da ništa više ne skroluje stranucu */
-#custom-substack-embed{
-  min-height:140px;      /* broj probaj – ~2 visine inputa je obično dosta */
-  position:relative;     /* da novi interni div‑ovi ostanu unutra */
 }
 
-/* 2) ukini neželjeno automatsko skrolovanje koje Substack ponekad okida */
-html,body{
-  scroll-behavior:auto!important;
-}
+</style>
 
-
-
-
-
-
-  </style>
 </head>
+
+
 <body>
 
-<header>
-  <h1>Živopisna Tanzanija</h1>
 
+<!-- LIGHTBOX -->
+
+<div id="lightbox" onclick="this.style.display='none'">
+
+  <span class="lightbox-zatvori">&times;</span>
+
+  <img id="lightbox-img"
+       src=""
+       alt="Uvećana slika">
+
+</div>
+
+
+<header>
+
+<h1 style="font-size: 2.5rem; margin-bottom: 0.2em; display: block; line-height: 1.2;">
+
+Zanzibar i safari u Tanzaniji, putopis i kompletan vodič: plaže, izleti i iskustva
+
+
+<a href="https://www.instagram.com/sandra.putuje"
+   target="_blank"
+   style="text-decoration: none; margin-left: 8px; display: inline-block; vertical-align: middle; transform: translateY(-4px);">
+
+<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+     alt="Instagram"
+     style="width:24px; height:24px; filter: invert(68%) sepia(85%) saturate(1350%) hue-rotate(345deg) brightness(98%) contrast(92%); display:inline-block;">
+
+</a>
+
+</h1>
+
+<p class="datum">
+
+<strong>septembar 2025</strong>
+
+</p>
+<section class="prvi-utisci-box">
+        <h2>Od tirkiznih plaža Zanzibara do divljine Tanzanije</h2>
+        <p>
+            Prvi utisci: Hakuna Matata i miris okeana. Na ovom putovanju spojili smo dve potpuno različite Afrike. 
+			Na Zanzibaru smo uživali u belim peščanim plažama, tirkiznom moru, šetnjama kroz Nungwi, Stone Town i izletima na farmu začina i koralni greben, plaži Kendwa, 
+			Jozani šumi sa endemskom vrstom majmuna i još puno toga.  
+			Zatim smo krenuli na kopno, gde su nas čekali safari u nacionalnim parkovima Tarangire i Ngorongoro, susreti sa slonovima, lavovima i žirafama, život među Masaijima i pogled prema Kilimandžaru.
+</p>
+<p> Ovo je priča o putovanju kroz Zanzibar i Tanzaniju, ali i o ljudima koje smo sreli, situacijama koje nismo očekivali i malim avanturama koje su nam ovo putovanje učinile posebnim.
+        </p>
+    </section>
 </header>
 
 
+<main>
 
-<button class="back-button" onclick="window.location.href='Tanzanija.html?aktivna=zanzibar'">← Nazad na Tanzanija</button>
-
-
-
-<article>
-<h2> Zanzibar - prvi utisci</h2>
+<article id="pocetak">
 
 
 
-<p>Prvi utisak na <strong>aerodromu</strong> na Zanzibaru: Zanzibarci su baš crni, ali niski. Paze <strong>kofere</strong> ko Japanci. Ugledala sam jednog <strong>carinika</strong> u dukserici s kapuljačom taman kad sam htela reći kako su lepo uniformisani, uredni i na visini zadatka.</p>
-
-<p>Gledam <strong>saputnike</strong>. Hoće li mi ovi nepoznati ljudi iz grupe postati dragi? Naravno da jesu postali.</p>
-
-<p>Veselo prevrćem po ustima <strong>swahili</strong>: Asante sana (puno hvala) i đambo đambo (zdravo) i dobijam lepe osmehe. Hakuna matata (nema problema), pole pole (polako), karibu (dobrodošli i nema na čemu), rafiki (prijatelj).</p>
-
-<p>Dobili smo nenadano luksuzan <strong>hotel</strong> s baldahinima na krevetima. Srećkovići opet. Vodič <strong>Vlada Zanzibarac</strong> sedeo je u busu pored mene i dobio je od mene prvi talas pitanja i čuđenja na moj prvi dodir s Afrikom.</p>
-
-<p>Videla mačku u <strong>Indiji</strong> nisam. Ovde jesam.</p> 
-
-<p>Šta ima od <strong>životinja</strong>? Gušter. Došao mi prvo veče na <strong>baldahin</strong>. Zašto bih bila sama u tako lepom krevetu? Eto mi posetioca. Bio je poprilično velik i debeo. Nismo znale kako da ga izbacimo. Duško, gde si? Zaljuljala sam baldahin, Olbina je držala otvorenu kesu u koju je upao i iznele smo ga u <strong>travu</strong>. Misija uspešno završena. Mi smo žene stene.</p>
-
-<p><strong>Gekon</strong> je vrsta koja mi se popela na baldahin.</p> 
-
-<p>Uroš je rekao da je spavao kao princeza pod baldahinom. Ipak nije sve toliko romantično. To nam je zaštita od komaraca, koji mogu preneti <strong>malariju</strong>, <strong>dengu</strong>, <strong>žutu groznicu</strong> i druge bolesti.</p>
-
-<p><img src="Tanzanija_files/dsc (3).jpg" alt="Nungwi plaža, Zanzibar"></p>
 
 
+<!-- SADRŽAJ -->
 
-<p>     </p>
-<p>     </p>
+<nav class="sadrzaj" aria-label="Sadržaj putopisa">
 
-<!-- Sledeća priča (automatski) -->
-<script src="tanzanija-sledeca.js"></script>
+<div id="vrh"></div>
 
-<p>     </p>
-<p>     </p>
+<h2>Sadržaj putopisa</h2>
+
+    <!-- SADRŽAJ SA LINKOVIMA -->
+   
+        <ul>
+            <li>
+                <a href="#poglavlje-1">1. Put za Zanzibar i let preko Istanbula</a>
+                <span class="toc-desc">- Zabune oko letova i zamena mesta uz prozor</span>
+            </li>
+            <li>
+                <a href="#poglavlje-2">2. Prvi utisci i smeštaj u Nungwiju</a>
+                <span class="toc-desc">- Lokalni izrazi, baldahini i noćni gušter</span>
+            </li>
+            <li>
+                <a href="#poglavlje-3">3. Šetnje selom Nungwi i plaža</a>
+                <span class="toc-desc">- Šareni seoski život, tropske kiše i večernja muzika</span>
+            </li>
+            <li>
+                <a href="#poglavlje-4">4. Izlet na farmu začina</a>
+                <span class="toc-desc">- Degustacija egzotičnog voća i karanfilić</span>
+            </li>
+            <li>
+                <a href="#poglavlje-5">5. Uživanje na Kendwa plaži</a>
+                <span class="toc-desc">- Beli pesak, ogromne morske zvezde i Masaiji</span>
+            </li>
+            <li>
+                <a href="#poglavlje-6">6. Poseta lokalnoj školi i donacije</a>
+                <span class="toc-desc">- Školski pribor, dečiji osmesi i pesma</span>
+            </li>
+            <li>
+                <a href="#poglavlje-7">7. Stone Town i Prison Island</a>
+                <span class="toc-desc">- Istorija, spomenik robovima i džinovske kornjače</span>
+            </li>
+            <li>
+                <a href="#poglavlje-8">8. Mnemba koralni greben i plovidba</a>
+                <span class="toc-desc">- Snorkeling, tirkizno more i skok majmuna</span>
+            </li>
+            <li>
+                <a href="#poglavlje-9">9. Jozani šuma, Mangrovi i Kae Funk plaža</a>
+                <span class="toc-desc">- Endemski majmuni, Rock Cafe i logorska vatra</span>
+            </li>
+            <li>
+                <a href="#poglavlje-10">10. Poslednji dan i noćna avantura</a>
+                <span class="toc-desc">- Duge šetnje obalom i kratka večernja napetost</span>
+            </li>
+
+            <li>
+                <a href="#poglavlje-11">11. Safari u Nacionalnom parku Tarangire</a>
+                <span class="toc-desc">- Slonovi pored džipa, bogatstvo životinja i borba s insektima</span>
+            </li>
+            <li>
+                <a href="#poglavlje-12">12. Safari u krateru Ngorongoro</a>
+                <span class="toc-desc">- Lavovi na medenom mesecu, morke i krađa ručka od majmuna</span>
+            </li>
+            <li>
+                <a href="#poglavlje-13">13. Serval Wildlife Park i bliski susreti</a>
+                <span class="toc-desc">- Hranjenje žirafa i neprocenjiv trenutak maženja lavice Nale</span>
+            </li>
+            <li>
+                <a href="#poglavlje-14">14. Autentični život Masai plemena</a>
+                <span class="toc-desc">- Poseta tradiciji, pećinski blagoslovi i Kilimandžaro</span>
+            </li>
+            <li>
+                <a href="#poglavlje-15">15. Materuni vodopad i priprema kafe</a>
+                <span class="toc-desc">- Crvena zemlja, kameleon Miloje i lokalna pesma Jambo Bwana</span>
+            </li>
+        </ul> 
+
+    </nav>
 
 
 
-<button class="back-button" onclick="window.location.href='Tanzanija.html?aktivna=zanzibar'">← Nazad na Tanzanija</button>
+ <!-- SKRAĆENE PRIČE -->
 
-<p>     </p>
-<p>     </p>
+    <h2 id="poglavlje-1">1. Put za Zanzibar i let preko Istanbula</h2>
+    <p>Nakon pauze u Istanbulu i kratke zabune oko broja leta (koji je vozio za Zanzibar preko Kilimandžara), usledio je udoban let uz neočekivanu zamenu mesta za ono uz prozor. Prijatna atmosfera u avionu uz poklone Turkish Airlines-a (čarape i maska za oči). Nestrpljenje pred uzbudljivu afričku avanturu.</p>
 
+    <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>
+	
+	
+	<h2 id="poglavlje-2">2. Prvi utisci i smeštaj u Nungwiju</h2>
+    <p>Slećemo na Zanzibar gde nas dočekuju uslužni meštani. Brzo učimo osnovne reči poput <em>Hakuna Matata</em> i <em>Pole Pole</em>. Smešteni smo u luksuzan hotel sa baldahinima koji pružaju neophodnu zaštitu od komaraca. Prvo veče obeležilo je i uspešno izbacivanje jednog velikog guštera iz sobe.</p>
 
- <footer>
-        <div id="disqus_thread" style="margin-top: 40px;"></div>
-    </footer>
+    <p><img src="zanzibar02.jpg" alt="Nungwi plaža, Zanzibar"></p>
 
-<div id="custom-substack-embed"></div>
-
-    <script>
-        // Lightbox logika
-        document.querySelectorAll('article img').forEach(image => {
-            image.onclick = () => {
-                document.getElementById('lightbox').style.display = 'flex';
-                document.getElementById('lightbox-img').src = image.getAttribute('src');
-            }
-        });
-
-        // Disqus komentari
-        var disqus_config = function () { 
-            this.page.url = window.location.href; 
-            this.page.identifier = window.location.pathname; 
-        };
-        (function() { 
-            var d = document, s = d.createElement('script'); 
-            s.src = 'https://sandra-putuje.disqus.com/embed.js'; 
-            s.setAttribute('data-timestamp', +new Date()); 
-            (d.head || d.body).appendChild(s); 
-        })();
-    </script>
-
-    <section class="newsletter" style="text-align: center; padding: 40px 20px; background: var(--card-bg); border-radius: 10px; border: 1px solid var(--card-border); margin: 50px 0;">
-    <hr style="border: 0; border-top: 1px solid #ccc; margin-bottom: 30px;">
-    <h2 style="margin-top: 0; color: var(--header-color);">Ne propustite sledeću avanturu!</h2>
-    <p>Pridružite se zajednici putnika i nove priče će vam stizati direktno u inbox.</p>
-    
-    <a href="https://sandra-putuje.substack.com/subscribe" 
-       target="_blank" 
-       style="display: inline-block; background-color: #8bb272; color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-        Prijavi se na newsletter
+    <a href="https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/zanzibar.html">
+     Zanzibar - prvi utisci
     </a>
     
-    <p style="font-size: 0.85rem; margin-top: 20px; color: #555; font-style: italic;">
-        *Besplatna prijava putem Substack platforme.
-    </p>
+
+    <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>
+
+
+    <h2 id="poglavlje-3">3. Šetnje selom Nungwi i plaža</h2>
+    <p>Jutarnja šetnja selom otkrila je autentični život meštana, školarce u uniformama i srdačne trgovce. Tirkizno more Nungwija očarava svojom lepotom. Kratak tropski pljusak i ubrzo kao da ništa nije bilo. Nestanci struje oko 19h su uobičajeni, zabrinula sam se u restoranu da ćemo ostati bez večere, ali to je sve kratkotrajno. Večeri na plaži donose posebnu energiju uz fudbal, muziku i sveže pečenu ribu.</p>
+
+    <p><img src="nungwi01.jpg" alt="Nungwi plaža, Zanzibar"></p>
+
+    <a href="https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/nungwi.html">
+     Šetnje selom Nungwi i plaža
+    </a> 
+
+ <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>   
+	
+	<h2 id="poglavlje-4">4. Izlet na farmu začina</h2>
+    <p>Poseban doživljaj bila je poseta farmi začina gde smo degustirali egzotično voće poput džekfruta i rambutana, te saznali fascinantne činjenice o karanfiliću, cimetu i vanili. Domaćini su nas obradovali ručkom među palmama i ručno rađenim krunama i nakitom od palminog lišća.</p>
+
+    <p><img src="farmazacina.jpg" alt="Farma začina, Zanzibar"></p>
+
+    <a href="https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/farmazacina.html">
+     Farma začina
+    </a> 
+
+
+    <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>
+
+
+    <h2 id="poglavlje-5">5. Uživanje na Kendwa plaži</h2>
+    <p>Kendwa plaža nas je oduševila prostranim slamnatim suncobranima i finim belim peskom. Šetajući uz obalu videli smo džinovske šarene morske zvezde i upoznali lokalne Masaije koji prodaju rukotvorine. Atmosfera je opuštena, a obala prepuna živopisnih scena.</p>
+
+    <p><img src="kendwa.jpg" alt="Kendwa, Zanzibar"></p>
+
+    <a href="https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/kendwa.html">
+     Kendwa
+    </a> 
+
+
+
+
+    <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>
+
+
+    <h2 id="poglavlje-6">6. Poseta lokalnoj školi i donacije</h2>
+    <p>Nezaboravan trenutak bila je poseta lokalnoj školi. Decu smo obradovali slatkišima i školskim priborom, a zauzvrat dobili najlepše osmehe i pesmice. Direktor nam je predočio školske izazove. Deca su ostavila snažan utisak svojom radošću.</p>
+
+    <p><img src="skola.jpg" alt="Škola, Zanzibar"></p>
+
+    <a href="https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/skola.html">
+     Škola
+    </a> 
+
+
+    <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>
+
+
+    <h2 id="poglavlje-7">7. Stone Town i Prison Island</h2>
+    <p>Stone Town odiše živopisnim haosom, bogatom istorijom i mešavinom kultura. Obišli smo lokalnu pijacu, spomenik robovima, a potom otplovili do Prison Island-a gde stanuju ogromne kornjače stare i preko dva veka. Dan je završen posmatranjem čuvenih skokova u more sa doka i zalaskom sunca.</p>
+
+    <p><img src="stonetown.jpg" alt="Stone town, Zanzibar"></p>
+
+    <a href="https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/stonetown.html">
+     Stone Town i Prison Island
+    </a> 
+
+
+    <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>
+
+    <h2 id="poglavlje-8">8. Mnemba koralni greben i plovidba</h2>
+    <p>Plovidba oko atola Mnemba donela je snorkeling među šarenim ribicama uz čisto tirkizno more i peščane sprudove. Tokom pauze na sprudu, zabavio nas je radoznali majmun koji je iznenada skočio na nas, dajući izletu dozu avanture.</p>
+
+    <p><img src="mnemba.jpg" alt="Mnemba, Zanzibar"></p>
+
+    <a href="https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/mnemba.html">
+     Mnemba
+    </a> 
+
+
+    <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>
+
+
+    <h2 id="poglavlje-9">9. Jozani šuma, Mangrovi i Kae Funk plaža</h2>
+    <p>U Jozani šumi videli smo retke i endemske crvene colobus majmune, dok je šuma mangrova zadivila svojim razgranatim korenjem i drvenim mostićima. Svratili smo i do poznatog Rock Cafe-a, a uveče u Kae Funk baru uživali uz logorsku vatru, akrobate i tradicionalni ples.</p>
+
+    <p><img src="sume.jpg" alt="Šume, Zanzibar"></p>
+
+    <a href="https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/sume.html">
+     Šume
+    </a> 
+
+
+    <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>
+
+
+    <h2 id="poglavlje-10">10. Poslednji dan i noćna avantura</h2>
+    <p>Slobodan dan iskoristili smo za opuštanje na plaži i duge šetnje uz obalu sa Masai ratnikom. Večernja šetnja kroz dublje delove sela donela je trenutak napetosti kada sam se nakratko izgubila, ali se sve brzo i bezbedno završilo susretom sa prijateljima iz grupe.</p>
+
+    <p><img src="strah.jpg" alt="Strah, Zanzibar"></p>
+
+    <a href="https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/strah.html">
+     Strah
+    </a> 
+
+
+    <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>
+
+
+<h2 id="poglavlje-11">11. Safari u Nacionalnom parku Tarangire</h2>
+    <p>Prvi deo safarija obeležio je direktan susret sa ogromnim slonom koji je prišao samom džipu i priredio nam pravu dozu adrenalina. Popodnevni nastavak vožnje doneo je bogatstvo divljeg sveta: krda gnuova, zebre, žirafe, nojeve i divlje svinje na korak od nas. Avanturu je dopunila i dramatična, herojska borba protiv uletelog roja napasnih insekata u džip.</p>
+
+       <p><img src="tarangiri.jpg" alt="Tarangire, Tanzanija"></p>
+
+    <a href="https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/tarangire.html">
+     Safari u Nacionalnom parku Tarangire
+    </a> 
+
+
+    <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>
+
+
+    <h2 id="poglavlje-12">12. Safari u krateru Ngorongoro</h2>
+    <p>Veličanstveni krater Ngorongoro oduševio nas je pogledom na bizona i lavlji par na „medenom mesecu“ koji je prošao neposredno uz naše vozilo. Ručak kraj jezera uz personalizovane šoljice obeležio je nestašni majmun koji mi je ukrao hranu sa ramena. Posmatranje lavica sa lavićima, flamingosa, nilskih konja. Komična scena nosoroga koji juri rendžera zaokružila je ovaj nezaboravni dan.</p>
+
+    <p><img src="ngorongoro.jpg" alt="Ngorongoro, Tanzanija"></p>
+
+    <a href="https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/ngorongoro.html">
+     Safari u krateru Ngorongoro
+    </a>  
+
+ <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>
+
+
+    <h2 id="poglavlje-13">13. Serval Wildlife Park i bliski susreti</h2>
+    <p>U Serval parku ostvarili su se dečiji snovi kroz neposredan kontakt i hranjenje slobodnih žirafa, zebri, antilopa i igra sa razigranim serval mačkama. Kruna posete bili su emotivni trenuci maženja prelepe bele lavice Nale, čime je ispunjena velika želja sa početka putovanja.</p>
+
+    <p><img src="serval.jpg" alt="Serval park, Tanzanija"></p>
+
+    <a href="https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/serval.html">
+     Serval Wildlife Park i bliski susreti
+    </a> 
+
+    <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>
+
+
+    <h2 id="poglavlje-14">14. Autentični život Masai plemena</h2>
+    <p>Boravak u tradicionalnim Masai lodževima doneo je duboko razumevanje njihove kulture, rituala, plesa udvaranja i gradnje kuća od balege i blata. Prošli smo kroz dirljive obrede u Pećini blagoslova i oproštaja, slušali priče oko vatre i doživeli čaroban rođendanski izlazak sunca sa pogledom na stidljivi Kilimandžaro.</p>
+
+    <p><img src="masai.jpg" alt="Masai lodge, Tanzanija"></p>
+
+    <a href="https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/masai.html">
+     Autentični život Masai plemena
+    </a> 
+
+
+    <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>
+
+
+    <h2 id="poglavlje-15">15. Materuni vodopad i priprema kafe</h2>
+    <p>Poslednji afrički izlet vodio je kroz bujno zelenilo i crvenu zemlju do moćnog Materuni vodopada u podnožju Kilimandžara. Tokom pešačenja sreli smo kameleona Miloja, a avantura je završena tradicionalnim pečenjem i mlevenjem kafe uz horsko pevanje čuvene pesme <em>Jambo Bwana</em>.</p>
+
+    <p><img src="materuni.jpg" alt="Materuni vodopad, Tanzanija"></p>
+
+    <a href="https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/materuni.html">
+     Materuni vodopad i priprema kafe
+    </a>
+
+    <div style="display:flex; justify-content:flex-end; margin:1rem 0;">
+     <a href="#vrh" class="back-button">↑ Nazad na početak</a>
+    </div>
+
+
+
+</article>
+
+
+<!-- POVRATAK -->
+
+<button class="back-link"
+        onclick="window.location.href='../../index.html?aktivno=Tanzanija'">
+
+← Nazad na Tanzaniju
+
+</button>
+
+
+<footer>
+
+<div id="disqus_thread" style="margin-top:40px;"></div>
+
+</footer>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+<hr style="border:0; border-top:1px solid #c7d8da; margin-bottom:30px;">
+
+<h2>
+Ne propustite sledeću avanturu!
+</h2>
+
+<p>
+Pridružite se zajednici putnika i nove priče će vam stizati direktno u inbox.
+</p>
+
+
+<a href="https://sandra-putuje.substack.com/subscribe"
+   target="_blank">
+
+Prijavi se na newsletter
+
+</a>
+
+
+<p style="font-size:0.85rem; margin-top:20px; color:#59727a; font-style:italic;">
+
+*Besplatna prijava putem Substack platforme.
+
+</p>
+
 </section>
 
+
+<script>
+
+/* LIGHTBOX */
+
+document.querySelectorAll('article img').forEach(image => {
+
+  image.onclick = () => {
+
+    document.getElementById('lightbox').style.display = 'flex';
+
+    document.getElementById('lightbox-img').src =
+      image.getAttribute('src');
+
+  }
+
+});
+
+
+/* DISQUS */
+
+var disqus_config = function () {
+
+  this.page.url = window.location.href;
+
+  this.page.identifier = window.location.pathname;
+
+};
+
+
+(function() {
+
+  var d = document,
+      s = d.createElement('script');
+
+  s.src = 'https://sandra-putuje.disqus.com/embed.js';
+
+  s.setAttribute('data-timestamp', +new Date());
+
+  (d.head || d.body).appendChild(s);
+
+})();
+
+</script>
+
+
 </body>
+
 </html>
