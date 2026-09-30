@@ -43,9 +43,6 @@
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/indija.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/trinaesti_dan.html</loc>
-  </url>
-  <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/prdeca_baba.html</loc>
   </url>
   <url>
@@ -55,13 +52,16 @@
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/jerash.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/cetvrti_dan.html</loc>
-  </url>
-  <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/tarangire.html</loc>
   </url>
   <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Indija/cetvrti_dan.html</loc>
+  </url>
+  <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/ngorongoro.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/trinaesti_dan.html</loc>
   </url>
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/masailodge.html</loc>
@@ -181,16 +181,16 @@
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/cetvrti_dan.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/peti_dan.html</loc>
-  </url>
-  <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sesti_dan.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sedmi_dan2.html</loc>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/peti_dan.html</loc>
   </url>
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sedmi_dan.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sedmi_dan2.html</loc>
   </url>
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Japan/sedmi_dan3.html</loc>
@@ -274,13 +274,13 @@
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/otrovna_nije_opasna.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/haljina.html</loc>
-  </url>
-  <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/pas.html</loc>
   </url>
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/beba_ajkula.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/haljina.html</loc>
   </url>
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/vrane.html</loc>
@@ -298,10 +298,10 @@
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/plave_zvezde.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/hello_sandra.html</loc>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/turski_sed.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/turski_sed.html</loc>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/hello_sandra.html</loc>
   </url>
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/lokalci.html</loc>
@@ -316,31 +316,19 @@
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Maldivi/5stvari.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/saveti.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/greske.html</loc>
-  </url>
-  <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/wadirum.html</loc>
-  </url>
-  <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/aqaba.html</loc>
   </url>
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/mrtvomore.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/nebo.html</loc>
-  </url>
-  <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/aman.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/ljudi.html</loc>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/aqaba.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/jordananimated.html</loc>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/saveti.html</loc>
   </url>
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/zanzibar.html</loc>
@@ -349,7 +337,19 @@
     <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/predgovor.html</loc>
   </url>
   <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/nebo.html</loc>
+  </url>
+  <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/zanzibar02.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/ljudi.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/greske.html</loc>
+  </url>
+  <url>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Azija/Jordan/jordananimated.html</loc>
   </url>
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Afrika/Tanzanija/nungwi.html</loc>
@@ -478,10 +478,10 @@
     <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Malta/komino.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Malta/mdina.html</loc>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Malta/valeta2.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Malta/valeta2.html</loc>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Malta/mdina.html</loc>
   </url>
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Malta/plavapecina.html</loc>
@@ -526,10 +526,10 @@
     <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/lucern.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/hajdi-selo.html</loc>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/lihtenstajn.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/lihtenstajn.html</loc>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/hajdi-selo.html</loc>
   </url>
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Nema%C4%8Dka/cirkus-u-tri-cina.html</loc>
@@ -643,10 +643,10 @@
     <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Italija/Amalfi/amalfisaveti.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Italija/Amalfi/predgovor.html</loc>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Italija/Amalfi/bari.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Italija/Amalfi/bari.html</loc>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Italija/Amalfi/predgovor.html</loc>
   </url>
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Italija/Amalfi/sorento.html</loc>
@@ -670,10 +670,10 @@
     <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Francuska/Azurna/montecarlo.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Francuska/Azurna/monako.html</loc>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Francuska/Azurna/menton.html</loc>
   </url>
   <url>
-    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Francuska/Azurna/menton.html</loc>
+    <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Francuska/Azurna/monako.html</loc>
   </url>
   <url>
     <loc>https://sandra-putuje.github.io/tamo-daleko/Evropa/Francuska/Azurna/eze.html</loc>
