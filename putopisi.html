@@ -266,6 +266,143 @@ main img {
         padding: 15px 16px;
       }
     }
+	
+/* --- Hamburger Meni sa dve crtice u gornjem desnom uglu --- */
+.top-right-menu {
+  position: fixed;
+  top: 8px;
+  right: 20px;
+  z-index: 1000;
+}
+
+@media (max-width: 600px) {
+ .top-right-menu {
+   right: 3px;
+   top: 2px;
+  }
+}
+
+.menu-toggle {
+  background: rgba(224, 169, 109, 0.95);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 42px;
+  height: 42px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-toggle:hover {
+  background-color: #c88545;
+  transform: scale(1.05);
+}
+
+.menu-line {
+  width: 22px;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle.active .line-1 {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.menu-toggle.active .line-2 {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+/* Meni i Podmeniji */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fdf6f0;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  overflow: visible;
+  border: 1px solid #e0a96d;
+  flex-direction: column;
+}
+
+.dropdown-content.show {
+  display: flex;
+  animation: fadeInMenu 0.2s ease-in-out;
+}
+
+.category-title {
+  padding: 10px 14px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  background-color: #f5e0c5;
+  color: #4B2E0E;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.category-title:hover {
+  background-color: #e0a96d;
+  color: white;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  background-color: #fdf6f0;
+}
+
+.menu-category.open .submenu {
+  display: flex;
+}
+
+.menu-category {
+  border-bottom: 1px solid #f5e0c5;
+}
+
+.menu-category:last-child {
+  border-bottom: none;
+}
+
+.submenu a {
+  color: #333;
+  padding: 8px 14px 8px 24px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: normal;
+  transition: background-color 0.2s, color 0.2s;
+  display: block;
+}
+
+.submenu a:hover {
+  background-color: #e0a96d;
+  color: white;
+}
+
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}	
+	
+	
   </style>
 </head>
 
@@ -304,6 +441,98 @@ main img {
     </p>
   </div>
   
+ <!-- Meni sa 2 crtice u gornjem desnom uglu -->
+  <div class="top-right-menu">
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Meni sa podkategorijama">
+      <span class="menu-line line-1"></span>
+      <span class="menu-line line-2"></span>
+    </button>
+    
+    <div class="dropdown-content" id="dropdownMenu">
+      
+      <div class="menu-category">
+        <div class="category-title" onclick="this.parentElement.classList.toggle('open')">🔥 Najnovije</div>
+        <div class="submenu">
+		
+		<a href="Evropa/Bugarska/sofija.html">Sofija</a>
+		
+		<a href="Evropa/Crna-Gora/crna-gora.html">Crna Gora</a> 
+	    <a href="Evropa/Rumunija/Temi%C5%A1var/Temisvar.html">Temišvar</a>
+		<a href="Evropa/Italija/Milano/milano.html">Milano</a> 
+	    <a href="Evropa/Svedska-Danska/svedska-danska.html">Švedska i Danska</a> 
+		<a href="Evropa/Kipar/kipar.html">Kipar</a>  
+        <a href="Evropa/Grčka/Grcka.html">Grčka</a>
+        <a href="Evropa/Francuska/Kolmar/kolmar.html">Kolmar</a>		
+        <a href="Evropa/Spanija/Andaluzija/andaluzija.html">Španija</a>		  
+		  
+		  
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <div class="category-title" onclick="this.parentElement.classList.toggle('open')">⭐ Najčitanije</div>
+        <div class="submenu">
+		 <!--
+          <a onclick="otvoriTekstIzMenija('japan')">Japan</a>
+          <a onclick="otvoriTekstIzMenija('maldivi')">Maldivi</a>
+          <a onclick="otvoriTekstIzMenija('jordan')">Jordan</a>
+		  
+		  
+		  
+		  -->
+        <a href="Azija/Japan/japan.html">Japan</a>
+        <a href="Azija/Maldivi/maldivi.html">Maldivi</a>
+        <a href="Azija/Jordan/jordan.html">Jordan</a>	
+		<a href="Afrika/Tanzanija/Tanzanija.html">Tanzanija</a>
+		<a href="Azija/Indija/indija.html">Indija</a>
+		
+		
+
+
+
+		
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <div class="category-title" onclick="this.parentElement.classList.toggle('open')">😄 Najsmešnije</div>
+        <div class="submenu">
+		
+
+		
+		<a href="Azija/Japan/trinaesti_dan.html">Sex hotel, Tokio</a>
+		<a href="Azija/Maldivi/prdeca_baba.html">Nemili događaj, Maldivi</a>		
+		<a href="Evropa/Italija/Amalfi/amalfipositano.html">Izgubljena Dragana, Pozitano</a>		
+		<a href="Azija/Jordan/jerash.html">Marama za muškarce, Džeraš</a>		
+
+        </div>
+      </div>
+	  
+      <div class="menu-category">
+        <div class="category-title" onclick="this.parentElement.classList.toggle('open')">🔮 Najneobičnije</div>
+        <div class="submenu">
+		 <!--
+          <a onclick="otvoriTekstIzMenija('japan')">Japan</a>
+          <a onclick="otvoriTekstIzMenija('maldivi')">Maldivi</a>
+          <a onclick="otvoriTekstIzMenija('jordan')">Jordan</a>
+		  
+		  
+		  
+		  -->
+        <a href="Azija/Indija/cetvrti_dan.html">Holi festival, Indija</a>
+        <a href="Afrika/Tanzanija/tarangire.html">Safari, Tarangire</a>
+        <a href="Afrika/Tanzanija/ngorongoro.html">Safari, Ngorongoro</a>	
+		<a href="Afrika/Tanzanija/masailodge.html">Masai pleme, Tanzanija</a>
+		<a href="Azija/Jordan/petra.html">Petra, svetsko čudo</a>
+        <a href="Azija/Indija/osmi_dan.html">Tadž Mahal, svetsko čudo</a>
+
+
+		
+        </div>
+      </div>	  
+
+    </div>
+  </div>
 
 
   <section class="featured">
@@ -465,7 +694,8 @@ main img {
       <a href="Azija/Maldivi/prdeca_baba.html">nemilom događaju na Maldivima</a>,
       <a href="Evropa/Italija/Amalfi/amalfipositano.html">izgubljenoj Dragani u Pozitanu</a>,
       <a href="Afrika/Tanzanija/masailodge.html">susretu sa Masai plemenom</a>,
-      <a href="Azija/Jordan/petra.html">Petri i <a href="Azija/Indija/osmi_dan.html">Tadž Mahalu</a>.
+      <a href="Azija/Jordan/petra.html">Petri</a>,
+      <a href="Azija/Indija/osmi_dan.html">Tadž Mahalu</a> i <a href="Azija/Indija/cetvrti_dan.html">Holi festival boja u Indiji</a>.
       Jer ponekad baš ono što nismo planirali postane najbolji deo putovanja.
     </p>
   </section>
@@ -648,6 +878,23 @@ main img {
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
   </a>
 </footer>
+<script>
+/* Funkcije za gornji desni meni */
+function toggleMenu() {
+  const toggleBtn = document.getElementById('menuToggle');
+  const menu = document.getElementById('dropdownMenu');
+  toggleBtn.classList.toggle('active');
+  menu.classList.toggle('show');
+}
 
+function zatvoriMeni() {
+  const toggleBtn = document.getElementById('menuToggle');
+  const menu = document.getElementById('dropdownMenu');
+  if (toggleBtn && menu) {
+    toggleBtn.classList.remove('active');
+    menu.classList.remove('show');
+  }
+}
+</script>
 </body>
 </html>
