@@ -117,15 +117,6 @@ header {
   text-decoration: underline;
 }
 
-.naslov-lokacije {
-  display: block;
-  max-width: 1000px;
-  margin: 1.5rem auto;
-  font-size: 1.3rem;
-  color: var(--deep-blue);
-  border-bottom: 2px solid var(--turquoise);
-  padding-bottom: 8px;
-}
 
 .card-grid {
   display: flex;
@@ -207,6 +198,30 @@ header {
   transform: scale(1.05);
 }
 
+
+
+.naslov-lokacije {
+  display: flex;
+  align-items: flex-end;      /* spušta i sliku i tekst skroz uz tirkiznu liniju */
+  justify-content: center;
+  gap: 12px;
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  font-size: 1.3rem;
+  color: var(--deep-blue);
+  border-bottom: 2px solid var(--turquoise);
+  padding-bottom: 6px;        /* ovde podešavaš koliko su tik uz liniju (npr. 4px ili 8px) */
+}
+
+.naslov-lokacije .emoji-icon {
+  display: block;
+  width: auto;
+  height: 60px;               /* smanji ili povećaj po želji (npr. 60px–90px) */
+  object-fit: contain;
+  margin: 0;
+  transform: translateY(5px);
+}
+
 @media (max-width: 600px) {
   .card-grid {
     flex-direction: column;
@@ -255,7 +270,14 @@ header {
 <!-- GLAVNI VODIČ -->
 
 <div class="naslov-lokacije">
-  🕌 Uzbekistan - Put svile
+<img 
+      src="uzb.png" 
+      alt="Uzbekistan" 
+      class="emoji-icon"
+      loading="lazy"
+    /> 
+
+   Uzbekistan - Put svile
 </div>
 
 <div class="card-grid">
@@ -274,7 +296,13 @@ header {
 <!-- PREDGOVOR -->
 
 <div class="naslov-lokacije">
-  ✨ Na putu svile
+<img 
+      src="put.png" 
+      alt="Uzbekistan" 
+      class="emoji-icon"
+      loading="lazy"
+    /> 
+  Na putu svile
 </div>
 
 <div class="card-grid">
@@ -293,7 +321,13 @@ header {
 <!-- TASKENT -->
 
 <div class="naslov-lokacije">
-  🏙️ Taškent - susret starog i novog
+<img 
+      src="tashkent.png" 
+      alt="Uzbekistan" 
+      class="emoji-icon"
+      loading="lazy"
+    /> 
+   Taškent - susret starog i novog
 </div>
 
 <div class="card-grid">
@@ -312,7 +346,13 @@ header {
 <!-- SAMARKAND -->
 
 <div class="naslov-lokacije">
-  🕌 Samarkand - plavo srce Puta svile
+<img 
+      src="samarcand.png" 
+      alt="Uzbekistan" 
+      class="emoji-icon"
+      loading="lazy"
+    /> 
+  Samarkand - plavo srce Puta svile
 </div>
 
 <div class="card-grid">
@@ -331,7 +371,13 @@ header {
 <!-- BUHARA -->
 
 <div class="naslov-lokacije">
-  🏛️ Buhara - grad gde je vreme stalo
+<img 
+      src="bukhara.png" 
+      alt="Uzbekistan" 
+      class="emoji-icon"
+      loading="lazy"
+    /> 
+   Buhara - grad gde je vreme stalo
 </div>
 
 <div class="card-grid">
@@ -350,7 +396,13 @@ header {
 <!-- HIVA -->
 
 <div class="naslov-lokacije">
-  🏜️ Hiva - bajka iza pustinjskih zidina
+<img 
+      src="khiva.png" 
+      alt="Uzbekistan" 
+      class="emoji-icon"
+      loading="lazy"
+    /> 
+   Hiva - bajka iza pustinjskih zidina
 </div>
 
 <div class="card-grid">
